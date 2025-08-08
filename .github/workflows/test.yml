@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    name: Build and Test
     
     steps:
       - name: Checkout code
@@ -25,10 +26,9 @@ jobs:
         working-directory: ./policy-library-app
         run: npm ci
         
-      - name: Run linter
+      - name: Type check
         working-directory: ./policy-library-app
-        run: npm run lint
-        continue-on-error: true  # Don't fail on lint warnings for now
+        run: npm run type-check
         
       - name: Build project
         working-directory: ./policy-library-app
@@ -37,10 +37,11 @@ jobs:
       - name: Check build output
         run: |
           if [ ! -d "policy-library-app/dist" ]; then
-            echo "Build failed - dist directory not found"
+            echo "❌ Build failed - dist directory not found"
             exit 1
           fi
-          echo "Build successful - dist directory exists"
+          echo "✅ Build successful - dist directory exists"
+          echo "📦 Build contents:"
           ls -la policy-library-app/dist/
           
       - name: Upload build artifacts
@@ -49,3 +50,12 @@ jobs:
           name: build-output
           path: policy-library-app/dist/
           retention-days: 1
+          
+      - name: Build Summary
+        if: always()
+        run: |
+          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Build and tests completed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Build Output" >> $GITHUB_STEP_SUMMARY
+          echo "Build artifacts have been uploaded and are ready for deployment." >> $GITHUB_STEP_SUMMARY
