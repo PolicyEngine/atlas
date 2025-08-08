@@ -20,15 +20,11 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: policy-library-app/package-lock.json
       - name: Install dependencies
-        working-directory: ./policy-library-app
         run: npm ci
       - name: ESLint
-        working-directory: ./policy-library-app
         run: npm run lint
       - name: Prettier Check
-        working-directory: ./policy-library-app
         run: npm run format:check
 
   type-check:
@@ -40,12 +36,9 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: policy-library-app/package-lock.json
       - name: Install dependencies
-        working-directory: ./policy-library-app
         run: npm ci
       - name: TypeScript Check
-        working-directory: ./policy-library-app
         run: npm run type-check
 
   build:
@@ -57,18 +50,15 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: policy-library-app/package-lock.json
       - name: Install dependencies
-        working-directory: ./policy-library-app
         run: npm ci
       - name: Build
-        working-directory: ./policy-library-app
         run: npm run build
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: policy-library-app/dist/
+          path: dist/
           retention-days: 1
 
   summary:

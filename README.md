@@ -1,131 +1,69 @@
-# PolicyEngine Policy Library
+# React + TypeScript + Vite
 
-AI-Powered Infrastructure for Every Benefit Rule in America
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview
+Currently, two official plugins are available:
 
-The Policy Library creates an immutable archive of every statute, regulation, and form that defines benefit eligibility across the United States. Our AI crawlers monitor agency websites weekly, capturing changes before documents disappear, and human reviewers verify accuracy through GitHub pull requests.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Live Demo
+## Expanding the ESLint configuration
 
-Visit the live application: [https://policyengine.github.io/policy-library/](https://policyengine.github.io/policy-library/)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## Problem We Solve
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- **18% of benefit program URLs from 2019 are dead today**
-- When CaseText shut down, thousands of legal references vanished overnight
-- State websites reorganize constantly, breaking links that power benefit calculators
-- Families lose benefits and organizations waste thousands of hours maintaining broken systems
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-## Our Solution
-
-1. **AI Crawls**: Claude/GPT-4 monitors 50+ jurisdictions weekly
-2. **Humans Verify**: GitHub pull request review process
-3. **Partners Build**: Stable API with permanent source IDs
-
-## Impact
-
-- **160,000** people served annually through partner tools
-- **50+** jurisdictions covered (federal + states)
-- **100,000+** documents archived with full version history
-- **24pp** accuracy improvement in LLM benefit calculations
-
-## Partnership Ecosystem
-
-### Research Institutions
-- Georgetown University
-- University of Michigan
-- NBER
-- USC
-
-### Direct Service Organizations
-- MyFriendBen (~3,500 screeners/month in Colorado)
-- Benefit Navigator (Gates/Nava AI partnership)
-- Navvy
-- Benefit Kitchen
-
-### Government Partners
-- Atlanta Fed (advisor with Policy Rules Database)
-- Georgia Center for Opportunity
-- Various state agencies
-
-## Technical Architecture
-
-- **AI Crawling**: Claude/GPT-4 powered intelligent extraction
-- **Storage**: Git repositories (one per jurisdiction) with Git LFS for PDFs
-- **Web Archiving**: Browsertrix for web-based statutes/regulations (WARC format)
-- **Search**: OpenSearch for full-text search capabilities
-- **API**: Stable source_id system to replace fragile direct links
-
-## Development
-
-### Prerequisites
-- Node.js >= 18
-- npm >= 9
-
-### Local Development
-```bash
-# Install dependencies
-cd policy-library-app
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Deploy to GitHub Pages
-npm run deploy
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-### Repository Structure
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-policy-library/
-├── policy-library-app/     # React application
-│   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── App.tsx        # Main app component
-│   │   └── App.css        # PolicyEngine styling
-│   └── package.json       # Dependencies and scripts
-├── one-pager.html         # Standalone PBIF proposal
-├── CLAUDE.md             # AI assistant instructions
-└── README.md             # This file
-```
-
-## PBIF Application
-
-This repository supports our application to the Public Benefit Innovation Fund (PBIF) Summer 2025 Open Call.
-
-### Funding Request
-- **Year 1 Budget**: $498,000
-- **Personnel (2.5 FTE)**: $405,000
-- **Partner Micro-grants**: $60,000
-- **Cloud & Infrastructure**: $18,000
-- **Contingency**: $15,000
-
-### Timeline
-- **Q1**: Core infrastructure & AI crawler development
-- **Q2**: 10 state pilots, partner integration
-- **Q3**: Scale to 30 states, API launch
-- **Q4**: Full 50+ jurisdiction deployment
-
-### Application Deadline
-August 16, 2025, 11:59 PM PT
-
-## Existing Work
-
-- **Pilot Repositories**: 
-  - [us-nc-sources](https://github.com/PolicyEngine/us-nc-sources) - North Carolina documents
-  - Atlanta Fed Policy Rules Database collaboration
-- **Related Projects**: PolicyEngine microsimulation models for US, UK, Canada, and other countries
-
-## Contact
-
-**Max Ghenis, CEO**  
-Email: max@policyengine.org  
-Website: [policyengine.org](https://policyengine.org)
-
-## License
-
-Public Domain (Unlicense)

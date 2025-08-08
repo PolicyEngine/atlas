@@ -20,35 +20,32 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: policy-library-app/package-lock.json
+          cache-dependency-path: package-lock.json
           
       - name: Install dependencies
-        working-directory: ./policy-library-app
         run: npm ci
         
       - name: Type check
-        working-directory: ./policy-library-app
         run: npm run type-check
         
       - name: Build project
-        working-directory: ./policy-library-app
         run: npm run build
         
       - name: Check build output
         run: |
-          if [ ! -d "policy-library-app/dist" ]; then
+          if [ ! -d "dist" ]; then
             echo "❌ Build failed - dist directory not found"
             exit 1
           fi
           echo "✅ Build successful - dist directory exists"
           echo "📦 Build contents:"
-          ls -la policy-library-app/dist/
+          ls -la dist/
           
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: policy-library-app/dist/
+          path: dist/
           retention-days: 1
           
       - name: Build Summary

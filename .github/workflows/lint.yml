@@ -4,12 +4,14 @@ on:
   pull_request:
     branches: [ main ]
     paths:
-      - 'policy-library-app/**'
+      - 'src/**'
+      - 'package.json'
       - '.github/workflows/lint.yml'
   push:
     branches: [ main ]
     paths:
-      - 'policy-library-app/**'
+      - 'src/**'
+      - 'package.json'
       - '.github/workflows/lint.yml'
 
 jobs:
@@ -26,28 +28,24 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: policy-library-app/package-lock.json
+          cache-dependency-path: package-lock.json
           
       - name: Install dependencies
-        working-directory: ./policy-library-app
         run: npm ci
         
       - name: Run ESLint
-        working-directory: ./policy-library-app
         run: |
           echo "::group::Running ESLint"
           npm run lint
           echo "::endgroup::"
         
       - name: Check TypeScript
-        working-directory: ./policy-library-app
         run: |
           echo "::group::TypeScript Type Checking"
           npx tsc --noEmit
           echo "::endgroup::"
           
       - name: Format check with Prettier
-        working-directory: ./policy-library-app
         run: |
           echo "::group::Prettier Format Check"
           npx prettier --check "src/**/*.{ts,tsx,css}" || true
