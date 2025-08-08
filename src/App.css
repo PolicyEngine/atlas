@@ -22,6 +22,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -38,6 +43,7 @@ body {
 }
 
 .app {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,10 +51,12 @@ body {
 
 main {
   flex: 1;
+  width: 100%;
 }
 
 /* Navigation */
 .nav-container {
+  width: 100%;
   background: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -58,11 +66,13 @@ main {
 
 .nav {
   width: 100%;
+  max-width: none;
   margin: 0;
-  padding: 15px 40px;
+  padding: 15px 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -120,11 +130,12 @@ main {
 
 /* Hero */
 .hero {
+  width: 100%;
   background: linear-gradient(135deg, var(--blue), var(--teal-pressed));
   color: var(--white);
-  padding: 80px 5%;
+  padding: 80px 2%;
   text-align: center;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero h1 {
@@ -165,25 +176,27 @@ main {
 /* Content */
 .content {
   width: 100%;
-  max-width: 100%;
+  max-width: none;
   margin: 0;
-  padding: 60px 3%;
+  padding: 40px 2%;
   box-sizing: border-box;
 }
 
 /* Full width sections */
 .section {
   width: 100%;
+  max-width: 100%;
   min-height: calc(100vh - 200px);
 }
 
 /* Cards */
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .card {
@@ -218,12 +231,13 @@ main {
 
 /* Workflow */
 .workflow-container {
+  width: 100%;
   background: var(--white);
   border-radius: 12px;
   padding: 40px;
   margin-bottom: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .workflow-title {
@@ -280,11 +294,12 @@ main {
 
 /* Demo */
 .demo-container {
+  width: 100%;
   background: var(--white);
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .demo-title {
@@ -416,12 +431,13 @@ main {
 
 /* Partners */
 .partners-container {
+  width: 100%;
   background: var(--white);
   border-radius: 12px;
   padding: 40px;
   margin-bottom: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .partners-title {
@@ -645,11 +661,12 @@ main {
 
 /* Budget & Timeline */
 .budget-timeline-container {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
   gap: 40px;
   margin-bottom: 40px;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .budget-card,
@@ -698,11 +715,13 @@ main {
 
 /* Footer */
 .footer {
+  width: 100%;
   background: var(--darkest-blue);
   color: var(--white);
-  padding: 40px 20px;
+  padding: 40px 2%;
   text-align: center;
   margin-top: auto;
+  box-sizing: border-box;
 }
 
 .footer-title {
@@ -782,11 +801,13 @@ main {
 }
 
 .application-section {
+  width: 100%;
   background: var(--white);
   border-radius: 12px;
   padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -1084,11 +1105,13 @@ main {
 }
 
 .engine-section {
+  width: 100%;
   background: var(--white);
   border-radius: 12px;
   padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .engine-box {

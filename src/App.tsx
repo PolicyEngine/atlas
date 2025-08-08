@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Overview from './components/Overview';
 import Demo from './components/Demo';
@@ -7,9 +7,23 @@ import Proposal from './components/Proposal';
 import PBIFApplication from './components/PBIFApplication';
 import ENGINEApplication from './components/ENGINEApplication';
 import Navigation from './components/Navigation';
+import LayoutTest from './components/LayoutTest';
 
 function App() {
   const [activeSection, setActiveSection] = useState<string>('overview');
+  const [showDebug, setShowDebug] = useState(false); // Press 'd' to toggle debug panel
+  
+  // Add keyboard shortcut for debug panel
+  React.useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'd' && e.ctrlKey) {
+        e.preventDefault();
+        setShowDebug(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
 
   return (
     <div className="app">
@@ -23,6 +37,8 @@ function App() {
         {activeSection === 'application' && <PBIFApplication />}
         {activeSection === 'engine' && <ENGINEApplication />}
       </main>
+      
+      {showDebug && <LayoutTest />}
 
       <footer className="footer">
         <h3 className="footer-title">Ready to Build America's Policy Infrastructure?</h3>
