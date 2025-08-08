@@ -23,24 +23,25 @@ function CommunityEngagement() {
         </div>
 
         <div className="engagement-section">
-          <h2>Accelerated Multilingual Support</h2>
+          <h2>Multilingual Access Strategy</h2>
           <p className="highlight-box">
-            <strong>Year 1 Commitment:</strong> Spanish language support will launch within 12 months, 
-            serving the 13% of Americans who are Spanish speakers. We're partnering with UnidosUS 
-            and local Latino-serving organizations for translation verification and cultural adaptation.
+            <strong>Pragmatic Approach:</strong> Rather than complex i18n systems, we'll leverage 
+            Google Translate API for automatic document translation with clear disclaimers about 
+            official English versions. This provides immediate access in 100+ languages while 
+            community reviewers can flag and improve critical translations.
           </p>
           <div className="timeline">
             <div className="timeline-item">
-              <strong>Months 1-3:</strong> Community language needs assessment
+              <strong>Month 1:</strong> Google Translate API integration for all documents
             </div>
             <div className="timeline-item">
-              <strong>Months 4-6:</strong> Spanish translation and verification
+              <strong>Months 2-3:</strong> Community review system for translation accuracy
             </div>
             <div className="timeline-item">
-              <strong>Months 7-9:</strong> Spanish interface development and testing
+              <strong>Months 4-6:</strong> Priority language verification (Spanish, Chinese, Arabic)
             </div>
             <div className="timeline-item">
-              <strong>Months 10-12:</strong> Spanish launch with community training
+              <strong>Ongoing:</strong> Community-submitted translation improvements
             </div>
           </div>
         </div>
@@ -70,13 +71,36 @@ function CommunityEngagement() {
         </div>
 
         <div className="engagement-section">
+          <h2>Universal Document Accessibility</h2>
+          <div className="accessibility-features">
+            <h3>Multiple Format Support</h3>
+            <ul>
+              <li><strong>Automatic Text Extraction:</strong> All PDFs processed with pdf2text to create searchable plaintext versions</li>
+              <li><strong>Screen Reader Compatible:</strong> Plaintext versions ensure full accessibility for vision-impaired users</li>
+              <li><strong>Low-Bandwidth Access:</strong> Text versions load 100x faster than PDFs on slow connections</li>
+              <li><strong>API Flexibility:</strong> Serve documents as PDF, plaintext, HTML, or JSON based on client needs</li>
+              <li><strong>Offline Packages:</strong> Compressed text bundles for entire programs/jurisdictions</li>
+            </ul>
+            
+            <h3>Technical Implementation</h3>
+            <ul>
+              <li><strong>pdf2text Pipeline:</strong> Automatic extraction on document ingestion</li>
+              <li><strong>OCR Fallback:</strong> Tesseract OCR for scanned/image-based PDFs</li>
+              <li><strong>Structure Preservation:</strong> Maintain headings, tables, and lists in plaintext</li>
+              <li><strong>Metadata Extraction:</strong> Pull dates, titles, and references automatically</li>
+              <li><strong>Version Control:</strong> Track both PDF and text versions in Git</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="engagement-section">
           <h2>Digital Equity Initiatives</h2>
           <ul>
-            <li><strong>Offline Access:</strong> Downloadable document packages for areas with limited internet</li>
+            <li><strong>Universal Translation:</strong> Google Translate API for 100+ languages with community verification</li>
             <li><strong>Library Partnerships:</strong> Integration with public library systems for community access</li>
-            <li><strong>Print-Friendly Formats:</strong> All documents available in printer-optimized versions</li>
             <li><strong>Mobile Optimization:</strong> Full functionality on low-bandwidth mobile connections</li>
             <li><strong>Community Tech Centers:</strong> Partner with existing centers for training and access</li>
+            <li><strong>Print-Friendly Formats:</strong> All documents available in printer-optimized versions</li>
           </ul>
         </div>
 

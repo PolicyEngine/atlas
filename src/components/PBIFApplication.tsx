@@ -342,8 +342,9 @@ function PBIFApplication() {
               <strong>Architecture:</strong> Crawler service using LangChain for AI orchestration.
               Leverages OpenStates schema for legislative documents ensuring consistency across
               states. GitHub for version control and human review workflow. PostgreSQL for metadata,
-              S3 for document storage. REST API using FastAPI for document access. CloudFlare CDN
-              for global distribution. Monitoring via Datadog for system health.
+              S3 for document storage with automatic pdf2text extraction for plaintext versions.
+              REST API using FastAPI for multi-format document access (PDF, text, HTML, JSON).
+              Google Translate API for 100+ language support. CloudFlare CDN for global distribution.
             </p>
             <p>
               This hybrid approach leverages AI's ability to process vast amounts of information
