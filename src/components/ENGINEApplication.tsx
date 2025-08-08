@@ -16,10 +16,10 @@ function ENGINEApplication() {
               src="https://docs.google.com/presentation/d/1NTtqyQnCqU2sB8Fan9NUxb9RNoWbGg3iI7T3CdmxZLQ/embed?start=false&loop=false&delayms=3000"
               width="100%"
               height="700"
-              style={{ 
+              style={{
                 border: 'none',
-                borderRadius: '8px', 
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' 
+                borderRadius: '8px',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
               }}
               title="PolicyEngine ENG(INE) Application Presentation"
               allowFullScreen={true}

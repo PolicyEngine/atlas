@@ -1,6 +1,6 @@
 /**
  * TDD Test for Full-Screen Layout
- * 
+ *
  * Requirements:
  * 1. The app should use the full viewport width (no white margins on sides)
  * 2. Content containers should extend edge-to-edge
@@ -27,10 +27,10 @@ describe('Full-Screen Layout E2E Tests', () => {
 
   test('Demo page should use full viewport width', async () => {
     await page.goto(APP_URL);
-    
+
     // Click on Live Demo tab
     await page.click('text=Live Demo');
-    await new Promise(r => setTimeout(r, 500)); // Wait for transition
+    await new Promise((r) => setTimeout(r, 500)); // Wait for transition
 
     // Get viewport width
     const viewportWidth = await page.evaluate(() => window.innerWidth);
@@ -43,19 +43,19 @@ describe('Full-Screen Layout E2E Tests', () => {
 
     // The demo container should be at least 95% of viewport width
     expect(demoContainerWidth).toBeGreaterThan(viewportWidth * 0.95);
-    
+
     // Check there's no significant left margin
     const demoContainerLeft = await page.evaluate(() => {
       const demo = document.querySelector('.demo-container');
       return demo ? demo.getBoundingClientRect().left : 0;
     });
-    
+
     expect(demoContainerLeft).toBeLessThan(50); // Should have minimal or no left margin
   });
 
   test('Content wrapper should not add unnecessary padding', async () => {
     await page.goto(APP_URL);
-    
+
     const contentPadding = await page.evaluate(() => {
       const content = document.querySelector('.content');
       if (!content) return null;
@@ -70,7 +70,7 @@ describe('Full-Screen Layout E2E Tests', () => {
     // Content should have minimal or no horizontal padding
     expect(parseInt(contentPadding?.paddingLeft || '0')).toBeLessThan(50);
     expect(parseInt(contentPadding?.paddingRight || '0')).toBeLessThan(50);
-    
+
     // Content width should be full viewport
     const viewportWidth = await page.evaluate(() => window.innerWidth);
     expect(contentPadding?.width).toBeGreaterThan(viewportWidth * 0.95);
@@ -78,19 +78,22 @@ describe('Full-Screen Layout E2E Tests', () => {
 
   test('No elements should overflow viewport horizontally', async () => {
     await page.goto(APP_URL);
-    
+
     const overflowingElements = await page.evaluate(() => {
       const viewportWidth = window.innerWidth;
       const elements = document.querySelectorAll('*');
       const overflowing: string[] = [];
-      
-      elements.forEach(el => {
+
+      elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
-        if (rect.right > viewportWidth + 5) { // 5px tolerance
-          overflowing.push(`${el.className || el.tagName}: ${rect.right - viewportWidth}px overflow`);
+        if (rect.right > viewportWidth + 5) {
+          // 5px tolerance
+          overflowing.push(
+            `${el.className || el.tagName}: ${rect.right - viewportWidth}px overflow`
+          );
         }
       });
-      
+
       return overflowing;
     });
 
@@ -99,14 +102,14 @@ describe('Full-Screen Layout E2E Tests', () => {
 
   test('Cards grid should use available width efficiently', async () => {
     await page.goto(APP_URL);
-    
+
     const cardsGridInfo = await page.evaluate(() => {
       const grid = document.querySelector('.cards-grid');
       if (!grid) return null;
-      
+
       const rect = grid.getBoundingClientRect();
       const parent = grid.parentElement?.getBoundingClientRect();
-      
+
       return {
         width: rect.width,
         parentWidth: parent?.width || 0,
@@ -117,7 +120,7 @@ describe('Full-Screen Layout E2E Tests', () => {
     if (cardsGridInfo) {
       // Cards grid should use most of its parent's width
       expect(cardsGridInfo.width).toBeGreaterThan(cardsGridInfo.parentWidth * 0.9);
-      
+
       // Should not have large left margin
       expect(cardsGridInfo.left).toBeLessThan(50);
     }
@@ -125,19 +128,19 @@ describe('Full-Screen Layout E2E Tests', () => {
 
   test('Visual regression: take screenshot for manual review', async () => {
     await page.goto(APP_URL);
-    
+
     // Take screenshots of each section
     const sections = ['Overview', 'Live Demo', 'Partners'];
-    
+
     for (const section of sections) {
       if (section !== 'Overview') {
         await page.click(`text=${section}`);
-        await new Promise(r => setTimeout(r, 500));
+        await new Promise((r) => setTimeout(r, 500));
       }
-      
-      await page.screenshot({ 
+
+      await page.screenshot({
         path: `test-screenshots/${section.toLowerCase().replace(' ', '-')}.png`,
-        fullPage: false 
+        fullPage: false,
       });
     }
   });

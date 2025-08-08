@@ -68,13 +68,25 @@ function LayoutTest() {
           Nav: {measurements.navWidth}px {isFullWidth(measurements.navWidth) ? '✓' : '✗'}
         </div>
         <div style={{ color: isFullWidth(measurements.contentWidth) ? '#4ade80' : '#f87171' }}>
-          Content: {measurements.contentWidth}px {isFullWidth(measurements.contentWidth) ? '✓' : '✗'}
+          Content: {measurements.contentWidth}px{' '}
+          {isFullWidth(measurements.contentWidth) ? '✓' : '✗'}
         </div>
         <div style={{ color: isFullWidth(measurements.heroWidth) ? '#4ade80' : '#f87171' }}>
           Hero: {measurements.heroWidth}px {isFullWidth(measurements.heroWidth) ? '✓' : '✗'}
         </div>
-        <div style={{ color: measurements.cardsWidth > 0 && measurements.cardsWidth >= measurements.contentWidth * 0.9 ? '#4ade80' : '#f87171' }}>
-          Cards: {measurements.cardsWidth}px {measurements.cardsWidth > 0 && measurements.cardsWidth >= measurements.contentWidth * 0.9 ? '✓' : '✗'}
+        <div
+          style={{
+            color:
+              measurements.cardsWidth > 0 &&
+              measurements.cardsWidth >= measurements.contentWidth * 0.9
+                ? '#4ade80'
+                : '#f87171',
+          }}
+        >
+          Cards: {measurements.cardsWidth}px{' '}
+          {measurements.cardsWidth > 0 && measurements.cardsWidth >= measurements.contentWidth * 0.9
+            ? '✓'
+            : '✗'}
         </div>
       </div>
       <div style={{ marginTop: '10px', fontSize: '10px', opacity: 0.7 }}>

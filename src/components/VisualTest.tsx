@@ -19,22 +19,27 @@ function VisualTest() {
       const elements = document.querySelectorAll('*');
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
-        
+
         // Check if element overflows viewport
         if (rect.right > viewportWidth) {
-          issues.push(`${el.className || el.tagName} overflows right by ${rect.right - viewportWidth}px`);
+          issues.push(
+            `${el.className || el.tagName} overflows right by ${rect.right - viewportWidth}px`
+          );
         }
-        
+
         // Check for unnecessary margins creating gaps
-        
-        if (rect.width < viewportWidth && 
-            rect.width > 0 && 
-            el.classList.contains('content') || 
-            el.classList.contains('section') ||
-            el.classList.contains('demo-container')) {
+
+        if (
+          (rect.width < viewportWidth && rect.width > 0 && el.classList.contains('content')) ||
+          el.classList.contains('section') ||
+          el.classList.contains('demo-container')
+        ) {
           const gap = viewportWidth - rect.width;
-          if (gap > 40) { // More than 40px gap is significant
-            issues.push(`${el.className} is ${gap}px narrower than viewport (width: ${rect.width}px)`);
+          if (gap > 40) {
+            // More than 40px gap is significant
+            issues.push(
+              `${el.className} is ${gap}px narrower than viewport (width: ${rect.width}px)`
+            );
           }
         }
       });
@@ -44,7 +49,9 @@ function VisualTest() {
       if (content) {
         const contentRect = content.getBoundingClientRect();
         if (contentRect.width < viewportWidth - 10) {
-          issues.push(`.content is not full width: ${contentRect.width}px vs viewport ${viewportWidth}px`);
+          issues.push(
+            `.content is not full width: ${contentRect.width}px vs viewport ${viewportWidth}px`
+          );
         }
       }
 
@@ -52,7 +59,9 @@ function VisualTest() {
       if (demoContainer) {
         const rect = demoContainer.getBoundingClientRect();
         const styles = window.getComputedStyle(demoContainer);
-        issues.push(`Demo container: width=${rect.width}px, left=${rect.left}px, padding=${styles.padding}`);
+        issues.push(
+          `Demo container: width=${rect.width}px, left=${rect.left}px, padding=${styles.padding}`
+        );
       }
 
       setDimensions({
@@ -63,10 +72,10 @@ function VisualTest() {
 
     checkLayout();
     window.addEventListener('resize', checkLayout);
-    
+
     // Also check after a delay to catch any async rendering
     setTimeout(checkLayout, 100);
-    
+
     return () => window.removeEventListener('resize', checkLayout);
   }, []);
 
@@ -89,8 +98,10 @@ function VisualTest() {
       }}
     >
       <h4 style={{ margin: '0 0 10px 0' }}>Layout Issues</h4>
-      <div>Viewport: {dimensions.viewport.width} x {dimensions.viewport.height}</div>
-      
+      <div>
+        Viewport: {dimensions.viewport.width} x {dimensions.viewport.height}
+      </div>
+
       {dimensions.issues.length === 0 ? (
         <div style={{ color: '#4ade80', marginTop: '10px' }}>✓ No layout issues detected</div>
       ) : (

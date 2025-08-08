@@ -52,7 +52,9 @@ function Demo() {
   };
 
   const handleSubmitDocument = () => {
-    alert('Mock-up: This would create a GitHub PR with your document for review by PolicyEngine maintainers.');
+    alert(
+      'Mock-up: This would create a GitHub PR with your document for review by PolicyEngine maintainers.'
+    );
   };
 
   const handleDownload = (docId: string) => {
@@ -68,7 +70,7 @@ function Demo() {
         versions: 12,
         excerpt:
           'This document defines the eligibility criteria and application procedures for benefits under this program...',
-        url: `https://policy-library.org/docs/${jurisdiction}/${program}/eligibility.pdf`
+        url: `https://policy-library.org/docs/${jurisdiction}/${program}/eligibility.pdf`,
       },
       {
         title: `${programNames[program]} Income Limits and Asset Tests`,
@@ -77,7 +79,7 @@ function Demo() {
         versions: 8,
         excerpt:
           'Income and asset limits are adjusted annually based on federal poverty guidelines and cost of living...',
-        url: `https://policy-library.org/docs/${jurisdiction}/${program}/income-limits.pdf`
+        url: `https://policy-library.org/docs/${jurisdiction}/${program}/income-limits.pdf`,
       },
       {
         title: `Administrative Procedures for ${programNames[program]}`,
@@ -86,7 +88,7 @@ function Demo() {
         versions: 15,
         excerpt:
           'State agencies must follow these procedures when processing applications and conducting reviews...',
-        url: `https://policy-library.org/docs/${jurisdiction}/${program}/admin-procedures.pdf`
+        url: `https://policy-library.org/docs/${jurisdiction}/${program}/admin-procedures.pdf`,
       },
     ];
   };
@@ -111,24 +113,32 @@ documents = response.json()`;
       <div className="content">
         <div className="demo-container">
           <h2 className="demo-title">Policy Library Mock-up</h2>
-          <p style={{ textAlign: 'center', color: 'var(--gray)', marginBottom: '30px', fontStyle: 'italic' }}>
-            This is a mock-up demonstration. The actual Policy Library will be fully functional upon funding.
+          <p
+            style={{
+              textAlign: 'center',
+              color: 'var(--gray)',
+              marginBottom: '30px',
+              fontStyle: 'italic',
+            }}
+          >
+            This is a mock-up demonstration. The actual Policy Library will be fully functional upon
+            funding.
           </p>
-          
+
           <div className="demo-tabs">
-            <button 
+            <button
               className={`demo-tab ${activeTab === 'search' ? 'active' : ''}`}
               onClick={() => setActiveTab('search')}
             >
               🔍 Search & Retrieve
             </button>
-            <button 
+            <button
               className={`demo-tab ${activeTab === 'upload' ? 'active' : ''}`}
               onClick={() => setActiveTab('upload')}
             >
               📤 Submit Document
             </button>
-            <button 
+            <button
               className={`demo-tab ${activeTab === 'api' ? 'active' : ''}`}
               onClick={() => setActiveTab('api')}
             >
@@ -190,7 +200,11 @@ documents = response.json()`;
                           {doc.title}
                         </h4>
                         <p
-                          style={{ fontSize: '14px', color: 'var(--dark-gray)', marginBottom: '10px' }}
+                          style={{
+                            fontSize: '14px',
+                            color: 'var(--dark-gray)',
+                            marginBottom: '10px',
+                          }}
                         >
                           {doc.excerpt}
                         </p>
@@ -206,7 +220,7 @@ documents = response.json()`;
                           </div>
                         </div>
                         <div style={{ marginTop: '15px' }}>
-                          <button 
+                          <button
                             className="demo-download-btn"
                             onClick={() => handleDownload(doc.id)}
                             style={{
@@ -216,14 +230,12 @@ documents = response.json()`;
                               border: 'none',
                               borderRadius: '4px',
                               cursor: 'pointer',
-                              marginRight: '10px'
+                              marginRight: '10px',
                             }}
                           >
                             📥 Download (Mock)
                           </button>
-                          <span style={{ fontSize: '12px', color: 'var(--gray)' }}>
-                            {doc.url}
-                          </span>
+                          <span style={{ fontSize: '12px', color: 'var(--gray)' }}>{doc.url}</span>
                         </div>
                       </div>
                     ))}
@@ -237,21 +249,31 @@ documents = response.json()`;
             <div className="demo-upload-section">
               <h3>Submit a New Document</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Contribute to the Policy Library by submitting new or updated policy documents. 
-                Your submission will create a GitHub pull request for review.
+                Contribute to the Policy Library by submitting new or updated policy documents. Your
+                submission will create a GitHub pull request for review.
               </p>
-              
-              <div style={{ background: 'var(--blue-98)', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
+
+              <div
+                style={{
+                  background: 'var(--blue-98)',
+                  padding: '20px',
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                }}
+              >
                 <label style={{ display: 'block', marginBottom: '10px' }}>
                   <strong>Document Details</strong>
                 </label>
-                
+
                 <div style={{ marginBottom: '15px' }}>
-                  <label htmlFor="doc-jurisdiction" style={{ display: 'block', marginBottom: '5px' }}>
+                  <label
+                    htmlFor="doc-jurisdiction"
+                    style={{ display: 'block', marginBottom: '5px' }}
+                  >
                     Jurisdiction
                   </label>
-                  <select 
-                    id="doc-jurisdiction" 
+                  <select
+                    id="doc-jurisdiction"
                     style={{ width: '100%', padding: '8px', borderRadius: '4px' }}
                     value={jurisdiction}
                     onChange={(e) => setJurisdiction(e.target.value)}
@@ -268,8 +290,8 @@ documents = response.json()`;
                   <label htmlFor="doc-program" style={{ display: 'block', marginBottom: '5px' }}>
                     Program
                   </label>
-                  <select 
-                    id="doc-program" 
+                  <select
+                    id="doc-program"
                     style={{ width: '100%', padding: '8px', borderRadius: '4px' }}
                     value={program}
                     onChange={(e) => setProgram(e.target.value)}
@@ -283,12 +305,10 @@ documents = response.json()`;
                 </div>
 
                 <div style={{ marginBottom: '15px' }}>
-                  <label style={{ display: 'block', marginBottom: '5px' }}>
-                    Upload Method
-                  </label>
+                  <label style={{ display: 'block', marginBottom: '5px' }}>Upload Method</label>
                   <div style={{ marginBottom: '10px' }}>
-                    <input 
-                      type="file" 
+                    <input
+                      type="file"
                       onChange={handleFileUpload}
                       accept=".pdf,.doc,.docx,.txt"
                       style={{ marginBottom: '10px' }}
@@ -300,8 +320,8 @@ documents = response.json()`;
                     )}
                   </div>
                   <div style={{ marginBottom: '10px' }}>
-                    <input 
-                      type="url" 
+                    <input
+                      type="url"
                       placeholder="Or paste document URL..."
                       value={uploadUrl}
                       onChange={(e) => setUploadUrl(e.target.value)}
@@ -310,7 +330,7 @@ documents = response.json()`;
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={handleSubmitDocument}
                   style={{
                     padding: '10px 20px',
@@ -320,19 +340,21 @@ documents = response.json()`;
                     borderRadius: '4px',
                     cursor: 'pointer',
                     width: '100%',
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Submit Document (Creates GitHub PR)
                 </button>
               </div>
 
-              <div style={{ 
-                background: '#fff3cd', 
-                border: '1px solid #ffc107', 
-                padding: '15px', 
-                borderRadius: '4px' 
-              }}>
+              <div
+                style={{
+                  background: '#fff3cd',
+                  border: '1px solid #ffc107',
+                  padding: '15px',
+                  borderRadius: '4px',
+                }}
+              >
                 <strong>📝 Mock-up Note:</strong> In the live system, this would:
                 <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
                   <li>Validate the document format and metadata</li>
@@ -353,7 +375,14 @@ documents = response.json()`;
 
               <div style={{ marginBottom: '20px' }}>
                 <h4>Endpoints</h4>
-                <div style={{ background: 'var(--blue-98)', padding: '15px', borderRadius: '8px', fontFamily: 'monospace' }}>
+                <div
+                  style={{
+                    background: 'var(--blue-98)',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    fontFamily: 'monospace',
+                  }}
+                >
                   <div style={{ marginBottom: '10px' }}>
                     <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
                     <code> /v1/documents</code> - Search and retrieve documents
@@ -375,27 +404,31 @@ documents = response.json()`;
 
               <div style={{ marginBottom: '20px' }}>
                 <h4>Example Code</h4>
-                <pre style={{ 
-                  background: '#2d2d2d', 
-                  color: '#f8f8f2', 
-                  padding: '15px', 
-                  borderRadius: '8px',
-                  overflow: 'auto'
-                }}>
+                <pre
+                  style={{
+                    background: '#2d2d2d',
+                    color: '#f8f8f2',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    overflow: 'auto',
+                  }}
+                >
                   <code>{apiExample}</code>
                 </pre>
               </div>
 
               <div style={{ marginBottom: '20px' }}>
                 <h4>Response Format</h4>
-                <pre style={{ 
-                  background: '#2d2d2d', 
-                  color: '#f8f8f2', 
-                  padding: '15px', 
-                  borderRadius: '8px',
-                  overflow: 'auto',
-                  fontSize: '14px'
-                }}>
+                <pre
+                  style={{
+                    background: '#2d2d2d',
+                    color: '#f8f8f2',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    overflow: 'auto',
+                    fontSize: '14px',
+                  }}
+                >
                   <code>{`{
   "documents": [
     {
@@ -423,12 +456,14 @@ documents = response.json()`;
                 </pre>
               </div>
 
-              <div style={{ 
-                background: '#d4edda', 
-                border: '1px solid #28a745', 
-                padding: '15px', 
-                borderRadius: '4px' 
-              }}>
+              <div
+                style={{
+                  background: '#d4edda',
+                  border: '1px solid #28a745',
+                  padding: '15px',
+                  borderRadius: '4px',
+                }}
+              >
                 <strong>🔑 Mock-up Note:</strong> The production API will include:
                 <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
                   <li>Authentication via API keys</li>

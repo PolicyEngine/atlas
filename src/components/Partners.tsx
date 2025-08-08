@@ -20,13 +20,13 @@ interface PartnersYAML {
 
 function Partners() {
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
-  
+
   // Parse YAML data
   const data = yaml.load(partnersData) as PartnersYAML;
   const partners = data.partners;
 
   // Group partners by category for display
-  const categories = [...new Set(partners.map(p => p.category))];
+  const categories = [...new Set(partners.map((p) => p.category))];
 
   return (
     <div className="section">
@@ -36,14 +36,16 @@ function Partners() {
           <p className="partners-subtitle">
             Leading institutions collaborating to transform benefits access in America
           </p>
-          
+
           <div className="partners-stats">
             <div className="partner-stat">
               <div className="partner-stat-number">{partners.length}</div>
               <div className="partner-stat-label">Partner Organizations</div>
             </div>
             <div className="partner-stat">
-              <div className="partner-stat-number">{partners.filter(p => p.status.includes('Active')).length}</div>
+              <div className="partner-stat-number">
+                {partners.filter((p) => p.status.includes('Active')).length}
+              </div>
               <div className="partner-stat-label">Active Contributors</div>
             </div>
             <div className="partner-stat">
@@ -54,22 +56,25 @@ function Partners() {
 
           <div className="partners-logo-grid">
             {partners.map((partner, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="partner-logo-item"
                 onClick={() => setSelectedPartner(partner)}
               >
                 <div className="partner-logo">
                   {partner.logo.startsWith('/') ? (
-                    <img 
-                      src={`/policy-library${partner.logo}`} 
+                    <img
+                      src={`/policy-library${partner.logo}`}
                       alt={partner.name}
                       onError={(e) => {
                         // Fallback to text if image fails to load
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
                         const fallback = document.createElement('div');
-                        fallback.textContent = partner.name.split(' ').map(w => w[0]).join('');
+                        fallback.textContent = partner.name
+                          .split(' ')
+                          .map((w) => w[0])
+                          .join('');
                         fallback.style.fontSize = '24px';
                         fallback.style.fontWeight = 'bold';
                         fallback.style.color = '#2C6496';
@@ -90,13 +95,15 @@ function Partners() {
           {selectedPartner && (
             <div className="partner-modal" onClick={() => setSelectedPartner(null)}>
               <div className="partner-modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="modal-close" onClick={() => setSelectedPartner(null)}>×</button>
-                
+                <button className="modal-close" onClick={() => setSelectedPartner(null)}>
+                  ×
+                </button>
+
                 <div className="modal-header">
                   <div className="modal-logo">
                     {selectedPartner.logo.startsWith('/') ? (
-                      <img 
-                        src={`/policy-library${selectedPartner.logo}`} 
+                      <img
+                        src={`/policy-library${selectedPartner.logo}`}
                         alt={selectedPartner.name}
                         style={{ maxHeight: '64px', maxWidth: '200px' }}
                       />
@@ -117,9 +124,9 @@ function Partners() {
                   <h4>Partnership Overview</h4>
                   <ReactMarkdown>{selectedPartner.involvement}</ReactMarkdown>
                   {selectedPartner.mou_link && (
-                    <a 
-                      href={selectedPartner.mou_link} 
-                      target="_blank" 
+                    <a
+                      href={selectedPartner.mou_link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       style={{
                         display: 'inline-block',
@@ -129,7 +136,7 @@ function Partners() {
                         color: 'white',
                         borderRadius: '4px',
                         textDecoration: 'none',
-                        fontWeight: 500
+                        fontWeight: 500,
                       }}
                     >
                       View MOU →

@@ -1537,9 +1537,7 @@ main {
 
 /* Download button hover */
 .demo-download-btn:hover {
-  background: var(--teal-pressed) \!important;
+  background: var(--teal-pressed) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(57, 198, 192, 0.3);
 }
-
-EOF < /dev/null
