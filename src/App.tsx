@@ -5,7 +5,6 @@ import Demo from './components/Demo';
 import Partners from './components/Partners';
 import PBIFApplication from './components/PBIFApplication';
 import ENGINEApplication from './components/ENGINEApplication';
-import CommunityEngagement from './components/CommunityEngagement';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         {activeSection === 'overview' && <Overview />}
         {activeSection === 'demo' && <Demo />}
         {activeSection === 'partners' && <Partners />}
-        {activeSection === 'community' && <CommunityEngagement />}
         {activeSection === 'application' && <PBIFApplication />}
         {activeSection === 'engine' && <ENGINEApplication />}
       </main>

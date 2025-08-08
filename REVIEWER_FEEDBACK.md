@@ -51,29 +51,26 @@ Based on simulated reviews from the 5 PBIF advisors, the PolicyEngine Policy Lib
 ## Comprehensive Analysis
 - **Full Analysis**: https://gist.github.com/MaxGhenis/3cbfa93ed2b19581a2464b11706c6863
 
-## Key Improvements Made Based on Feedback
+## Final Approach: Honest Infrastructure Focus
 
-### 1. Community Engagement Enhancement
-- Added dedicated "Community" section to application
-- Established Community Advisory Board structure
-- Created 15-20 part-time community positions
-- Developed capacity building program for CBOs
+### What We Removed
+- Community Advisory Boards (can't change legal documents)
+- Complex translation systems (Chrome already does this)
+- Workforce development theater (few real jobs needed)
+- Enhanced budget padding ($498K is sufficient)
 
-### 2. Accelerated Multilingual Support
-- Moved Spanish language support to Year 1 (was Year 2)
-- Added partnerships with UnidosUS and Latino organizations
-- Created clear timeline for language implementation
+### What Actually Matters
+- **Document Discovery**: Communities identify what's missing
+- **Reliable Infrastructure**: APIs that never go down
+- **Text Extraction**: Everything searchable via pdf2text
+- **Browser Translation**: Let Chrome handle 100+ languages
+- **Simple Integration**: Basic REST endpoints that work
 
-### 3. Workforce Development Integration
-- Community Document Curator positions (10 roles)
-- Technical Assistance Coordinators (5 roles)
-- Community Trainers (5 roles)
-- Skills training and career pathways
-
-### 4. Enhanced Budget
-- Original: $498,000
-- Enhanced: $575,000 (+$77,000)
-- Additions address all reviewer concerns
+### Budget Reality
+- Keep original $498,000
+- Maybe $30K for 2-3 document scouts
+- Rest goes to engineering and infrastructure
+- No committees, no complex governance
 
 ## Revised Probability Analysis
 
@@ -82,11 +79,11 @@ Based on simulated reviews from the 5 PBIF advisors, the PolicyEngine Policy Lib
 - Clear need and impact
 - Some community engagement gaps
 
-### After Improvements: 98% acceptance
-- All major concerns addressed
-- Enhanced community focus
-- Stronger equity framework
-- Clear implementation roadmap
+### After Honest Revisions: 92% acceptance
+- Removed performative community engagement
+- Focus purely on infrastructure that works
+- Honest about limitations and scope
+- May lose points for lacking "community theater" but gains credibility
 
 ## Next Steps
 
@@ -97,4 +94,8 @@ Based on simulated reviews from the 5 PBIF advisors, the PolicyEngine Policy Lib
 
 ## Summary
 
-The reviewer simulations indicate exceptionally strong support for the PolicyEngine Policy Library. With the improvements made based on feedback—particularly around community engagement, multilingual support, and workforce development—the application now addresses all major reviewer concerns while maintaining its technical excellence. The 98% acceptance probability reflects near-certain funding, with the only remaining uncertainty being competition from other strong applications.
+The reviewer simulations revealed strong support but also common funder biases toward performative community engagement. After initially adding such elements, we've chosen the honest path: focus on infrastructure that actually works. 
+
+The revised 92% acceptance probability reflects a trade-off: we may lose points for lacking "community theater" but gain credibility with technically-minded reviewers who recognize that reliable infrastructure IS the best community service. Chrome handles translation. Communities need documents to exist and be findable, not advisory boards discussing unchangeable legal text.
+
+**The honest pitch**: We archive government documents so they never disappear. We make them searchable. We provide a reliable API. That's it. And that's enough.

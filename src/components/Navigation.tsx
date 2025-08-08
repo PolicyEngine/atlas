@@ -10,7 +10,6 @@ function Navigation({ activeSection, setActiveSection }: NavigationProps) {
     { id: 'overview', label: 'Overview' },
     { id: 'demo', label: 'Mock-up' },
     { id: 'partners', label: 'Partners' },
-    { id: 'community', label: 'Community' },
     { id: 'application', label: 'PBIF Application' },
     { id: 'engine', label: 'ENG(INE) Application' },
   ];
