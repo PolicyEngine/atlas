@@ -437,28 +437,30 @@ function PBIFApplication() {
               and schema as foundation for our regulatory document archiving.
             </p>
             <p>
-              <strong>Engagement strategy:</strong> We approach agencies as partners, not
-              adversaries. Our preservation service benefits them by reducing FOIA requests,
-              providing historical archives, and improving public access. We offer agencies preview
-              access to their archived documents and notification of crawling activities.
+              <strong>Civic tech community engagement:</strong> Former Code for America brigades and
+              civic tech groups provide critical infrastructure support. These volunteer
+              technologists help identify missing documents, contribute crawlers for their local
+              jurisdictions, and validate data quality. Groups like Code for Boston, Chi Hack Night,
+              and OpenOakland have expressed interest in maintaining their state's coverage. This
+              distributed model ensures comprehensive coverage while building local ownership.
             </p>
             <p>
-              <strong>Critical stakeholder involvement:</strong> Direct service organizations
-              actively shape development. MyFriendBen and Benefit Navigator staff participate in
-              monthly design sessions, test beta features, and provide continuous feedback. Their
-              frontline experience guides prioritization.
-            </p>
-            <p>
-              <strong>Beneficiary engagement:</strong> Through partner organizations, we gather
-              input from families navigating benefits. User research sessions identify document
-              needs. Feedback forms on partner sites collect ongoing input. This indirect engagement
-              respects privacy while incorporating lived experience.
+              <strong>Direct service partnership:</strong> MyFriendBen and Benefit Navigator staff
+              participate in monthly design sessions, test beta features, and provide continuous
+              feedback. Their frontline experience guides prioritization. They identify which
+              documents are most critical for daily operations.
             </p>
             <p>
               <strong>Academic collaboration:</strong> Better Government Lab researchers contribute
               policy expertise and validation. Georgetown and Michigan teams use the system for
-              research, providing academic rigor. These partnerships ensure we're building
-              infrastructure that serves both immediate needs and long-term research goals.
+              research, providing academic rigor. The Atlanta Fed provides economic analysis of
+              benefit cliff effects using our comprehensive document archive.
+            </p>
+            <p>
+              <strong>Open source ecosystem:</strong> All code is public, enabling any developer to
+              contribute. Documentation encourages local adaptations. This transparency builds trust
+              with government agencies and ensures long-term sustainability beyond any single
+              organization.
             </p>
           </div>
 
