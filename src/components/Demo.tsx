@@ -15,26 +15,26 @@ function Demo() {
   const [showResults, setShowResults] = useState(false);
 
   const jurisdictionNames: Record<string, string> = {
-    'federal': 'Federal',
-    'nc': 'North Carolina',
-    'ca': 'California',
-    'ny': 'New York',
-    'tx': 'Texas'
+    federal: 'Federal',
+    nc: 'North Carolina',
+    ca: 'California',
+    ny: 'New York',
+    tx: 'Texas',
   };
 
   const programNames: Record<string, string> = {
-    'snap': 'SNAP',
-    'medicaid': 'Medicaid',
-    'tanf': 'TANF',
-    'wic': 'WIC',
-    'liheap': 'LIHEAP'
+    snap: 'SNAP',
+    medicaid: 'Medicaid',
+    tanf: 'TANF',
+    wic: 'WIC',
+    liheap: 'LIHEAP',
   };
 
   const doctypeNames: Record<string, string> = {
-    'statute': 'Statute',
-    'regulation': 'Regulation',
-    'form': 'Form',
-    'guidance': 'Guidance'
+    statute: 'Statute',
+    regulation: 'Regulation',
+    form: 'Form',
+    guidance: 'Guidance',
   };
 
   const searchDocuments = () => {
@@ -48,22 +48,25 @@ function Demo() {
         id: `${jurisdiction}_${program}_001`,
         lastUpdated: '2025-01-15',
         versions: 12,
-        excerpt: 'This document defines the eligibility criteria and application procedures for benefits under this program...'
+        excerpt:
+          'This document defines the eligibility criteria and application procedures for benefits under this program...',
       },
       {
         title: `${programNames[program]} Income Limits and Asset Tests`,
         id: `${jurisdiction}_${program}_002`,
         lastUpdated: '2025-01-08',
         versions: 8,
-        excerpt: 'Income and asset limits are adjusted annually based on federal poverty guidelines and cost of living...'
+        excerpt:
+          'Income and asset limits are adjusted annually based on federal poverty guidelines and cost of living...',
       },
       {
         title: `Administrative Procedures for ${programNames[program]}`,
         id: `${jurisdiction}_${program}_003`,
         lastUpdated: '2024-12-20',
         versions: 15,
-        excerpt: 'State agencies must follow these procedures when processing applications and conducting reviews...'
-      }
+        excerpt:
+          'State agencies must follow these procedures when processing applications and conducting reviews...',
+      },
     ];
   };
 
@@ -75,8 +78,8 @@ function Demo() {
           <div className="demo-controls">
             <div className="demo-select">
               <label htmlFor="jurisdiction">Jurisdiction</label>
-              <select 
-                id="jurisdiction" 
+              <select
+                id="jurisdiction"
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value)}
               >
@@ -89,11 +92,7 @@ function Demo() {
             </div>
             <div className="demo-select">
               <label htmlFor="program">Program</label>
-              <select 
-                id="program"
-                value={program}
-                onChange={(e) => setProgram(e.target.value)}
-              >
+              <select id="program" value={program} onChange={(e) => setProgram(e.target.value)}>
                 <option value="snap">SNAP (Food Stamps)</option>
                 <option value="medicaid">Medicaid</option>
                 <option value="tanf">TANF</option>
@@ -103,11 +102,7 @@ function Demo() {
             </div>
             <div className="demo-select">
               <label htmlFor="doctype">Document Type</label>
-              <select 
-                id="doctype"
-                value={doctype}
-                onChange={(e) => setDoctype(e.target.value)}
-              >
+              <select id="doctype" value={doctype} onChange={(e) => setDoctype(e.target.value)}>
                 <option value="statute">Statutes</option>
                 <option value="regulation">Regulations</option>
                 <option value="form">Forms</option>
@@ -118,7 +113,7 @@ function Demo() {
               Search Documents
             </button>
           </div>
-          
+
           {showResults && (
             <div className="demo-results show">
               <div className="demo-doc-header">
@@ -131,7 +126,9 @@ function Demo() {
                     <h4 style={{ color: 'var(--blue-pressed)', marginBottom: '10px' }}>
                       {doc.title}
                     </h4>
-                    <p style={{ fontSize: '14px', color: 'var(--dark-gray)', marginBottom: '10px' }}>
+                    <p
+                      style={{ fontSize: '14px', color: 'var(--dark-gray)', marginBottom: '10px' }}
+                    >
                       {doc.excerpt}
                     </p>
                     <div className="demo-doc-meta">

@@ -8,13 +8,15 @@ function Navigation({ activeSection, setActiveSection }: NavigationProps) {
     { id: 'overview', label: 'Overview' },
     { id: 'demo', label: 'Live Demo' },
     { id: 'partners', label: 'Partners' },
-    { id: 'proposal', label: 'PBIF Proposal' }
+    { id: 'proposal', label: 'PBIF Proposal' },
   ];
 
   return (
     <nav className="nav-container">
       <div className="nav">
-        <a href="#" className="logo">POLICYENGINE</a>
+        <a href="#" className="logo">
+          POLICYENGINE
+        </a>
         <ul className="nav-links">
           {navItems.map((item) => (
             <li key={item.id}>

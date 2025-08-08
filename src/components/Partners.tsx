@@ -2,20 +2,25 @@ function Partners() {
   const partnerCategories = [
     {
       title: 'Research Institutions',
-      partners: ['Georgetown University', 'University of Michigan', 'NBER', 'USC']
+      partners: ['Georgetown University', 'University of Michigan', 'NBER', 'USC'],
     },
     {
       title: 'Direct Service',
-      partners: ['MyFriendBen', 'Benefit Navigator', 'Navvy', 'Benefit Kitchen']
+      partners: ['MyFriendBen', 'Benefit Navigator', 'Navvy', 'Benefit Kitchen'],
     },
     {
       title: 'Government',
-      partners: ['Atlanta Fed (advisor)', 'DC DHS', 'Arizona DES', 'State agencies']
+      partners: ['Atlanta Fed (advisor)', 'DC DHS', 'Arizona DES', 'State agencies'],
     },
     {
       title: 'Policy Centers',
-      partners: ['Prenatal-to-3 Policy Impact', 'Georgia Center for Opportunity', 'Urban Institute', 'Center for Civic Futures']
-    }
+      partners: [
+        'Prenatal-to-3 Policy Impact',
+        'Georgia Center for Opportunity',
+        'Urban Institute',
+        'Center for Civic Futures',
+      ],
+    },
   ];
 
   return (

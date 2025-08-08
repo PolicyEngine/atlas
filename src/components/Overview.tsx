@@ -19,24 +19,39 @@ function Overview() {
           </div>
         </div>
       </div>
-      
+
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
             <h2 className="card-title">The Crisis</h2>
-            <p>When CaseText shut down, thousands of legal references vanished overnight. State websites reorganize constantly, breaking the links that power benefit calculators. 18% of benefit program URLs from 2019 are dead today.</p>
+            <p>
+              When CaseText shut down, thousands of legal references vanished overnight. State
+              websites reorganize constantly, breaking the links that power benefit calculators. 18%
+              of benefit program URLs from 2019 are dead today.
+            </p>
             <br />
-            <p><strong>Impact:</strong> Families lose benefits. Organizations waste thousands of hours maintaining broken systems. AI tools generate incorrect information without reliable sources.</p>
+            <p>
+              <strong>Impact:</strong> Families lose benefits. Organizations waste thousands of
+              hours maintaining broken systems. AI tools generate incorrect information without
+              reliable sources.
+            </p>
           </div>
-          
+
           <div className="card solution-card">
             <h2 className="card-title">Our Solution</h2>
-            <p>Policy Library creates an immutable archive of every statute, regulation, and form that defines benefit eligibility. Our AI crawlers monitor agency websites weekly, capturing changes before documents disappear.</p>
+            <p>
+              Policy Library creates an immutable archive of every statute, regulation, and form
+              that defines benefit eligibility. Our AI crawlers monitor agency websites weekly,
+              capturing changes before documents disappear.
+            </p>
             <br />
-            <p><strong>Result:</strong> Permanent source IDs that never break. Full version history. AI-ready corpus for accurate benefit calculations.</p>
+            <p>
+              <strong>Result:</strong> Permanent source IDs that never break. Full version history.
+              AI-ready corpus for accurate benefit calculations.
+            </p>
           </div>
         </div>
-        
+
         <div className="workflow-container">
           <h2 className="workflow-title">How It Works</h2>
           <div className="workflow">
