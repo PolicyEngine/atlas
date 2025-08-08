@@ -8,7 +8,7 @@ interface NavigationProps {
 function Navigation({ activeSection, setActiveSection }: NavigationProps) {
   const navItems = [
     { id: 'overview', label: 'Overview' },
-    { id: 'demo', label: 'Live Demo' },
+    { id: 'demo', label: 'Mock-up' },
     { id: 'partners', label: 'Partners' },
     { id: 'proposal', label: 'PBIF Proposal' },
     { id: 'application', label: 'Full Application' },

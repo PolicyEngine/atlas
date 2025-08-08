@@ -1312,3 +1312,78 @@ main {
   color: var(--blue-pressed);
   margin-bottom: 15px;
 }
+
+/* Demo Tabs */
+.demo-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--light-gray);
+  padding-bottom: 0;
+}
+
+.demo-tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  bottom: -2px;
+}
+
+.demo-tab:hover {
+  color: var(--darkest-blue);
+  background: var(--blue-98);
+}
+
+.demo-tab.active {
+  color: var(--teal-pressed);
+  border-bottom-color: var(--teal-accent);
+  background: none;
+}
+
+/* Demo Upload Section */
+.demo-upload-section {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Demo API Section */
+.demo-api-section {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Code blocks */
+.demo-api-section pre {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.demo-api-section code {
+  font-family: inherit;
+}
+
+/* Download button hover */
+.demo-download-btn:hover {
+  background: var(--teal-pressed) \!important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(57, 198, 192, 0.3);
+}
+
+EOF < /dev/null
