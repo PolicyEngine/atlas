@@ -1648,3 +1648,182 @@ main {
   color: var(--dark-gray);
   margin-top: 15px;
 }
+
+/* Civic Tech Engagement Styles */
+.civic-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: var(--dark-gray);
+}
+
+.civic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.civic-card {
+  background: var(--blue-98);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--blue-light);
+}
+
+.civic-card h3 {
+  color: var(--blue-pressed);
+  margin-bottom: 15px;
+}
+
+.civic-examples {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.civic-examples ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.civic-code {
+  margin-top: 20px;
+}
+
+.civic-code pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+.civic-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 24px;
+  color: var(--teal-accent);
+  margin-bottom: 5px;
+}
+
+.civic-involvement {
+  background: var(--light-gray);
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.civic-involvement h3 {
+  color: var(--blue-pressed);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.involvement-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.involvement-item {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.involvement-item h4 {
+  color: var(--teal-pressed);
+  margin-bottom: 15px;
+}
+
+.involvement-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.involvement-item li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.involvement-item li:before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal-accent);
+}
+
+.civic-recognition {
+  background: var(--teal-light);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.civic-recognition h3 {
+  color: var(--teal-pressed);
+  margin-bottom: 15px;
+}
+
+.civic-recognition ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.civic-recognition li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+.civic-recognition li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--teal-accent);
+  font-weight: bold;
+}
+
+.civic-impact {
+  margin-top: 40px;
+}
+
+.impact-quote {
+  background: white;
+  padding: 30px;
+  border-left: 4px solid var(--teal-accent);
+  border-radius: 8px;
+}
+
+.impact-quote blockquote {
+  margin: 0;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.impact-quote cite {
+  display: block;
+  margin-top: 15px;
+  text-align: right;
+  color: var(--gray);
+  font-style: normal;
+}
