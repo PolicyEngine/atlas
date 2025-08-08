@@ -437,8 +437,8 @@ function PBIFApplication() {
               and schema as foundation for our regulatory document archiving.
             </p>
             <p>
-              <strong>Civic tech community engagement:</strong> We plan to partner with former Code for
-              America brigades and civic tech groups for infrastructure support. These volunteer
+              <strong>Civic tech community engagement:</strong> We plan to partner with former Code
+              for America brigades and civic tech groups for infrastructure support. These volunteer
               technologists can help identify missing documents, contribute crawlers for their local
               jurisdictions, and validate data quality. The distributed model of civic tech groups
               maintaining their local coverage would ensure comprehensive coverage while building
