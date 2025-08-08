@@ -2,10 +2,10 @@
 # Each partner contributes unique expertise and resources to build comprehensive benefits infrastructure
 
 partners:
-  - name: NBER
+  - name: National Bureau of Economic Research
     full_name: National Bureau of Economic Research
     category: Research
-    logo: /logos/nber.png
+    logo: /logos/nber.svg
     involvement: >
       NBER develops TAXSIM, the gold standard for tax analysis and tax credit guidance used by
       researchers worldwide. Through our [MOU](https://docs.google.com/document/d/1i5QcwgsQowrX2fp6AnbRT4Sc3yZoXKyUHNf63M-B9sg/preview),
@@ -21,37 +21,28 @@ partners:
     status: Active MOU
     mou_link: https://docs.google.com/document/d/1i5QcwgsQowrX2fp6AnbRT4Sc3yZoXKyUHNf63M-B9sg/preview
 
-  - name: Georgetown University
-    full_name: Georgetown University McCourt School
+  - name: Better Government Lab
+    full_name: Better Government Lab (Georgetown McCourt & University of Michigan Ford School)
     category: Research
-    logo: /logos/georgetown.png
+    logo: /logos/bgl.png
     involvement: >
-      Georgetown researchers use PolicyEngine for policy analysis and have identified the critical
-      need for permanent document archives. Their work on historical policy research has been
-      hampered by disappearing documents, making the Policy Library essential for academic research.
+      The Better Government Lab is a partnership between Georgetown University's McCourt School 
+      of Public Policy and the University of Michigan's Ford School of Public Policy. They use 
+      and contribute to PolicyEngine's safety net program rules encodings to estimate the take-up 
+      of benefit programs. Their research on benefits access and administrative burden directly 
+      informs PolicyEngine's modeling of program participation.
     contributions:
-      - Research validation and testing
-      - Academic use cases and requirements
-      - Student engagement and training
-    status: Active Collaboration
-
-  - name: University of Michigan
-    full_name: University of Michigan
-    category: Research
-    logo: /logos/umich.png
-    involvement: >
-      U-M researchers collaborate on benefits access and policy modeling. They provide expertise
-      in survey data and help validate our microsimulation models against real-world outcomes.
-    contributions:
-      - Survey data expertise
-      - Model validation
-      - Research partnerships
-    status: Active Partner
+      - Safety net program rules encoding
+      - Benefit take-up rate estimation
+      - Research on administrative burden
+      - Academic validation of models
+      - Policy analysis and testing
+    status: Active Contributor
 
   - name: University of Southern California
     full_name: University of Southern California
     category: Research
-    logo: /logos/usc.png
+    logo: /logos/usc.svg
     involvement: >
       USC researchers use PolicyEngine tools for policy analysis and contribute to model
       development, particularly around California-specific policies.
@@ -95,7 +86,7 @@ partners:
   - name: MyFriendBen
     full_name: MyFriendBen
     category: Direct Service
-    logo: /logos/myfriendben.png
+    logo: /logos/myfriendben.webp
     involvement: >
       MyFriendBen helps people navigate benefits applications. They waste 20+ hours monthly
       maintaining broken links to policy documents. The Policy Library will dramatically reduce
@@ -135,7 +126,7 @@ partners:
       - User experience feedback
     status: Formal Partner
 
-  - name: Prenatal-to-3 Policy Impact
+  - name: Prenatal-to-3 Policy Impact Center
     full_name: Prenatal-to-3 Policy Impact Center
     category: Policy
     logo: /logos/pn3.png

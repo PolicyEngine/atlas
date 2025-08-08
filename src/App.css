@@ -475,12 +475,14 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 20px 15px;
   background: var(--blue-98);
   border-radius: 12px;
   transition: all 0.3s ease;
   cursor: pointer;
   border: 2px solid transparent;
+  min-height: 220px;
+  justify-content: flex-start;
 }
 
 .partner-logo-item:hover {
@@ -492,16 +494,19 @@ main {
 
 .partner-logo {
   margin-bottom: 15px;
-  height: 80px;
+  height: 60px;
+  width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .partner-logo img {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 60px;
+  max-width: 140px;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
 
