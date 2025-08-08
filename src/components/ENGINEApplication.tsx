@@ -13,7 +13,7 @@ function ENGINEApplication() {
         <div className="engine-section">
           <div className="presentation-container" style={{ marginTop: '30px' }}>
             <iframe
-              src="https://docs.google.com/presentation/d/e/2PACX-1vQIGQdcHkJcOIh6OcRz0rLQMCJJZ7IvnYXILMJFxJGo6nAGD7t4M0EyROkA6_pVYLp0DZSoFzCVHzQN/embed?start=false&loop=false&delayms=3000"
+              src="https://docs.google.com/presentation/d/1NTtqyQnCqU2sB8Fan9NUxb9RNoWbGg3iI7T3CdmxZLQ/embed?start=false&loop=false&delayms=3000"
               width="100%"
               height="700"
               style={{ 
@@ -22,6 +22,7 @@ function ENGINEApplication() {
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' 
               }}
               title="PolicyEngine ENG(INE) Application Presentation"
+              allowFullScreen={true}
             />
           </div>
         </div>
