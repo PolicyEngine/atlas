@@ -9,7 +9,7 @@ describe('PolicyEngineLogo', () => {
     const img = container.querySelector('img');
     
     expect(img).toBeInTheDocument();
-    expect(img).toHaveStyle({ height: '70px' });
+    expect(img).toHaveStyle({ height: '120px' });
   });
 
   it('should maintain aspect ratio', () => {
