@@ -19,7 +19,6 @@ function VisualTest() {
       const elements = document.querySelectorAll('*');
       elements.forEach((el) => {
         const rect = el.getBoundingClientRect();
-        const styles = window.getComputedStyle(el);
         
         // Check if element overflows viewport
         if (rect.right > viewportWidth) {
@@ -27,8 +26,6 @@ function VisualTest() {
         }
         
         // Check for unnecessary margins creating gaps
-        const marginLeft = parseFloat(styles.marginLeft) || 0;
-        const marginRight = parseFloat(styles.marginRight) || 0;
         
         if (rect.width < viewportWidth && 
             rect.width > 0 && 
