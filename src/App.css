@@ -321,6 +321,86 @@ main {
   font-size: 15px;
 }
 
+/* Benchmark Section */
+.benchmark-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benchmark-content {
+  margin-top: 20px;
+}
+
+.benchmark-intro {
+  font-size: 18px;
+  color: var(--dark-gray);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.benchmark-methodology {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.benchmark-methodology h3 {
+  color: var(--blue);
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.methodology-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.methodology-step {
+  padding-left: 20px;
+  border-left: 3px solid var(--teal-accent);
+  color: var(--dark-gray);
+  line-height: 1.7;
+}
+
+.methodology-step strong {
+  color: var(--darkest-blue);
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.methodology-step ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.methodology-step li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.benchmark-preview {
+  background: var(--teal-light);
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid var(--teal-accent);
+}
+
+.benchmark-preview h3 {
+  color: var(--teal-pressed);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.benchmark-preview p {
+  color: var(--dark-gray);
+  line-height: 1.7;
+}
+
 .workflow-title {
   font-size: 28px;
   font-weight: 600;
@@ -340,7 +420,7 @@ main {
 .workflow-step {
   text-align: center;
   flex: 1;
-  min-width: 150px;
+  min-width: 120px;
 }
 
 .workflow-icon {

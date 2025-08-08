@@ -14,8 +14,8 @@ function Overview() {
             <div className="hero-stat-label">Jurisdictions</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">24pp</div>
-            <div className="hero-stat-label">LLM Accuracy Gain</div>
+            <div className="hero-stat-number">10K+</div>
+            <div className="hero-stat-label">LLM Benchmark Tests</div>
           </div>
         </div>
       </div>
@@ -58,21 +58,27 @@ function Overview() {
           <h2 className="workflow-title">How It Works</h2>
           <div className="workflow">
             <div className="workflow-step">
+              <div className="workflow-icon">👥</div>
+              <div className="workflow-label">Identify Sources</div>
+              <div className="workflow-desc">Humans point to critical documents</div>
+            </div>
+            <div className="workflow-arrow">→</div>
+            <div className="workflow-step">
               <div className="workflow-icon">🤖</div>
               <div className="workflow-label">AI Monitors</div>
-              <div className="workflow-desc">Intelligent crawlers detect document changes</div>
+              <div className="workflow-desc">Crawlers track changes weekly</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
               <div className="workflow-icon">📚</div>
-              <div className="workflow-label">Permanent Archive</div>
-              <div className="workflow-desc">Documents preserved with version history</div>
+              <div className="workflow-label">Archive Forever</div>
+              <div className="workflow-desc">Version control & permanent IDs</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
               <div className="workflow-icon">🔗</div>
               <div className="workflow-label">Stable APIs</div>
-              <div className="workflow-desc">Rules-as-code providers integrate once</div>
+              <div className="workflow-desc">Never worry about broken links</div>
             </div>
           </div>
         </div>
@@ -124,6 +130,46 @@ function Overview() {
                   ones that disappear most frequently.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="benchmark-section">
+          <h2 className="section-title">Rigorous LLM Accuracy Benchmark</h2>
+          <div className="benchmark-content">
+            <p className="benchmark-intro">
+              We're building the first comprehensive benchmark for AI benefit calculations, 
+              testing how access to authoritative documents improves accuracy:
+            </p>
+            <div className="benchmark-methodology">
+              <h3>🧪 Benchmark Methodology</h3>
+              <div className="methodology-steps">
+                <div className="methodology-step">
+                  <strong>1. Generate Test Suite:</strong> Create 10,000+ test cases using PolicyEngine-US 
+                  with exact benefit calculations for diverse household-benefit combinations across all states.
+                </div>
+                <div className="methodology-step">
+                  <strong>2. Test Four Conditions:</strong>
+                  <ul>
+                    <li><strong>Baseline:</strong> LLM alone with no additional context</li>
+                    <li><strong>With Documents:</strong> LLM with access to Policy Library documents</li>
+                    <li><strong>With Calculator:</strong> LLM with PolicyEngine-US tool access</li>
+                    <li><strong>Full Stack:</strong> LLM with both documents and calculator</li>
+                  </ul>
+                </div>
+                <div className="methodology-step">
+                  <strong>3. Measure Impact:</strong> Track accuracy improvements, error types, and 
+                  confidence levels across different benefit programs and household types.
+                </div>
+              </div>
+            </div>
+            <div className="benchmark-preview">
+              <h3>📊 Expected Findings</h3>
+              <p>
+                Early testing suggests dramatic improvements when LLMs have access to source documents. 
+                The benchmark will quantify exactly how much document access matters for different 
+                use cases, creating the evidence base for AI-powered benefits navigation.
+              </p>
             </div>
           </div>
         </div>

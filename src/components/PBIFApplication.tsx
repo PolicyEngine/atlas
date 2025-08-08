@@ -174,9 +174,10 @@ function PBIFApplication() {
             <p>
               <strong>Impact metrics:</strong> 10,000 hours saved annually by partner organizations 
               (baseline: 240 hours/year per organization wasted on broken links), 50,000 successful 
-              benefit applications using our documents by Month 24 (tracked via API usage), 
-              24 percentage point improvement in AI tool accuracy (baseline: our testing shows 
-              52% accuracy without sources, 76% with sources).
+              benefit applications using our documents by Month 24 (tracked via API usage). 
+              LLM accuracy improvement measured through comprehensive benchmark: 10,000+ test cases 
+              comparing baseline LLM performance against document-enhanced and tool-enhanced versions, 
+              with expected 20-40 percentage point accuracy gains based on preliminary testing.
             </p>
             <p>
               We'll track progress through automated dashboards, monthly partner surveys, and 
@@ -276,10 +277,11 @@ function PBIFApplication() {
             </p>
             <p>
               <strong>Learning dissemination:</strong> Quarterly reports analyzing policy change 
-              patterns, document preservation challenges, and adoption metrics. Academic papers 
-              with university partners on benefits access and administrative burden. Conference 
-              presentations at Code for America Summit, Benefits Data Trust convening. Webinars 
-              for benefits navigators and legal aid organizations.
+              patterns, document preservation challenges, and adoption metrics. Public LLM benchmark 
+              results showing accuracy improvements across different conditions (baseline, with documents, 
+              with tools, full stack). Academic papers with university partners on AI-powered benefits 
+              navigation and administrative burden reduction. Conference presentations at Code for America 
+              Summit, Benefits Data Trust convening. Webinars for benefits navigators and AI developers.
             </p>
             <p>
               <strong>Community engagement:</strong> Monthly community calls for feedback and 
@@ -315,7 +317,8 @@ function PBIFApplication() {
               crawling and document extraction. Prompted to understand government website patterns, 
               identify policy documents, and extract structured metadata. Embedding models for 
               semantic search and duplicate detection. Traditional NLP for document classification 
-              and change detection.
+              and change detection. LLM benchmark framework using PolicyEngine-US to generate 
+              ground truth calculations across 10,000+ household scenarios.
             </p>
             <p>
               <strong>Human oversight checkpoints:</strong> (1) Initial crawler configuration: 
