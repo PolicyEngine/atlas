@@ -5,25 +5,26 @@ partners:
   - name: NBER
     full_name: National Bureau of Economic Research
     category: Research
-    logo: 📊
+    logo: /logos/nber.png
     involvement: >
       NBER develops TAXSIM, the gold standard for tax analysis and tax credit guidance used by
-      researchers worldwide. Through our MOU, NBER contributes their archive of state and federal
-      individual income tax forms dating back to 2010 to the Policy Library. They are exploring
-      the Policy Library as a user for future development, which will be coordinated with
-      PolicyEngine's roadmap. Their expertise in tax modeling and extensive historical data
-      collection makes them a critical partner in ensuring comprehensive coverage of tax rules.
+      researchers worldwide. Through our [MOU](https://docs.google.com/document/d/1i5QcwgsQowrX2fp6AnbRT4Sc3yZoXKyUHNf63M-B9sg/preview),
+      NBER contributes their archive of state and federal individual income tax forms dating back to 2010 
+      to the Policy Library. They are exploring the Policy Library as a user for future development, 
+      which will be coordinated with PolicyEngine's roadmap. Their expertise in tax modeling and extensive 
+      historical data collection makes them a critical partner in ensuring comprehensive coverage of tax rules.
     contributions:
       - TAXSIM tax modeling expertise
       - Historical tax forms from 2010-present
       - Technical guidance on tax rule preservation
       - User feedback for platform development
     status: Active MOU
+    mou_link: https://docs.google.com/document/d/1i5QcwgsQowrX2fp6AnbRT4Sc3yZoXKyUHNf63M-B9sg/preview
 
   - name: Georgetown University
     full_name: Georgetown University McCourt School
     category: Research
-    logo: 🎓
+    logo: /logos/georgetown.png
     involvement: >
       Georgetown researchers use PolicyEngine for policy analysis and have identified the critical
       need for permanent document archives. Their work on historical policy research has been
@@ -37,7 +38,7 @@ partners:
   - name: University of Michigan
     full_name: University of Michigan
     category: Research
-    logo: 🏛️
+    logo: /logos/umich.png
     involvement: >
       U-M researchers collaborate on benefits access and policy modeling. They provide expertise
       in survey data and help validate our microsimulation models against real-world outcomes.
@@ -47,10 +48,10 @@ partners:
       - Research partnerships
     status: Active Partner
 
-  - name: USC
+  - name: University of Southern California
     full_name: University of Southern California
     category: Research
-    logo: 🔬
+    logo: /logos/usc.png
     involvement: >
       USC researchers use PolicyEngine tools for policy analysis and contribute to model
       development, particularly around California-specific policies.
@@ -60,10 +61,10 @@ partners:
       - Model testing
     status: Active User
 
-  - name: Atlanta Federal Reserve
+  - name: Federal Reserve Bank of Atlanta
     full_name: Federal Reserve Bank of Atlanta
     category: Government
-    logo: 🏦
+    logo: /logos/atlanta-fed.png
     involvement: >
       The Atlanta Fed has been actively contributing to us-sources and us-nc-sources repositories
       as proof of concept. They maintain the Policy Rules Database and see the Policy Library as
@@ -79,7 +80,7 @@ partners:
   - name: Georgia Center for Opportunity
     full_name: Georgia Center for Opportunity
     category: Policy
-    logo: 🍑
+    logo: /logos/gco.png
     involvement: >
       GCO has been actively contributing to us-sources and us-nc-sources repositories, providing
       real-world testing of the collaborative model. They use PolicyEngine tools for their work
@@ -94,7 +95,7 @@ partners:
   - name: MyFriendBen
     full_name: MyFriendBen
     category: Direct Service
-    logo: 💚
+    logo: /logos/myfriendben.png
     involvement: >
       MyFriendBen helps people navigate benefits applications. They waste 20+ hours monthly
       maintaining broken links to policy documents. The Policy Library will dramatically reduce
@@ -105,64 +106,39 @@ partners:
       - Real-world impact metrics
     status: Pilot Partner
 
-  - name: Benefit Navigator
-    full_name: Benefit Navigator
+  - name: ImagineLA
+    full_name: ImagineLA (Benefit Navigator)
     category: Direct Service
-    logo: 🧭
+    logo: /logos/imaginela.png
     involvement: >
-      Benefit Navigator provides comprehensive benefits screening and enrollment assistance.
-      They need reliable access to policy documents across multiple jurisdictions and will be
-      an early adopter of the Policy Library API.
+      ImagineLA runs Benefit Navigator, providing comprehensive benefits screening and enrollment 
+      assistance. They need reliable access to policy documents across multiple jurisdictions and 
+      will be an early adopter of the Policy Library API.
     contributions:
       - Multi-state requirements
       - API testing and feedback
       - User journey insights
     status: Committed Partner
 
-  - name: Navvy
-    full_name: Navvy
+  - name: Impactica
+    full_name: Impactica (Navvy for Student Basic Needs Coalition)
     category: Direct Service
-    logo: ⚓
+    logo: /logos/impactica.png
     involvement: >
-      Navvy helps families access benefits through simplified navigation tools. They require
-      stable document references for their automated eligibility checking systems.
+      Impactica partners with PolicyEngine to develop Navvy for the Student Basic Needs Coalition,
+      helping students access benefits through simplified navigation tools. They require stable 
+      document references for their automated eligibility checking systems.
     contributions:
+      - Student-focused use cases
       - Automated system integration testing
       - Requirements for machine-readable formats
       - User experience feedback
-    status: Interested Partner
-
-  - name: Benefit Kitchen
-    full_name: Benefit Kitchen
-    category: Direct Service
-    logo: 🍳
-    involvement: >
-      Benefit Kitchen provides benefits access services with a focus on SNAP and nutrition
-      programs. They need reliable access to food assistance program rules and forms.
-    contributions:
-      - SNAP program expertise
-      - Nutrition assistance requirements
-      - Community feedback
-    status: Interested Partner
-
-  - name: Urban Institute
-    full_name: Urban Institute
-    category: Policy
-    logo: 🏙️
-    involvement: >
-      The Urban Institute conducts policy research and analysis. Their researchers need access
-      to historical policy documents for longitudinal studies and would benefit from the
-      permanent archive capabilities of the Policy Library.
-    contributions:
-      - Research validation
-      - Policy analysis expertise
-      - Historical data requirements
-    status: Research Partner
+    status: Formal Partner
 
   - name: Prenatal-to-3 Policy Impact
     full_name: Prenatal-to-3 Policy Impact Center
     category: Policy
-    logo: 👶
+    logo: /logos/pn3.png
     involvement: >
       The PN-3 Center tracks state policies affecting families with young children. They need
       reliable access to state-level policy documents and would use the Policy Library for
@@ -173,41 +149,3 @@ partners:
       - Impact measurement
     status: Potential Partner
 
-  - name: DC DHS
-    full_name: DC Department of Human Services
-    category: Government
-    logo: 🏛️
-    involvement: >
-      DC DHS has expressed interest in the Policy Library for maintaining their own policy
-      documentation and ensuring consistent access for service providers in the District.
-    contributions:
-      - Government use case validation
-      - DC-specific policy documents
-      - Implementation feedback
-    status: Interested Agency
-
-  - name: Arizona DES
-    full_name: Arizona Department of Economic Security
-    category: Government
-    logo: 🌵
-    involvement: >
-      Arizona DES is interested in using the Policy Library to improve access to their
-      program rules and reduce the burden on their staff from answering policy questions.
-    contributions:
-      - State agency perspective
-      - Arizona policy documents
-      - Government integration requirements
-    status: Interested Agency
-
-  - name: Center for Civic Futures
-    full_name: Center for Civic Futures
-    category: Policy
-    logo: 🌐
-    involvement: >
-      The Center for Civic Futures works on democratic innovation and civic technology.
-      They see the Policy Library as critical infrastructure for transparent governance.
-    contributions:
-      - Civic tech expertise
-      - Democratic access perspectives
-      - Community engagement strategies
-    status: Advisory Partner

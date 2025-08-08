@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import partnersData from '../data/partners.yaml?raw';
 import yaml from 'js-yaml';
+import ReactMarkdown from 'react-markdown';
 
 interface Partner {
   name: string;
@@ -10,6 +11,7 @@ interface Partner {
   involvement: string;
   contributions: string[];
   status: string;
+  mou_link?: string;
 }
 
 interface PartnersYAML {
@@ -57,7 +59,27 @@ function Partners() {
                 className="partner-logo-item"
                 onClick={() => setSelectedPartner(partner)}
               >
-                <div className="partner-logo">{partner.logo}</div>
+                <div className="partner-logo">
+                  {partner.logo.startsWith('/') ? (
+                    <img 
+                      src={`/policy-library${partner.logo}`} 
+                      alt={partner.name}
+                      onError={(e) => {
+                        // Fallback to text if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallback = document.createElement('div');
+                        fallback.textContent = partner.name.split(' ').map(w => w[0]).join('');
+                        fallback.style.fontSize = '24px';
+                        fallback.style.fontWeight = 'bold';
+                        fallback.style.color = '#2C6496';
+                        target.parentElement?.appendChild(fallback);
+                      }}
+                    />
+                  ) : (
+                    <span>{partner.logo}</span>
+                  )}
+                </div>
                 <div className="partner-name">{partner.name}</div>
                 <div className="partner-type">{partner.category}</div>
                 <div className="partner-status-badge">{partner.status}</div>
@@ -71,7 +93,17 @@ function Partners() {
                 <button className="modal-close" onClick={() => setSelectedPartner(null)}>×</button>
                 
                 <div className="modal-header">
-                  <div className="modal-logo">{selectedPartner.logo}</div>
+                  <div className="modal-logo">
+                    {selectedPartner.logo.startsWith('/') ? (
+                      <img 
+                        src={`/policy-library${selectedPartner.logo}`} 
+                        alt={selectedPartner.name}
+                        style={{ maxHeight: '64px', maxWidth: '200px' }}
+                      />
+                    ) : (
+                      <span>{selectedPartner.logo}</span>
+                    )}
+                  </div>
                   <div>
                     <h3>{selectedPartner.full_name}</h3>
                     <div className="modal-badges">
@@ -83,7 +115,26 @@ function Partners() {
 
                 <div className="modal-section">
                   <h4>Partnership Overview</h4>
-                  <p>{selectedPartner.involvement}</p>
+                  <ReactMarkdown>{selectedPartner.involvement}</ReactMarkdown>
+                  {selectedPartner.mou_link && (
+                    <a 
+                      href={selectedPartner.mou_link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-block',
+                        marginTop: '15px',
+                        padding: '8px 16px',
+                        background: '#39c6c0',
+                        color: 'white',
+                        borderRadius: '4px',
+                        textDecoration: 'none',
+                        fontWeight: 500
+                      }}
+                    >
+                      View MOU →
+                    </a>
+                  )}
                 </div>
 
                 <div className="modal-section">
