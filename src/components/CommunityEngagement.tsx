@@ -5,69 +5,65 @@ function CommunityEngagement() {
         <h1>Community Engagement & Equity</h1>
         
         <div className="engagement-section">
-          <h2>Community Advisory Board</h2>
+          <h2>Community Document Discovery</h2>
           <p>
-            Within 90 days of funding, we will establish a Community Advisory Board comprising:
+            The primary community contribution is identifying which documents matter for their specific needs:
           </p>
           <ul>
-            <li>Benefit recipients with lived experience navigating safety net programs</li>
-            <li>Community-based organization leaders serving vulnerable populations</li>
-            <li>Multilingual community advocates representing diverse linguistic groups</li>
-            <li>Digital equity practitioners addressing technology access barriers</li>
-            <li>Rural and urban community representatives ensuring geographic diversity</li>
+            <li><strong>Document Requests:</strong> "We need the SNAP vehicle asset limit policy for Illinois"</li>
+            <li><strong>Missing Coverage:</strong> "The childcare copayment schedule isn't archived yet"</li>
+            <li><strong>Update Alerts:</strong> "This WIC food list changed last month"</li>
+            <li><strong>Dead Link Reports:</strong> "The Medicaid application form URL broke"</li>
+            <li><strong>Priority Ranking:</strong> Which documents are most frequently needed</li>
           </ul>
-          <p>
-            The board will meet quarterly with decision-making authority over community features, 
-            language priorities, and capacity building programs.
-          </p>
-        </div>
-
-        <div className="engagement-section">
-          <h2>Multilingual Access Strategy</h2>
           <p className="highlight-box">
-            <strong>Pragmatic Approach:</strong> Rather than complex i18n systems, we'll leverage 
-            Google Translate API for automatic document translation with clear disclaimers about 
-            official English versions. This provides immediate access in 100+ languages while 
-            community reviewers can flag and improve critical translations.
+            <strong>What communities DON'T do:</strong> Edit legal text, verify legal accuracy, or 
+            interpret regulations. These are preserved exactly as published by government agencies. 
+            Community input is about discovery and prioritization, not content modification.
           </p>
-          <div className="timeline">
-            <div className="timeline-item">
-              <strong>Month 1:</strong> Google Translate API integration for all documents
-            </div>
-            <div className="timeline-item">
-              <strong>Months 2-3:</strong> Community review system for translation accuracy
-            </div>
-            <div className="timeline-item">
-              <strong>Months 4-6:</strong> Priority language verification (Spanish, Chinese, Arabic)
-            </div>
-            <div className="timeline-item">
-              <strong>Ongoing:</strong> Community-submitted translation improvements
-            </div>
-          </div>
         </div>
 
         <div className="engagement-section">
-          <h2>Workforce Development Program</h2>
+          <h2>Translation: Let Chrome Handle It</h2>
+          <p className="highlight-box">
+            <strong>Simple Reality:</strong> Chrome already translates web pages automatically. 
+            Users needing Spanish, Chinese, or any other language just right-click → "Translate to [Language]". 
+            We serve documents in their official English form. Chrome/Edge/Safari handle translation. 
+            No API costs, no complexity, no maintenance. This is how millions of immigrants already 
+            navigate government websites.
+          </p>
           <p>
-            Creating 15-20 part-time positions within communities to support the Policy Library:
+            <strong>What we actually do:</strong> Ensure documents are text-based (not scanned images) 
+            so browser translation works. That's it. The technology already exists and users already 
+            know how to use it.
+          </p>
+        </div>
+
+        <div className="engagement-section">
+          <h2>Realistic Community Roles</h2>
+          <p>
+            Limited but impactful positions focused on actual community needs:
           </p>
           <div className="workforce-grid">
             <div className="workforce-item">
-              <h3>Community Document Curators</h3>
-              <p>Local experts who identify and verify documents relevant to their communities</p>
-              <p><strong>Positions:</strong> 10 roles at $25/hour, 10 hours/week</p>
+              <h3>Document Scouts (2-3 positions)</h3>
+              <p>Monitor state agency websites for new documents and policy changes</p>
+              <p><strong>Tasks:</strong> Submit URLs, report broken links, flag updates</p>
+              <p><strong>Pay:</strong> $20/hour, 5-10 hours/week</p>
             </div>
             <div className="workforce-item">
-              <h3>Technical Assistance Coordinators</h3>
-              <p>Bridge between Policy Library and community organizations needing integration support</p>
-              <p><strong>Positions:</strong> 5 roles at $30/hour, 15 hours/week</p>
-            </div>
-            <div className="workforce-item">
-              <h3>Community Trainers</h3>
-              <p>Conduct workshops and bootcamps for CBOs on using the Policy Library</p>
-              <p><strong>Positions:</strong> 5 roles, project-based at $500/workshop</p>
+              <h3>API Integration Support (1-2 positions)</h3>
+              <p>Help benefits organizations integrate the Policy Library API</p>
+              <p><strong>Tasks:</strong> Technical support, documentation, training</p>
+              <p><strong>Pay:</strong> $30/hour, as-needed basis</p>
             </div>
           </div>
+          <p className="highlight-box">
+            <strong>Reality Check:</strong> Most "community engagement" around legal documents is 
+            performative. The real value is in preserving documents reliably and making them 
+            accessible via API. Communities need the documents to exist and be findable, not to 
+            edit or verify them.
+          </p>
         </div>
 
         <div className="engagement-section">
@@ -105,91 +101,61 @@ function CommunityEngagement() {
         </div>
 
         <div className="engagement-section">
-          <h2>Capacity Building for Community Organizations</h2>
+          <h2>What Organizations Actually Need</h2>
           <div className="capacity-grid">
             <div className="capacity-item">
-              <h3>No-Code Integration Tools</h3>
-              <p>Simple widgets and embeds that require no technical expertise</p>
+              <h3>Reliable API</h3>
+              <p>Documents that never disappear with consistent URLs</p>
             </div>
             <div className="capacity-item">
-              <h3>CBO Bootcamps</h3>
-              <p>Monthly training sessions on leveraging Policy Library for client services</p>
+              <h3>Simple Integration</h3>
+              <p>Basic REST endpoints with good documentation</p>
             </div>
             <div className="capacity-item">
-              <h3>Micro-Grants Program</h3>
-              <p>$1,000-$5,000 grants for CBOs to integrate Policy Library into their workflows</p>
+              <h3>Search That Works</h3>
+              <p>Find documents by program, state, date, or keyword</p>
             </div>
             <div className="capacity-item">
-              <h3>Partner Support Network</h3>
-              <p>Peer-to-peer learning community for organizations using Policy Library</p>
+              <h3>Change Notifications</h3>
+              <p>Webhooks when documents they care about update</p>
             </div>
           </div>
+          <p>
+            <strong>Skip the theater:</strong> No advisory boards discussing documents they can't change. 
+            No complex governance structures. Just reliable infrastructure that works.
+          </p>
         </div>
 
         <div className="engagement-section">
-          <h2>Equity Impact Framework</h2>
-          <p>
-            We will measure and report on differential impact across communities:
-          </p>
+          <h2>Actual Equity Metrics That Matter</h2>
           <ul>
-            <li>Document coverage by language and community need</li>
-            <li>Usage patterns across different demographic groups</li>
-            <li>Time savings for organizations serving marginalized communities</li>
-            <li>Accessibility audit results and improvements</li>
-            <li>Community feedback integration metrics</li>
+            <li><strong>Coverage:</strong> Are all safety net programs in all states archived?</li>
+            <li><strong>Accessibility:</strong> Do documents load on slow connections? Work with screen readers?</li>
+            <li><strong>Availability:</strong> Is the API free for nonprofits? No rate limits for community orgs?</li>
+            <li><strong>Languages:</strong> Which languages are actually being requested via the API?</li>
+            <li><strong>Uptime:</strong> Can organizations rely on this infrastructure 24/7?</li>
           </ul>
-          <p>
-            Quarterly equity reports will be published publicly with input from the Community Advisory Board.
+          <p className="highlight-box">
+            <strong>The best equity work is invisible:</strong> When infrastructure just works, 
+            organizations can focus on helping families instead of fixing broken links.
           </p>
         </div>
 
         <div className="engagement-section budget-section">
-          <h2>Enhanced Budget for Community Engagement</h2>
-          <table className="budget-table">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Original</th>
-                <th>Enhanced</th>
-                <th>Addition</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Personnel</td>
-                <td>$405,000</td>
-                <td>$445,000</td>
-                <td>+$40,000</td>
-              </tr>
-              <tr>
-                <td>Community Engagement</td>
-                <td>$60,000</td>
-                <td>$85,000</td>
-                <td>+$25,000</td>
-              </tr>
-              <tr>
-                <td>Infrastructure</td>
-                <td>$18,000</td>
-                <td>$30,000</td>
-                <td>+$12,000</td>
-              </tr>
-              <tr>
-                <td>Contingency</td>
-                <td>$15,000</td>
-                <td>$15,000</td>
-                <td>$0</td>
-              </tr>
-              <tr className="total-row">
-                <td><strong>Total</strong></td>
-                <td><strong>$498,000</strong></td>
-                <td><strong>$575,000</strong></td>
-                <td><strong>+$77,000</strong></td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="budget-note">
-            The enhanced budget addresses all reviewer concerns while staying well within PBIF's 
-            funding range, representing high-leverage investments in community engagement and equity.
+          <h2>Realistic Budget</h2>
+          <p className="highlight-box">
+            <strong>Keep the original $498,000 budget.</strong> The "enhanced" community engagement 
+            budget was mostly theater. The money is better spent on:
+          </p>
+          <ul>
+            <li><strong>More engineering time:</strong> Build robust crawlers and APIs</li>
+            <li><strong>Better infrastructure:</strong> Handle scale and ensure uptime</li>
+            <li><strong>Document scouts:</strong> 2-3 people finding documents (maybe $30K total)</li>
+            <li><strong>OCR/pdf2text tools:</strong> Make all documents searchable</li>
+          </ul>
+          <p>
+            <strong>The truth:</strong> Good infrastructure IS equity work. When the API never goes down 
+            and documents never disappear, that helps vulnerable communities more than any advisory board.
           </p>
         </div>
       </div>
