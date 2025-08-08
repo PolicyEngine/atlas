@@ -2,7 +2,7 @@ const PolicyEngineLogo = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
       <img
-        src="/policyengine-logo.png"
+        src="/policy-library/policyengine-logo.png"
         alt="PolicyEngine Icon"
         style={{ height: '32px', width: '32px' }}
       />
