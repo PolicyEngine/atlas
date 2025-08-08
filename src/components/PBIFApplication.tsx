@@ -329,7 +329,8 @@ function PBIFApplication() {
               identify policy documents, and extract structured metadata. Embedding models for
               semantic search and duplicate detection. Traditional NLP for document classification
               and change detection. LLM benchmark framework using PolicyEngine-US to generate ground
-              truth calculations across 10,000+ household scenarios.
+              truth calculations across 10,000+ household scenarios. MCP (Model Context Protocol)
+              server enabling direct LLM integration for real-time policy lookups.
             </p>
             <p>
               <strong>Human oversight checkpoints:</strong> (1) Initial crawler configuration:
@@ -342,8 +343,10 @@ function PBIFApplication() {
               <strong>Architecture:</strong> Crawler service using LangChain for AI orchestration.
               Leverages OpenStates schema for legislative documents ensuring consistency across
               states. GitHub for version control and human review workflow. PostgreSQL for metadata,
-              S3 for document storage. REST API using FastAPI for document access. CloudFlare CDN
-              for global distribution. Monitoring via Datadog for system health.
+              S3 for document storage with automatic pdf2text extraction for plaintext versions.
+              REST API using FastAPI for multi-format document access (PDF, text, HTML, JSON).
+              Google Translate API for 100+ language support. CloudFlare CDN for global
+              distribution.
             </p>
             <p>
               This hybrid approach leverages AI's ability to process vast amounts of information
@@ -470,9 +473,10 @@ function PBIFApplication() {
             <p>
               <strong>Software stack:</strong> Python for crawler development using LangChain for AI
               orchestration. OpenStates API v3 integration for legislative document access and
-              schema compatibility. FastAPI for REST API development. PostgreSQL for structured
-              data. React for public dashboards. GitHub Actions for CI/CD. All open-source except AI
-              services.
+              schema compatibility. FastAPI for REST API development. MCP server for native LLM
+              integration enabling tools like Claude to directly query policy documents during
+              conversations. PostgreSQL for structured data. React for public dashboards. GitHub
+              Actions for CI/CD. All open-source except AI services.
             </p>
             <p>
               <strong>Government system integration:</strong> API-first architecture enables

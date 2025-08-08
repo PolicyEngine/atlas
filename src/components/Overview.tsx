@@ -84,20 +84,20 @@ function Overview() {
         </div>
 
         <div className="benefits-section">
-          <h2 className="section-title">Built for Rules-as-Code Providers</h2>
+          <h2 className="section-title">Built for AI & Rules-as-Code</h2>
           <div className="benefits-grid">
+            <div className="benefit-item">
+              <h3>MCP Server Integration</h3>
+              <p>
+                Native Model Context Protocol server lets AI assistants query policy documents
+                directly during conversations. No hallucinations, just facts.
+              </p>
+            </div>
             <div className="benefit-item">
               <h3>No More Dead Links</h3>
               <p>
                 Permanent source IDs that survive website reorganizations, vendor shutdowns, and
                 agency changes.
-              </p>
-            </div>
-            <div className="benefit-item">
-              <h3>Stop Managing PDFs</h3>
-              <p>
-                Access any document via API. No local storage, no file management, no broken
-                references.
               </p>
             </div>
             <div className="benefit-item">
@@ -108,9 +108,10 @@ function Overview() {
               </p>
             </div>
             <div className="benefit-item">
-              <h3>Reliable Citations</h3>
+              <h3>Simple REST API</h3>
               <p>
-                Every rule links to its authoritative source. Build trust with users and regulators.
+                Basic endpoints that work. No complex auth. Free tier for nonprofits. Just GET the
+                documents you need.
               </p>
             </div>
           </div>
