@@ -12,6 +12,7 @@ function Navigation({ activeSection, setActiveSection }: NavigationProps) {
     { id: 'partners', label: 'Partners' },
     { id: 'proposal', label: 'PBIF Proposal' },
     { id: 'application', label: 'Full Application' },
+    { id: 'engine', label: 'ENGINE Application' },
   ];
 
   return (
