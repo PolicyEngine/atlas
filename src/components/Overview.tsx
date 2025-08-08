@@ -3,7 +3,7 @@ function Overview() {
     <div className="section">
       <div className="hero">
         <h1>Policy Library</h1>
-        <p className="hero-subtitle">AI-Powered Infrastructure for Every Benefit Rule in America</p>
+        <p className="hero-subtitle">Permanent Document Infrastructure for America's Safety Net</p>
         <div className="hero-stats">
           <div className="hero-stat">
             <div className="hero-stat-number">160K</div>
@@ -23,31 +23,33 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">The Crisis</h2>
+            <h2 className="card-title">The Infrastructure Crisis</h2>
             <p>
-              When CaseText shut down, thousands of legal references vanished overnight. State
-              websites reorganize constantly, breaking the links that power benefit calculators. 18%
-              of benefit program URLs from 2019 are dead today.
+              Rules-as-code providers face an impossible challenge: government documents constantly 
+              disappear. Teams waste thousands of hours maintaining broken links, storing PDFs locally, 
+              and manually checking for updates. When websites reorganize or vendors like CaseText shut 
+              down, entire systems break.
             </p>
             <br />
             <p>
-              <strong>Impact:</strong> Families lose benefits. Organizations waste thousands of
-              hours maintaining broken systems. AI tools generate incorrect information without
-              reliable sources.
+              <strong>The cost:</strong> 18% of 2019 benefit URLs are dead. Organizations can't reliably 
+              tie rules to source documents. Engineers become librarians instead of building tools that 
+              help families.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">Our Solution</h2>
+            <h2 className="card-title">Document Infrastructure That Works</h2>
             <p>
-              Policy Library creates an immutable archive of every statute, regulation, and form
-              that defines benefit eligibility. Our AI crawlers monitor agency websites weekly,
-              capturing changes before documents disappear.
+              Policy Library provides the missing infrastructure layer. We preserve every statute, 
+              regulation, and form that defines eligibility—permanently. Rules-as-code providers get 
+              stable APIs with documents that never disappear, automatic change detection, and version 
+              history.
             </p>
             <br />
             <p>
-              <strong>Result:</strong> Permanent source IDs that never break. Full version history.
-              AI-ready corpus for accurate benefit calculations.
+              <strong>Focus on what matters:</strong> Stop managing PDFs. Stop fixing broken links. 
+              Build the rules engines and calculators that actually help families access benefits.
             </p>
           </div>
         </div>
@@ -57,20 +59,42 @@ function Overview() {
           <div className="workflow">
             <div className="workflow-step">
               <div className="workflow-icon">🤖</div>
-              <div className="workflow-label">AI Crawls</div>
-              <div className="workflow-desc">Claude/GPT-4 monitors 50+ jurisdictions weekly</div>
+              <div className="workflow-label">AI Monitors</div>
+              <div className="workflow-desc">Intelligent crawlers detect document changes</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">✓</div>
-              <div className="workflow-label">Humans Verify</div>
-              <div className="workflow-desc">GitHub pull request review process</div>
+              <div className="workflow-icon">📚</div>
+              <div className="workflow-label">Permanent Archive</div>
+              <div className="workflow-desc">Documents preserved with version history</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">🚀</div>
-              <div className="workflow-label">Partners Build</div>
-              <div className="workflow-desc">Stable API with permanent source IDs</div>
+              <div className="workflow-icon">🔗</div>
+              <div className="workflow-label">Stable APIs</div>
+              <div className="workflow-desc">Rules-as-code providers integrate once</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="benefits-section">
+          <h2 className="section-title">Built for Rules-as-Code Providers</h2>
+          <div className="benefits-grid">
+            <div className="benefit-item">
+              <h3>No More Dead Links</h3>
+              <p>Permanent source IDs that survive website reorganizations, vendor shutdowns, and agency changes.</p>
+            </div>
+            <div className="benefit-item">
+              <h3>Stop Managing PDFs</h3>
+              <p>Access any document via API. No local storage, no file management, no broken references.</p>
+            </div>
+            <div className="benefit-item">
+              <h3>Automatic Updates</h3>
+              <p>Get notified when documents change. Access full version history. Never miss critical updates.</p>
+            </div>
+            <div className="benefit-item">
+              <h3>Reliable Citations</h3>
+              <p>Every rule links to its authoritative source. Build trust with users and regulators.</p>
             </div>
           </div>
         </div>

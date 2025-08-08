@@ -3,7 +3,7 @@ const PolicyEngineLogo = () => {
     <img
       src="/policy-library/policyengine-logo.png"
       alt="PolicyEngine"
-      style={{ height: '120px', width: 'auto' }}
+      style={{ height: '48px', width: 'auto' }}
     />
   );
 };

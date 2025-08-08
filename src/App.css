@@ -68,7 +68,7 @@ main {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 15px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,6 +243,37 @@ main {
   box-shadow: none;
   border-top: 1px solid var(--light-gray);
   box-sizing: border-box;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+}
+
+.benefit-item h3 {
+  color: var(--blue);
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  color: var(--dark-gray);
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 .workflow-title {
