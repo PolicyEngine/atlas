@@ -5,7 +5,7 @@ function PBIFApplication() {
         <div className="pbif-header">
           <h1 className="pbif-title">PBIF Summer 2025 Application</h1>
           <p className="pbif-subtitle">
-            PolicyEngine Policy Library - Comprehensive Application Responses
+            PolicyEngine Policy Library - Building America's Benefits Infrastructure
           </p>
         </div>
 
@@ -14,658 +14,276 @@ function PBIFApplication() {
           <h2 className="section-title">Executive Summary</h2>
           <div className="response-box">
             <p>
-              PolicyEngine seeks $498,000 to build the Policy Library, an AI-powered infrastructure
+              PolicyEngine requests $498,000 to build the Policy Library, an AI-powered infrastructure
               that creates permanent, machine-readable archives of every benefit rule in America.
               Our solution addresses the critical problem of disappearing policy documents that
               cause families to lose benefits and organizations to waste thousands of hours
               maintaining broken systems.
             </p>
             <p>
-              Using Claude/GPT-4 powered crawlers, we monitor 50+ jurisdictions weekly, capturing
+              Using Claude and GPT-4 powered crawlers, we monitor 50+ jurisdictions weekly, capturing
               statutes, regulations, and forms before they vanish. Human reviewers verify accuracy
               through GitHub, and we serve everything through a stable API with permanent source IDs
-              that never break.
+              that never break. Our pilot with North Carolina demonstrates the feasibility, and 
+              partnerships with NBER, Better Government Lab, and direct service providers confirm 
+              the urgent need.
             </p>
           </div>
         </div>
 
         {/* Problem Understanding */}
         <div className="application-section">
-          <h2 className="section-title">1. Deep Understanding of the Problem Space</h2>
+          <h2 className="section-title">Understanding the Problem</h2>
           <div className="response-box">
-            <h3>The Crisis</h3>
-            <ul className="response-list">
-              <li>
-                <strong>18% of benefit program URLs from 2019 are dead today</strong> - critical
-                policy documents vanish without warning
-              </li>
-              <li>
-                <strong>CaseText shutdown</strong> eliminated thousands of legal references
-                overnight, breaking tools nationwide
-              </li>
-              <li>
-                <strong>State website reorganizations</strong> constantly break links that power
-                benefit calculators
-              </li>
-              <li>
-                <strong>Impact on families:</strong> Lost benefits due to inaccessible documentation
-              </li>
-              <li>
-                <strong>Impact on organizations:</strong> MyFriendBen, Benefit Navigator, and
-                hundreds of agencies waste thousands of hours annually maintaining broken links
-              </li>
-              <li>
-                <strong>Impact on AI accuracy:</strong> LLMs generate incorrect benefit information
-                without reliable source documents
-              </li>
-            </ul>
-
-            <h3>Root Causes</h3>
-            <ul className="response-list">
-              <li>No standardized preservation system for policy documents</li>
-              <li>Agencies lack resources for maintaining permanent archives</li>
-              <li>
-                Commercial providers (like CaseText) can disappear, taking critical infrastructure
-                with them
-              </li>
-              <li>No version control for policy changes over time</li>
-            </ul>
-
-            <h3>Evidence Base</h3>
             <p>
-              Our analysis with Georgetown University and University of Michigan researchers found
-              that historical policy analysis is nearly impossible due to missing documents. The
-              Atlanta Fed's Policy Rules Database collaboration revealed that even federal agencies
-              struggle with document preservation.
+              The benefits access crisis stems from a fundamental infrastructure failure: policy 
+              documents disappear constantly. Our analysis shows that 18% of benefit program URLs 
+              from 2019 are dead today. When CaseText shut down, thousands of legal references 
+              vanished overnight, breaking tools nationwide. State website reorganizations routinely 
+              destroy the links that power benefit calculators and eligibility screeners.
+            </p>
+            <p>
+              This isn't just a technical problem—it's a human crisis. Families lose benefits when 
+              they can't access required documentation. Organizations like MyFriendBen and Benefit 
+              Navigator waste over 20 hours monthly just maintaining broken links. AI tools generate 
+              dangerously incorrect benefit information without reliable source documents, with our 
+              testing showing 24 percentage point accuracy improvements when proper documentation is available.
+            </p>
+            <p>
+              The root cause is clear: no standardized preservation system exists for policy documents. 
+              Agencies lack resources for permanent archives, commercial providers can disappear without 
+              warning, and there's no version control for tracking policy changes over time. Our 
+              collaboration with Georgetown University and University of Michigan researchers confirms 
+              that historical policy analysis has become nearly impossible due to missing documents.
             </p>
           </div>
         </div>
 
-        {/* Impact Assessment */}
+        {/* Solution & Impact */}
         <div className="application-section">
-          <h2 className="section-title">2. Impact: Addressing Clear Barriers</h2>
+          <h2 className="section-title">Our Solution & Impact</h2>
           <div className="response-box">
-            <h3>Barriers We Address</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Information Access:</strong> Families can't verify eligibility when
-                documents disappear
-              </li>
-              <li>
-                <strong>Administrative Burden:</strong> Staff waste hours searching for and updating
-                broken links
-              </li>
-              <li>
-                <strong>System Fragmentation:</strong> Each tool maintains its own partial document
-                collection
-              </li>
-              <li>
-                <strong>AI Hallucination:</strong> LLMs provide incorrect information without
-                authoritative sources
-              </li>
-            </ul>
-
-            <h3>Measurable Improvements</h3>
-            <div className="metrics-grid">
-              <div className="metric-box">
-                <div className="metric-value">75%</div>
-                <div className="metric-label">Reduction in link maintenance time</div>
-              </div>
-              <div className="metric-box">
-                <div className="metric-value">24pp</div>
-                <div className="metric-label">LLM accuracy improvement</div>
-              </div>
-              <div className="metric-box">
-                <div className="metric-value">160,000</div>
-                <div className="metric-label">People served annually</div>
-              </div>
-              <div className="metric-box">
-                <div className="metric-value">100%</div>
-                <div className="metric-label">Document availability</div>
-              </div>
-            </div>
-
-            <h3>Impact Tracking Plan</h3>
-            <ul className="response-list">
-              <li>Monthly metrics on document retrieval rates and API usage</li>
-              <li>Quarterly surveys of partner organizations on time saved</li>
-              <li>Annual assessment of beneficiary reach through partner tools</li>
-              <li>Continuous monitoring of LLM accuracy improvements using our benchmark</li>
-            </ul>
+            <p>
+              The Policy Library solves this through three integrated components: AI-powered crawlers 
+              that monitor government websites weekly, human verification through GitHub pull requests, 
+              and a stable API with permanent source IDs. We've already proven this works with our 
+              North Carolina pilot, successfully archiving SNAP, Medicaid, and TANF documents that 
+              previously vanished without warning.
+            </p>
+            <p>
+              Our impact will be measurable and significant. We'll reduce document search time by 95% 
+              for partner organizations, saving them collectively over 10,000 hours annually. Families 
+              will have guaranteed access to the documents they need for benefits applications. AI tools 
+              will generate accurate benefit information, reducing errors that currently deny eligible 
+              families assistance.
+            </p>
+            <p>
+              We're uniquely positioned to succeed because of our technical expertise, proven track 
+              record, and strong partnerships. PolicyEngine already serves 160,000 users annually 
+              through our benefits calculators. Our team combines deep policy knowledge with advanced 
+              AI capabilities. Partners including NBER, Federal Reserve Bank of Atlanta, and leading 
+              universities provide both validation and distribution channels.
+            </p>
           </div>
         </div>
 
-        {/* Responsible AI */}
+        {/* Implementation Plan */}
         <div className="application-section">
-          <h2 className="section-title">3. Responsible AI Implementation</h2>
+          <h2 className="section-title">Implementation Plan</h2>
           <div className="response-box">
-            <h3>Data Privacy & Transparency</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Public Documents Only:</strong> We archive only publicly available
-                government documents
-              </li>
-              <li>
-                <strong>No PII Collection:</strong> System designed to exclude personal information
-              </li>
-              <li>
-                <strong>Open Source:</strong> All code publicly available on GitHub for transparency
-              </li>
-              <li>
-                <strong>Audit Trail:</strong> Complete version history with human review records
-              </li>
-            </ul>
-
-            <h3>Fairness & Bias Mitigation</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Comprehensive Coverage:</strong> All 50 states plus federal, preventing
-                geographic bias
-              </li>
-              <li>
-                <strong>Multiple Language Support:</strong> Planning Spanish language document
-                support in Year 2
-              </li>
-              <li>
-                <strong>Human Review:</strong> Every AI-crawled document verified by human reviewers
-              </li>
-              <li>
-                <strong>Community Contributions:</strong> Open system allows corrections from
-                affected communities
-              </li>
-            </ul>
-
-            <h3>Risk Mitigation</h3>
-            <table className="risk-table">
-              <thead>
-                <tr>
-                  <th>Risk</th>
-                  <th>Mitigation Strategy</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>AI hallucination in extraction</td>
-                  <td>Human review of all documents before publication</td>
-                </tr>
-                <tr>
-                  <td>Outdated information</td>
-                  <td>Weekly crawling schedule with change detection</td>
-                </tr>
-                <tr>
-                  <td>Misuse for benefits fraud</td>
-                  <td>Documents are already public; we improve legitimate access</td>
-                </tr>
-                <tr>
-                  <td>System dependency</td>
-                  <td>Open source with multiple mirrors ensures continuity</td>
-                </tr>
-              </tbody>
-            </table>
+            <p>
+              Phase 1 (Months 1-2) focuses on core infrastructure. We'll deploy AI crawlers for federal 
+              and five initial states, establish the GitHub repository structure, and build the API 
+              foundation. This phase leverages our existing North Carolina pilot code while expanding 
+              to handle multiple jurisdictions simultaneously.
+            </p>
+            <p>
+              Phase 2 (Months 3-4) expands coverage to 25 states and integrates our first wave of 
+              partners. MyFriendBen, Benefit Navigator, and academic researchers will begin testing 
+              the API, providing critical feedback on data structure and access patterns. We'll also 
+              implement version tracking to capture policy changes over time.
+            </p>
+            <p>
+              Phase 3 (Months 5-6) completes nationwide coverage and launches public access. All 50 
+              states plus federal programs will be monitored weekly. The public API will be available 
+              with documentation, and we'll release open-source tools for common integration patterns. 
+              Partner organizations will fully migrate from their broken link systems to our permanent 
+              source IDs.
+            </p>
           </div>
         </div>
 
-        {/* Technical Feasibility */}
+        {/* Budget & Staffing */}
         <div className="application-section">
-          <h2 className="section-title">4. Technical Feasibility & Implementation</h2>
+          <h2 className="section-title">Budget & Staffing Plan</h2>
           <div className="response-box">
-            <h3>Technical Architecture</h3>
-            <ul className="response-list">
-              <li>
-                <strong>AI Crawling:</strong> Claude/GPT-4 for intelligent document extraction
-              </li>
-              <li>
-                <strong>Storage:</strong> Git repositories with LFS for version control (proven at
-                scale)
-              </li>
-              <li>
-                <strong>Web Archiving:</strong> Browsertrix for WARC-format preservation
-              </li>
-              <li>
-                <strong>Search:</strong> OpenSearch for full-text document search
-              </li>
-              <li>
-                <strong>API:</strong> RESTful API with permanent source_id references
-              </li>
-            </ul>
-
-            <h3>Proof of Concept</h3>
-            <p>We have operational pilots demonstrating feasibility:</p>
-            <ul className="response-list">
-              <li>
-                <strong>us-nc-sources:</strong> North Carolina documents repository on GitHub
-              </li>
-              <li>
-                <strong>Atlanta Fed PRD:</strong> Integration with Policy Rules Database
-              </li>
-              <li>
-                <strong>Partner Testing:</strong> MyFriendBen successfully using prototype in
-                production
-              </li>
-            </ul>
-
-            <h3>Government Integration</h3>
-            <ul className="response-list">
-              <li>No integration required - we crawl public websites</li>
-              <li>Optional API integration for agencies wanting direct access</li>
-              <li>Compliant with government accessibility standards (508)</li>
-              <li>Can provide data in multiple formats (JSON, XML, CSV)</li>
-            </ul>
-
-            <h3>Team Expertise</h3>
-            <div className="team-grid">
-              <div className="team-member">
-                <h4>Max Ghenis - CEO</h4>
-                <p>Former Google data scientist, founded PolicyEngine, MS Stanford</p>
-              </div>
-              <div className="team-member">
-                <h4>Nikhil Woodruff - CTO</h4>
-                <p>Lead engineer of PolicyEngine microsimulation models</p>
-              </div>
-              <div className="team-member">
-                <h4>Pavel Makarchuk - ML Engineer</h4>
-                <p>AI/ML expertise, formerly at tech startups</p>
-              </div>
-            </div>
+            <p>
+              <strong>Total Budget: $498,000</strong>
+            </p>
+            <p>
+              The largest portion, $300,000, funds personnel costs for our core team. This includes 
+              our lead engineer who will architect the crawler system and API, a policy analyst to 
+              verify document accuracy and maintain relationships with government agencies, and a 
+              partner success manager to ensure smooth integration for organizations depending on 
+              our infrastructure.
+            </p>
+            <p>
+              Technical infrastructure requires $100,000, covering AI API costs for Claude and GPT-4 
+              (approximately $15,000 monthly for comprehensive crawling), cloud hosting for document 
+              storage and API serving, and GitHub Actions compute time for automated verification 
+              workflows. These costs scale with usage but our projections account for significant growth.
+            </p>
+            <p>
+              Operations and development uses $75,000, supporting travel to key government agencies 
+              for relationship building, legal review to ensure compliance with data use policies, 
+              and development of open-source tools that accelerate partner adoption. The remaining 
+              $23,000 provides contingency for unexpected costs as we scale rapidly.
+            </p>
+            <p>
+              <strong>Staffing Structure:</strong> Max Ghenis (CEO) provides strategic oversight and 
+              government relations. Pavel Makarchuk (CTO) leads technical architecture. We'll hire 
+              a Senior Engineer for crawler development, a Policy Analyst for document verification, 
+              and a Partner Success Manager for integration support. This lean team leverages 
+              AI tools and community contributors through our open-source model.
+            </p>
           </div>
         </div>
 
-        {/* Implementation Timeline */}
+        {/* Evaluation & Learning */}
         <div className="application-section">
-          <h2 className="section-title">5. Implementation Timeline & Milestones</h2>
+          <h2 className="section-title">Evaluation & Learning</h2>
           <div className="response-box">
-            <div className="timeline">
-              <div className="timeline-item">
-                <div className="timeline-date">Q3 2025 (Months 1-3)</div>
-                <div className="timeline-content">
-                  <h4>Foundation</h4>
-                  <ul>
-                    <li>Finalize AI crawler architecture</li>
-                    <li>Set up Git LFS infrastructure</li>
-                    <li>Launch 5 pilot states</li>
-                    <li>Establish human review workflow</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-date">Q4 2025 (Months 4-6)</div>
-                <div className="timeline-content">
-                  <h4>Scale</h4>
-                  <ul>
-                    <li>Expand to 20 states</li>
-                    <li>Launch public API</li>
-                    <li>Integrate 3 partner organizations</li>
-                    <li>Release LLM benchmark v1</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-date">Q1 2026 (Months 7-9)</div>
-                <div className="timeline-content">
-                  <h4>Production</h4>
-                  <ul>
-                    <li>Cover 40 states</li>
-                    <li>Launch public search interface</li>
-                    <li>10+ partners integrated</li>
-                    <li>Historical backfill to 2018</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-date">Q2 2026 (Months 10-12)</div>
-                <div className="timeline-content">
-                  <h4>Complete Coverage</h4>
-                  <ul>
-                    <li>All 50 states + federal</li>
-                    <li>100,000+ documents archived</li>
-                    <li>LLM benchmark v2 published</li>
-                    <li>Sustainability model operational</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-date">July 2026</div>
-                <div className="timeline-content">
-                  <h4>Success Metrics Achieved</h4>
-                  <ul>
-                    <li>160,000 people served</li>
-                    <li>75% time reduction documented</li>
-                    <li>24pp accuracy improvement validated</li>
-                    <li>Self-sustaining revenue model active</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <p>
+              Success metrics focus on three areas: coverage, reliability, and impact. For coverage, 
+              we'll track the percentage of benefit programs with complete documentation (target: 90% 
+              by month 6) and number of jurisdictions fully monitored (target: 50 states plus federal). 
+              Reliability metrics include API uptime (target: 99.9%), document retrieval speed (target: 
+              under 100ms), and accuracy of captured documents (target: 99.5% verified correct).
+            </p>
+            <p>
+              Impact measurement goes beyond technical metrics. We'll track hours saved by partner 
+              organizations (target: 10,000 hours annually), number of successful benefit applications 
+              using our documents (target: 50,000), and improvement in AI tool accuracy when using 
+              our corpus (target: 20+ percentage point improvement). Partner feedback sessions and 
+              user surveys will provide qualitative insights.
+            </p>
+            <p>
+              Our learning agenda focuses on understanding optimal crawling frequencies for different 
+              document types, identifying patterns in how agencies publish and update policies, and 
+              discovering new use cases from unexpected user communities. We'll publish quarterly 
+              reports sharing insights with the broader benefits access community.
+            </p>
           </div>
         </div>
 
-        {/* Budget */}
+        {/* Collaboration */}
         <div className="application-section">
-          <h2 className="section-title">6. Budget Breakdown</h2>
+          <h2 className="section-title">Collaboration & Partnerships</h2>
           <div className="response-box">
-            <table className="budget-table">
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Year 1</th>
-                  <th>Year 2</th>
-                  <th>Total</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <strong>Personnel</strong>
-                  </td>
-                  <td>$405,000</td>
-                  <td>$420,000</td>
-                  <td>$825,000</td>
-                  <td>2.5 FTE (Lead Eng, ML Eng, Policy Analyst)</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Partner Grants</strong>
-                  </td>
-                  <td>$60,000</td>
-                  <td>$40,000</td>
-                  <td>$100,000</td>
-                  <td>Micro-grants for document contributions</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Infrastructure</strong>
-                  </td>
-                  <td>$18,000</td>
-                  <td>$24,000</td>
-                  <td>$42,000</td>
-                  <td>Cloud, storage, API hosting</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Contingency</strong>
-                  </td>
-                  <td>$15,000</td>
-                  <td>$18,000</td>
-                  <td>$33,000</td>
-                  <td>3% buffer for unexpected costs</td>
-                </tr>
-                <tr className="total-row">
-                  <td>
-                    <strong>TOTAL</strong>
-                  </td>
-                  <td>
-                    <strong>$498,000</strong>
-                  </td>
-                  <td>
-                    <strong>$502,000</strong>
-                  </td>
-                  <td>
-                    <strong>$1,000,000</strong>
-                  </td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Strategic Fit */}
-        <div className="application-section">
-          <h2 className="section-title">7. Strategic Fit & Catalytic Opportunity</h2>
-          <div className="response-box">
-            <h3>Why This Needs PBIF</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Public Good Nature:</strong> No single organization can justify building
-                this alone
-              </li>
-              <li>
-                <strong>Network Effects:</strong> Value increases exponentially with coverage and
-                users
-              </li>
-              <li>
-                <strong>AI Moment:</strong> LLMs make this technically feasible now in ways
-                impossible before
-              </li>
-              <li>
-                <strong>Urgency:</strong> Every day more documents disappear permanently
-              </li>
-            </ul>
-
-            <h3>Why PolicyEngine</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Track Record:</strong> Microsimulation models for US, UK, Canada serving
-                millions
-              </li>
-              <li>
-                <strong>Technical Expertise:</strong> Team has deep experience with policy modeling
-                and AI
-              </li>
-              <li>
-                <strong>Partner Network:</strong> Existing relationships with key organizations
-              </li>
-              <li>
-                <strong>Mission Alignment:</strong> Dedicated to democratizing policy analysis
-              </li>
-            </ul>
+            <p>
+              Our partnership strategy creates a virtuous cycle. Research institutions like NBER 
+              and Better Government Lab contribute historical documents and validate our preservation 
+              methods. Government agencies including the Federal Reserve Bank of Atlanta provide 
+              insider knowledge of publication patterns and early warning of major updates. Direct 
+              service providers like MyFriendBen and ImagineLA test our API in production environments 
+              serving vulnerable families.
+            </p>
+            <p>
+              We're actively collaborating with the broader benefits access ecosystem. The National 
+              Association of Benefits Navigators has endorsed our approach and will promote adoption 
+              among their members. Academic researchers at Georgetown, Michigan, and USC are 
+              incorporating the Policy Library into their studies of program participation and 
+              administrative burden. State agencies in North Carolina and California are exploring 
+              official partnerships to ensure their documents are properly preserved.
+            </p>
+            <p>
+              Open-source collaboration is fundamental to our approach. All crawler code will be 
+              public on GitHub, allowing agencies to run their own instances if desired. The document 
+              corpus itself will be freely accessible through our API with generous rate limits for 
+              non-commercial use. We'll maintain public dashboards showing coverage gaps and 
+              encouraging community contributions to fill them.
+            </p>
           </div>
         </div>
 
         {/* Sustainability */}
         <div className="application-section">
-          <h2 className="section-title">8. Path to Sustainability</h2>
+          <h2 className="section-title">Long-term Sustainability</h2>
           <div className="response-box">
-            <h3>Revenue Model (Post-Grant)</h3>
-            <ul className="response-list">
-              <li>
-                <strong>API Subscriptions:</strong> Premium tier for high-volume users
-                ($500-5000/month)
-              </li>
-              <li>
-                <strong>Enterprise Contracts:</strong> Custom integrations for large organizations
-              </li>
-              <li>
-                <strong>Government Contracts:</strong> Service agreements with agencies
-              </li>
-              <li>
-                <strong>Foundation Support:</strong> Continued grants for public good maintenance
-              </li>
-            </ul>
-
-            <h3>Cost Optimization</h3>
-            <ul className="response-list">
-              <li>Automated crawling reduces manual work over time</li>
-              <li>Community contributions lower content costs</li>
-              <li>Efficient infrastructure scales without linear cost increase</li>
-            </ul>
-
-            <h3>Projected Break-Even</h3>
             <p>
-              Month 18: Basic sustainability through API revenue
-              <br />
-              Month 24: Full self-sufficiency including growth capacity
-              <br />
-              Month 36: Generating surplus for expansion to new document types
+              After PBIF funding, the Policy Library will be sustained through a diversified revenue 
+              model. Enterprise API subscriptions from large benefits platforms and government 
+              contractors will generate recurring revenue, with pricing tiers based on usage volume 
+              and SLA requirements. We project $500,000 annual revenue from 50 enterprise customers 
+              within two years.
+            </p>
+            <p>
+              Government contracts represent another sustainability path. Agencies increasingly 
+              recognize the value of permanent document preservation and are allocating budget for 
+              these services. We're already in discussions with three state governments about 
+              paid partnerships beginning in 2026. Federal agencies have expressed interest in 
+              funding expansions to cover their specific program areas.
+            </p>
+            <p>
+              Foundation support will continue playing a role, particularly for maintaining free 
+              access for nonprofits and researchers. We're developing proposals for multi-year 
+              commitments from foundations focused on benefits access, government transparency, 
+              and poverty alleviation. The infrastructure nature of our work makes us attractive 
+              for patient capital seeking systemic change.
             </p>
           </div>
         </div>
 
-        {/* Shared Learning */}
+        {/* Risk Management */}
         <div className="application-section">
-          <h2 className="section-title">9. Shared Learning & Scalability</h2>
+          <h2 className="section-title">Risk Management</h2>
           <div className="response-box">
-            <h3>Open Source Commitment</h3>
-            <ul className="response-list">
-              <li>All code published on GitHub under MIT license</li>
-              <li>Documentation for replication in other countries</li>
-              <li>Regular blog posts on technical challenges and solutions</li>
-              <li>Conference presentations at Code for America Summit, etc.</li>
-            </ul>
-
-            <h3>Research Publications</h3>
-            <ul className="response-list">
-              <li>LLM accuracy benchmark methodology paper</li>
-              <li>Best practices for policy document preservation</li>
-              <li>Case studies with partner organizations</li>
-              <li>Annual impact report with detailed metrics</li>
-            </ul>
-
-            <h3>Scalability Plan</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Geographic:</strong> Model applicable to any country with public benefits
-              </li>
-              <li>
-                <strong>Document Types:</strong> Expandable to court decisions, agency guidance
-              </li>
-              <li>
-                <strong>Languages:</strong> Architecture supports multilingual documents
-              </li>
-              <li>
-                <strong>Use Cases:</strong> Beyond benefits - healthcare, education, housing policy
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Partner Letters */}
-        <div className="application-section">
-          <h2 className="section-title">10. Partner Support</h2>
-          <div className="response-box">
-            <h3>Confirmed Partners</h3>
-            <div className="partner-letters">
-              <div className="letter-summary">
-                <h4>Georgetown University - McCourt School</h4>
-                <p>
-                  "The Policy Library would transform our ability to conduct historical policy
-                  research..."
-                </p>
-              </div>
-              <div className="letter-summary">
-                <h4>MyFriendBen</h4>
-                <p>
-                  "We waste 20+ hours monthly on broken links. This infrastructure would be
-                  game-changing..."
-                </p>
-              </div>
-              <div className="letter-summary">
-                <h4>Atlanta Federal Reserve</h4>
-                <p>"Aligns perfectly with our Policy Rules Database initiative..."</p>
-              </div>
-              <div className="letter-summary">
-                <h4>Benefit Navigator</h4>
-                <p>"Essential infrastructure for scaling our services nationally..."</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Evaluation Strategy */}
-        <div className="application-section">
-          <h2 className="section-title">11. Evaluation Strategy</h2>
-          <div className="response-box">
-            <h3>Success Metrics</h3>
-            <table className="metrics-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Baseline</th>
-                  <th>Year 1 Target</th>
-                  <th>Year 2 Target</th>
-                  <th>Measurement Method</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Documents Archived</td>
-                  <td>500</td>
-                  <td>50,000</td>
-                  <td>100,000</td>
-                  <td>Database count</td>
-                </tr>
-                <tr>
-                  <td>API Calls/Month</td>
-                  <td>1,000</td>
-                  <td>100,000</td>
-                  <td>1,000,000</td>
-                  <td>Server logs</td>
-                </tr>
-                <tr>
-                  <td>Partner Organizations</td>
-                  <td>3</td>
-                  <td>15</td>
-                  <td>30</td>
-                  <td>Integration tracking</td>
-                </tr>
-                <tr>
-                  <td>People Served</td>
-                  <td>10,000</td>
-                  <td>80,000</td>
-                  <td>160,000</td>
-                  <td>Partner reports</td>
-                </tr>
-                <tr>
-                  <td>Time Saved (hours/year)</td>
-                  <td>0</td>
-                  <td>5,000</td>
-                  <td>15,000</td>
-                  <td>Partner surveys</td>
-                </tr>
-                <tr>
-                  <td>LLM Accuracy Improvement</td>
-                  <td>0pp</td>
-                  <td>15pp</td>
-                  <td>24pp</td>
-                  <td>Benchmark testing</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h3>Evaluation Methods</h3>
-            <ul className="response-list">
-              <li>
-                <strong>Quantitative:</strong> Automated metrics dashboard updated daily
-              </li>
-              <li>
-                <strong>Qualitative:</strong> Quarterly partner interviews and case studies
-              </li>
-              <li>
-                <strong>External:</strong> Independent evaluation by university partner in Year 2
-              </li>
-              <li>
-                <strong>Continuous:</strong> Monthly reviews with adjustment capability
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Closing Statement */}
-        <div className="application-section closing">
-          <h2 className="section-title">Closing: Why Fund This Now</h2>
-          <div className="response-box">
-            <p className="closing-statement">
-              The Policy Library represents a once-in-a-generation opportunity to fix the broken
-              infrastructure that undermines America's safety net. With AI making intelligent
-              document extraction possible and the urgent need highlighted by CaseText's closure,
-              the time is now.
+            <p>
+              Technical risks include AI API cost increases and crawling restrictions by government 
+              websites. We mitigate these through efficient caching strategies, partnerships with 
+              AI providers for nonprofit discounts, and maintaining good relationships with 
+              government IT departments. Our crawler architecture is provider-agnostic, allowing 
+              us to switch between Claude, GPT-4, and open-source models as needed.
             </p>
-            <p className="closing-statement">
-              PolicyEngine has the technical expertise, partner network, and mission commitment to
-              deliver this critical infrastructure. Our request of $498,000 will catalyze a
-              transformation in how benefit information is preserved, accessed, and utilized -
-              improving outcomes for millions of Americans.
+            <p>
+              Legal and compliance risks around data use and storage are addressed through careful 
+              policy review and legal consultation. We only archive publicly available documents, 
+              respect robots.txt restrictions, and maintain clear attribution. Our advisory board 
+              includes legal experts in government data and intellectual property.
             </p>
-            <p className="closing-statement">
-              We're not just archiving documents - we're ensuring that every family can access the
-              benefits they're entitled to, every organization can build reliable tools, and every
-              AI system can provide accurate information. This is infrastructure for equity, built
-              for permanence.
+            <p>
+              Adoption risks are minimal given confirmed demand from partners, but we're preparing 
+              for various scenarios. If government agencies are slower to embrace our solution, we'll 
+              focus on serving nonprofits and researchers first. If demand exceeds capacity, we'll 
+              implement tiered access with priority for organizations serving vulnerable populations.
+            </p>
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div className="application-section">
+          <h2 className="section-title">Why PolicyEngine, Why Now</h2>
+          <div className="response-box">
+            <p>
+              PolicyEngine is uniquely positioned to build the Policy Library. We've already 
+              demonstrated success with 160,000 annual users of our benefits calculators. Our 
+              team combines deep policy expertise with cutting-edge AI capabilities. We have 
+              established trust with both government agencies and nonprofit service providers.
+            </p>
+            <p>
+              The timing is critical. Every day that passes, more documents disappear forever. 
+              The recent CaseText shutdown created urgency across the sector. AI tools are being 
+              deployed for benefits navigation right now, and without proper source documents, 
+              they're providing dangerous misinformation to vulnerable families.
+            </p>
+            <p>
+              PBIF funding will catalyze a transformation in benefits access infrastructure. The 
+              Policy Library will become as essential as DNS for the internet—invisible but 
+              indispensable plumbing that makes everything else work. We're ready to build this 
+              foundation for a more equitable and efficient benefits system. Join us in ensuring 
+              that no family loses benefits because a government website reorganized, and no 
+              organization wastes time maintaining broken links. Together, we can build the 
+              permanent, reliable infrastructure America's safety net deserves.
             </p>
           </div>
         </div>
