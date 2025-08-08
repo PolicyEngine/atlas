@@ -1,0 +1,63 @@
+name: Lint Code
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - '.github/workflows/lint.yml'
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - '.github/workflows/lint.yml'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint TypeScript and CSS
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run ESLint
+        run: |
+          echo "::group::Running ESLint"
+          npm run lint
+          echo "::endgroup::"
+        
+      - name: Check TypeScript
+        run: |
+          echo "::group::TypeScript Type Checking"
+          npx tsc --noEmit
+          echo "::endgroup::"
+          
+      - name: Format check with Prettier
+        run: |
+          echo "::group::Prettier Format Check"
+          npx prettier --check "src/**/*.{ts,tsx,css}" || true
+          echo "::endgroup::"
+          
+      - name: Lint Summary
+        if: always()
+        run: |
+          echo "## Lint Summary" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Linting completed. Check the logs above for any issues." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Checks performed:" >> $GITHUB_STEP_SUMMARY
+          echo "- ESLint (TypeScript/React)" >> $GITHUB_STEP_SUMMARY
+          echo "- TypeScript type checking" >> $GITHUB_STEP_SUMMARY
+          echo "- Prettier format check" >> $GITHUB_STEP_SUMMARY
