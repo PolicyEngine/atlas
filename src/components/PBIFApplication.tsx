@@ -329,7 +329,8 @@ function PBIFApplication() {
               identify policy documents, and extract structured metadata. Embedding models for
               semantic search and duplicate detection. Traditional NLP for document classification
               and change detection. LLM benchmark framework using PolicyEngine-US to generate ground
-              truth calculations across 10,000+ household scenarios.
+              truth calculations across 10,000+ household scenarios. MCP (Model Context Protocol)
+              server enabling direct LLM integration for real-time policy lookups.
             </p>
             <p>
               <strong>Human oversight checkpoints:</strong> (1) Initial crawler configuration:
@@ -471,9 +472,10 @@ function PBIFApplication() {
             <p>
               <strong>Software stack:</strong> Python for crawler development using LangChain for AI
               orchestration. OpenStates API v3 integration for legislative document access and
-              schema compatibility. FastAPI for REST API development. PostgreSQL for structured
-              data. React for public dashboards. GitHub Actions for CI/CD. All open-source except AI
-              services.
+              schema compatibility. FastAPI for REST API development. MCP server for native LLM
+              integration enabling tools like Claude to directly query policy documents during
+              conversations. PostgreSQL for structured data. React for public dashboards. GitHub
+              Actions for CI/CD. All open-source except AI services.
             </p>
             <p>
               <strong>Government system integration:</strong> API-first architecture enables

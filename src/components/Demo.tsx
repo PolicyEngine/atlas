@@ -14,7 +14,7 @@ function Demo() {
   const [program, setProgram] = useState('snap');
   const [doctype, setDoctype] = useState('statute');
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'api'>('search');
+  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'api' | 'mcp'>('search');
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadUrl, setUploadUrl] = useState('');
 
@@ -143,6 +143,12 @@ documents = response.json()`;
               onClick={() => setActiveTab('api')}
             >
               🔌 API Access
+            </button>
+            <button
+              className={`demo-tab ${activeTab === 'mcp' ? 'active' : ''}`}
+              onClick={() => setActiveTab('mcp')}
+            >
+              🤖 MCP Server
             </button>
           </div>
 
@@ -471,6 +477,150 @@ documents = response.json()`;
                   <li>Webhook notifications for document updates</li>
                   <li>Batch operations for bulk retrieval</li>
                   <li>Full OpenAPI/Swagger documentation</li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'mcp' && (
+            <div className="demo-api-section">
+              <h3>MCP Server - Native AI Integration</h3>
+              <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
+                The Model Context Protocol server enables AI assistants like Claude to query policy 
+                documents directly during conversations. No more hallucinations about benefit rules.
+              </p>
+
+              <div style={{ marginBottom: '20px' }}>
+                <h4>How It Works</h4>
+                <div
+                  style={{
+                    background: 'var(--blue-98)',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    marginBottom: '20px'
+                  }}
+                >
+                  <ol style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+                    <li>User asks Claude: "What's the SNAP asset limit in California?"</li>
+                    <li>Claude queries Policy Library MCP server for CA SNAP regulations</li>
+                    <li>Server returns authoritative document excerpts</li>
+                    <li>Claude provides accurate answer with citations</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '20px' }}>
+                <h4>MCP Configuration</h4>
+                <pre
+                  style={{
+                    background: '#2d2d2d',
+                    color: '#f8f8f2',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    overflow: 'auto',
+                  }}
+                >
+                  <code>{`// claude_desktop_config.json
+{
+  "mcpServers": {
+    "policy-library": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@policyengine/policy-library-mcp"
+      ],
+      "env": {
+        "POLICY_LIBRARY_API_KEY": "your-api-key"
+      }
+    }
+  }
+}`}</code>
+                </pre>
+              </div>
+
+              <div style={{ marginBottom: '20px' }}>
+                <h4>Available Tools</h4>
+                <div
+                  style={{
+                    background: 'var(--blue-98)',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    fontFamily: 'monospace',
+                  }}
+                >
+                  <div style={{ marginBottom: '10px' }}>
+                    <code style={{ color: 'var(--teal-pressed)' }}>search_documents</code>
+                    - Find policy documents by jurisdiction, program, and keywords
+                  </div>
+                  <div style={{ marginBottom: '10px' }}>
+                    <code style={{ color: 'var(--teal-pressed)' }}>get_document</code>
+                    - Retrieve full document text by ID
+                  </div>
+                  <div style={{ marginBottom: '10px' }}>
+                    <code style={{ color: 'var(--teal-pressed)' }}>get_excerpt</code>
+                    - Extract relevant sections for specific questions
+                  </div>
+                  <div style={{ marginBottom: '10px' }}>
+                    <code style={{ color: 'var(--teal-pressed)' }}>check_updates</code>
+                    - Find recent changes to policies
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '20px' }}>
+                <h4>Example Conversation</h4>
+                <div
+                  style={{
+                    background: '#f8f9fa',
+                    border: '1px solid #dee2e6',
+                    borderRadius: '8px',
+                    padding: '15px',
+                  }}
+                >
+                  <div style={{ marginBottom: '15px' }}>
+                    <strong>User:</strong> Can a family with $3,000 in savings qualify for SNAP in Texas?
+                  </div>
+                  <div style={{ marginBottom: '15px' }}>
+                    <strong>Claude (using MCP):</strong> Let me check the current Texas SNAP asset limits...
+                    <div style={{ 
+                      background: '#e9ecef', 
+                      padding: '10px', 
+                      marginTop: '10px',
+                      borderRadius: '4px',
+                      fontFamily: 'monospace',
+                      fontSize: '13px'
+                    }}>
+                      Querying: policy_library.search_documents({`{`}<br/>
+                      &nbsp;&nbsp;jurisdiction: "texas",<br/>
+                      &nbsp;&nbsp;program: "snap",<br/>
+                      &nbsp;&nbsp;keywords: "asset limit resource"<br/>
+                      {`}`})
+                    </div>
+                  </div>
+                  <div>
+                    <strong>Claude:</strong> According to Texas SNAP regulations (7 TAC §360.63, last updated 
+                    October 2024), households may have up to $2,750 in countable resources, or $4,250 if at 
+                    least one member is age 60 or older or disabled. With $3,000 in savings, a regular household 
+                    would exceed the limit, but could qualify if a member is elderly or disabled.
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style={{
+                  background: '#d4edda',
+                  border: '1px solid #28a745',
+                  padding: '15px',
+                  borderRadius: '4px',
+                }}
+              >
+                <strong>🤖 Why MCP Matters:</strong>
+                <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
+                  <li>AI tools get accurate, up-to-date policy information</li>
+                  <li>Every answer includes authoritative citations</li>
+                  <li>No hallucinations about benefit rules</li>
+                  <li>Works with Claude, ChatGPT, and other MCP-compatible tools</li>
+                  <li>Zero integration effort for end users</li>
                 </ul>
               </div>
             </div>
