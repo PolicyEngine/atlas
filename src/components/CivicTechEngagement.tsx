@@ -21,12 +21,12 @@ function CivicTechEngagement() {
               capturing what matters for their communities.
             </p>
             <div className="civic-examples">
-              <strong>Active Groups:</strong>
+              <strong>Potential Partner Groups:</strong>
               <ul>
-                <li>Code for Boston - Massachusetts regulations</li>
-                <li>Chi Hack Night - Illinois SNAP/TANF docs</li>
-                <li>OpenOakland - California county variations</li>
-                <li>Code for Philly - Pennsylvania forms</li>
+                <li>Code for America Brigades</li>
+                <li>Local civic hack nights</li>
+                <li>University civic tech programs</li>
+                <li>Open data advocates</li>
               </ul>
             </div>
           </div>
@@ -60,13 +60,13 @@ class NYCBenefitsSpider(PolicySpider):
             </p>
             <div className="civic-stats">
               <div className="stat-item">
-                <strong>15+</strong> Active civic tech groups
+                <strong>Goal: 15+</strong> Civic tech partnerships
               </div>
               <div className="stat-item">
-                <strong>200+</strong> Volunteer contributors
+                <strong>Goal: 200+</strong> Volunteer contributors
               </div>
               <div className="stat-item">
-                <strong>30</strong> States with local maintainers
+                <strong>Goal: 30</strong> States with maintainers
               </div>
             </div>
           </div>
