@@ -140,3 +140,22 @@ partners:
       - Impact measurement
     status: Potential Partner
 
+  - name: OpenStates / Plural
+    full_name: OpenStates (Plural Policy)
+    category: Infrastructure
+    logo: /logos/openstates.png
+    involvement: >
+      OpenStates, now part of Plural Policy, provides comprehensive legislative tracking 
+      infrastructure for all 50 states, DC, and Puerto Rico. Their CEO has expressed openness 
+      to collaboration. We plan to leverage their proven schema for legislative documents 
+      and integrate with their API to ensure comprehensive coverage of statutes. OpenStates 
+      handles the legislative side while Policy Library focuses on the regulatory and 
+      administrative documents that define actual benefit eligibility and implementation.
+    contributions:
+      - Legislative document schema and standards
+      - API integration for statute tracking
+      - 11+ years of experience with state data uniformity
+      - Existing infrastructure for bill text extraction
+      - Complementary coverage (legislative vs regulatory)
+    status: In Discussion
+

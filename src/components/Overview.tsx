@@ -98,6 +98,35 @@ function Overview() {
             </div>
           </div>
         </div>
+
+        <div className="integration-section">
+          <h2 className="section-title">Comprehensive Coverage Through Partnership</h2>
+          <div className="integration-content">
+            <p className="integration-intro">
+              Policy Library complements existing infrastructure to provide complete document coverage:
+            </p>
+            <div className="integration-grid">
+              <div className="integration-item">
+                <h3>🏛️ OpenStates Integration</h3>
+                <p>
+                  Leveraging OpenStates' proven schema and API for legislative documents. 
+                  They handle bills and statutes across all 50 states, DC, and Puerto Rico, 
+                  while we focus on the regulatory and administrative documents that actually 
+                  define benefit eligibility.
+                </p>
+              </div>
+              <div className="integration-item">
+                <h3>📋 Regulatory Focus</h3>
+                <p>
+                  We archive the implementation details: agency regulations, policy manuals, 
+                  application forms, and guidance documents. These are the documents that 
+                  determine whether someone actually qualifies for benefits—and they're the 
+                  ones that disappear most frequently.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

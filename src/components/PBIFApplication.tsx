@@ -326,6 +326,7 @@ function PBIFApplication() {
             </p>
             <p>
               <strong>Architecture:</strong> Crawler service using LangChain for AI orchestration. 
+              Leverages OpenStates schema for legislative documents ensuring consistency across states. 
               GitHub for version control and human review workflow. PostgreSQL for metadata, 
               S3 for document storage. REST API using FastAPI for document access. CloudFlare 
               CDN for global distribution. Monitoring via Datadog for system health.
@@ -416,8 +417,9 @@ function PBIFApplication() {
               Government partnerships are developing through multiple channels. The Federal 
               Reserve Bank of Atlanta committed to collaboration through their Policy Rules 
               Database team, providing insider knowledge of federal documentation patterns. 
-              North Carolina DHHS expressed interest following our successful pilot. California 
-              agencies are exploring official partnerships for document preservation.
+              North Carolina DHHS expressed interest following our successful pilot. OpenStates/Plural 
+              CEO expressed openness to collaboration, offering their proven legislative tracking 
+              infrastructure and schema as foundation for our regulatory document archiving.
             </p>
             <p>
               <strong>Engagement strategy:</strong> We approach agencies as partners, not 
@@ -456,9 +458,10 @@ function PBIFApplication() {
             </p>
             <p>
               <strong>Software stack:</strong> Python for crawler development using LangChain 
-              for AI orchestration. FastAPI for REST API development. PostgreSQL for structured 
-              data. React for public dashboards. GitHub Actions for CI/CD. All open-source 
-              except AI services.
+              for AI orchestration. OpenStates API v3 integration for legislative document 
+              access and schema compatibility. FastAPI for REST API development. PostgreSQL 
+              for structured data. React for public dashboards. GitHub Actions for CI/CD. 
+              All open-source except AI services.
             </p>
             <p>
               <strong>Government system integration:</strong> API-first architecture enables 
