@@ -3,7 +3,7 @@ function Overview() {
     <div className="section">
       <div className="hero">
         <h1>Policy Library</h1>
-        <p className="hero-subtitle">AI-Powered Infrastructure for Every Benefit Rule in America</p>
+        <p className="hero-subtitle">Permanent Document Infrastructure for America's Safety Net</p>
         <div className="hero-stats">
           <div className="hero-stat">
             <div className="hero-stat-number">160K</div>
@@ -14,8 +14,8 @@ function Overview() {
             <div className="hero-stat-label">Jurisdictions</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">24pp</div>
-            <div className="hero-stat-label">LLM Accuracy Gain</div>
+            <div className="hero-stat-number">10K+</div>
+            <div className="hero-stat-label">LLM Benchmark Tests</div>
           </div>
         </div>
       </div>
@@ -23,31 +23,33 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">The Crisis</h2>
+            <h2 className="card-title">The Infrastructure Crisis</h2>
             <p>
-              When CaseText shut down, thousands of legal references vanished overnight. State
-              websites reorganize constantly, breaking the links that power benefit calculators. 18%
-              of benefit program URLs from 2019 are dead today.
+              Rules-as-code providers face an impossible challenge: government documents constantly
+              disappear. Teams waste thousands of hours maintaining broken links, storing PDFs
+              locally, and manually checking for updates. When websites reorganize or vendors like
+              CaseText shut down, entire systems break.
             </p>
             <br />
             <p>
-              <strong>Impact:</strong> Families lose benefits. Organizations waste thousands of
-              hours maintaining broken systems. AI tools generate incorrect information without
-              reliable sources.
+              <strong>The cost:</strong> 18% of 2019 benefit URLs are dead. Organizations can't
+              reliably tie rules to source documents. Engineers become librarians instead of
+              building tools that help families.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">Our Solution</h2>
+            <h2 className="card-title">Document Infrastructure That Works</h2>
             <p>
-              Policy Library creates an immutable archive of every statute, regulation, and form
-              that defines benefit eligibility. Our AI crawlers monitor agency websites weekly,
-              capturing changes before documents disappear.
+              Policy Library provides the missing infrastructure layer. We preserve every statute,
+              regulation, and form that defines eligibility—permanently. Rules-as-code providers get
+              stable APIs with documents that never disappear, automatic change detection, and
+              version history.
             </p>
             <br />
             <p>
-              <strong>Result:</strong> Permanent source IDs that never break. Full version history.
-              AI-ready corpus for accurate benefit calculations.
+              <strong>Focus on what matters:</strong> Stop managing PDFs. Stop fixing broken links.
+              Build the rules engines and calculators that actually help families access benefits.
             </p>
           </div>
         </div>
@@ -56,21 +58,139 @@ function Overview() {
           <h2 className="workflow-title">How It Works</h2>
           <div className="workflow">
             <div className="workflow-step">
+              <div className="workflow-icon">👥</div>
+              <div className="workflow-label">Identify Sources</div>
+              <div className="workflow-desc">Humans point to critical documents</div>
+            </div>
+            <div className="workflow-arrow">→</div>
+            <div className="workflow-step">
               <div className="workflow-icon">🤖</div>
-              <div className="workflow-label">AI Crawls</div>
-              <div className="workflow-desc">Claude/GPT-4 monitors 50+ jurisdictions weekly</div>
+              <div className="workflow-label">AI Monitors</div>
+              <div className="workflow-desc">Crawlers track changes weekly</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">✓</div>
-              <div className="workflow-label">Humans Verify</div>
-              <div className="workflow-desc">GitHub pull request review process</div>
+              <div className="workflow-icon">📚</div>
+              <div className="workflow-label">Archive Forever</div>
+              <div className="workflow-desc">Version control & permanent IDs</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">🚀</div>
-              <div className="workflow-label">Partners Build</div>
-              <div className="workflow-desc">Stable API with permanent source IDs</div>
+              <div className="workflow-icon">🔗</div>
+              <div className="workflow-label">Stable APIs</div>
+              <div className="workflow-desc">Never worry about broken links</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="benefits-section">
+          <h2 className="section-title">Built for Rules-as-Code Providers</h2>
+          <div className="benefits-grid">
+            <div className="benefit-item">
+              <h3>No More Dead Links</h3>
+              <p>
+                Permanent source IDs that survive website reorganizations, vendor shutdowns, and
+                agency changes.
+              </p>
+            </div>
+            <div className="benefit-item">
+              <h3>Stop Managing PDFs</h3>
+              <p>
+                Access any document via API. No local storage, no file management, no broken
+                references.
+              </p>
+            </div>
+            <div className="benefit-item">
+              <h3>Automatic Updates</h3>
+              <p>
+                Get notified when documents change. Access full version history. Never miss critical
+                updates.
+              </p>
+            </div>
+            <div className="benefit-item">
+              <h3>Reliable Citations</h3>
+              <p>
+                Every rule links to its authoritative source. Build trust with users and regulators.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="integration-section">
+          <h2 className="section-title">Comprehensive Coverage Through Partnership</h2>
+          <div className="integration-content">
+            <p className="integration-intro">
+              Policy Library complements existing infrastructure to provide complete document
+              coverage:
+            </p>
+            <div className="integration-grid">
+              <div className="integration-item">
+                <h3>🏛️ OpenStates Integration</h3>
+                <p>
+                  Leveraging OpenStates' proven schema and API for legislative documents. They
+                  handle bills and statutes across all 50 states, DC, and Puerto Rico, while we
+                  focus on the regulatory and administrative documents that actually define benefit
+                  eligibility.
+                </p>
+              </div>
+              <div className="integration-item">
+                <h3>📋 Regulatory Focus</h3>
+                <p>
+                  We archive the implementation details: agency regulations, policy manuals,
+                  application forms, and guidance documents. These are the documents that determine
+                  whether someone actually qualifies for benefits—and they're the ones that
+                  disappear most frequently.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="benchmark-section">
+          <h2 className="section-title">Rigorous LLM Accuracy Benchmark</h2>
+          <div className="benchmark-content">
+            <p className="benchmark-intro">
+              We're building the first comprehensive benchmark for AI benefit calculations, testing
+              how access to authoritative documents improves accuracy:
+            </p>
+            <div className="benchmark-methodology">
+              <h3>🧪 Benchmark Methodology</h3>
+              <div className="methodology-steps">
+                <div className="methodology-step">
+                  <strong>1. Generate Test Suite:</strong> Create 10,000+ test cases using
+                  PolicyEngine-US with exact benefit calculations for diverse household-benefit
+                  combinations across all states.
+                </div>
+                <div className="methodology-step">
+                  <strong>2. Test Four Conditions:</strong>
+                  <ul>
+                    <li>
+                      <strong>Baseline:</strong> LLM alone with no additional context
+                    </li>
+                    <li>
+                      <strong>With Documents:</strong> LLM with access to Policy Library documents
+                    </li>
+                    <li>
+                      <strong>With Calculator:</strong> LLM with PolicyEngine-US tool access
+                    </li>
+                    <li>
+                      <strong>Full Stack:</strong> LLM with both documents and calculator
+                    </li>
+                  </ul>
+                </div>
+                <div className="methodology-step">
+                  <strong>3. Measure Impact:</strong> Track accuracy improvements, error types, and
+                  confidence levels across different benefit programs and household types.
+                </div>
+              </div>
+            </div>
+            <div className="benchmark-preview">
+              <h3>📊 Expected Findings</h3>
+              <p>
+                Early testing suggests dramatic improvements when LLMs have access to source
+                documents. The benchmark will quantify exactly how much document access matters for
+                different use cases, creating the evidence base for AI-powered benefits navigation.
+              </p>
             </div>
           </div>
         </div>

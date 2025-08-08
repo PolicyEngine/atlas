@@ -3,7 +3,8 @@ import './App.css';
 import Overview from './components/Overview';
 import Demo from './components/Demo';
 import Partners from './components/Partners';
-import Proposal from './components/Proposal';
+import PBIFApplication from './components/PBIFApplication';
+import ENGINEApplication from './components/ENGINEApplication';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         {activeSection === 'overview' && <Overview />}
         {activeSection === 'demo' && <Demo />}
         {activeSection === 'partners' && <Partners />}
-        {activeSection === 'proposal' && <Proposal />}
+        {activeSection === 'application' && <PBIFApplication />}
+        {activeSection === 'engine' && <ENGINEApplication />}
       </main>
 
       <footer className="footer">
