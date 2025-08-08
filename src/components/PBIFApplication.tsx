@@ -345,7 +345,8 @@ function PBIFApplication() {
               states. GitHub for version control and human review workflow. PostgreSQL for metadata,
               S3 for document storage with automatic pdf2text extraction for plaintext versions.
               REST API using FastAPI for multi-format document access (PDF, text, HTML, JSON).
-              Google Translate API for 100+ language support. CloudFlare CDN for global distribution.
+              Google Translate API for 100+ language support. CloudFlare CDN for global
+              distribution.
             </p>
             <p>
               This hybrid approach leverages AI's ability to process vast amounts of information

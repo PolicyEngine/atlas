@@ -89,7 +89,7 @@ function Overview() {
             <div className="benefit-item">
               <h3>MCP Server Integration</h3>
               <p>
-                Native Model Context Protocol server lets AI assistants query policy documents 
+                Native Model Context Protocol server lets AI assistants query policy documents
                 directly during conversations. No hallucinations, just facts.
               </p>
             </div>
@@ -110,8 +110,8 @@ function Overview() {
             <div className="benefit-item">
               <h3>Simple REST API</h3>
               <p>
-                Basic endpoints that work. No complex auth. Free tier for nonprofits. Just GET 
-                the documents you need.
+                Basic endpoints that work. No complex auth. Free tier for nonprofits. Just GET the
+                documents you need.
               </p>
             </div>
           </div>
