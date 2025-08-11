@@ -32,7 +32,7 @@ function Overview() {
             </p>
             <br />
             <p>
-              <strong>The cost:</strong> 18% of 2019 benefit URLs are dead. Organizations can't
+              <strong>The cost:</strong> Government URLs frequently break and documents disappear. Organizations can't
               reliably tie rules to source documents. Engineers become librarians instead of
               building tools that help families.
             </p>
