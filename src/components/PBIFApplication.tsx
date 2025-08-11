@@ -50,15 +50,17 @@ function PBIFApplication() {
             <p>
               Primary beneficiaries include: (1) Families accessing benefits who need reliable
               documentation, (2) Direct service organizations like MyFriendBen and ImagineLA's
-              Benefit Navigator that spend significant time fixing broken links and searching for documents,
-              (3) AI tools that currently generate incorrect benefit information without proper sources.
+              Benefit Navigator that spend significant time fixing broken links and searching for
+              documents, (3) AI tools that currently generate incorrect benefit information without
+              proper sources.
             </p>
             <p>
               Expected impact: Dramatically reduce time organizations spend on document management,
-              enable thousands more successful benefit applications, and substantially improve AI accuracy
-              for benefit calculations. We've proven feasibility with our North Carolina pilot and have commitments from NBER,
-              Better Government Lab, and Federal Reserve Bank of Atlanta. PolicyEngine's existing user base
-              and technical expertise position us uniquely to build this critical infrastructure.
+              enable thousands more successful benefit applications, and substantially improve AI
+              accuracy for benefit calculations. We've proven feasibility with our North Carolina
+              pilot and have commitments from NBER, Better Government Lab, and Federal Reserve Bank
+              of Atlanta. PolicyEngine's existing user base and technical expertise position us
+              uniquely to build this critical infrastructure.
             </p>
           </div>
 
@@ -71,10 +73,10 @@ function PBIFApplication() {
               We've completed a successful pilot with North Carolina, archiving SNAP, Medicaid, and
               TANF documents. Current users include researchers at Georgetown and Michigan using our
               pilot repository for policy analysis. PolicyEngine's existing benefits calculators
-              serve thousands of users who will immediately benefit from reliable document
-              access. Partner organizations MyFriendBen and Benefit Navigator
-              are ready to integrate once we launch. The system is architected for immediate scaling
-              to all 50 states plus federal programs.
+              serve thousands of users who will immediately benefit from reliable document access.
+              Partner organizations MyFriendBen and Benefit Navigator are ready to integrate once we
+              launch. The system is architected for immediate scaling to all 50 states plus federal
+              programs.
             </p>
           </div>
 
@@ -114,11 +116,11 @@ function PBIFApplication() {
             </p>
             <p>
               We validated this problem through direct partnerships. MyFriendBen reports spending
-              substantial time fixing broken links instead of serving their users. Benefit
-              Navigator staff confirmed similar challenges. Georgetown and Michigan researchers
-              cannot conduct historical policy analysis due to missing documents. The Federal
-              Reserve Bank of Atlanta's Policy Rules Database team validated that even federal
-              agencies struggle with document preservation.
+              substantial time fixing broken links instead of serving their users. Benefit Navigator
+              staff confirmed similar challenges. Georgetown and Michigan researchers cannot conduct
+              historical policy analysis due to missing documents. The Federal Reserve Bank of
+              Atlanta's Policy Rules Database team validated that even federal agencies struggle
+              with document preservation.
             </p>
             <p>
               Non-AI solutions have failed because: (1) Manual archiving cannot scale to 50+
@@ -151,10 +153,10 @@ function PBIFApplication() {
             </p>
             <p>
               Secondary beneficiaries are the organizations serving these families. Direct service
-              providers save significant time currently wasted on maintaining broken links.
-              Benefits navigators access reliable documentation instantly. Researchers at
-              universities gain ability to conduct longitudinal policy analysis. Government agencies
-              themselves benefit from permanent archives of their own historical documents.
+              providers save significant time currently wasted on maintaining broken links. Benefits
+              navigators access reliable documentation instantly. Researchers at universities gain
+              ability to conduct longitudinal policy analysis. Government agencies themselves
+              benefit from permanent archives of their own historical documents.
             </p>
             <p>
               We involve beneficiaries throughout the project via: Monthly feedback sessions with
