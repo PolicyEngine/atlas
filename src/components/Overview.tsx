@@ -196,26 +196,6 @@ function Overview() {
           </div>
         </div>
 
-        <div
-          className="access-note"
-          style={{
-            marginTop: '60px',
-            padding: '20px',
-            background: 'var(--light-gray)',
-            borderRadius: '8px',
-            textAlign: 'center',
-          }}
-        >
-          <p style={{ color: 'var(--dark-gray)', margin: 0 }}>
-            <strong>For PBIF Reviewers:</strong> Access the full application at{' '}
-            <a
-              href="/policy-library/application"
-              style={{ color: 'var(--blue)', textDecoration: 'underline' }}
-            >
-              /application
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );
