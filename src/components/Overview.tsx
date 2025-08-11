@@ -218,6 +218,57 @@ function Overview() {
         </div>
 
         <div
+          className="rules-as-code-section"
+          style={{
+            marginTop: '60px',
+            padding: '30px',
+            background: 'var(--teal-light)',
+            borderRadius: '12px',
+          }}
+        >
+          <h2 className="section-title">Powering Rules-as-Code at Scale</h2>
+          <div style={{ marginBottom: '20px' }}>
+            <p style={{ fontSize: '18px', marginBottom: '20px' }}>
+              PolicyEngine has encoded thousands of rules into our open-source benefit calculators, with{' '}
+              <strong>14,000+ source document references</strong> including page-specific citations to IRS publications, 
+              federal regulations, and state codes. We know firsthand the pain: every parameter needs authoritative 
+              backing, from SNAP asset limits to EITC phase-out rates.
+            </p>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: '20px',
+              }}
+            >
+              <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
+                  🔗 Source-to-Code Traceability
+                </h3>
+                <p>
+                  Every rule in PolicyEngine-US links to its source document, often down to the specific page. 
+                  Policy Library ensures those links never break and the documents remain accessible forever.
+                </p>
+              </div>
+              <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
+                  ⚡ Accelerate Development
+                </h3>
+                <p>
+                  New rules-as-code projects can build faster when documents are instantly accessible. 
+                  What took us years to collect will be available to everyone from day one.
+                </p>
+              </div>
+            </div>
+            <p style={{ marginTop: '20px', fontSize: '16px' }}>
+              <strong>The multiplier effect:</strong> When document access is solved once for everyone, 
+              dozens of rules-as-code projects can flourish. Each new calculator, each new tool, builds 
+              on reliable infrastructure instead of reinventing document management.
+            </p>
+          </div>
+        </div>
+
+        <div
           className="government-vision-section"
           style={{
             marginTop: '60px',
