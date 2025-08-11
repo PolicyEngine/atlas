@@ -6,16 +6,16 @@ function Overview() {
         <p className="hero-subtitle">Permanent Document Infrastructure for America's Safety Net</p>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-number">160K</div>
-            <div className="hero-stat-label">People Served Annually</div>
+            <div className="hero-stat-number">50+</div>
+            <div className="hero-stat-label">Target Jurisdictions</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">50+</div>
-            <div className="hero-stat-label">Jurisdictions</div>
+            <div className="hero-stat-number">100K+</div>
+            <div className="hero-stat-label">Documents to Archive</div>
           </div>
           <div className="hero-stat">
             <div className="hero-stat-number">10K+</div>
-            <div className="hero-stat-label">LLM Benchmark Tests</div>
+            <div className="hero-stat-label">LLM Tests Planned</div>
           </div>
         </div>
       </div>
@@ -23,33 +23,38 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">The Infrastructure Crisis</h2>
+            <h2 className="card-title">The Hidden Crisis in Benefit Access</h2>
             <p>
-              Rules-as-code providers face an impossible challenge: government documents constantly
-              disappear. Teams waste thousands of hours maintaining broken links, storing PDFs
-              locally, and manually checking for updates. When websites reorganize or vendors like
-              CaseText shut down, entire systems break.
+              Every organization building benefit tools faces the same nightmare: finding and understanding
+              the actual rules is nearly impossible. Documents are scattered across hundreds of agency websites,
+              buried in PDFs, hidden behind paywalls, or simply don't exist online. Both humans and AI spend
+              countless hours searching for a single eligibility criterion that might be in a policy manual
+              from 2019, a court case from 2022, or an administrative memo that was never digitized.
             </p>
             <br />
             <p>
-              <strong>The cost:</strong> Government URLs frequently break and documents disappear.
-              Organizations can't reliably tie rules to source documents. Engineers become
-              librarians instead of building tools that help families.
+              <strong>The real cost:</strong> We're all solving the same problem in isolation. Every nonprofit,
+              every government agency, every AI company is independently hunting for the same documents,
+              making the same phone calls to agencies, filing the same FOIA requests. Meanwhile, millions of
+              families can't access benefits because nobody can efficiently understand the rules.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">Document Infrastructure That Works</h2>
+            <h2 className="card-title">A Public Good for Policy Knowledge</h2>
             <p>
-              Policy Library provides the missing infrastructure layer. We preserve every statute,
-              regulation, and form that defines eligibility—permanently. Rules-as-code providers get
-              stable APIs with documents that never disappear, automatic change detection, and
-              version history.
+              Policy Library creates the shared infrastructure America needs: a comprehensive, searchable,
+              permanent archive of every document that defines benefit eligibility. We find documents humans
+              can't—from obscure agency memos to state administrative codes to court decisions. AI monitors 
+              every agency website weekly, archives everything permanently, and makes it all accessible through
+              simple APIs.
             </p>
             <br />
             <p>
-              <strong>Focus on what matters:</strong> Stop managing PDFs. Stop fixing broken links.
-              Build the rules engines and calculators that actually help families access benefits.
+              <strong>Unlock innovation at scale:</strong> When every tool builder, researcher, and AI company
+              can instantly access the same authoritative documents, we stop duplicating work and start building
+              solutions. Thousands of hours shift from document hunting to helping families. The entire ecosystem
+              accelerates.
             </p>
           </div>
         </div>
@@ -197,15 +202,46 @@ function Overview() {
                 </p>
               </div>
               <div className="integration-item">
-                <h3>📋 Regulatory Focus</h3>
+                <h3>📋 Complete Document Coverage</h3>
                 <p>
-                  We archive the implementation details: agency regulations, policy manuals,
-                  application forms, and guidance documents. These are the documents that determine
-                  whether someone actually qualifies for benefits—and they're the ones that
-                  disappear most frequently.
+                  We archive the full picture: statutes, regulations, policy manuals, court decisions,
+                  administrative memos, and application forms. Understanding how policies actually work
+                  requires all these pieces together—not just laws or just regulations. We preserve the
+                  complete documentary record that determines benefit eligibility.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="government-vision-section" style={{ marginTop: '60px', padding: '30px', background: 'var(--blue-light)', borderRadius: '12px' }}>
+          <h2 className="section-title">Vision: Government-to-Government Infrastructure</h2>
+          <div style={{ marginBottom: '20px' }}>
+            <p style={{ fontSize: '18px', marginBottom: '20px' }}>
+              Beyond serving nonprofits and AI tools, Policy Library could transform how governments themselves 
+              share information. Imagine if states could instantly access county implementation manuals, or counties 
+              could see how neighboring jurisdictions interpret the same federal regulations.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>🏛️ Cross-Jurisdiction Learning</h3>
+                <p>
+                  States implementing new SNAP waivers could instantly see how other states handled similar 
+                  situations. Counties could learn from each other's interpretations of state guidance.
+                </p>
+              </div>
+              <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>📊 Policy Continuity</h3>
+                <p>
+                  When administrations change or staff turn over, institutional knowledge is preserved. 
+                  New staff can access the complete history of policy interpretations and implementations.
+                </p>
+              </div>
+            </div>
+            <p style={{ marginTop: '20px', fontSize: '16px', fontStyle: 'italic' }}>
+              We're setting aside resources to engage government partners and test how this infrastructure 
+              could serve their needs directly. The potential for improving government efficiency is enormous.
+            </p>
           </div>
         </div>
 

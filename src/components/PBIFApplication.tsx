@@ -36,10 +36,10 @@ function PBIFApplication() {
             <p>
               The Policy Library addresses a critical infrastructure failure: benefit program
               documents disappear constantly, causing families to lose access and organizations to
-              waste thousands of hours maintaining broken links. Our analysis shows 18% of benefit
-              program URLs from 2019 are dead today. When CaseText shut down, thousands of legal
+              waste thousands of hours maintaining broken links. When CaseText shut down, legal
               references vanished overnight. State website reorganizations routinely break the links
-              powering benefit calculators.
+              powering benefit calculators. Documents are scattered, often offline, making research
+              painfully slow for both humans and AI.
             </p>
             <p>
               Our solution uses AI-powered crawlers (Claude/GPT-4) to monitor 50+ jurisdictions
@@ -50,16 +50,15 @@ function PBIFApplication() {
             <p>
               Primary beneficiaries include: (1) Families accessing benefits who need reliable
               documentation, (2) Direct service organizations like MyFriendBen and ImagineLA's
-              Benefit Navigator that waste 20+ hours monthly fixing broken links, (3) AI tools that
-              currently generate incorrect benefit information without proper sources.
+              Benefit Navigator that spend significant time fixing broken links and searching for documents,
+              (3) AI tools that currently generate incorrect benefit information without proper sources.
             </p>
             <p>
-              Expected impact: Save partner organizations 10,000+ hours annually, enable 50,000
-              successful benefit applications, and improve AI accuracy by 24 percentage points.
-              We've proven feasibility with our North Carolina pilot and have commitments from NBER,
-              Better Government Lab, and Federal Reserve Bank of Atlanta. PolicyEngine already
-              serves 160,000 users annually through our benefits calculators, positioning us
-              uniquely to build this critical infrastructure.
+              Expected impact: Dramatically reduce time organizations spend on document management,
+              enable thousands more successful benefit applications, and substantially improve AI accuracy
+              for benefit calculations. We've proven feasibility with our North Carolina pilot and have commitments from NBER,
+              Better Government Lab, and Federal Reserve Bank of Atlanta. PolicyEngine's existing user base
+              and technical expertise position us uniquely to build this critical infrastructure.
             </p>
           </div>
 
@@ -72,8 +71,8 @@ function PBIFApplication() {
               We've completed a successful pilot with North Carolina, archiving SNAP, Medicaid, and
               TANF documents. Current users include researchers at Georgetown and Michigan using our
               pilot repository for policy analysis. PolicyEngine's existing benefits calculators
-              serve 160,000 users annually who will immediately benefit from reliable document
-              access. Partner organizations MyFriendBen (3,500 monthly users) and Benefit Navigator
+              serve thousands of users who will immediately benefit from reliable document
+              access. Partner organizations MyFriendBen and Benefit Navigator
               are ready to integrate once we launch. The system is architected for immediate scaling
               to all 50 states plus federal programs.
             </p>
@@ -109,13 +108,13 @@ function PBIFApplication() {
               The benefits access crisis stems from disappearing policy documents that break the
               infrastructure powering America's safety net. Recent federal policy changes including
               SNAP work requirements, Medicaid unwinding, and TANF time limits make accurate
-              documentation critical, yet 18% of benefit program URLs from 2019 are dead today. The
+              documentation critical, yet government URLs frequently disappear without warning. The
               CaseText shutdown eliminated thousands of legal references overnight, breaking tools
               nationwide.
             </p>
             <p>
               We validated this problem through direct partnerships. MyFriendBen reports spending
-              20+ hours monthly fixing broken links instead of serving their 3,500 users. Benefit
+              substantial time fixing broken links instead of serving their users. Benefit
               Navigator staff confirmed similar challenges. Georgetown and Michigan researchers
               cannot conduct historical policy analysis due to missing documents. The Federal
               Reserve Bank of Atlanta's Policy Rules Database team validated that even federal
@@ -128,7 +127,7 @@ function PBIFApplication() {
               can disappear, taking infrastructure with them. AI is uniquely suited to intelligently
               crawl complex government websites, understand document relationships, and identify
               changes requiring preservation. Our testing shows Claude and GPT-4 can accurately
-              identify and extract policy documents with 95% precision when properly prompted,
+              identify and extract policy documents with high accuracy when properly prompted,
               making this an ideal AI application where traditional approaches have demonstrably
               failed.
             </p>
@@ -152,7 +151,7 @@ function PBIFApplication() {
             </p>
             <p>
               Secondary beneficiaries are the organizations serving these families. Direct service
-              providers save 20+ hours monthly currently wasted on maintaining broken links.
+              providers save significant time currently wasted on maintaining broken links.
               Benefits navigators access reliable documentation instantly. Researchers at
               universities gain ability to conduct longitudinal policy analysis. Government agencies
               themselves benefit from permanent archives of their own historical documents.
@@ -577,13 +576,13 @@ function PBIFApplication() {
           <div className="response-box">
             <p>
               PolicyEngine is uniquely positioned to build the Policy Library. We already serve
-              160,000 users annually through our benefits calculators, understanding deeply what
+              thousands of users through our benefits calculators, understanding deeply what
               families and organizations need. Our team combines policy expertise with technical
               excellence—we've built production systems handling millions of calculations. Our
               nonprofit mission ensures we'll maintain free access for those who need it most.
             </p>
             <p>
-              The timing is critical. Every day, more documents disappear forever—18% of 2019 URLs
+              The timing is critical. Every day, more documents disappear forever—government URLs
               are already dead. The recent CaseText shutdown created sector-wide urgency. AI tools
               are being deployed now for benefits navigation, and without proper sources, they're
               spreading dangerous misinformation to vulnerable families. Waiting means more lost
