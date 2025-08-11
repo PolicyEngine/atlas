@@ -83,6 +83,35 @@ function Overview() {
           </div>
         </div>
 
+        <div className="progress-section" style={{ marginTop: '60px', padding: '30px', background: 'var(--teal-light)', borderRadius: '12px' }}>
+          <h2 className="section-title">Already In Progress</h2>
+          <div style={{ marginBottom: '20px' }}>
+            <p style={{ fontSize: '18px', marginBottom: '20px' }}>
+              We're not starting from scratch. In partnership with the <strong>Atlanta Fed's Policy Rules Database</strong>, <strong>Georgia Center for Opportunity</strong>, and <strong>MyFriendBen</strong>, we're already building the foundation:
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>🏗️ US Sources Repository</h3>
+                <p style={{ marginBottom: '10px' }}>
+                  Federal-level documents for SNAP, Medicaid, TANF, and more. Establishing the core infrastructure and standards.
+                </p>
+                <a href="https://github.com/PolicyEngine/us-sources" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue)', textDecoration: 'underline' }}>
+                  github.com/PolicyEngine/us-sources →
+                </a>
+              </div>
+              <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>🏛️ North Carolina Pilot</h3>
+                <p style={{ marginBottom: '10px' }}>
+                  Complete state-level implementation with Atlanta Fed collaboration. Proving the model works at scale.
+                </p>
+                <a href="https://github.com/PolicyEngine/us-nc-sources" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue)', textDecoration: 'underline' }}>
+                  github.com/PolicyEngine/us-nc-sources →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="benefits-section">
           <h2 className="section-title">Built for AI & Rules-as-Code</h2>
           <div className="benefits-grid">
