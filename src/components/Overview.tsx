@@ -230,9 +230,9 @@ function Overview() {
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
               PolicyEngine has encoded thousands of rules into our open-source benefit calculators, with{' '}
-              <strong>14,000+ source document references</strong> including page-specific citations to IRS publications, 
-              federal regulations, and state codes. We know firsthand the pain: every parameter needs authoritative 
-              backing, from SNAP asset limits to EITC phase-out rates.
+              <strong>nearly 4,000 source document references</strong> (2,500 unique documents) including page-specific 
+              citations to IRS publications, federal regulations, and state codes. We know firsthand the pain: every 
+              parameter needs authoritative backing, from SNAP asset limits to EITC phase-out rates.
             </p>
             <div
               style={{
