@@ -8,6 +8,12 @@ The Policy Library addresses a critical infrastructure failure: benefit program 
 
 **Live Application**: https://policyengine.github.io/policy-library/
 
+### Direct Access URLs
+
+- **PBIF Application**: https://policyengine.github.io/policy-library/application
+- **Partners List**: https://policyengine.github.io/policy-library/partners
+- **ENGINE Application**: https://policyengine.github.io/policy-library/engine
+
 ## Features
 
 - **AI-Powered Document Crawling**: Claude/GPT-4 powered intelligent extraction
