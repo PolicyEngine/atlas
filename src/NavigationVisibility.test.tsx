@@ -10,12 +10,12 @@ describe('Navigation visibility', () => {
         <NavigationRouter />
       </MemoryRouter>
     );
-    
+
     // Should show public sections
     expect(screen.getByText('Overview')).toBeInTheDocument();
     expect(screen.getByText('Mock-up')).toBeInTheDocument();
     expect(screen.getByText('Community')).toBeInTheDocument();
-    
+
     // Should NOT show sensitive sections
     expect(screen.queryByText('Partners')).not.toBeInTheDocument();
     expect(screen.queryByText('PBIF Application')).not.toBeInTheDocument();
@@ -24,11 +24,11 @@ describe('Navigation visibility', () => {
 
   it('shows all sections when on /partners route', () => {
     render(
-      <MemoryRouter initialEntries={['/partners']} >
+      <MemoryRouter initialEntries={['/partners']}>
         <NavigationRouter />
       </MemoryRouter>
     );
-    
+
     // Should show all sections
     expect(screen.getByText('Overview')).toBeInTheDocument();
     expect(screen.getByText('Mock-up')).toBeInTheDocument();
@@ -40,11 +40,11 @@ describe('Navigation visibility', () => {
 
   it('shows all sections when on /application route', () => {
     render(
-      <MemoryRouter initialEntries={['/application']} >
+      <MemoryRouter initialEntries={['/application']}>
         <NavigationRouter />
       </MemoryRouter>
     );
-    
+
     // Should show all sections
     expect(screen.getByText('Overview')).toBeInTheDocument();
     expect(screen.getByText('Mock-up')).toBeInTheDocument();
@@ -56,11 +56,11 @@ describe('Navigation visibility', () => {
 
   it('shows all sections when on /engine route', () => {
     render(
-      <MemoryRouter initialEntries={['/engine']} >
+      <MemoryRouter initialEntries={['/engine']}>
         <NavigationRouter />
       </MemoryRouter>
     );
-    
+
     // Should show all sections
     expect(screen.getByText('Overview')).toBeInTheDocument();
     expect(screen.getByText('Mock-up')).toBeInTheDocument();
@@ -72,16 +72,16 @@ describe('Navigation visibility', () => {
 
   it('hides sensitive sections on /demo route', () => {
     render(
-      <MemoryRouter initialEntries={['/demo']} >
+      <MemoryRouter initialEntries={['/demo']}>
         <NavigationRouter />
       </MemoryRouter>
     );
-    
+
     // Should show public sections
     expect(screen.getByText('Overview')).toBeInTheDocument();
     expect(screen.getByText('Mock-up')).toBeInTheDocument();
     expect(screen.getByText('Community')).toBeInTheDocument();
-    
+
     // Should NOT show sensitive sections
     expect(screen.queryByText('Partners')).not.toBeInTheDocument();
     expect(screen.queryByText('PBIF Application')).not.toBeInTheDocument();
@@ -90,16 +90,16 @@ describe('Navigation visibility', () => {
 
   it('hides sensitive sections on /community route', () => {
     render(
-      <MemoryRouter initialEntries={['/community']} >
+      <MemoryRouter initialEntries={['/community']}>
         <NavigationRouter />
       </MemoryRouter>
     );
-    
+
     // Should show public sections
     expect(screen.getByText('Overview')).toBeInTheDocument();
     expect(screen.getByText('Mock-up')).toBeInTheDocument();
     expect(screen.getByText('Community')).toBeInTheDocument();
-    
+
     // Should NOT show sensitive sections
     expect(screen.queryByText('Partners')).not.toBeInTheDocument();
     expect(screen.queryByText('PBIF Application')).not.toBeInTheDocument();

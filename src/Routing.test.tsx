@@ -10,7 +10,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should show Overview content (use more specific text)
     expect(screen.getByRole('heading', { name: /Policy Library/ })).toBeInTheDocument();
     expect(screen.getByText(/Permanent Document Infrastructure/)).toBeInTheDocument();
@@ -22,7 +22,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should show Demo content
     expect(screen.getByText(/Policy Library Mock-up/)).toBeInTheDocument();
   });
@@ -33,7 +33,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should show PBIF Application content
     expect(screen.getByText(/PBIF Summer 2025 Application/)).toBeInTheDocument();
   });
@@ -44,7 +44,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should show Partners content
     expect(screen.getByText(/Our Partner Organizations/)).toBeInTheDocument();
   });
@@ -55,7 +55,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should show ENGINE Application content
     expect(screen.getByText(/Nonprofit ENG\(INE\) 2025 Application/)).toBeInTheDocument();
   });
@@ -66,7 +66,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should show Community content
     expect(screen.getByText(/Civic Tech Community Partnership/)).toBeInTheDocument();
   });
@@ -77,7 +77,7 @@ describe('URL-based routing', () => {
         <AppRoutes />
       </MemoryRouter>
     );
-    
+
     // Should redirect to Overview (use more specific selector)
     expect(screen.getByRole('heading', { name: /Policy Library/ })).toBeInTheDocument();
     expect(screen.getByText(/Permanent Document Infrastructure/)).toBeInTheDocument();
