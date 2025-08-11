@@ -6,7 +6,16 @@ interface NavigationProps {
 }
 
 function Navigation({ activeSection, setActiveSection }: NavigationProps) {
-  const navItems = [
+  // Only show sensitive sections if they're already active (accessed via URL)
+  const showAllSections = ['partners', 'application', 'engine'].includes(activeSection);
+
+  const publicItems = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'demo', label: 'Mock-up' },
+    { id: 'civic-tech', label: 'Community' },
+  ];
+
+  const allItems = [
     { id: 'overview', label: 'Overview' },
     { id: 'demo', label: 'Mock-up' },
     { id: 'partners', label: 'Partners' },
@@ -14,6 +23,8 @@ function Navigation({ activeSection, setActiveSection }: NavigationProps) {
     { id: 'civic-tech', label: 'Community' },
     { id: 'engine', label: 'ENG(INE) Application' },
   ];
+
+  const navItems = showAllSections ? allItems : publicItems;
 
   return (
     <nav className="nav-container">
