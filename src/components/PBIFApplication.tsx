@@ -9,6 +9,21 @@ function PBIFApplication() {
           </p>
         </div>
 
+        <div className="response-box" style={{ background: '#f0f8ff', marginBottom: '30px' }}>
+          <p style={{ fontStyle: 'italic', marginBottom: '10px' }}>
+            <strong>Note:</strong> This page shows our responses to the official PBIF application questions.
+            Each section header and question text is verbatim from the application.
+          </p>
+          <p style={{ marginBottom: 0 }}>
+            <a href="https://www.publicbenefitinnovationfund.org/Summer_2025_Open_Call_Application.pdf" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style={{ color: 'var(--blue)' }}>
+              View Official Application PDF →
+            </a>
+          </p>
+        </div>
+
         {/* Section 1: Executive Summary & Project Overview */}
         <div className="application-section">
           <h2 className="section-title">Section 1: Executive Summary & Project Overview</h2>
@@ -32,7 +47,10 @@ function PBIFApplication() {
           </div>
 
           <div className="response-box">
-            <h3>Executive Summary (250 words)</h3>
+            <h3>Executive Summary (limit 250 words)</h3>
+            <p style={{ fontStyle: 'italic', fontSize: '14px', marginBottom: '15px' }}>
+              "In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."
+            </p>
             <p>
               The Policy Library is cross-cutting infrastructure that directly enables all four PBIF
               priority areas. Every tool for income verification, SNAP error reduction, beneficiary
@@ -108,6 +126,9 @@ function PBIFApplication() {
 
           <div className="response-box">
             <h3>Problem Statement (250 words)</h3>
+            <p style={{ fontStyle: 'italic', fontSize: '14px', marginBottom: '15px' }}>
+              "Clearly articulate the specific problem or challenge your initiative aims to address and how it relates to recent changes in federal policy or funding changes. Provide supporting data or evidence to demonstrate the urgency and significance of this problem - and how you've validated it with staff and/or beneficiaries. Is this an area where non-AI solutions do not already offer effective, fit-for-purpose, affordable approaches?"
+            </p>
             <p>
               The benefits access crisis stems from disappearing policy documents that break the
               infrastructure powering America's safety net. Recent federal policy changes including
