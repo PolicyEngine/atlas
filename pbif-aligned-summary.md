@@ -11,7 +11,7 @@ The Policy Library addresses the root cause behind ALL four PBIF priority areas:
 - Our solution: Instant API access to state-specific verification rules with version history
 
 **2. SNAP Error Rate Reduction**  
-- 40% of errors stem from outdated or misunderstood policy documents
+- Many errors stem from outdated or misunderstood policy documents
 - Our solution: AI-monitored archives ensure staff always have current eligibility criteria
 
 **3. Clear Beneficiary Communication**
@@ -19,13 +19,13 @@ The Policy Library addresses the root cause behind ALL four PBIF priority areas:
 - Our solution: Every rule linked to its authoritative source, enabling confident guidance
 
 **4. Application/Verification/Appeal Backlog Reduction**
-- Staff waste 20% of time hunting for policy clarifications
+- Staff waste substantial time hunting for policy clarifications
 - Our solution: Instant document access returns hours to actual casework
 
 ### Why This Is THE Upstream Solution
 
 Every organization building tools for these priorities—including other PBIF applicants—faces the same infrastructure gap: 
-- Government documents disappear (we've documented hundreds of dead links from 2019-2024)
+- Government documents disappear constantly
 - Agencies reorganize websites quarterly, breaking every integration
 - Critical memos exist only in email chains or filing cabinets
 - Staff confidence erodes when they can't verify their guidance
@@ -52,7 +52,7 @@ Every organization building tools for these priorities—including other PBIF ap
 - Working prototypes at github.com/PolicyEngine/us-sources and us-nc-sources
 - Interactive mockup demonstrating full system: https://policyengine.github.io/policy-library
 - PolicyEngine's 2,500+ document references prove the need and approach
-- AI crawlers tested with 95% accuracy on state agency sites
+- AI crawlers tested successfully on state agency sites
 
 **12-Month Production Timeline:**
 - Months 1-3: Scale existing crawlers to 10 states
@@ -62,9 +62,9 @@ Every organization building tools for these priorities—including other PBIF ap
 
 ### Evaluation Criteria Alignment
 
-**Impact**: Removes the #1 infrastructure barrier for EVERY safety net tool
+**Impact**: Removes a critical infrastructure barrier for EVERY safety net tool
 - Measurable: Partner time savings, document availability metrics, API usage
-- Direct beneficiary impact: 160,000+ through existing partner networks
+- Direct beneficiary impact through existing partner networks
 
 **Responsible AI**: Documents are facts, not interpretations
 - No bias risk: We preserve source material, not encode rules

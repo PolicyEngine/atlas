@@ -47,10 +47,10 @@ function PBIFApplication() {
             </p>
             <p>
               <strong>Direct PBIF Priority Impact:</strong> (1) Income verification—instant access to
-              state-specific disregard policies; (2) SNAP errors—current eligibility criteria prevent
-              40% of documentation-related errors; (3) Beneficiary communication—advocates can
-              confidently explain rules with source documents; (4) Backlog reduction—staff save 20%
-              of time currently spent hunting for policy clarifications.
+              state-specific disregard policies; (2) SNAP errors—current eligibility criteria reduce
+              documentation-related errors; (3) Beneficiary communication—advocates can
+              confidently explain rules with source documents; (4) Backlog reduction—staff save
+              significant time currently spent hunting for policy clarifications.
             </p>
             <p>
               <strong>Not starting from scratch:</strong> We're already live with Federal Reserve
