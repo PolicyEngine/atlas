@@ -14,9 +14,7 @@ function Demo() {
   const [program, setProgram] = useState('snap');
   const [doctype, setDoctype] = useState('statute');
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'bulk' | 'api' | 'mcp'>(
-    'search'
-  );
+  const [activeTab, setActiveTab] = useState<'bulk' | 'upload' | 'search' | 'api' | 'mcp'>('bulk');
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadUrl, setUploadUrl] = useState('');
 
@@ -129,10 +127,10 @@ documents = response.json()`;
 
           <div className="demo-tabs">
             <button
-              className={`demo-tab ${activeTab === 'search' ? 'active' : ''}`}
-              onClick={() => setActiveTab('search')}
+              className={`demo-tab ${activeTab === 'bulk' ? 'active' : ''}`}
+              onClick={() => setActiveTab('bulk')}
             >
-              🔍 Search & Retrieve
+              📦 Bulk Ingestion
             </button>
             <button
               className={`demo-tab ${activeTab === 'upload' ? 'active' : ''}`}
@@ -141,10 +139,10 @@ documents = response.json()`;
               📤 Submit Document
             </button>
             <button
-              className={`demo-tab ${activeTab === 'bulk' ? 'active' : ''}`}
-              onClick={() => setActiveTab('bulk')}
+              className={`demo-tab ${activeTab === 'search' ? 'active' : ''}`}
+              onClick={() => setActiveTab('search')}
             >
-              📦 Bulk Ingestion
+              🔍 Search & Retrieve
             </button>
             <button
               className={`demo-tab ${activeTab === 'api' ? 'active' : ''}`}
