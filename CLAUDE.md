@@ -16,7 +16,7 @@ This is the **PolicyEngine Policy Library** repository - a PBIF (Public Benefit 
 
 ### PBIF Application Details
 - **Application Deadline**: August 16, 2025, 11:59 PM Pacific Time
-- **Funding Request**: $498,000 (within PBIF range of $500K-$2M)
+- **Funding Request**: $700,000 (within PBIF range of $500K-$2M)
 - **Grant Period**: 2 years with 12-month production deployment requirement
 - **Focus**: AI-enabled technology reducing administrative burden for SNAP, Medicaid, and other safety net programs
 
@@ -92,18 +92,22 @@ policy-library/
 └── README.md          # Public-facing documentation
 ```
 
-## Budget Breakdown (Total 2-Year)
+## Budget Breakdown (Total 2 Years)
 
-- **Personnel (1.85 FTE)**: $293,000
-- **Fringe Benefits (33%)**: $96,690
-- **Partner Contracts**: $164,000
-  - MyFriendBen: $50,000 (deep integration pilot)
-  - Benefit Navigator: $50,000 (deep integration pilot)
-  - Georgia Center for Opportunity: $30,000 (founding partner)
-  - Other partners: $34,000
-- **AI Tools & Infrastructure**: $60,000
-- **Indirect (10% de minimis)**: $61,369
-- **Total**: $675,059
+- **Personnel (1.85 FTE)**: $425,235
+  - Lead Engineer: 1.0 FTE
+  - ML/AI Engineer: 0.8 FTE  
+  - Policy Analyst: 0.05 FTE
+- **Partner Contracts**: $180,000
+  - MyFriendBen: $50,000 (5-state expansion: CO, NC, MA, IL, TX)
+  - Benefit Navigator: $50,000 (7 markets via PolicyEngine API)
+  - Georgia Center for Opportunity: $30,000 (technical integration)
+  - Citizen Codex: $20,000 (UX research & design)
+  - Others: $30,000 (Urban Institute, Mirza, additional partners)
+- **Cloud & Infrastructure**: $20,000
+- **Other Direct Costs**: $11,141
+- **Indirect (10% de minimis)**: $63,637
+- **Total**: $700,000
 
 ## PBIF Budget Google Sheets Automation
 
@@ -111,6 +115,7 @@ policy-library/
 
 ### Key Scripts:
 - `update_partner_allocations.py` - Updates partner funding amounts (MFB, BN, GCO, etc.)
+- `update_expanded_partners.py` - Updates budget to $700k with expanded partner network
 - `final_correct_fill.py` - Main script to fill the entire budget spreadsheet
 - Uses `gspread` with credentials in `token.pickle`
 - Spreadsheet ID: `1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw`

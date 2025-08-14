@@ -1,5 +1,5 @@
 # PBIF Budget - PolicyEngine Policy Library
-## Total Request: $675,059 over 2 years
+## Total Request: $700,000 over 2 years
 
 ### FINAL BUDGET FOR GOOGLE SHEETS ENTRY
 
@@ -16,31 +16,29 @@
 
 | Category | Year 1 | Year 2 | Total | Justification |
 |----------|--------|--------|-------|--------------|
-| Partner Contracts | $82,000 | $82,000 | $164,000 | MyFriendBen ($50k), Benefit Navigator ($50k), GCO ($30k), Others ($34k) |
-| Cloud Infrastructure | $10,000 | $12,000 | $22,000 | AWS for crawlers, storage, API |
+| Partner Contracts | $90,000 | $90,000 | $180,000 | MyFriendBen ($50k), Benefit Navigator ($50k), GCO ($30k), Citizen Codex ($20k), Others ($30k) |
+| Cloud Infrastructure | $10,000 | $10,000 | $20,000 | AWS for crawlers, storage, API |
 | Software Licenses | $3,000 | $3,000 | $6,000 | GitHub, monitoring tools |
-| Travel/Dissemination | $2,000 | $3,000 | $5,000 | Conferences, partner meetings |
-| **Other Direct Subtotal** | **$75,000** | **$58,000** | **$133,000** | |
+| Travel/Dissemination | $2,071 | $3,070 | $5,141 | Conferences, partner meetings |
+| **Other Direct Subtotal** | **$105,071** | **$106,070** | **$211,141** | |
 
 #### INDIRECT COSTS (10% de minimis rate)
 
 | | Year 1 | Year 2 | Total |
 |--|--------|--------|-------|
-| Direct Costs Base | $231,250 | $218,937 | $450,187 |
-| Indirect (10%) | $23,125 | $21,894 | $45,019 |
+| Direct Costs Base | $314,546 | $321,830 | $636,376 |
+| Indirect (10%) | $31,454 | $32,183 | $63,637 |
 
 #### TOTAL BUDGET
 
 | | Year 1 | Year 2 | Total |
 |--|--------|--------|-------|
-| Personnel | $156,250 | $160,937 | $317,187 |
-| Other Direct | $75,000 | $58,000 | $133,000 |
-| Indirect | $23,125 | $21,894 | $45,019 |
-| **GRAND TOTAL** | **$254,375** | **$240,831** | **$495,206** |
+| Personnel | $209,475 | $215,760 | $425,235 |
+| Other Direct | $105,071 | $106,070 | $211,141 |
+| Indirect | $31,454 | $32,183 | $63,637 |
+| **GRAND TOTAL** | **$346,000** | **$354,013** | **$700,013** |
 
-**Adjustment to reach exactly $498,000:** Add $2,794 to Year 2 cloud infrastructure
-- Final Year 2 Cloud Infrastructure: $14,794
-- Final Grand Total: **$498,000**
+**Note:** Budget totals approximately $700,000 to accommodate expanded partner network including Urban Institute and for-profit partners like Mirza.
 
 ---
 
@@ -53,16 +51,17 @@
 
 *Note: Salaries are set at nonprofit rates, significantly below market for these technical roles.*
 
-**Partner Microgrants ($164,000)**
+**Partner Microgrants ($180,000)**
 - **Deep Integration Pilots:** MyFriendBen ($50,000), Benefit Navigator ($50,000)
-- **Founding Partner:** GCO ($30,000), recognizing their role as original pilot partner  
-- **Other Partners:** Various organizations ($34,000)
+- **Founding Partner:** GCO ($30,000), recognizing their role as original pilot partner
+- **UX Research & Design:** Citizen Codex ($20,000), user research and interface design
+- **Other Partners:** Urban Institute, Mirza, and additional organizations ($30,000)
 - **Purpose:** Compensates partners for deep technical integration, document identification, API testing, and providing feedback
 - **Note:** Prenatal-to-3 Policy Impact Center contributes documents without receiving funding
 
 *Note: Atlanta Fed cannot receive funds but participates as voluntary collaborator*
 
-**Cloud Infrastructure ($24,794)**
+**Cloud Infrastructure ($20,000)**
 - Year 1: Setup and initial crawlers for 10 states
 - Year 2: Scale to 50+ jurisdictions with increased storage
 - Includes: AWS compute, S3 storage, CloudFront CDN, monitoring
@@ -72,12 +71,12 @@
 - Datadog or similar for monitoring
 - Document processing tools
 
-**Travel/Dissemination ($5,000)**
+**Travel/Dissemination ($5,141)**
 - Present findings at 2-3 conferences
 - Partner site visits for implementation support
 - Open-source documentation and training materials
 
-**Indirect Costs (10%, $45,019)**
+**Indirect Costs (10%, $63,637)**
 - Using federal de minimis rate as PolicyEngine doesn't have negotiated rate
 - Covers accounting, HR, facilities, and general administration
 
