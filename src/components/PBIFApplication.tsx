@@ -55,26 +55,28 @@ function PBIFApplication() {
               technical solution, the target beneficiaries, and the anticipated impact."
             </p>
             <p>
-              The Policy Library is cross-cutting infrastructure that directly enables all four PBIF
-              priority areas. Every tool for income verification, SNAP error reduction, beneficiary
-              communication, and backlog reduction fails when the underlying policy documents
-              disappear—which happens constantly as agencies reorganize websites and vendors shut
-              down.
+              The Policy Library creates foundational infrastructure that transforms how the entire
+              benefits ecosystem operates. When every tool has instant access to comprehensive,
+              properly tagged source documents, we unlock capabilities that are impossible today:
+              AI assistants that accurately determine multi-program eligibility, caseworkers who
+              confidently navigate complex rules, researchers who track implementation variations,
+              and new innovations we haven't yet imagined.
             </p>
             <p>
-              Our AI-powered solution (using Claude/GPT-5) monitors 50+ jurisdictions weekly,
-              permanently archiving statutes, regulations, and implementation memos. Our 100%
-              open-source rules engine (with 100+ contributors) identifies all relevant documents
-              for any eligibility decision—including complex interactions like TANF-SNAP categorical
-              eligibility. We provide stable APIs ensuring caseworkers, advocates, and AI tools
-              always have access to current, authoritative documents.
+              Our approach combines AI-powered document monitoring (Claude/GPT-5) with PolicyEngine's
+              100% open-source rules engine to create intelligent infrastructure. We don't just
+              archive documents—we understand relationships between them, surface non-obvious
+              connections (like TANF providing SNAP categorical eligibility), and enable every
+              tool in the ecosystem to build on authoritative ground truth rather than incomplete
+              document sets.
             </p>
             <p>
               <strong>Direct PBIF Priority Impact:</strong> (1) Income verification—instant access
               to state-specific disregard policies; (2) SNAP errors—current eligibility criteria
               reduce documentation-related errors; (3) Beneficiary communication—advocates can
               confidently explain rules with source documents; (4) Backlog reduction—staff save
-              significant time currently spent hunting for policy clarifications.
+              significant time currently spent hunting for policy clarifications. Critical for
+              caseworker training: ensures new staff learn from current, accurate policy documents.
             </p>
             <p>
               <strong>Not starting from scratch:</strong> Our collaboration with Federal Reserve
@@ -82,7 +84,8 @@ function PBIFApplication() {
               with documents in our respective models, covering federal programs and North Carolina
               initially with nationwide scope. MyFriendBen and Benefit Navigator already use our API
               for benefit calculations—we propose adding document display as an enhancement to their
-              existing requests ($30k each for deep integration). When Colorado users query benefits
+              existing requests and integrating directly into their caseworker training materials
+              ($50k each for document contribution, testing, and deep integration). When Colorado users query benefits
               through MyFriendBen or Riverside County caseworkers use Benefit Navigator, they'll see
               primary sources alongside calculations they already receive.
             </p>
@@ -295,8 +298,8 @@ function PBIFApplication() {
               these existing requests, showing users the actual regulations behind their results.
               Benefit Navigator, deployed with LA County caseworkers and expanding to Riverside
               County, will enhance their current PolicyEngine integration with primary-source
-              verification during eligibility determinations. Each pilot receives $30k for deep
-              technical integration and deployment support.
+              verification during eligibility determinations and caseworker training modules. Each pilot receives $50k for
+              document contribution, testing, deep technical integration, and caseworker training development.
             </p>
             <p>
               Government partnership strategy leverages existing relationships. Federal Reserve Bank
