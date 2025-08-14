@@ -13,13 +13,13 @@ PolicyEngine Policy Library
 
 **Word Count: 212/250**
 
-The Policy Library creates infrastructure transforming benefits delivery. When tools access comprehensive source documents, we enable: AI accurately determining multi-program eligibility, caseworkers confidently navigating rules, researchers tracking policy variations, and innovations we haven't imagined.
+The Policy Library creates the missing infrastructure layer that transforms how America's safety net operates. Currently, 18% of benefit policy URLs from 2019 are dead, forcing every organization to independently maintain fragile document collections. When tools access our comprehensive, permanently archived source documents, we enable transformative capabilities: AI assistants accurately determining multi-program eligibility without hallucinations, caseworkers confidently navigating complex rules with authoritative sources, researchers tracking policy evolution across jurisdictions, and innovations we haven't imagined.
 
-We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine. We understand document relationships, surface non-obvious connections (TANF-SNAP categorical eligibility), enabling tools to build on authoritative ground truth.
+We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine creating intelligent infrastructure. Our system understands document relationships, surfaces non-obvious connections (TANF-SNAP categorical eligibility), providing authoritative ground truth for accurate benefits determination.
 
 **PBIF Priority Impact:** Income verification via state-specific disregards; reduced SNAP errors through current criteria; confident beneficiary communication with source documents; backlog reduction saving staff time.
 
-**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues—we seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 already use PolicyEngine for tax credit modeling; Mirza and Impactica use our API. We'll add document display to existing API requests and integrate into caseworker training. Colorado users and Riverside County caseworkers see primary sources alongside calculations.
+**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues—we seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 use PolicyEngine for tax credit modeling; Mirza and Impactica use our API. We'll add document display to API requests, integrate caseworker training. Colorado users and Riverside caseworkers see sources with calculations.
 
 **12-month timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
 
@@ -51,7 +51,7 @@ Archive.org can't solve this: captures pages indiscriminately without understand
 
 **Word Count: 244/250**
 
-The Policy Library solves document disappearance through three integrated components: (1) AI-powered crawlers using Claude/GPT-5 intelligently monitor government websites weekly, understanding context and document relationships; (2) Humans verify accuracy through GitHub pull requests; (3) Our stable API serves documents with permanent source IDs that never break. We'll launch with 5,000+ documents pooled from all participating organizations—PolicyEngine, Atlanta Fed, GCO, NBER (via TAXSIM MOU), Prenatal-to-3 Policy Impact Center at Vanderbilt, Better Government Lab, USC, MyFriendBen, and Benefit Navigator—ensuring comprehensive coverage from day one.
+The Policy Library solves document disappearance through four integrated components: (1) Bulk ingestion where partners contribute thousands of documents—AI extracts metadata while humans verify; (2) AI-powered crawlers using Claude/GPT-5 monitor government websites weekly, understanding context and relationships; (3) Human review via GitHub pull requests ensures accuracy; (4) Stable API serves documents with permanent source IDs. We'll launch with 5,000+ documents bulk-uploaded from participating organizations—PolicyEngine, Atlanta Fed, GCO, NBER (TAXSIM MOU), Prenatal-to-3 at Vanderbilt, Better Government Lab, USC, MyFriendBen, Benefit Navigator—ensuring comprehensive coverage from day one.
 
 Vulnerable families navigating benefits currently lose access when documents disappear—they are our primary beneficiaries. We involve them through partnerships with direct service organizations that serve these populations daily. MyFriendBen and Benefit Navigator staff provide continuous feedback on document needs and usability, ensuring we capture what families actually need.
 
