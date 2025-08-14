@@ -1,9 +1,8 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { 
-  executiveSummaryContent, 
+import {
+  executiveSummaryContent,
   valuePropositionContent,
-  technicalFeasibilityContent 
+  technicalFeasibilityContent,
 } from '../content/pbif/applicationContent';
 
 function PBIFApplication() {
