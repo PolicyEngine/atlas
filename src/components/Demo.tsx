@@ -14,7 +14,7 @@ function Demo() {
   const [program, setProgram] = useState('snap');
   const [doctype, setDoctype] = useState('statute');
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'api' | 'mcp'>('search');
+  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'bulk' | 'api' | 'mcp'>('search');
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadUrl, setUploadUrl] = useState('');
 
@@ -137,6 +137,12 @@ documents = response.json()`;
               onClick={() => setActiveTab('upload')}
             >
               📤 Submit Document
+            </button>
+            <button
+              className={`demo-tab ${activeTab === 'bulk' ? 'active' : ''}`}
+              onClick={() => setActiveTab('bulk')}
+            >
+              📦 Bulk Ingestion
             </button>
             <button
               className={`demo-tab ${activeTab === 'api' ? 'active' : ''}`}
@@ -367,6 +373,165 @@ documents = response.json()`;
                   <li>Create a pull request to the appropriate GitHub repository</li>
                   <li>Notify maintainers for review</li>
                   <li>Track contribution history and attribution</li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'bulk' && (
+            <div className="demo-bulk-section">
+              <h3>Partner Bulk Document Ingestion</h3>
+              <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
+                Organizations with large document collections can contribute thousands of documents at once. 
+                Our AI-powered system semi-automatically assigns metadata with human verification.
+              </p>
+
+              <div style={{ marginBottom: '25px' }}>
+                <h4>Contributing Organizations</h4>
+                <div
+                  style={{
+                    background: 'var(--blue-98)',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    marginBottom: '20px',
+                  }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                    <div>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>PolicyEngine</strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>2,500+ policy parameter citations from rules engine</p>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>Federal Reserve Bank of Atlanta</strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>Policy Rules Database documents (nationwide)</p>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>Georgia Center for Opportunity</strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>All states and programs documentation</p>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>NBER</strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>Tax documents since 2018 via TAXSIM MOU</p>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>Prenatal-to-3 Policy Impact Center</strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>State tax credit modeling documents</p>
+                    </div>
+                    <div>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>MyFriendBen</strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>Colorado benefits documentation</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '25px' }}>
+                <h4>Bulk Ingestion Process</h4>
+                <div
+                  style={{
+                    background: '#f8f9fa',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    border: '1px solid #dee2e6',
+                  }}
+                >
+                  <ol style={{ paddingLeft: '20px', lineHeight: '2' }}>
+                    <li>
+                      <strong>Document Drop:</strong> Partners upload ZIP files or provide cloud storage links with thousands of PDFs, DOCs, and web archives
+                    </li>
+                    <li>
+                      <strong>AI Processing:</strong> Claude/GPT-5 analyzes each document to extract:
+                      <ul style={{ marginTop: '8px', marginBottom: '8px' }}>
+                        <li>Document title and type (statute, regulation, form, guidance)</li>
+                        <li>Jurisdiction and program area</li>
+                        <li>Effective dates and version information</li>
+                        <li>Related document references</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Metadata Assignment:</strong> AI suggests metadata tags based on content analysis and filename patterns
+                    </li>
+                    <li>
+                      <strong>Human Verification:</strong> Batch review interface for partners to quickly verify or correct AI suggestions
+                    </li>
+                    <li>
+                      <strong>Integration:</strong> Documents added to searchable library with full attribution to contributing organization
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '25px' }}>
+                <h4>Example Bulk Upload Interface</h4>
+                <div
+                  style={{
+                    background: 'white',
+                    border: '2px dashed var(--blue-light)',
+                    borderRadius: '8px',
+                    padding: '40px',
+                    textAlign: 'center',
+                    cursor: 'pointer',
+                  }}
+                >
+                  <div style={{ fontSize: '48px', marginBottom: '15px' }}>📁</div>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px' }}>
+                    Drop document collection here
+                  </p>
+                  <p style={{ color: 'var(--gray)', marginBottom: '15px' }}>
+                    or click to browse (supports ZIP, folders, cloud links)
+                  </p>
+                  <div style={{ fontSize: '14px', color: 'var(--dark-gray)' }}>
+                    <strong>Accepted formats:</strong> PDF, DOC, DOCX, TXT, HTML, WARC
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '25px' }}>
+                <h4>AI Metadata Extraction Preview</h4>
+                <div
+                  style={{
+                    background: '#2d2d2d',
+                    color: '#f8f8f2',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    fontFamily: 'monospace',
+                    fontSize: '13px',
+                  }}
+                >
+                  <div style={{ marginBottom: '15px', color: '#75715e' }}>
+                    # Processing: GA_SNAP_Eligibility_2024.pdf
+                  </div>
+                  <div style={{ color: '#a6e22e' }}>✓ Extracted metadata:</div>
+                  <div style={{ paddingLeft: '20px', marginTop: '10px' }}>
+                    <div>Title: "Georgia SNAP Eligibility Requirements"</div>
+                    <div>Type: Regulation</div>
+                    <div>Jurisdiction: Georgia</div>
+                    <div>Program: SNAP</div>
+                    <div>Effective Date: 2024-10-01</div>
+                    <div>Source Agency: Georgia Division of Family and Children Services</div>
+                    <div>Confidence: 94%</div>
+                  </div>
+                  <div style={{ marginTop: '15px', color: '#f92672' }}>
+                    [Human Review Required] ▶ Confirm or edit metadata
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style={{
+                  background: '#d4edda',
+                  border: '1px solid #28a745',
+                  padding: '15px',
+                  borderRadius: '4px',
+                }}
+              >
+                <strong>🚀 Launch Impact:</strong> Starting with 5,000+ documents from partner organizations
+                <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
+                  <li>Comprehensive coverage from day one</li>
+                  <li>AI processes metadata 100x faster than manual entry</li>
+                  <li>Human verification ensures accuracy</li>
+                  <li>Partners retain full attribution and credit</li>
+                  <li>Continuous updates as partners add new documents</li>
                 </ul>
               </div>
             </div>
