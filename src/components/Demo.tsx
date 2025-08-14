@@ -14,9 +14,7 @@ function Demo() {
   const [program, setProgram] = useState('snap');
   const [doctype, setDoctype] = useState('statute');
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<'bulk' | 'upload' | 'search' | 'api' | 'mcp'>(
-    'bulk'
-  );
+  const [activeTab, setActiveTab] = useState<'bulk' | 'upload' | 'search' | 'api' | 'mcp'>('bulk');
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadUrl, setUploadUrl] = useState('');
 
