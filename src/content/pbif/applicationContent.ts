@@ -11,17 +11,17 @@ PolicyEngine Policy Library
 ## Executive Summary (limit 250 words)
 *"In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."*
 
-**Word Count: 212/250**
+**Word Count: 239/250**
 
 The Policy Library creates the missing infrastructure layer that transforms how America's safety net operates. Currently, 18% of benefit policy URLs from 2019 are dead, forcing every organization to independently maintain fragile document collections. When tools access our comprehensive, permanently archived source documents, we enable transformative capabilities: AI assistants accurately determining multi-program eligibility without hallucinations, caseworkers confidently navigating complex rules with authoritative sources, researchers tracking policy evolution across jurisdictions, and innovations we haven't imagined.
 
-We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine creating intelligent infrastructure. Our system understands document relationships, surfaces non-obvious connections (TANF-SNAP categorical eligibility), providing authoritative ground truth for accurate benefits determination.
+We'll combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine to create intelligent infrastructure. Our system will understand document relationships and surface non-obvious connections like TANF-SNAP categorical eligibility, providing authoritative ground truth for accurate benefits determination. We'll use agentic AI with comprehensive metadata rather than fine-tuning, enabling flexible and accurate document retrieval at scale.
 
-**PBIF Priority Impact:** Income verification via state-specific disregards; reduced SNAP errors through current criteria; confident beneficiary communication with source documents; backlog reduction saving staff time.
+**PBIF Priority Impact:** We'll enable income verification via state-specific disregards, reduce SNAP errors through current criteria, support confident beneficiary communication with source documents, and reduce backlogs to save staff time.
 
-**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues—we seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 use PolicyEngine for tax credit modeling; Mirza and Impactica use our API. We'll add document display to API requests, integrate caseworker training. Colorado users and Riverside caseworkers see sources with calculations.
+**Not starting from scratch:** Our collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues. We'll seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 already use PolicyEngine for tax credit modeling, while Mirza and Impactica use our API. We'll add document display to API requests and integrate caseworker training. Colorado users and Riverside caseworkers will see sources alongside calculations.
 
-**12-month timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
+**12-month production timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot
@@ -30,9 +30,9 @@ Our collaboration with Atlanta Fed and Georgia Center for Opportunity archives f
 
 ## Project Timeline & Funding
 **Start Date:** November 15, 2025  
-**End Date:** November 14, 2027 (24 months)  
+**End Date:** November 14, 2026 (12 months)  
 **Total Grant Request:** $675,059  
-**Other Funding:** [To be determined]`;
+**Other Funding:** PolicyEngine operational support, partner in-kind contributions`;
 
 export const valuePropositionContent = `# Section 2: Value Proposition and Responsible Deployment
 
@@ -101,7 +101,7 @@ Community organization adoption follows a tiered approach. Tier 1: Direct integr
 
 Sustainability comes through diversified support. Enterprise API subscriptions from large platforms generate recurring revenue. Government contracts for official preservation services provide stable funding. Foundation support maintains free access for nonprofits. Open-source model enables community contributions reducing costs.
 
-Scalability is built into architecture. Cloud infrastructure handles growth automatically. Crawler architecture is jurisdiction-agnostic, adding new states requires configuration not code. Community contributors can add coverage through pull requests. By Month 24, we'll cover all 50 states plus federal programs, becoming essential infrastructure for America's safety net.
+Scalability is built into our architecture. Cloud infrastructure will handle growth automatically. Our crawler architecture is jurisdiction-agnostic—adding new states requires only configuration changes, not new code. Community contributors can add coverage through pull requests. Within 12 months, we'll achieve full production with 50+ jurisdictions covered. Post-grant, we'll continue expanding internationally, becoming essential infrastructure for America's safety net and beyond.
 
 ## Dissemination & Learning (250 words)
 
