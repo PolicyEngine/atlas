@@ -35,9 +35,7 @@ Specific measurable metrics include:
 
 **Reliability metrics:** 99.9% API uptime, under 100ms retrieval speed, 99.5% accuracy via human verification.
 
-**Impact metrics:** MyFriendBen's 3,500 monthly Colorado users will see primary sources; Riverside County's 500+ caseworkers will access real-time verification. Our rules engine integration will ensure ALL relevant documents are found, including non-obvious connections like TANF-SNAP eligibility. We'll track document retrievals per partner, broken link reduction, and time to resolve eligibility questions. 
-
-**LLM accuracy evaluation:** We'll measure a targeted 24 percentage point improvement through systematic testing. Our evaluation will compare LLM performance across 1,000+ test cases in three conditions: (1) baseline with task description only, (2) enhanced with policy documents provided, and (3) full stack with documents plus PolicyEngine patterns. We'll measure accuracy by comparing generated PolicyEngine parameter files against ground truth, expecting 70%+ accuracy with documents versus <30% baseline. This rigorous evaluation extends the Beeck Center's rules-as-code methodology.
+**Impact metrics:** MyFriendBen's 3,500 monthly Colorado users will see primary sources; Riverside County's 500+ caseworkers will access real-time verification. Our rules engine integration will ensure ALL relevant documents are found, including non-obvious connections like TANF-SNAP eligibility. We'll track document retrievals per partner, broken link reduction, and time to resolve eligibility questions. We'll measure API response times, document accuracy rates through human verification, and partner satisfaction scores through monthly surveys.
 
 We track progress through automated dashboards, monthly partner surveys, and API analytics. We publish quarterly reports sharing findings publicly. Success means families never hear "we can't find that document" when applying for benefits.
 
@@ -79,7 +77,7 @@ Knowledge sharing maximizes impact across the benefits ecosystem.
 
 **Public data access:** Document corpus via API with free tier. Bulk exports for researchers. Public dashboards showing coverage. Weekly Internet Archive dumps for preservation.
 
-**Learning dissemination:** Quarterly reports on policy patterns, preservation challenges, adoption metrics. LLM benchmark results showing accuracy improvements (baseline, with documents, with tools, full stack), including rules-as-code generation experiments demonstrating how primary sources enable accurate PolicyEngine parameter generation—extending Beeck Center's work. Academic papers on AI-powered benefits navigation. Conference presentations at Code for America Summit, Benefits Data Trust convening. Webinars for navigators and developers.
+**Learning dissemination:** Quarterly reports on policy patterns, preservation challenges, and adoption metrics. Academic papers on AI-powered benefits navigation and document preservation methodologies. Conference presentations at Code for America Summit and Benefits Data Trust convening. Webinars for navigators and developers on using the Policy Library API and integrating document access into their tools.
 
 **Community engagement:** Monthly calls for feedback. GitHub discussions for requests. Newsletter with updates. Documentation wiki.
 

@@ -6,13 +6,13 @@
 
 Our AI crawlers will understand government websites like human researchers do. We'll use Claude and GPT-5 to navigate complex sites, identify relevant documents, and understand relationships between statutes, regulations, and forms.
 
-**AI techniques:** We'll use agentic AI with Retrieval-Augmented Generation (RAG) rather than fine-tuning. LLMs will power intelligent crawling while embedding models enable semantic search. We'll implement NLP for classification and change detection. Our LLM benchmark will test PolicyEngine-US across 10,000+ household scenarios. We'll conduct rules-as-code generation experiments measuring LLM accuracy when creating PolicyEngine parameter files with and without document access. An MCP server will enable direct LLM integration.
+**AI techniques:** We'll use agentic AI with Retrieval-Augmented Generation (RAG) rather than fine-tuning. LLMs will power intelligent crawling while embedding models enable semantic search. We'll implement NLP for classification and change detection. An MCP server will enable direct LLM integration, allowing AI tools to query our document library directly during conversations with users.
 
 **Human oversight:** We'll implement four stages of human review: (1) Initial configuration by engineers, (2) Document verification via GitHub pull requests, (3) Change confirmation by subject matter experts, (4) Regular quality audits.
 
 **Architecture:** We'll use LangChain for orchestration with daily URL monitoring that sends partner alerts. Our web app will accept document submissions. We'll seed the system with 5,000+ documents from partners including PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide coverage), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, and Benefit Navigator. Our rules engine will identify relevant documents including non-obvious connections like TANF-SNAP eligibility. FastAPI will enhance partner integrations—MyFriendBen and Benefit Navigator will add document display to existing API calls. We'll use PostgreSQL for metadata, S3 for storage, and CloudFlare CDN for distribution.
 
-**Rules-as-Code Evaluation:** Building on the Beeck Center's work, we'll systematically test LLMs generating rules for PolicyEngine and Atlanta Fed systems across three conditions: baseline (description only), enhanced (with documents), and full (documents plus patterns). We expect to achieve 70%+ accuracy with documents versus <30% baseline, validated through 1,000+ test cases.
+**Integration with Rules Engines:** Building on the Beeck Center's work, we'll integrate our document library with PolicyEngine and Atlanta Fed's rules systems. Our API will provide source documents that these systems need for accurate benefits calculations, ensuring that rules engines have access to the authoritative policy text they're encoding.
 
 ## Data Strategy - Data Sources (250 words)
 

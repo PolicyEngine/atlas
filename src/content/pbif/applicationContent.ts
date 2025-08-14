@@ -71,7 +71,7 @@ Specific measurable metrics include:
 
 **Reliability metrics:** 99.9% API uptime, under 100ms retrieval speed, 99.5% accuracy via human verification.
 
-**Impact metrics:** MyFriendBen's 3,500 monthly Colorado users see primary sources; Riverside County's 500+ caseworkers access real-time verification. Rules engine integration ensures ALL relevant documents including non-obvious connections (TANF-SNAP eligibility). Track: document retrievals per partner, broken link reduction, time to resolve eligibility questions. LLM accuracy improvement of 24pp through test cases, including rules-as-code generation experiments (Beeck Center approach) comparing AI performance with/without primary sources—expecting significant improvement generating accurate PolicyEngine parameter files when LLMs reference actual statutes.
+**Impact metrics:** MyFriendBen's 3,500 monthly Colorado users will see primary sources; Riverside County's 500+ caseworkers will access real-time verification. Our rules engine integration will ensure ALL relevant documents are found, including non-obvious connections like TANF-SNAP eligibility. We'll track document retrievals per partner, broken link reduction, and time to resolve eligibility questions. We'll measure API response times, document accuracy rates through human verification, and partner satisfaction scores through monthly surveys.
 
 We track progress through automated dashboards, monthly partner surveys, and API analytics. We publish quarterly reports sharing findings publicly. Success means families never hear "we can't find that document" when applying for benefits.
 
@@ -113,7 +113,7 @@ Knowledge sharing maximizes impact across the benefits ecosystem.
 
 **Public data access:** Document corpus via API with free tier. Bulk exports for researchers. Public dashboards showing coverage. Weekly Internet Archive dumps for preservation.
 
-**Learning dissemination:** Quarterly reports on policy patterns, preservation challenges, adoption metrics. LLM benchmark results showing accuracy improvements (baseline, with documents, with tools, full stack), including rules-as-code generation experiments demonstrating how primary sources enable accurate PolicyEngine parameter generation—extending Beeck Center's work. Academic papers on AI-powered benefits navigation. Conference presentations at Code for America Summit, Benefits Data Trust convening. Webinars for navigators and developers.
+**Learning dissemination:** Quarterly reports on policy patterns, preservation challenges, and adoption metrics. Academic papers on AI-powered benefits navigation and document preservation methodologies. Conference presentations at Code for America Summit and Benefits Data Trust convening. Webinars for navigators and developers on using the Policy Library API and integrating document access into their tools.
 
 **Community engagement:** Monthly calls for feedback. GitHub discussions for requests. Newsletter with updates. Documentation wiki.
 
@@ -127,13 +127,13 @@ export const technicalFeasibilityContent = `# Section 3: Technical & Practical F
 
 AI crawlers understand government websites like human researchers. Claude/GPT-5 navigate complex sites, identify documents, understand relationships between statutes, regulations, forms.
 
-**AI techniques:** LLMs power intelligent crawling. Embedding models enable semantic search. NLP for classification and change detection. LLM benchmark using PolicyEngine-US across 10,000+ household scenarios. Rules-as-code generation experiments measuring LLM accuracy creating PolicyEngine parameter files with/without document access. MCP server for direct LLM integration.
+**AI techniques:** We'll use agentic AI with Retrieval-Augmented Generation (RAG) rather than fine-tuning. LLMs will power intelligent crawling while embedding models enable semantic search. We'll implement NLP for classification and change detection. An MCP server will enable direct LLM integration, allowing AI tools to query our document library directly during conversations with users.
 
 **Human oversight:** (1) Initial configuration, (2) Document verification via GitHub PR, (3) Change confirmation, (4) Regular audits.
 
 **Architecture:** LangChain orchestration. Daily URL monitoring with partner alerts. Web app for document submission. Seeded with 5,000+ documents from partners: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Rules engine identifies relevant documents including non-obvious connections (TANF-SNAP eligibility). FastAPI enhances partner integrations—MyFriendBen and Benefit Navigator add document display to existing API calls. PostgreSQL metadata, S3 storage, CloudFlare CDN.
 
-**Rules-as-Code Evaluation:** Building on Beeck Center's work, we'll test LLMs generating rules for PolicyEngine and Atlanta Fed systems. Three conditions: baseline (description only), enhanced (with documents), full (documents plus patterns). Expect 70%+ accuracy with documents versus <30% baseline.
+**Integration with Rules Engines:** Building on the Beeck Center's work, we'll integrate our document library with PolicyEngine and Atlanta Fed's rules systems. Our API will provide source documents that these systems need for accurate benefits calculations, ensuring that rules engines have access to the authoritative policy text they're encoding.
 
 ## Data Strategy - Data Sources (250 words)
 
