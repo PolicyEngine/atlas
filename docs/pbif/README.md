@@ -14,9 +14,9 @@ Detailed budget breakdown for the $675,059 grant request over 2 years, including
 Template letter requests for partner organizations to provide letters of support/collaboration.
 
 ### Partner Statements of Work
-- [sow-myfriendben.md](sow-myfriendben.md) - MyFriendBen SOW ($50k, 5-state expansion)
-- [sow-benefit-navigator.md](sow-benefit-navigator.md) - Benefit Navigator SOW ($50k, 7 markets)  
-- [sow-georgia-center-opportunity.md](sow-georgia-center-opportunity.md) - GCO SOW ($30k, technical integration)
+- [sow/myfriendben.md](sow/myfriendben.md) - MyFriendBen ($50k, 5-state expansion)
+- [sow/benefit-navigator.md](sow/benefit-navigator.md) - Benefit Navigator ($50k, 7 markets)  
+- [sow/georgia-center-opportunity.md](sow/georgia-center-opportunity.md) - Georgia Center for Opportunity ($30k, technical integration)
 
 ## Application Status
 
