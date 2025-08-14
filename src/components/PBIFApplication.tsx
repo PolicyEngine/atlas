@@ -149,44 +149,45 @@ function PBIFApplication() {
               approaches?"
             </p>
             <p>
-              The benefits access crisis stems from disappearing policy documents that break the
-              infrastructure powering America's safety net. Recent federal policy changes including
-              SNAP work requirements, Medicaid unwinding, and TANF time limits make accurate
-              documentation critical, yet government URLs frequently disappear without warning. The
-              CaseText shutdown eliminated thousands of legal references overnight, breaking tools
-              nationwide.
+              The benefits ecosystem lacks foundational infrastructure for policy documentation,
+              forcing every organization to rebuild document discovery and maintenance. This
+              fragmentation prevents breakthrough innovations: AI tools can't provide accurate
+              multi-program guidance without comprehensive documents, caseworkers can't confidently
+              navigate complex eligibility rules, and researchers can't track policy evolution.
+              Recent changes—SNAP work requirements, Medicaid unwinding, TANF time limits—make this
+              infrastructure critical for system-wide transformation.
             </p>
             <p>
-              We validated this problem through direct partnerships. MyFriendBen reports spending
-              substantial time fixing broken links instead of serving their users. Benefit Navigator
-              staff confirmed similar challenges. Georgetown and Michigan researchers cannot conduct
-              historical policy analysis due to missing documents. Our collaboration with the
-              Federal Reserve Bank of Atlanta's Policy Rules Database demonstrates the need for
-              comprehensive document preservation infrastructure.
+              We validated this need through partnerships. MyFriendBen and Benefit Navigator spend
+              resources maintaining document access instead of improving user experience. Georgetown
+              and Michigan researchers lack the document foundation for policy analysis. The Federal
+              Reserve Bank of Atlanta's Policy Rules Database collaboration shows even sophisticated
+              institutions need shared infrastructure. Most critically, families navigating benefits
+              face inconsistent information because no single source provides comprehensive,
+              authoritative documentation.
             </p>
             <p>
-              Non-AI solutions have failed because: (1) Manual archiving cannot scale to 50+
-              jurisdictions with weekly updates, (2) Web scraping without intelligence misses
-              context and relationships between documents, (3) Commercial providers like CaseText
-              can disappear, taking infrastructure with them. AI is uniquely suited to intelligently
-              crawl complex government websites, understand document relationships, and identify
-              changes requiring preservation. Our testing shows Claude and GPT-5 accurately identify
-              and extract policy documents with high precision when we properly prompt them, making
-              this an ideal AI application where traditional approaches have demonstrably failed.
+              AI uniquely enables this transformation: (1) Intelligent crawling understands context
+              and relationships traditional scraping misses, (2) LLMs can identify policy changes
+              requiring immediate preservation, (3) AI surfaces non-obvious document connections
+              like TANF-SNAP categorical eligibility. Our testing shows Claude and GPT-5 excel at
+              document extraction and classification when properly prompted. This isn't about
+              replacing human judgment—it's about creating infrastructure that amplifies human
+              expertise, enabling innovations impossible without comprehensive document access.
             </p>
           </div>
 
           <div className="response-box">
             <h3>Solution & Target Beneficiaries (250 words)</h3>
             <p>
-              The Policy Library solves document disappearance through three integrated components:
-              (1) AI-powered crawlers using Claude/GPT-5 intelligently monitor government websites
-              weekly, understanding context and document relationships; (2) Humans verify accuracy
-              through GitHub pull requests; (3) Our stable API serves documents with permanent
-              source IDs that never break. We'll launch with 5,000+ documents pooled from all
-              participating organizations—PolicyEngine, Atlanta Fed, GCO, Prenatal-to-3 Policy
-              Impact Center at Vanderbilt, Better Government Lab, USC, MyFriendBen, and Benefit
-              Navigator—ensuring comprehensive coverage from day one.
+              The Policy Library creates infrastructure that transforms what's possible in benefits
+              delivery. Three components enable this: (1) AI-powered discovery using Claude/GPT-5
+              to intelligently understand policy relationships across jurisdictions; (2) Human
+              verification ensuring accuracy through collaborative review; (3) Intelligent APIs that
+              don't just serve documents but understand connections between them. We launch with
+              5,000+ documents from PolicyEngine, Atlanta Fed, GCO, Prenatal-to-3 Policy Impact
+              Center, Better Government Lab, USC, MyFriendBen, and Benefit Navigator—creating
+              immediate value while building toward comprehensive coverage.
             </p>
             <p>
               Vulnerable families navigating benefits currently lose access when documents
