@@ -14,7 +14,9 @@ function Demo() {
   const [program, setProgram] = useState('snap');
   const [doctype, setDoctype] = useState('statute');
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'bulk' | 'api' | 'mcp'>('search');
+  const [activeTab, setActiveTab] = useState<'search' | 'upload' | 'bulk' | 'api' | 'mcp'>(
+    'search'
+  );
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadUrl, setUploadUrl] = useState('');
 
@@ -382,8 +384,9 @@ documents = response.json()`;
             <div className="demo-bulk-section">
               <h3>Partner Bulk Document Ingestion</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Organizations with large document collections can contribute thousands of documents at once. 
-                Our AI-powered system semi-automatically assigns metadata with human verification.
+                Organizations with large document collections can contribute thousands of documents
+                at once. Our AI-powered system semi-automatically assigns metadata with human
+                verification.
               </p>
 
               <div style={{ marginBottom: '25px' }}>
@@ -399,27 +402,45 @@ documents = response.json()`;
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                     <div>
                       <strong style={{ color: 'var(--blue-pressed)' }}>PolicyEngine</strong>
-                      <p style={{ fontSize: '14px', marginTop: '5px' }}>2,500+ policy parameter citations from rules engine</p>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>
+                        2,500+ policy parameter citations from rules engine
+                      </p>
                     </div>
                     <div>
-                      <strong style={{ color: 'var(--blue-pressed)' }}>Federal Reserve Bank of Atlanta</strong>
-                      <p style={{ fontSize: '14px', marginTop: '5px' }}>Policy Rules Database documents (nationwide)</p>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>
+                        Federal Reserve Bank of Atlanta
+                      </strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>
+                        Policy Rules Database documents (nationwide)
+                      </p>
                     </div>
                     <div>
-                      <strong style={{ color: 'var(--blue-pressed)' }}>Georgia Center for Opportunity</strong>
-                      <p style={{ fontSize: '14px', marginTop: '5px' }}>All states and programs documentation</p>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>
+                        Georgia Center for Opportunity
+                      </strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>
+                        All states and programs documentation
+                      </p>
                     </div>
                     <div>
                       <strong style={{ color: 'var(--blue-pressed)' }}>NBER</strong>
-                      <p style={{ fontSize: '14px', marginTop: '5px' }}>Tax documents since 2018 via TAXSIM MOU</p>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>
+                        Tax documents since 2018 via TAXSIM MOU
+                      </p>
                     </div>
                     <div>
-                      <strong style={{ color: 'var(--blue-pressed)' }}>Prenatal-to-3 Policy Impact Center</strong>
-                      <p style={{ fontSize: '14px', marginTop: '5px' }}>State tax credit modeling documents</p>
+                      <strong style={{ color: 'var(--blue-pressed)' }}>
+                        Prenatal-to-3 Policy Impact Center
+                      </strong>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>
+                        State tax credit modeling documents
+                      </p>
                     </div>
                     <div>
                       <strong style={{ color: 'var(--blue-pressed)' }}>MyFriendBen</strong>
-                      <p style={{ fontSize: '14px', marginTop: '5px' }}>Colorado benefits documentation</p>
+                      <p style={{ fontSize: '14px', marginTop: '5px' }}>
+                        Colorado benefits documentation
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -437,10 +458,12 @@ documents = response.json()`;
                 >
                   <ol style={{ paddingLeft: '20px', lineHeight: '2' }}>
                     <li>
-                      <strong>Document Drop:</strong> Partners upload ZIP files or provide cloud storage links with thousands of PDFs, DOCs, and web archives
+                      <strong>Document Drop:</strong> Partners upload ZIP files or provide cloud
+                      storage links with thousands of PDFs, DOCs, and web archives
                     </li>
                     <li>
-                      <strong>AI Processing:</strong> Claude/GPT-5 analyzes each document to extract:
+                      <strong>AI Processing:</strong> Claude/GPT-5 analyzes each document to
+                      extract:
                       <ul style={{ marginTop: '8px', marginBottom: '8px' }}>
                         <li>Document title and type (statute, regulation, form, guidance)</li>
                         <li>Jurisdiction and program area</li>
@@ -449,13 +472,16 @@ documents = response.json()`;
                       </ul>
                     </li>
                     <li>
-                      <strong>Metadata Assignment:</strong> AI suggests metadata tags based on content analysis and filename patterns
+                      <strong>Metadata Assignment:</strong> AI suggests metadata tags based on
+                      content analysis and filename patterns
                     </li>
                     <li>
-                      <strong>Human Verification:</strong> Batch review interface for partners to quickly verify or correct AI suggestions
+                      <strong>Human Verification:</strong> Batch review interface for partners to
+                      quickly verify or correct AI suggestions
                     </li>
                     <li>
-                      <strong>Integration:</strong> Documents added to searchable library with full attribution to contributing organization
+                      <strong>Integration:</strong> Documents added to searchable library with full
+                      attribution to contributing organization
                     </li>
                   </ol>
                 </div>
@@ -525,7 +551,8 @@ documents = response.json()`;
                   borderRadius: '4px',
                 }}
               >
-                <strong>🚀 Launch Impact:</strong> Starting with 5,000+ documents from partner organizations
+                <strong>🚀 Launch Impact:</strong> Starting with 5,000+ documents from partner
+                organizations
                 <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
                   <li>Comprehensive coverage from day one</li>
                   <li>AI processes metadata 100x faster than manual entry</li>
