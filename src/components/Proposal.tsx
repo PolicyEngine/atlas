@@ -13,11 +13,11 @@ function Proposal() {
               <br />
               • Partner Contracts: $164,000
               <br />
-              &nbsp;&nbsp;- Integration pilots (MFB/BN): $60,000
+              &nbsp;&nbsp;- Integration pilots (MFB/BN): $100,000
               <br />
               &nbsp;&nbsp;- GCO (Fed/NC pilot lead): $30,000
               <br />
-              &nbsp;&nbsp;- Other partners: $74,000
+              &nbsp;&nbsp;- Other partners: $34,000
               <br />
               • AI Tools & Infrastructure: $60,000
               <br />• Indirect (10% de minimis): $61,369
@@ -70,8 +70,8 @@ function Proposal() {
               <strong>✓ Deep Integration Pilots:</strong> MyFriendBen (3,500+ Colorado users
               monthly) and Benefit Navigator (LA County expanding to Riverside) already use our API.
               We'll add document display to their existing benefit calculations—users see primary
-              sources alongside results they already receive. $30k each supports deep technical
-              integration.
+              sources alongside results they already receive. $50k each supports deep technical
+              integration and deployment support.
             </div>
           </div>
         </div>
