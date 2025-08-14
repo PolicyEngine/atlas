@@ -2,6 +2,8 @@
 
 ## Solution Description (250 words)
 
+**Word Count: 198/250**
+
 AI crawlers understand government websites like human researchers. Claude/GPT-5 navigate complex sites, identify documents, understand relationships between statutes, regulations, forms.
 
 **AI techniques:** LLMs power intelligent crawling. Embedding models enable semantic search. NLP for classification and change detection. LLM benchmark using PolicyEngine-US across 10,000+ household scenarios. Rules-as-code generation experiments measuring LLM accuracy creating PolicyEngine parameter files with/without document access. MCP server for direct LLM integration.
@@ -13,6 +15,8 @@ AI crawlers understand government websites like human researchers. Claude/GPT-5 
 **Rules-as-Code Evaluation:** Building on Beeck Center's work, we'll test LLMs generating rules for PolicyEngine and Atlanta Fed systems. Three conditions: baseline (description only), enhanced (with documents), full (documents plus patterns). Expect 70%+ accuracy with documents versus <30% baseline.
 
 ## Data Strategy - Data Sources (250 words)
+
+**Word Count: 140/250**
 
 Data from public government websites only. Federal agencies (cms.gov, fns.usda.gov, acf.hhs.gov) publish regulations. State agencies host statutes, rules, forms. Never collect private data.
 
@@ -26,6 +30,8 @@ Data from public government websites only. Federal agencies (cms.gov, fns.usda.g
 
 ## Data Strategy - Data Management (250 words)
 
+**Word Count: 200/250**
+
 We ensure data quality through multiple validation layers. AI extracts documents with confidence scores; humans review low-confidence items additionally. Duplicate detection prevents redundant storage. Change tracking identifies true updates versus formatting changes. Automated testing verifies document accessibility and format integrity.
 
 **Representativeness:** We systematically cover all major benefit programs (SNAP, Medicaid, TANF, WIC, LIHEAP) across jurisdictions. Coverage dashboards identify gaps. Community can request missing documents via GitHub. Regular audits ensure comprehensive coverage without bias toward certain programs or states.
@@ -37,6 +43,8 @@ We ensure data quality through multiple validation layers. AI extracts documents
 **Quality metrics:** 99.5% accuracy target verified through sampling. Completeness tracked via coverage dashboards. Freshness monitored through update frequency. Community feedback incorporated via GitHub issues. This comprehensive approach ensures reliable, secure data management.
 
 ## Stakeholder Engagement (250 words)
+
+**Word Count: 172/250**
 
 Government partnerships through multiple channels. Federal Reserve Bank of Atlanta and Georgia Center for Opportunity collaboration demonstrates commitment—seeding library with documents covering all states/programs nationwide. Atlanta Fed helps test rules-as-code generation evaluation. OpenStates/Plural CEO expressed openness to collaboration, offering legislative tracking infrastructure.
 
@@ -50,6 +58,8 @@ Government partnerships through multiple channels. Federal Reserve Bank of Atlan
 
 ## Resources and Infrastructure (250 words)
 
+**Word Count: 228/250**
+
 Computational resources leverage cloud infrastructure for scalability. AWS provides core services: EC2 for crawlers, S3 for document storage, RDS for metadata. Infrastructure costs scale with usage, starting small and growing as coverage expands. AI API costs for Claude/GPT-5 vary based on crawling frequency and document volume.
 
 **Software stack:** Python for crawler development using LangChain for AI orchestration. Integration with PolicyEngine's open-source rules engine to identify relevant documents for eligibility decisions—our engine already maps complex relationships like TANF-SNAP categorical eligibility. OpenStates API v3 integration for legislative document access and schema compatibility. FastAPI for REST API development. MCP server for native LLM integration enabling tools like Claude to directly query policy documents during conversations. PostgreSQL for structured data. React for public dashboards. GitHub Actions for CI/CD. All components 100% open-source except AI services.
@@ -62,6 +72,8 @@ Computational resources leverage cloud infrastructure for scalability. AWS provi
 
 ## Scalability & Sustainability (250 words)
 
+**Word Count: 180/250**
+
 We build technical scalability into our architecture. Our crawler system uses job queues enabling horizontal scaling. Add more workers to handle more jurisdictions. Document storage in S3 scales infinitely. API uses caching and CDN for performance at scale. Database sharding ready for millions of documents.
 
 **Long-term sustainability through revenue diversification:** Enterprise API subscriptions from benefits platforms and government contractors. Government contracts for official preservation services. Foundation support for free nonprofit access. Multiple revenue streams ensure sustainability beyond grant period.
@@ -73,6 +85,8 @@ We build technical scalability into our architecture. Our crawler system uses jo
 **Technical evolution:** Architecture supports new AI models as they emerge. Jurisdiction-agnostic design enables international expansion. Modular components allow feature addition without system rewrites. Version control preserves all historical data. This comprehensive approach ensures the Policy Library becomes permanent infrastructure, not a temporary project.
 
 ## Financial Viability (250 words)
+
+**Word Count: 166/250**
 
 **Budget allocation:** Personnel (1.85 FTE): $293,000. Fringe benefits (33%): $96,690. Partner contracts including integration support: $164,000. AI tools and infrastructure: $60,000. Indirect costs (10% de minimis): $61,369. Total: $675,059.
 

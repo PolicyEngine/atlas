@@ -3,6 +3,8 @@
 ## Problem Statement (250 words)
 *"Clearly articulate the specific problem or challenge your initiative aims to address and how it relates to recent changes in federal policy or funding changes. Provide supporting data or evidence to demonstrate the urgency and significance of this problem - and how you've validated it with staff and/or beneficiaries. Is this an area where non-AI solutions do not already offer effective, fit-for-purpose, affordable approaches?"*
 
+**Word Count: 220/250**
+
 The benefits ecosystem lacks infrastructure for policy documentation, forcing organizations to rebuild document discovery. This prevents innovations: AI can't provide accurate multi-program guidance, caseworkers can't navigate eligibility rules, researchers can't track policy evolution. Recent changes—SNAP work requirements, Medicaid unwinding, TANF limits—make this critical.
 
 Partners validated this need. MyFriendBen and Benefit Navigator waste resources maintaining documents. Georgetown and Michigan researchers lack document foundations. Atlanta Fed's collaboration shows even sophisticated institutions need shared infrastructure. Families face inconsistent information without comprehensive documentation.
@@ -10,6 +12,8 @@ Partners validated this need. MyFriendBen and Benefit Navigator waste resources 
 Archive.org can't solve this: captures pages indiscriminately without understanding policy documents, no API for "Colorado SNAP rules" queries, can't identify document relationships, no metadata or semantic search. Benefits platforms need purpose-built infrastructure—structured data, reliable APIs, intelligent understanding. AI uniquely enables: (1) Intelligent crawling understands which documents matter, (2) LLMs identify changes requiring preservation, (3) AI surfaces non-obvious connections like TANF-SNAP categorical eligibility. Claude and GPT-5 excel at document extraction. This infrastructure amplifies human expertise, enabling impossible innovations.
 
 ## Solution & Target Beneficiaries (250 words)
+
+**Word Count: 244/250**
 
 The Policy Library solves document disappearance through three integrated components: (1) AI-powered crawlers using Claude/GPT-5 intelligently monitor government websites weekly, understanding context and document relationships; (2) Humans verify accuracy through GitHub pull requests; (3) Our stable API serves documents with permanent source IDs that never break. We'll launch with 5,000+ documents pooled from all participating organizations—PolicyEngine, Atlanta Fed, GCO, NBER (via TAXSIM MOU), Prenatal-to-3 Policy Impact Center at Vanderbilt, Better Government Lab, USC, MyFriendBen, and Benefit Navigator—ensuring comprehensive coverage from day one.
 
@@ -20,6 +24,8 @@ Organizations serving these families also benefit significantly. Direct service 
 We involve beneficiaries throughout the project via: Monthly feedback sessions with partner organizations, open GitHub discussions for document requests, public dashboards showing coverage gaps, and direct integration with tools families already use. This participatory approach ensures we're building infrastructure that serves real needs, not theoretical ones.
 
 ## Proposed Benefit and Impact Evaluation (250 words)
+
+**Word Count: 181/250**
 
 Our success transforms how America's safety net operates. Organizations shift from maintaining broken links to serving families. AI tools provide accurate benefit information. Families never lose benefits due to missing documents.
 
@@ -35,6 +41,8 @@ We track progress through automated dashboards, monthly partner surveys, and API
 
 ## Responsible Design and Use (250 words)
 
+**Word Count: 192/250**
+
 We identify three key risks: privacy concerns, accuracy issues, and potential misuse. We address each proactively through technical and governance measures.
 
 **Privacy protection:** We archive only publicly available documents, never personal data. We don't collect or store user information. All documents we preserve already exist publicly. We respect robots.txt restrictions and rate limits to avoid overloading government servers.
@@ -47,6 +55,8 @@ We identify three key risks: privacy concerns, accuracy issues, and potential mi
 
 ## Adoption and Path to Scale (250 words)
 
+**Word Count: 238/250**
+
 Implementation builds on existing relationships. MyFriendBen already uses our API for 3,500+ monthly benefit calculations across Colorado—we'll add document display to these existing requests, showing users the actual regulations behind their results. Benefit Navigator, deployed with LA County caseworkers and expanding to Riverside County, will enhance their current PolicyEngine integration with primary-source verification during eligibility determinations. Each pilot receives $30k for deep technical integration and deployment support.
 
 Government partnership strategy leverages existing relationships. Federal Reserve Bank of Atlanta has committed to collaboration through their Policy Rules Database. North Carolina and California agencies expressed interest following our pilot success. We'll formalize partnerships through MOUs establishing data sharing agreements and technical integration plans.
@@ -58,6 +68,8 @@ Sustainability comes through diversified support. Enterprise API subscriptions f
 Scalability is built into architecture. Cloud infrastructure handles growth automatically. Crawler architecture is jurisdiction-agnostic, adding new states requires configuration not code. Community contributors can add coverage through pull requests. By Month 24, we'll cover all 50 states plus federal programs, becoming essential infrastructure for America's safety net.
 
 ## Dissemination & Learning (250 words)
+
+**Word Count: 167/250**
 
 Knowledge sharing maximizes impact across the benefits ecosystem.
 
