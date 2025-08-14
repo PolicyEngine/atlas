@@ -11,15 +11,15 @@ PolicyEngine Policy Library
 ## Executive Summary (limit 250 words)
 *"In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."*
 
-The Policy Library creates foundational infrastructure that transforms how the entire benefits ecosystem operates. When every tool has instant access to comprehensive, properly tagged source documents, we unlock capabilities that are impossible today: AI assistants that accurately determine multi-program eligibility, caseworkers who confidently navigate complex rules, researchers who track implementation variations, and new innovations we haven't yet imagined.
+The Policy Library creates infrastructure transforming benefits delivery. When tools access comprehensive source documents, we enable: AI accurately determining multi-program eligibility, caseworkers confidently navigating rules, researchers tracking policy variations, and innovations we haven't imagined.
 
-Our approach combines AI-powered document monitoring (Claude/GPT-5) with PolicyEngine's 100% open-source rules engine to create intelligent infrastructure. We don't just archive documents—we understand relationships between them, surface non-obvious connections (like TANF providing SNAP categorical eligibility), and enable every tool in the ecosystem to build on authoritative ground truth rather than incomplete document sets.
+We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine. We understand document relationships, surface non-obvious connections (TANF-SNAP categorical eligibility), enabling tools to build on authoritative ground truth.
 
-**Direct PBIF Priority Impact:** (1) Income verification—instant access to state-specific disregard policies; (2) SNAP errors—current eligibility criteria reduce documentation-related errors; (3) Beneficiary communication—advocates can confidently explain rules with source documents; (4) Backlog reduction—staff save significant time currently spent hunting for policy clarifications.
+**PBIF Priority Impact:** Income verification via state-specific disregards; reduced SNAP errors through current criteria; confident beneficiary communication with source documents; backlog reduction saving staff time.
 
-**Not starting from scratch:** Our collaboration with Federal Reserve Bank of Atlanta and Georgia Center for Opportunity continues as we seed the library with documents in our respective models, covering federal programs and North Carolina initially with nationwide scope. MyFriendBen and Benefit Navigator already use our API for benefit calculations—we propose adding document display as an enhancement to their existing requests and integrating directly into their caseworker training materials ($50k each for document contribution, testing, and deep integration). When Colorado users query benefits through MyFriendBen or Riverside County caseworkers use Benefit Navigator, they'll see primary sources alongside calculations they already receive.
+**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta and Georgia Center for Opportunity continues—we seed the library with documents covering nationwide scope. MyFriendBen and Benefit Navigator already use our API—we'll add document display to existing requests and integrate into caseworker training ($50k each). Colorado users and Riverside County caseworkers see primary sources alongside calculations.
 
-**12-month production timeline:** Months 1-3: Launch with 5,000+ documents from all partners, scale to 10 states; Months 4-6: API v1 with partner integration; Months 7-9: 30 states; Months 10-12: Full production. This infrastructure makes every other PBIF project more reliable and sustainable.
+**12-month timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot
@@ -45,7 +45,7 @@ Why not use Archive.org? While excellent for general web preservation, Archive.o
 
 ## Solution & Target Beneficiaries (250 words)
 
-The Policy Library creates infrastructure that transforms what's possible in benefits delivery. Three components enable this: (1) AI-powered discovery using Claude/GPT-5 to intelligently understand policy relationships across jurisdictions; (2) Human verification ensuring accuracy through collaborative review; (3) Intelligent APIs that don't just serve documents but understand connections between them. We launch with 5,000+ documents from PolicyEngine, Atlanta Fed, GCO, Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, and Benefit Navigator—creating immediate value while building toward comprehensive coverage.
+The Policy Library solves document disappearance through three integrated components: (1) AI-powered crawlers using Claude/GPT-5 intelligently monitor government websites weekly, understanding context and document relationships; (2) Humans verify accuracy through GitHub pull requests; (3) Our stable API serves documents with permanent source IDs that never break. We'll launch with 5,000+ documents pooled from all participating organizations—PolicyEngine, Atlanta Fed, GCO, Prenatal-to-3 Policy Impact Center at Vanderbilt, Better Government Lab, USC, MyFriendBen, and Benefit Navigator—ensuring comprehensive coverage from day one.
 
 Vulnerable families navigating benefits currently lose access when documents disappear—they are our primary beneficiaries. We involve them through partnerships with direct service organizations that serve these populations daily. MyFriendBen and Benefit Navigator staff provide continuous feedback on document needs and usability, ensuring we capture what families actually need.
 
