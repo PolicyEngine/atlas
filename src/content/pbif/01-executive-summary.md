@@ -19,7 +19,7 @@ We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source 
 
 **PBIF Priority Impact:** Income verification via state-specific disregards; reduced SNAP errors through current criteria; confident beneficiary communication with source documents; backlog reduction saving staff time.
 
-**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta and Georgia Center for Opportunity continues—we seed the library with documents covering nationwide scope. MyFriendBen and Benefit Navigator already use our API—we'll add document display to existing requests and integrate into caseworker training ($50k each). Colorado users and Riverside County caseworkers see primary sources alongside calculations.
+**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta and Georgia Center for Opportunity continues—we seed the library with documents covering nationwide scope. MyFriendBen and Benefit Navigator already use our API—we'll add document display to existing requests and integrate into caseworker training. Colorado users and Riverside County caseworkers see primary sources alongside calculations.
 
 **12-month timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
 

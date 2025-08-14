@@ -19,7 +19,7 @@ We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source 
 
 **PBIF Priority Impact:** Income verification via state-specific disregards; reduced SNAP errors through current criteria; confident beneficiary communication with source documents; backlog reduction saving staff time.
 
-**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta and Georgia Center for Opportunity continues—we seed the library with documents covering nationwide scope. MyFriendBen and Benefit Navigator already use our API—we'll add document display to existing requests and integrate into caseworker training ($50k each). Colorado users and Riverside County caseworkers see primary sources alongside calculations.
+**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta and Georgia Center for Opportunity continues—we seed the library with documents covering nationwide scope. MyFriendBen and Benefit Navigator already use our API—we'll add document display to existing requests and integrate into caseworker training. Colorado users and Riverside County caseworkers see primary sources alongside calculations.
 
 **12-month timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
 
@@ -93,7 +93,7 @@ We identify three key risks: privacy concerns, accuracy issues, and potential mi
 
 **Word Count: 238/250**
 
-Implementation builds on existing relationships. MyFriendBen already uses our API for 3,500+ monthly benefit calculations across Colorado—we'll add document display to these existing requests, showing users the actual regulations behind their results. Benefit Navigator, deployed with LA County caseworkers and expanding to Riverside County, will enhance their current PolicyEngine integration with primary-source verification during eligibility determinations. Each pilot receives $30k for deep technical integration and deployment support.
+Implementation builds on existing relationships. MyFriendBen already uses our API for 3,500+ monthly benefit calculations across Colorado—we'll add document display to these existing requests, showing users the actual regulations behind their results. Benefit Navigator, deployed with LA County caseworkers and expanding to Riverside County, will enhance their current PolicyEngine integration with primary-source verification during eligibility determinations. Deep integration pilots include technical integration and deployment support.
 
 Government partnership strategy leverages existing relationships. Federal Reserve Bank of Atlanta has committed to collaboration through their Policy Rules Database. North Carolina and California agencies expressed interest following our pilot success. We'll formalize partnerships through MOUs establishing data sharing agreements and technical integration plans.
 
