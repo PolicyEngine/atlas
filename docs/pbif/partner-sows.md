@@ -5,7 +5,7 @@
 **Period: 24 months**
 
 ### Organization Overview
-MyFriendBen operates Colorado's leading digital benefits screener, serving 3,500+ users monthly across the state. Their platform helps vulnerable families navigate complex eligibility requirements for SNAP, Medicaid, WIC, and other safety net programs. As an established PolicyEngine API client, they already integrate our benefits calculations into their screening process. Critically, MyFriendBen is actively cultivating relationships with Colorado state agencies including the Department of Human Services, positioning them to pilot government caseworker training programs.
+MyFriendBen operates a leading digital benefits screener, serving 3,500+ users monthly and expanding from Colorado to North Carolina, Massachusetts, Illinois, and Texas. Their platform helps vulnerable families navigate complex eligibility requirements for SNAP, Medicaid, WIC, and other safety net programs. As an established PolicyEngine API client, they already integrate our benefits calculations into their screening process. MyFriendBen has received support from the Gates Foundation and Gary Community Ventures (which incubated the organization), among other funders. They are actively cultivating relationships with state agencies across their expansion states, positioning them to pilot government caseworker training programs.
 
 ### Scope of Work
 
@@ -49,13 +49,14 @@ MyFriendBen operates Colorado's leading digital benefits screener, serving 3,500
 
 ### Deliverables
 - Year 1: Comprehensive training curriculum with 20+ hours of content for community organizations
-- Year 1: 200+ trained community-based caseworkers across Colorado
-- Year 2: Government agency training program with 50-75 state caseworkers trained
+- Year 1: 200+ trained community-based caseworkers across 5 states (CO, NC, MA, IL, TX)
+- Year 2: Government agency training programs in 2-3 states with 50-75 state caseworkers trained
 - Year 2: Train-the-trainer materials for sustainable government adoption
-- Fully integrated document display in MyFriendBen platform
-- Quarterly impact reports with metrics and case studies
+- Fully integrated document display in MyFriendBen platform across all expansion states
+- Quarterly impact reports with metrics and case studies from multiple jurisdictions
 - Government agency adoption toolkit with ROI documentation
 - Best practices guide for state human services departments nationwide
+- Multi-state comparison insights from diverse implementations
 
 ---
 
@@ -64,7 +65,7 @@ MyFriendBen operates Colorado's leading digital benefits screener, serving 3,500
 **Period: 24 months**
 
 ### Organization Overview
-Benefit Navigator, developed through partnership between Gates Foundation and Nava, provides AI-powered benefits navigation for caseworkers in Los Angeles County and expanding to Riverside County. Their platform includes a closed-domain AI chatbot that helps caseworkers quickly find accurate benefit information. The tool serves 500+ caseworkers supporting thousands of families monthly. Benefit Navigator has established relationships with county human services agencies and is positioned to expand their government partnerships to explore knowledge base development and training material creation.
+Benefit Navigator provides AI-powered benefits navigation for caseworkers, currently operating in Los Angeles County and expanding to Riverside County, Alameda County, Washington DC, Chicago, and New York City. Their platform includes a closed-domain AI chatbot developed through a partnership with Nava, which received Gates Foundation funding for the AI chatbot technology. The tool serves 500+ caseworkers supporting thousands of families monthly. Benefit Navigator has established relationships with county and city human services agencies across their expansion markets and is positioned to expand their government partnerships to explore knowledge base development and training material creation.
 
 ### Scope of Work
 
@@ -126,25 +127,26 @@ Benefit Navigator, developed through partnership between Gates Foundation and Na
 
 ### Deliverables
 - Year 1: Fully integrated AI chatbot with Policy Library document sourcing
-- Year 1: 150+ trained community and county caseworkers across LA and Riverside
-- Year 1: Geographic expansion toolkit for 3-5 additional counties
-- Year 2: Government agency knowledge bases for 2-3 county offices
+- Year 1: 300+ trained community and government caseworkers across 7 markets (LA, Riverside, Alameda, DC, Chicago, NYC)
+- Year 1: Geographic expansion toolkit supporting rapid deployment
+- Year 2: Government agency knowledge bases for 4-5 jurisdictions
 - Year 2: Sustainable framework for agency-maintained training materials
-- Year 2: Cross-county knowledge sharing platform
-- Real-time accuracy monitoring system throughout
+- Year 2: Cross-jurisdiction knowledge sharing platform (county and city level)
+- Real-time accuracy monitoring system throughout all markets
 - Comprehensive training curriculum with AI-specific modules
-- Monthly metrics reports and quarterly impact assessments
+- Monthly metrics reports and quarterly impact assessments from diverse urban settings
 - Best practices documentation for government adoption of AI-powered benefits navigation
-- ROI analysis for county human services departments
+- ROI analysis for county and city human services departments
+- Comparative insights from implementations across different governance structures
 
 ---
 
-## Georgia Center for Opportunity - Founding Partner Integration
+## Georgia Center for Opportunity - Technical Integration Partner
 **Amount: $30,000**  
 **Period: 24 months**
 
 ### Organization Overview
-Georgia Center for Opportunity (GCO) operates comprehensive rules engines for safety net programs across multiple states, with deep expertise in SNAP, Medicaid, and TANF policy implementation. As a founding partner collaborating with the Federal Reserve Bank of Atlanta, GCO brings extensive document collections and policy encoding experience. Their tools serve researchers, policymakers, and direct service organizations across the Southeast.
+Georgia Center for Opportunity (GCO) brings deep technical expertise in benefits modeling and rules engines, operating the benefitscliffs.org platform across 13 states. Their tools model SNAP, Medicaid, TANF, and other safety net programs, helping caseworkers, researchers, and policymakers understand benefit interactions and eligibility. GCO has collaborated with PolicyEngine and the Federal Reserve Bank of Atlanta on federal and North Carolina pilot implementations, demonstrating strong technical capabilities in document management and policy encoding. Their extensive document collections and experience building rules engines make them a valuable technical partner for ensuring comprehensive coverage.
 
 ### Scope of Work
 
@@ -243,10 +245,10 @@ Georgia Center for Opportunity (GCO) operates comprehensive rules engines for sa
 
 | Partner | Amount | Year 1 Focus | Year 2 Focus |
 |---------|--------|--------------|--------------|
-| MyFriendBen | $50,000 | Community caseworker training, technical integration | Government agency pilot with Colorado DHS |
-| Benefit Navigator | $50,000 | AI chatbot integration, county expansion | Government knowledge base development |
-| Georgia Center for Opportunity | $30,000 | Document contribution, metadata verification | Rules engine integration, tools development |
-| **Total** | **$130,000** | **Foundation building** | **Government adoption** |
+| MyFriendBen | $50,000 | 5-state expansion (CO, NC, MA, IL, TX), community training | Government agency pilots in 2-3 states |
+| Benefit Navigator | $50,000 | 7-market AI integration (LA, Riverside, Alameda, DC, Chicago, NYC) | Government knowledge bases in 4-5 jurisdictions |
+| Georgia Center for Opportunity | $30,000 | Technical integration, benefitscliffs.org document contribution | Rules engine optimization, 13-state coverage |
+| **Total** | **$130,000** | **Multi-jurisdiction foundation** | **Government adoption at scale** |
 
 ## Cross-Partner Collaboration
 
@@ -269,9 +271,9 @@ The 2-year partnership structure strategically positions the Policy Library for 
 - Establish metrics and ROI documentation
 
 ### Year 2: Government Pilot Programs
-- **MyFriendBen**: Direct partnership with Colorado Department of Human Services
-- **Benefit Navigator**: Knowledge base development with LA and Riverside Counties
-- **GCO**: Integration with government-facing rules engines
+- **MyFriendBen**: Direct partnerships with state agencies in Colorado, North Carolina, and one additional expansion state
+- **Benefit Navigator**: Knowledge base development with LA, Riverside, Alameda Counties, plus DC, Chicago, and NYC agencies
+- **GCO**: Technical integration with rules engines serving 13 states through benefitscliffs.org
 
 ### Expected Government Impact
 - **Reduced Training Costs**: 40% reduction in new caseworker onboarding time
@@ -283,9 +285,9 @@ The 2-year partnership structure strategically positions the Policy Library for 
 ## Long-term Sustainability
 
 These partnerships establish sustainable models for:
-- **MyFriendBen**: Template for state human services department adoption nationwide
-- **Benefit Navigator**: Blueprint for county-level AI-powered knowledge management
-- **GCO**: Standard for government rules engine document integration
+- **MyFriendBen**: Template for state human services department adoption across diverse states (red, blue, purple)
+- **Benefit Navigator**: Blueprint for urban AI-powered knowledge management (counties and major cities)
+- **GCO**: Technical standard for rules engine document integration across 13+ states
 
 Each partner commits to:
 - Maintaining integrations beyond the grant period
