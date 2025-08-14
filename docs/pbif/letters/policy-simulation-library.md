@@ -1,4 +1,4 @@
-# Letter of Support - Policy Simulation Library Foundation
+# Letter of Support - PSL Foundation
 
 **[DRAFT - To be printed on PSL Foundation letterhead]**
 
@@ -10,15 +10,15 @@ c/o Ballmer Group
 
 Dear PBIF Review Committee,
 
-The Policy Simulation Library Foundation (PSL) strongly endorses PolicyEngine's application for the Public Benefit Innovation Fund to develop the Policy Library. As the fiscal sponsor of PolicyEngine and steward of open-source policy modeling tools including Tax-Calculator, we recognize this project as essential infrastructure for the policy analysis community.
+The PSL Foundation (PSL-F) strongly endorses PolicyEngine's application for the Public Benefit Innovation Fund to develop the Policy Library. As the fiscal sponsor of PolicyEngine and steward of open-source policy modeling tools including Tax-Calculator, we recognize this project as essential infrastructure for the policy analysis community.
 
 ## Our Relationship with PolicyEngine
 
-PolicyEngine operates under PSL Foundation's fiscal sponsorship, allowing them to pursue their mission of democratizing policy analysis while we handle administrative functions. This arrangement has proven highly successful, with PolicyEngine becoming one of our most active and impactful projects. Their work exemplifies our commitment to open-source, transparent, and validated policy modeling.
+PolicyEngine operates under PSL-F's fiscal sponsorship, allowing them to pursue their mission of democratizing policy analysis while we handle administrative functions. This arrangement has proven highly successful, with PolicyEngine becoming one of our most active and impactful projects. Their work exemplifies our commitment to open-source, transparent, and validated policy modeling.
 
 ## The Tax-Calculator Connection
 
-PSL Foundation maintains Tax-Calculator, the open-source federal tax microsimulation model originally developed at the American Enterprise Institute and now used by:
+PSL-F maintains Tax-Calculator, the open-source federal tax microsimulation model originally developed at the American Enterprise Institute and now used by:
 
 - Congressional Budget Office staff for distributional analysis
 - Joint Committee on Taxation staff for revenue estimation validation
@@ -40,7 +40,7 @@ We commit to modifying Tax-Calculator to leverage the Policy Library API, demons
 
 ## Contribution of Resources
 
-PSL Foundation will contribute:
+PSL-F will contribute:
 
 - **Tax documentation archive** - Federal tax forms, instructions, and publications from our validation datasets
 - **State tax materials** - Documentation we've collected for state tax modeling initiatives  
@@ -72,7 +72,7 @@ We enthusiastically support this application and look forward to integrating the
 Sincerely,
 
 [Name]  
-President, Policy Simulation Library Foundation
+President, PSL Foundation
 
 [Contact Information]
 
