@@ -1,22 +1,22 @@
 # PBIF Budget - PolicyEngine Policy Library
-## Total Request: $498,000 over 2 years
+## Total Request: $675,059 over 2 years
 
 ### FINAL BUDGET FOR GOOGLE SHEETS ENTRY
 
-#### PERSONNEL (1.5 FTE total)
+#### PERSONNEL (1.85 FTE total)
 
 | Position | FTE | Year 1 Salary | Year 1 Benefits (25%) | Year 1 Total | Year 2 Salary (3% increase) | Year 2 Benefits | Year 2 Total |
 |----------|-----|--------------|----------------------|--------------|---------------------------|-----------------|--------------|
-| Lead Engineer/Director | 0.75 | $67,500 | $16,875 | $84,375 | $69,525 | $17,381 | $86,906 |
-| ML/AI Engineer | 0.5 | $40,000 | $10,000 | $50,000 | $41,200 | $10,300 | $51,500 |
-| Policy Coordinator | 0.25 | $17,500 | $4,375 | $21,875 | $18,025 | $4,506 | $22,531 |
-| **Personnel Subtotal** | **1.5** | **$125,000** | **$31,250** | **$156,250** | **$128,750** | **$32,187** | **$160,937** |
+| Lead Engineer/Director | 1.0 | $90,000 | $29,700 | $119,700 | $92,700 | $30,591 | $123,291 |
+| ML/AI Engineer | 0.8 | $64,000 | $21,120 | $85,120 | $65,920 | $21,754 | $87,674 |
+| Policy Analyst | 0.05 | $3,500 | $1,155 | $4,655 | $3,605 | $1,190 | $4,795 |
+| **Personnel Subtotal** | **1.85** | **$157,500** | **$51,975** | **$209,475** | **$162,225** | **$53,535** | **$215,760** |
 
 #### OTHER DIRECT COSTS
 
 | Category | Year 1 | Year 2 | Total | Justification |
 |----------|--------|--------|-------|--------------|
-| Partner Microgrants | $60,000 | $40,000 | $100,000 | GCO ($25k), MyFriendBen ($20k), Others ($55k) |
+| Partner Contracts | $82,000 | $82,000 | $164,000 | MyFriendBen ($50k), Benefit Navigator ($50k), GCO ($30k), Others ($34k) |
 | Cloud Infrastructure | $10,000 | $12,000 | $22,000 | AWS for crawlers, storage, API |
 | Software Licenses | $3,000 | $3,000 | $6,000 | GitHub, monitoring tools |
 | Travel/Dissemination | $2,000 | $3,000 | $5,000 | Conferences, partner meetings |
@@ -53,11 +53,12 @@
 
 *Note: Salaries are set at nonprofit rates, significantly below market for these technical roles.*
 
-**Partner Microgrants ($100,000)**
-- **Founding Partners:** GCO ($25,000), recognizing their role as original pilot partner
-- **Implementation Partners:** MyFriendBen ($20,000), Benefit Navigator ($15,000)
-- **Testing Partners:** 8-10 organizations at $5,000 each
-- **Purpose:** Compensates partners for time spent identifying documents, testing API integration, and providing feedback
+**Partner Microgrants ($164,000)**
+- **Deep Integration Pilots:** MyFriendBen ($50,000), Benefit Navigator ($50,000)
+- **Founding Partner:** GCO ($30,000), recognizing their role as original pilot partner  
+- **Other Partners:** Various organizations ($34,000)
+- **Purpose:** Compensates partners for deep technical integration, document identification, API testing, and providing feedback
+- **Note:** Prenatal-to-3 Policy Impact Center contributes documents without receiving funding
 
 *Note: Atlanta Fed cannot receive funds but participates as voluntary collaborator*
 

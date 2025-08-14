@@ -92,16 +92,36 @@ policy-library/
 └── README.md          # Public-facing documentation
 ```
 
-## Budget Breakdown (Year 1)
+## Budget Breakdown (Total 2-Year)
 
-- **Personnel (2.5 FTE)**: $405,000
-  - Lead Engineer: 1.0 FTE
-  - ML/AI Engineer: 0.8 FTE  
-  - Policy Analyst: 0.7 FTE
-- **Partner Micro-grants**: $60,000
-- **Cloud & Infrastructure**: $18,000
-- **Contingency**: $15,000
-- **Total**: $498,000
+- **Personnel (1.85 FTE)**: $293,000
+- **Fringe Benefits (33%)**: $96,690
+- **Partner Contracts**: $164,000
+  - MyFriendBen: $50,000 (deep integration pilot)
+  - Benefit Navigator: $50,000 (deep integration pilot)
+  - Georgia Center for Opportunity: $30,000 (founding partner)
+  - Other partners: $34,000
+- **AI Tools & Infrastructure**: $60,000
+- **Indirect (10% de minimis)**: $61,369
+- **Total**: $675,059
+
+## PBIF Budget Google Sheets Automation
+
+**IMPORTANT**: We have a Python package `pbif_budget_filler/` that directly updates the PBIF budget in Google Sheets.
+
+### Key Scripts:
+- `update_partner_allocations.py` - Updates partner funding amounts (MFB, BN, GCO, etc.)
+- `final_correct_fill.py` - Main script to fill the entire budget spreadsheet
+- Uses `gspread` with credentials in `token.pickle`
+- Spreadsheet ID: `1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw`
+
+### To Update Budget in Google Sheets:
+```bash
+cd pbif_budget_filler
+python update_partner_allocations.py  # Or create new script with updated amounts
+```
+
+**Note**: Prenatal-to-3 Policy Impact Center contributes documents without receiving funding
 
 ## Timeline
 
