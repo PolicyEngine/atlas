@@ -10,7 +10,7 @@ AI crawlers understand government websites like human researchers. Claude/GPT-5 
 
 **Human oversight:** (1) Initial configuration, (2) Document verification via GitHub PR, (3) Change confirmation, (4) Regular audits.
 
-**Architecture:** LangChain orchestration. Daily URL monitoring with partner alerts. Web app for document submission. Seeded with 5,000+ documents from partners: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Rules engine identifies relevant documents including non-obvious connections (TANF-SNAP eligibility). FastAPI enhances partner integrations—MyFriendBen and Benefit Navigator add document display to existing API calls. PostgreSQL metadata, S3 storage, CloudFlare CDN.
+**Architecture:** LangChain orchestration. Daily URL monitoring with partner alerts. Web app for document submission. Seeded with 5,000+ documents from partners: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Urban Institute, Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Rules engine identifies relevant documents including non-obvious connections (TANF-SNAP eligibility). FastAPI enhances partner integrations—MyFriendBen and Benefit Navigator add document display to existing API calls. PostgreSQL metadata, S3 storage, CloudFlare CDN.
 
 **Rules-as-Code Evaluation:** Building on Beeck Center's work, we'll test LLMs generating rules for PolicyEngine and Atlanta Fed systems. Three conditions: baseline (description only), enhanced (with documents), full (documents plus patterns). Expect 70%+ accuracy with documents versus <30% baseline.
 
@@ -26,7 +26,7 @@ Data from public government websites only. Federal agencies (cms.gov, fns.usda.g
 
 **Securing access:** Responsible crawling: respecting robots.txt, rate limits, identifying via user agent. Agencies can push updates directly. Several expressed interest during pilot.
 
-**Pilot validation:** North Carolina pilot proved feasibility archiving SNAP, Medicaid, TANF documents. Federal sites more standardized. Partner contributions: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018), Prenatal-to-3 at Vanderbilt, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Collaborative seeding ensures comprehensive coverage while eliminating privacy concerns.
+**Pilot validation:** North Carolina pilot proved feasibility archiving SNAP, Medicaid, TANF documents. Federal sites more standardized. Partner contributions: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018), Urban Institute, Prenatal-to-3 at Vanderbilt, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Collaborative seeding ensures comprehensive coverage while eliminating privacy concerns.
 
 ## Data Strategy - Data Management (250 words)
 
@@ -52,7 +52,7 @@ Government partnerships through multiple channels. Federal Reserve Bank of Atlan
 
 **Direct service partnership:** MyFriendBen and Benefit Navigator staff participate monthly, test features, provide feedback. Frontline experience guides prioritization.
 
-**Academic collaboration:** Better Government Lab and USC contribute expertise and documents from PolicyEngine research. NBER contributes assembled tax documents through TAXSIM MOU covering historical policies since 2018. Prenatal-to-3 at Vanderbilt uses PolicyEngine for tax credit modeling, contributes research archive. Georgetown and Michigan teams provide academic rigor. Researchers use archive for economic analysis.
+**Academic collaboration:** Better Government Lab and USC contribute expertise and documents from PolicyEngine research. NBER contributes assembled tax documents through TAXSIM MOU covering historical policies since 2018. Urban Institute contributes safety net program documentation and research expertise. Prenatal-to-3 at Vanderbilt uses PolicyEngine for tax credit modeling, contributes research archive. Georgetown and Michigan teams provide academic rigor. Researchers use archive for economic analysis.
 
 **Open source ecosystem:** All code public. Work with 8-10 rules-as-code organizations via RFP—state agencies, research institutions, civic tech groups contributing documents. Documentation encourages adaptation. Transparency builds trust and ensures sustainability.
 
