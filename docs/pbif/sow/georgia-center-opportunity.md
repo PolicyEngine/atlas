@@ -6,7 +6,7 @@
 
 ## Organization Overview
 
-Georgia Center for Opportunity (GCO) brings deep technical expertise in benefits modeling and rules engines, operating the benefitscliffs.org platform across 13 states. Their tools model SNAP, Medicaid, TANF, and other safety net programs, helping caseworkers, researchers, and policymakers understand benefit interactions and eligibility. GCO has collaborated with PolicyEngine and the Federal Reserve Bank of Atlanta on federal and North Carolina pilot implementations, demonstrating strong technical capabilities in document management and policy encoding. Their extensive document collections and experience building rules engines make them a valuable technical partner for ensuring comprehensive coverage.
+Georgia Center for Opportunity (GCO) brings deep technical expertise in benefits modeling and rules engines, operating the benefitscliffs.org platform across 13 states. Their tools model SNAP, Medicaid, TANF, and other safety net programs, helping caseworkers, researchers, and policymakers understand benefit interactions and eligibility. GCO has collaborated with PolicyEngine and the Federal Reserve Bank of Atlanta on federal and North Carolina pilot implementations focused on document collection and organization. Their extensive document collections and experience building rules engines make them a valuable technical partner for ensuring comprehensive coverage.
 
 ## Scope of Work
 
