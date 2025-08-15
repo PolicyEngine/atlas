@@ -194,12 +194,12 @@ function Overview() {
             </p>
             <div className="integration-grid">
               <div className="integration-item">
-                <h3>🏛️ OpenStates Integration</h3>
+                <h3>🏛️ OpenStates Standards</h3>
                 <p>
-                  Leveraging OpenStates' proven schema and API for legislative documents. They
-                  handle bills and statutes across all 50 states, DC, and Puerto Rico, while we
-                  focus on the regulatory and administrative documents that actually define benefit
-                  eligibility.
+                  Adopting OpenStates' proven schema and API standards for legislative documents.
+                  We'll follow their successful approach to state data uniformity, focusing on the
+                  regulatory and administrative documents that actually define benefit eligibility
+                  while maintaining compatibility with their legislative tracking infrastructure.
                 </p>
               </div>
               <div className="integration-item">
