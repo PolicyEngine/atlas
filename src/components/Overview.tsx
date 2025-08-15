@@ -3,7 +3,7 @@ function Overview() {
     <div className="section">
       <div className="hero">
         <h1>Policy Library</h1>
-        <p className="hero-subtitle">Permanent Document Infrastructure for America's Safety Net</p>
+        <p className="hero-subtitle">Establishing Credibility for Open-Source Rules Engines</p>
         <div className="hero-stats">
           <div className="hero-stat">
             <div className="hero-stat-number">50+</div>
@@ -23,40 +23,39 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">The Hidden Crisis in Benefit Access</h2>
+            <h2 className="card-title">Rules Engines Lack Government Credibility</h2>
             <p>
-              Every organization building benefit tools faces the same nightmare: finding and
-              understanding the actual rules is nearly impossible. Documents are scattered across
-              hundreds of agency websites, buried in PDFs, hidden behind paywalls, or simply don't
-              exist online. Both humans and AI spend countless hours searching for a single
-              eligibility criterion that might be in a policy manual from 2019, a court case from
-              2022, or an administrative memo that was never digitized.
+              Open-source rules engines encode thousands of benefit policies, but without
+              authoritative documentation, they remain experimental tools. As Tim Shaw from the
+              Gates Foundation notes, document libraries are "an important first step" but need
+              proven utility through real use cases. Currently, 18% of benefit policy URLs from 2019
+              are dead, undermining trust in automated systems.
             </p>
             <br />
             <p>
-              <strong>The real cost:</strong> We're all solving the same problem in isolation. Every
-              nonprofit, every government agency, every AI company is independently hunting for the
-              same documents, making the same phone calls to agencies, filing the same FOIA
-              requests. Meanwhile, millions of families can't access benefits because nobody can
-              efficiently understand the rules.
+              <strong>The credibility gap:</strong> Rules engines can't cite their sources.
+              Government agencies won't adopt tools that can't prove accuracy. Every calculation
+              needs traceable documentation—from SNAP asset limits to EITC phase-outs. Without
+              permanent, versioned documents, rules-as-code remains a promise rather than production
+              infrastructure.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">A Public Good for Policy Knowledge</h2>
+            <h2 className="card-title">From Experimental to Essential Infrastructure</h2>
             <p>
-              Policy Library creates the shared infrastructure America needs: a comprehensive,
-              searchable, permanent archive of every document that defines benefit eligibility. We
-              find documents humans can't—from obscure agency memos to state administrative codes to
-              court decisions. AI monitors every agency website weekly, archives everything
-              permanently, and makes it all accessible through simple APIs.
+              Policy Library provides the missing layer: permanent, versioned documentation that
+              rules engines reference. Year 1 establishes comprehensive coverage (50+ jurisdictions)
+              and proves accuracy improvements through nonprofit demonstrations. Year 2 leverages
+              these results for government adoption.
             </p>
             <br />
             <p>
-              <strong>Unlock innovation at scale:</strong> When every tool builder, researcher, and
-              AI company can instantly access the same authoritative documents, we stop duplicating
-              work and start building solutions. Thousands of hours shift from document hunting to
-              helping families. The entire ecosystem accelerates.
+              <strong>The transformation:</strong> When rules engines can cite exact policy sources,
+              they transform from experimental tools to trusted infrastructure. MyFriendBen and
+              Benefit Navigator will demonstrate error reduction. Our NSF POSE Phase 1 grant
+              complements PBIF funding to expand the open-source ecosystem. Government adoption
+              follows proven results.
             </p>
           </div>
         </div>
@@ -153,7 +152,7 @@ function Overview() {
         </div>
 
         <div className="benefits-section">
-          <h2 className="section-title">Built for AI & Rules-as-Code</h2>
+          <h2 className="section-title">Enabling Trusted Rules-as-Code</h2>
           <div className="benefits-grid">
             <div className="benefit-item">
               <h3>MCP Server Integration</h3>
@@ -230,10 +229,10 @@ function Overview() {
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
               PolicyEngine has encoded thousands of rules into our open-source benefit calculators,
-              with <strong>nearly 4,000 source document references</strong> (2,500 unique documents)
-              including page-specific citations to IRS publications, federal regulations, and state
-              codes. We know firsthand the pain: every parameter needs authoritative backing, from
-              SNAP asset limits to EITC phase-out rates.
+              with <strong>nearly 4,000 source document references</strong> (2,500 unique
+              documents). But without permanent access to these documents, our rules engine—and
+              others like it—can't achieve the credibility needed for government adoption. Policy
+              Library solves this by ensuring every rule can be traced to its authoritative source.
             </p>
             <div
               style={{
@@ -280,13 +279,13 @@ function Overview() {
             borderRadius: '12px',
           }}
         >
-          <h2 className="section-title">Vision: Government-to-Government Infrastructure</h2>
+          <h2 className="section-title">Year 2 Vision: Government Adoption</h2>
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-              Beyond serving nonprofits and AI tools, Policy Library could transform how governments
-              themselves share information. Imagine if states could instantly access county
-              implementation manuals, or counties could see how neighboring jurisdictions interpret
-              the same federal regulations.
+              After proving utility through Year 1 nonprofit demonstrations, Year 2 focuses on
+              government adoption. With documented accuracy improvements and cost savings from
+              MyFriendBen and Benefit Navigator implementations, we'll have the evidence base
+              governments need to adopt rules-as-code infrastructure.
             </p>
             <div
               style={{

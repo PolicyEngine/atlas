@@ -12,6 +12,7 @@ function Navigation({ activeSection, setActiveSection }: NavigationProps) {
   const publicItems = [
     { id: 'overview', label: 'Overview' },
     { id: 'demo', label: 'Mock-up' },
+    { id: 'partners', label: 'Partners' },
     { id: 'civic-tech', label: 'Community' },
   ];
 
