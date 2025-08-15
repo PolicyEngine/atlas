@@ -11,19 +11,19 @@ PolicyEngine Policy Library
 ## Executive Summary (limit 250 words)
 *"In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."*
 
-**Word Count: 250/250**
+**Word Count: 249/250**
 
-Open-source rules engines cannot achieve government credibility without authoritative documentation. Currently, 18% of benefit policy URLs from 2019 are dead, undermining trust in automated eligibility systems that could transform SNAP, Medicaid, and TANF administration. The Policy Library creates permanent, AI-curated documentation infrastructure that rules engines reference, establishing accuracy and coverage essential for government adoption.
+SNAP errors cost $10.5 billion annually (FY 2023), with 44 states failing accuracy thresholds in FY 2024. Root cause: ambiguous policy language creates inconsistent caseworker interpretations. Our AI-powered Policy Library analyzes benefit documents to identify ambiguities that drive errors, providing governments actionable insights to write clearer policies.
 
-Our solution directly addresses PBIF's four priority areas: income verification through state-specific disregards, SNAP error reduction via current criteria access, beneficiary communication with verifiable sources, and backlog reduction by saving caseworker research time. When rules engines cite exact sources, they transform from experimental tools to trusted government infrastructure.
+Our solution uses Claude/GPT-4 to scan policy documents across 50+ jurisdictions, scoring ambiguity levels and correlating them with actual SNAP Quality Control error rates by state. We deliver specific recommendations: "Your eligibility criteria has ambiguity score X, correlating with Y% higher error rates—here's how to clarify." This directly addresses PBIF priorities: reducing SNAP errors through clearer documentation, improving income verification consistency, and reducing administrative burden.
 
-We're not starting from scratch. Existing collaborations with Federal Reserve Bank of Atlanta, NBER (TAXSIM MOU), Urban Institute, Georgetown, and USC validate this need. MyFriendBen serves 3,500 monthly users; Benefit Navigator reaches 500+ caseworkers; PolicyEngine calculators serve 160,000 annually. Partners waste resources maintaining document libraries while families receive inconsistent information.
+Strong partnerships validate demand. Federal Reserve Bank of Atlanta collaborates on Policy Rules Database integration; NBER leverages our TAXSIM MOU for tax policy analysis; Urban Institute and Georgetown researchers use our pilot archives. MyFriendBen (3,500 monthly users) and Benefit Navigator (500+ caseworkers) demonstrate immediate application—both struggle with interpreting contradictory policy sources.
 
-Our AI-powered system (Claude/GPT-4) monitors 50+ jurisdictions, capturing documents before they vanish. Human reviewers verify accuracy through GitHub. We provide stable APIs with permanent source IDs, eliminating broken links that plague current systems.
+Our permanent document library provides the stable foundation this analysis requires. AI monitors agency websites, capturing documents before they disappear (18% of 2019 URLs are dead). Human reviewers verify accuracy through GitHub workflows. We provide stable APIs with permanent source IDs, eliminating broken links.
 
-**Year 1:** Establish credibility through comprehensive coverage and nonprofit demonstrations proving 24pp accuracy improvements in LLM benefit calculations. **Year 2:** Government adoption building on proven results from rules-as-code demonstrations.
+**Year 1:** Deploy ambiguity analysis across 10 pilot states, correlate with actual error data. **Year 2:** Scale nationwide, providing governments evidence-based recommendations for clearer policy writing.
 
-This infrastructure investment enables innovation for generations. Our $700,000 request catalyzes millions in downstream value across the policy ecosystem, creating permanent public goods that ensure every eligible family can access benefits they deserve.
+This transforms policy writing from art to science, enabling error reduction at the source rather than expensive downstream corrections.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot
