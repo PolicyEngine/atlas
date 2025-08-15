@@ -96,7 +96,7 @@ We'll build technical scalability into our architecture from day one. Our crawle
 
 **Word Count: 166/250**
 
-**Budget allocation:** Personnel (1.85 FTE): $293,000. Fringe benefits (33%): $96,690. Partner contracts including integration support: $164,000. AI tools and infrastructure: $60,000. Indirect costs (10% de minimis): $61,369. Total: $675,059.
+**Budget allocation:** Personnel (1.85 FTE): $425,235. Partner contracts including integration support: $180,000. Cloud infrastructure: $20,000. Other direct costs: $11,141. Indirect costs (10% de minimis): $63,637. Total: $700,000.
 
 The PBIF grant enables dedicated Policy Library development while PolicyEngine maintains its existing benefits calculator services. This focused investment creates infrastructure that becomes self-sustaining through API subscriptions and government contracts.
 

@@ -30,6 +30,6 @@ Our collaboration with Atlanta Fed and Georgia Center for Opportunity archives f
 
 ## Project Timeline & Funding
 **Start Date:** November 15, 2025  
-**End Date:** November 14, 2026 (12 months)  
-**Total Grant Request:** $675,059  
+**End Date:** November 14, 2027 (24 months)  
+**Total Grant Request:** $700,000  
 **Other Funding:** NSF POSE Phase 1 grant for open-source ecosystem expansion, PolicyEngine operational support, partner in-kind contributions

@@ -5,19 +5,19 @@ function Proposal() {
         <div className="budget-timeline-container">
           <div className="budget-card">
             <h2 className="card-title">2-Year Budget</h2>
-            <div className="budget-total">$675,059</div>
+            <div className="budget-total">$700,000</div>
             <div className="budget-items">
-              • Personnel (1.85 FTE/yr): $293,000
+              • Personnel (1.85 FTE): $425,235
               <br />
-              • Fringe Benefits (33%): $96,690
-              <br />
-              • Partner Contracts: $164,000
+              • Partner Contracts: $180,000
               <br />
               &nbsp;&nbsp;- Integration pilots (MFB/BN): $100,000
               <br />
-              &nbsp;&nbsp;- GCO (Fed/NC pilot lead): $30,000
+              &nbsp;&nbsp;- GCO (technical integration): $30,000
               <br />
-              &nbsp;&nbsp;- Other partners: $34,000
+              &nbsp;&nbsp;- Citizen Codex (UX): $20,000
+              <br />
+              &nbsp;&nbsp;- Other partners: $30,000
               <br />
               • AI Tools & Infrastructure: $60,000
               <br />• Indirect (10% de minimis): $61,369
