@@ -2,31 +2,31 @@
 
 ## Solution Description (250 words)
 
-**Word Count: 198/250**
+**Word Count: 237/250**
 
-AI crawlers understand government websites like human researchers. Claude/GPT-5 navigate complex sites, identify documents, understand relationships between statutes, regulations, forms.
+Our AI crawlers will understand government websites like human researchers do. We'll use Claude and GPT-5 to navigate complex sites, identify relevant documents, and understand relationships between statutes, regulations, and forms.
 
-**AI techniques:** LLMs power intelligent crawling. Embedding models enable semantic search. NLP for classification and change detection. LLM benchmark using PolicyEngine-US across 10,000+ household scenarios. Rules-as-code generation experiments measuring LLM accuracy creating PolicyEngine parameter files with/without document access. MCP server for direct LLM integration.
+**AI techniques:** We'll use agentic AI with Retrieval-Augmented Generation (RAG) rather than fine-tuning. LLMs will power intelligent crawling while embedding models enable semantic search. We'll implement NLP for classification and change detection. An MCP server will enable direct LLM integration, allowing AI tools to query our document library directly during conversations with users.
 
-**Human oversight:** (1) Initial configuration, (2) Document verification via GitHub PR, (3) Change confirmation, (4) Regular audits.
+**Human oversight:** We'll implement four stages of human review: (1) Initial configuration by engineers, (2) Document verification via GitHub pull requests, (3) Change confirmation by subject matter experts, (4) Regular quality audits.
 
-**Architecture:** LangChain orchestration. Daily URL monitoring with partner alerts. Web app for document submission. Seeded with 5,000+ documents from partners: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Urban Institute, Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Rules engine identifies relevant documents including non-obvious connections (TANF-SNAP eligibility). FastAPI enhances partner integrations—MyFriendBen and Benefit Navigator add document display to existing API calls. PostgreSQL metadata, S3 storage, CloudFlare CDN.
+**Architecture:** We'll use LangChain for orchestration with daily URL monitoring that sends partner alerts. Our web app will accept document submissions. We'll seed the system with 5,000+ documents from partners including PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide coverage), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Urban Institute, Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, and Benefit Navigator. Our rules engine will identify relevant documents including non-obvious connections like TANF-SNAP eligibility. FastAPI will enhance partner integrations—MyFriendBen and Benefit Navigator will add document display to existing API calls. We'll use PostgreSQL for metadata, S3 for storage, and CloudFlare CDN for distribution.
 
-**Rules-as-Code Evaluation:** Building on Beeck Center's work, we'll test LLMs generating rules for PolicyEngine and Atlanta Fed systems. Three conditions: baseline (description only), enhanced (with documents), full (documents plus patterns). Expect 70%+ accuracy with documents versus <30% baseline.
+**Integration with Rules Engines:** Building on the Beeck Center's work, we'll integrate our document library with PolicyEngine and Atlanta Fed's rules systems. Our API will provide source documents that these systems need for accurate benefits calculations, ensuring that rules engines have access to the authoritative policy text they're encoding.
 
 ## Data Strategy - Data Sources (250 words)
 
 **Word Count: 140/250**
 
-Data from public government websites only. Federal agencies (cms.gov, fns.usda.gov, acf.hhs.gov) publish regulations. State agencies host statutes, rules, forms. Never collect private data.
+We'll collect data from public government websites only. Federal agencies like cms.gov, fns.usda.gov, and acf.hhs.gov publish regulations, while state agencies host statutes, rules, and forms. We'll never collect private data.
 
-**Data ownership:** Public domain or government works. Clear attribution maintained. Our value-add creates new IP while respecting source rights.
+**Data ownership:** All content is public domain or government works. We'll maintain clear attribution for every document. Our value-add will create new IP while respecting source rights.
 
-**Data agreements:** No formal agreements needed for public documents. Establishing MOUs with Federal Reserve Bank of Atlanta, North Carolina DHHS for collaboration and updates.
+**Data agreements:** We don't need formal agreements for public documents. We're establishing MOUs with the Federal Reserve Bank of Atlanta and North Carolina DHHS for collaboration and updates.
 
-**Securing access:** Responsible crawling: respecting robots.txt, rate limits, identifying via user agent. Agencies can push updates directly. Several expressed interest during pilot.
+**Securing access:** We'll practice responsible crawling by respecting robots.txt files, implementing rate limits, and identifying ourselves via user agent strings. Agencies can push updates directly to our system. Several agencies have already expressed interest during our pilot.
 
-**Pilot validation:** North Carolina pilot proved feasibility archiving SNAP, Medicaid, TANF documents. Federal sites more standardized. Partner contributions: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018), Urban Institute, Prenatal-to-3 at Vanderbilt, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Collaborative seeding ensures comprehensive coverage while eliminating privacy concerns.
+**Pilot validation:** Our North Carolina pilot has already proven the feasibility of archiving SNAP, Medicaid, and TANF documents. Federal sites are more standardized, making them easier to process. Partner contributions include PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide coverage), GCO (all states/programs), NBER (tax documents since 2018), Urban Institute, Prenatal-to-3 at Vanderbilt, Better Government Lab, USC, MyFriendBen, and Benefit Navigator. This collaborative seeding approach ensures comprehensive coverage while eliminating privacy concerns.
 
 ## Data Strategy - Data Management (250 words)
 
@@ -74,15 +74,23 @@ Computational resources leverage cloud infrastructure for scalability. AWS provi
 
 **Word Count: 180/250**
 
-We build technical scalability into our architecture. Our crawler system uses job queues enabling horizontal scaling. Add more workers to handle more jurisdictions. Document storage in S3 scales infinitely. API uses caching and CDN for performance at scale. Database sharding ready for millions of documents.
+We'll build technical scalability into our architecture from day one. Our crawler system will use job queues enabling horizontal scaling—we can simply add more workers to handle more jurisdictions. Document storage in S3 will scale infinitely. Our API will use caching and CDN for performance at scale. We'll implement database sharding to handle millions of documents.
 
-**Long-term sustainability through revenue diversification:** Enterprise API subscriptions from benefits platforms and government contractors. Government contracts for official preservation services. Foundation support for free nonprofit access. Multiple revenue streams ensure sustainability beyond grant period.
+**12-Month Detailed Timeline:**
+- **Months 1-2:** Set up infrastructure, deploy initial crawlers, bulk ingest 5,000+ partner documents
+- **Months 3-4:** Launch API v1, integrate with MyFriendBen and Benefit Navigator  
+- **Months 5-6:** Scale to 10 states, implement automated quality checks
+- **Months 7-8:** Expand to 30 states, launch public web interface
+- **Months 9-10:** Add remaining states, optimize performance
+- **Months 11-12:** Full production with 50+ jurisdictions, conduct comprehensive evaluation
 
-**Cost optimization:** Open-source approach eliminates licensing costs. Community contributions from 100+ developers reduce development expenses. Efficient caching minimizes AI API usage. Graduated storage (hot/cold) optimizes costs for historical documents.
+**Long-term sustainability through revenue diversification:** We'll secure enterprise API subscriptions from benefits platforms and government contractors. Government contracts for official preservation services will provide stable funding. Foundation support will maintain free access for nonprofits. Multiple revenue streams will ensure sustainability beyond the grant period.
 
-**Organizational sustainability:** PolicyEngine's existing infrastructure and team provide stable foundation. Policy Library enhances our core benefits calculator mission. Board commitment to long-term support. Partnership agreements ensure continued stakeholder investment.
+**Cost optimization:** Our open-source approach eliminates licensing costs. Community contributions from 100+ developers will reduce development expenses. Efficient caching will minimize AI API usage. Graduated storage (hot/cold) will optimize costs for historical documents.
 
-**Technical evolution:** Architecture supports new AI models as they emerge. Jurisdiction-agnostic design enables international expansion. Modular components allow feature addition without system rewrites. Version control preserves all historical data. This comprehensive approach ensures the Policy Library becomes permanent infrastructure, not a temporary project.
+**Organizational sustainability:** PolicyEngine's existing infrastructure and team provide a stable foundation. The Policy Library enhances our core benefits calculator mission. Our board has committed to long-term support. Partnership agreements ensure continued stakeholder investment.
+
+**Technical evolution:** Our architecture will support new AI models as they emerge. The jurisdiction-agnostic design enables international expansion. Modular components allow feature addition without system rewrites. Version control preserves all historical data.
 
 ## Financial Viability (250 words)
 
@@ -94,6 +102,6 @@ The PBIF grant enables dedicated Policy Library development while PolicyEngine m
 
 **Funding diversification:** PBIF funding jumpstarts development. By Year 2, we anticipate enterprise API subscriptions and government preservation contracts. The open-source model and community contributions reduce ongoing costs.
 
-**Financial sustainability plan:** Year 1: PBIF funding covers development and initial deployment with 5,000+ seed documents from partners. Year 2: Begin enterprise subscriptions and government contracts as system proves value. Year 3: Achieve sustainability through diversified revenue including API subscriptions, government contracts, and foundation support.
+**Financial sustainability plan:** Within our 12-month grant period, PBIF funding will cover development and deployment with 5,000+ seed documents from partners. By month 9, we'll begin securing enterprise subscriptions and government contracts as the system proves its value. Post-grant, we'll achieve full sustainability through diversified revenue including API subscriptions, government contracts, and foundation support.
 
 **Risk mitigation:** Staggered hiring reduces upfront costs. Cloud infrastructure scales with usage. Open-source model enables community contributions. Multiple revenue streams prevent single points of failure. This pragmatic approach ensures financial viability while building critical infrastructure.

@@ -11,17 +11,17 @@ PolicyEngine Policy Library
 ## Executive Summary (limit 250 words)
 *"In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."*
 
-**Word Count: 212/250**
+**Word Count: 239/250**
 
 The Policy Library creates the missing infrastructure layer that transforms how America's safety net operates. Currently, 18% of benefit policy URLs from 2019 are dead, forcing every organization to independently maintain fragile document collections. When tools access our comprehensive, permanently archived source documents, we enable transformative capabilities: AI assistants accurately determining multi-program eligibility without hallucinations, caseworkers confidently navigating complex rules with authoritative sources, researchers tracking policy evolution across jurisdictions, and innovations we haven't imagined.
 
-We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine creating intelligent infrastructure. Our system understands document relationships, surfaces non-obvious connections (TANF-SNAP categorical eligibility), providing authoritative ground truth for accurate benefits determination.
+We'll combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine to create intelligent infrastructure. Our system will understand document relationships and surface non-obvious connections like TANF-SNAP categorical eligibility, providing authoritative ground truth for accurate benefits determination. We'll use agentic AI with comprehensive metadata rather than fine-tuning, enabling flexible and accurate document retrieval at scale.
 
-**PBIF Priority Impact:** Income verification via state-specific disregards; reduced SNAP errors through current criteria; confident beneficiary communication with source documents; backlog reduction saving staff time.
+**PBIF Priority Impact:** We'll enable income verification via state-specific disregards, reduce SNAP errors through current criteria, support confident beneficiary communication with source documents, and reduce backlogs to save staff time.
 
-**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues—we seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 use PolicyEngine for tax credit modeling; Mirza and Impactica use our API. We'll add document display to API requests, integrate caseworker training. Colorado users and Riverside caseworkers see sources with calculations.
+**Not starting from scratch:** Our collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues. We'll seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 already use PolicyEngine for tax credit modeling, while Mirza and Impactica use our API. We'll add document display to API requests and integrate caseworker training. Colorado users and Riverside caseworkers will see sources alongside calculations.
 
-**12-month timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
+**12-month production timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot
@@ -30,9 +30,9 @@ Our collaboration with Atlanta Fed and Georgia Center for Opportunity archives f
 
 ## Project Timeline & Funding
 **Start Date:** November 15, 2025  
-**End Date:** November 14, 2027 (24 months)  
+**End Date:** November 14, 2026 (12 months)  
 **Total Grant Request:** $675,059  
-**Other Funding:** [To be determined]`;
+**Other Funding:** PolicyEngine operational support, partner in-kind contributions`;
 
 export const valuePropositionContent = `# Section 2: Value Proposition and Responsible Deployment
 
@@ -71,7 +71,7 @@ Specific measurable metrics include:
 
 **Reliability metrics:** 99.9% API uptime, under 100ms retrieval speed, 99.5% accuracy via human verification.
 
-**Impact metrics:** MyFriendBen's 3,500 monthly Colorado users see primary sources; Riverside County's 500+ caseworkers access real-time verification. Rules engine integration ensures ALL relevant documents including non-obvious connections (TANF-SNAP eligibility). Track: document retrievals per partner, broken link reduction, time to resolve eligibility questions. LLM accuracy improvement of 24pp through test cases, including rules-as-code generation experiments (Beeck Center approach) comparing AI performance with/without primary sources—expecting significant improvement generating accurate PolicyEngine parameter files when LLMs reference actual statutes.
+**Impact metrics:** MyFriendBen's 3,500 monthly Colorado users will see primary sources; Riverside County's 500+ caseworkers will access real-time verification. Our rules engine integration will ensure ALL relevant documents are found, including non-obvious connections like TANF-SNAP eligibility. We'll track document retrievals per partner, broken link reduction, and time to resolve eligibility questions. We'll measure API response times, document accuracy rates through human verification, and partner satisfaction scores through monthly surveys.
 
 We track progress through automated dashboards, monthly partner surveys, and API analytics. We publish quarterly reports sharing findings publicly. Success means families never hear "we can't find that document" when applying for benefits.
 
@@ -101,7 +101,7 @@ Community organization adoption follows a tiered approach. Tier 1: Direct integr
 
 Sustainability comes through diversified support. Enterprise API subscriptions from large platforms generate recurring revenue. Government contracts for official preservation services provide stable funding. Foundation support maintains free access for nonprofits. Open-source model enables community contributions reducing costs.
 
-Scalability is built into architecture. Cloud infrastructure handles growth automatically. Crawler architecture is jurisdiction-agnostic, adding new states requires configuration not code. Community contributors can add coverage through pull requests. By Month 24, we'll cover all 50 states plus federal programs, becoming essential infrastructure for America's safety net.
+Scalability is built into our architecture. Cloud infrastructure will handle growth automatically. Our crawler architecture is jurisdiction-agnostic—adding new states requires only configuration changes, not new code. Community contributors can add coverage through pull requests. Within 12 months, we'll achieve full production with 50+ jurisdictions covered. Post-grant, we'll continue expanding internationally, becoming essential infrastructure for America's safety net and beyond.
 
 ## Dissemination & Learning (250 words)
 
@@ -113,7 +113,7 @@ Knowledge sharing maximizes impact across the benefits ecosystem.
 
 **Public data access:** Document corpus via API with free tier. Bulk exports for researchers. Public dashboards showing coverage. Weekly Internet Archive dumps for preservation.
 
-**Learning dissemination:** Quarterly reports on policy patterns, preservation challenges, adoption metrics. LLM benchmark results showing accuracy improvements (baseline, with documents, with tools, full stack), including rules-as-code generation experiments demonstrating how primary sources enable accurate PolicyEngine parameter generation—extending Beeck Center's work. Academic papers on AI-powered benefits navigation. Conference presentations at Code for America Summit, Benefits Data Trust convening. Webinars for navigators and developers.
+**Learning dissemination:** Quarterly reports on policy patterns, preservation challenges, and adoption metrics. Academic papers on AI-powered benefits navigation and document preservation methodologies. Conference presentations at Code for America Summit and Benefits Data Trust convening. Webinars for navigators and developers on using the Policy Library API and integrating document access into their tools.
 
 **Community engagement:** Monthly calls for feedback. GitHub discussions for requests. Newsletter with updates. Documentation wiki.
 
@@ -127,13 +127,13 @@ export const technicalFeasibilityContent = `# Section 3: Technical & Practical F
 
 AI crawlers understand government websites like human researchers. Claude/GPT-5 navigate complex sites, identify documents, understand relationships between statutes, regulations, forms.
 
-**AI techniques:** LLMs power intelligent crawling. Embedding models enable semantic search. NLP for classification and change detection. LLM benchmark using PolicyEngine-US across 10,000+ household scenarios. Rules-as-code generation experiments measuring LLM accuracy creating PolicyEngine parameter files with/without document access. MCP server for direct LLM integration.
+**AI techniques:** We'll use agentic AI with Retrieval-Augmented Generation (RAG) rather than fine-tuning. LLMs will power intelligent crawling while embedding models enable semantic search. We'll implement NLP for classification and change detection. An MCP server will enable direct LLM integration, allowing AI tools to query our document library directly during conversations with users.
 
 **Human oversight:** (1) Initial configuration, (2) Document verification via GitHub PR, (3) Change confirmation, (4) Regular audits.
 
 **Architecture:** LangChain orchestration. Daily URL monitoring with partner alerts. Web app for document submission. Seeded with 5,000+ documents from partners: PolicyEngine (2,500+ citations), Atlanta Fed model (nationwide), GCO (all states/programs), NBER (tax documents since 2018 via TAXSIM MOU), Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator. Rules engine identifies relevant documents including non-obvious connections (TANF-SNAP eligibility). FastAPI enhances partner integrations—MyFriendBen and Benefit Navigator add document display to existing API calls. PostgreSQL metadata, S3 storage, CloudFlare CDN.
 
-**Rules-as-Code Evaluation:** Building on Beeck Center's work, we'll test LLMs generating rules for PolicyEngine and Atlanta Fed systems. Three conditions: baseline (description only), enhanced (with documents), full (documents plus patterns). Expect 70%+ accuracy with documents versus <30% baseline.
+**Integration with Rules Engines:** Building on the Beeck Center's work, we'll integrate our document library with PolicyEngine and Atlanta Fed's rules systems. Our API will provide source documents that these systems need for accurate benefits calculations, ensuring that rules engines have access to the authoritative policy text they're encoding.
 
 ## Data Strategy - Data Sources (250 words)
 
