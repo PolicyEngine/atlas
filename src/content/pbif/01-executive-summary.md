@@ -11,17 +11,19 @@ PolicyEngine Policy Library
 ## Executive Summary (limit 250 words)
 *"In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."*
 
-**Word Count: 196/250**
+**Word Count: 250/250**
 
-Open-source rules engines lack credibility without authoritative documentation. Currently, 18% of benefit policy URLs from 2019 are dead, undermining trust in automated eligibility systems. The Policy Library provides permanent, versioned documentation that rules engines reference, establishing accuracy and coverage for government adoption. When rules engines cite exact sources, they transform from experimental tools to trusted infrastructure.
+Open-source rules engines cannot achieve government credibility without authoritative documentation. Currently, 18% of benefit policy URLs from 2019 are dead, undermining trust in automated eligibility systems that could transform SNAP, Medicaid, and TANF administration. The Policy Library creates permanent, AI-curated documentation infrastructure that rules engines reference, establishing accuracy and coverage essential for government adoption.
 
-We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's rules engine creating intelligent infrastructure. Our system understands document relationships, surfaces non-obvious connections (TANF-SNAP categorical eligibility), providing authoritative ground truth for accurate benefits determination.
+Our solution directly addresses PBIF's four priority areas: income verification through state-specific disregards, SNAP error reduction via current criteria access, beneficiary communication with verifiable sources, and backlog reduction by saving caseworker research time. When rules engines cite exact sources, they transform from experimental tools to trusted government infrastructure.
 
-**PBIF Priority Impact:** Enable income verification via state-specific disregards, reduce SNAP errors through current criteria, support confident beneficiary communication with sources, reduce backlogs saving staff time.
+We're not starting from scratch. Existing collaborations with Federal Reserve Bank of Atlanta, NBER (TAXSIM MOU), Urban Institute, Georgetown, and USC validate this need. MyFriendBen serves 3,500 monthly users; Benefit Navigator reaches 500+ caseworkers; PolicyEngine calculators serve 160,000 annually. Partners waste resources maintaining document libraries while families receive inconsistent information.
 
-**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Urban Institute, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, Benefit Navigator continues. We seed the library with nationwide documents. NBER and Prenatal-to-3 use PolicyEngine for tax credit modeling; Mirza and Impactica use our API. Colorado users and Riverside caseworkers see sources with calculations.
+Our AI-powered system (Claude/GPT-4) monitors 50+ jurisdictions, capturing documents before they vanish. Human reviewers verify accuracy through GitHub. We provide stable APIs with permanent source IDs, eliminating broken links that plague current systems.
 
-**Year 1:** Establish credibility through comprehensive coverage (50+ jurisdictions), nonprofit demonstrations proving accuracy improvements, and open-source templates. **Year 2:** Government adoption building on proven results.
+**Year 1:** Establish credibility through comprehensive coverage and nonprofit demonstrations proving 24pp accuracy improvements in LLM benefit calculations. **Year 2:** Government adoption building on proven results from rules-as-code demonstrations.
+
+This infrastructure investment enables innovation for generations. Our $700,000 request catalyzes millions in downstream value across the policy ecosystem, creating permanent public goods that ensure every eligible family can access benefits they deserve.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot
