@@ -5,7 +5,7 @@
 
 **Word Count: 220/250**
 
-The benefits ecosystem lacks infrastructure for policy documentation, forcing organizations to rebuild document discovery. This prevents innovations: AI can't provide accurate multi-program guidance, caseworkers can't navigate eligibility rules, researchers can't track policy evolution. Recent changes—SNAP work requirements, Medicaid unwinding, TANF limits—make this critical.
+Open-source rules engines cannot achieve government credibility without authoritative documentation. Tim Shaw's feedback confirms this: document libraries are 'an important first step' but need proven utility through real use cases. Rules engines encoding SNAP, Medicaid, and TANF policies lack trust because they can't cite sources. Recent changes—SNAP work requirements, Medicaid unwinding, TANF limits—require verifiable encoding.
 
 Partners validated this need. MyFriendBen and Benefit Navigator waste resources maintaining documents. Georgetown and Michigan researchers lack document foundations. Atlanta Fed's collaboration shows even sophisticated institutions need shared infrastructure. Families face inconsistent information without comprehensive documentation.
 
@@ -27,7 +27,7 @@ We'll involve beneficiaries throughout the project via multiple channels. Our pa
 
 **Word Count: 181/250**
 
-Our success transforms how America's safety net operates. Organizations shift from maintaining broken links to serving families. AI tools provide accurate benefit information. Families never lose benefits due to missing documents.
+Year 1 establishes rules engine credibility through comprehensive documentation and nonprofit demonstrations. Year 2 enables government adoption based on proven accuracy improvements. Success means rules engines transition from experimental tools to trusted infrastructure.
 
 Specific measurable metrics include:
 
@@ -57,7 +57,7 @@ We identify three key risks: privacy concerns, accuracy issues, and potential mi
 
 **Word Count: 238/250**
 
-Implementation builds on existing relationships. MyFriendBen already uses our API for 3,500+ monthly benefit calculations across Colorado—we'll add document display to these existing requests, showing users the actual regulations behind their results. Benefit Navigator, deployed with LA County caseworkers and expanding to Riverside County, will enhance their current PolicyEngine integration with primary-source verification during eligibility determinations. Deep integration pilots include technical integration and deployment support.
+Year 1 focuses on proving rules engine accuracy with nonprofit partners. MyFriendBen's 3,500+ monthly users will demonstrate error reduction when calculations cite sources. Benefit Navigator will show how document-backed rules improve caseworker confidence. These demonstrations establish the credibility needed for Year 2 government adoption.
 
 Government partnership strategy leverages existing relationships. Federal Reserve Bank of Atlanta has committed to collaboration through their Policy Rules Database. North Carolina and California agencies expressed interest following our pilot success. We'll formalize partnerships through MOUs establishing data sharing agreements and technical integration plans.
 
@@ -65,7 +65,7 @@ Community organization adoption follows a tiered approach. Tier 1: Direct integr
 
 Sustainability comes through diversified support. Enterprise API subscriptions from large platforms generate recurring revenue. Government contracts for official preservation services provide stable funding. Foundation support maintains free access for nonprofits. Open-source model enables community contributions reducing costs.
 
-Scalability is built into our architecture. Cloud infrastructure will handle growth automatically. Our crawler architecture is jurisdiction-agnostic—adding new states requires only configuration changes, not new code. Community contributors can add coverage through pull requests. Within 12 months, we'll achieve full production with 50+ jurisdictions covered. Post-grant, we'll continue expanding internationally, becoming essential infrastructure for America's safety net and beyond.
+Scalability is built into our architecture. Cloud infrastructure will handle growth automatically. Our crawler architecture is jurisdiction-agnostic—adding new states requires only configuration changes, not new code. Community contributors can add coverage through pull requests. Year 1 achieves comprehensive coverage (50+ jurisdictions) establishing rules engine credibility. Year 2 leverages proven results for government adoption. Our NSF POSE Phase 1 grant complements PBIF funding by expanding the open-source ecosystem for sustained growth.
 
 ## Dissemination & Learning (250 words)
 

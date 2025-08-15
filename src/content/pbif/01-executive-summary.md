@@ -11,17 +11,17 @@ PolicyEngine Policy Library
 ## Executive Summary (limit 250 words)
 *"In a concise summary, describe the core problem your project addresses, the proposed technical solution, the target beneficiaries, and the anticipated impact."*
 
-**Word Count: 239/250**
+**Word Count: 196/250**
 
-The Policy Library creates the missing infrastructure layer that transforms how America's safety net operates. Currently, 18% of benefit policy URLs from 2019 are dead, forcing every organization to independently maintain fragile document collections. When tools access our comprehensive, permanently archived source documents, we enable transformative capabilities: AI assistants accurately determining multi-program eligibility without hallucinations, caseworkers confidently navigating complex rules with authoritative sources, researchers tracking policy evolution across jurisdictions, and innovations we haven't imagined.
+Open-source rules engines lack credibility without authoritative documentation. Currently, 18% of benefit policy URLs from 2019 are dead, undermining trust in automated eligibility systems. The Policy Library provides permanent, versioned documentation that rules engines reference, establishing accuracy and coverage for government adoption. When rules engines cite exact sources, they transform from experimental tools to trusted infrastructure.
 
-We'll combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's open-source rules engine to create intelligent infrastructure. Our system will understand document relationships and surface non-obvious connections like TANF-SNAP categorical eligibility, providing authoritative ground truth for accurate benefits determination. We'll use agentic AI with comprehensive metadata rather than fine-tuning, enabling flexible and accurate document retrieval at scale.
+We combine AI-powered monitoring (Claude/GPT-5) with PolicyEngine's rules engine creating intelligent infrastructure. Our system understands document relationships, surfaces non-obvious connections (TANF-SNAP categorical eligibility), providing authoritative ground truth for accurate benefits determination.
 
-**PBIF Priority Impact:** We'll enable income verification via state-specific disregards, reduce SNAP errors through current criteria, support confident beneficiary communication with source documents, and reduce backlogs to save staff time.
+**PBIF Priority Impact:** Enable income verification via state-specific disregards, reduce SNAP errors through current criteria, support confident beneficiary communication with sources, reduce backlogs saving staff time.
 
-**Not starting from scratch:** Our collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Urban Institute, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, and Benefit Navigator continues. We'll seed the library with documents covering nationwide scope. NBER and Prenatal-to-3 already use PolicyEngine for tax credit modeling, while Mirza and Impactica use our API. We'll add document display to API requests and integrate caseworker training. Colorado users and Riverside caseworkers will see sources alongside calculations.
+**Not starting from scratch:** Collaboration with Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Urban Institute, Prenatal-to-3, Better Government Lab, USC, MyFriendBen, Benefit Navigator continues. We seed the library with nationwide documents. NBER and Prenatal-to-3 use PolicyEngine for tax credit modeling; Mirza and Impactica use our API. Colorado users and Riverside caseworkers see sources with calculations.
 
-**12-month production timeline:** Months 1-3: Launch 5,000+ documents, 10 states; Months 4-6: API v1 with partners; Months 7-9: 30 states; Months 10-12: Full production covering 50+ jurisdictions.
+**Year 1:** Establish credibility through comprehensive coverage (50+ jurisdictions), nonprofit demonstrations proving accuracy improvements, and open-source templates. **Year 2:** Government adoption building on proven results.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot
@@ -32,4 +32,4 @@ Our collaboration with Atlanta Fed and Georgia Center for Opportunity archives f
 **Start Date:** November 15, 2025  
 **End Date:** November 14, 2026 (12 months)  
 **Total Grant Request:** $675,059  
-**Other Funding:** PolicyEngine operational support, partner in-kind contributions
+**Other Funding:** NSF POSE Phase 1 grant for open-source ecosystem expansion, PolicyEngine operational support, partner in-kind contributions
