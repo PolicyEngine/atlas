@@ -10,6 +10,7 @@ function NavigationRouter() {
   const publicItems = [
     { path: '/', label: 'Overview' },
     { path: '/demo', label: 'Mock-up' },
+    { path: '/partners', label: 'Partners' },
     { path: '/community', label: 'Community' },
   ];
 
