@@ -1,5 +1,6 @@
 # Statement of Work - MyFriendBen
 
+**Status:** Conditional upon PolicyEngine receiving PBIF award  
 **Partner:** MyFriendBen  
 **Amount:** $50,000  
 **Period:** 24 months  
@@ -16,11 +17,11 @@ MyFriendBen operates a leading digital benefits screener, serving 3,500+ users m
 - Provide feedback on document organization and accessibility
 - Share insights on which documents are most critical for benefits screening
 
-### Caseworker Training Development
-- Collaborate on developing training materials that integrate Policy Library access
-- Pilot training with their network of community-based caseworkers
-- Provide feedback on training effectiveness and document utility
-- Share best practices from implementations across different states
+### Rules-as-Code Demonstration
+- Demonstrate how Policy Library enables accurate rules encoding in their screening tools
+- Track and document accuracy improvements when calculations reference source documents
+- Compare error rates between document-backed vs traditional implementations
+- Create case studies showing reduced maintenance burden with authoritative sources
 
 ### Technical Integration
 - Enhance existing PolicyEngine API integration to display relevant policy documents
@@ -28,49 +29,58 @@ MyFriendBen operates a leading digital benefits screener, serving 3,500+ users m
 - Provide user feedback on document presentation and navigation
 - Track usage patterns to inform system improvements
 
-### Government Partnership Exploration
-- Leverage state agency relationships to explore government adoption opportunities
-- Facilitate introductions to interested agencies in expansion states
-- Share learnings about government needs for training materials and documentation
-- Help identify pathways for sustainable government adoption
+### Government Rules-as-Code Pathway
+- Leverage state agency relationships to demonstrate rules-as-code benefits
+- Show agencies how document-backed calculations reduce eligibility errors
+- Pilot automated policy encoding with interested state partners
+- Document cost savings from reduced manual rule interpretation
+- Create replicable model for government rules-as-code adoption
 
 ## Deliverables
 
-- **Year 1: Foundation Building**
+- **Year 1: Rules-as-Code Foundation**
   - Policy documents from 5 states contributed to library
   - Metadata verification for relevant programs
-  - Initial training materials developed and tested
-  - Feedback reports on technical integration
-  - Usage data and patterns from community implementations
+  - Baseline accuracy metrics established for current screening
+  - Document-backed calculations implemented in screening tool
+  - Accuracy improvement metrics documented
+  - Error reduction case studies from Colorado implementation
 
-- **Year 2: Scaling & Government Adoption**
-  - Refined training programs based on Year 1 learnings
-  - Government agency pilot in 1-2 states (contingent on agency interest)
-  - Case studies documenting impact on caseworker effectiveness
-  - Best practices guide for multi-state implementation
-  - Recommendations for scaling to additional states
+- **Year 2: Government Rules-as-Code Adoption**
+  - Rules-as-code pilot with 1-2 state agencies
+  - Automated policy encoding demonstrations
+  - Cost-benefit analysis of rules-as-code implementation
+  - Open-source templates for government adoption
+  - Technical documentation for agency IT teams
+  - Sustainability model for government-maintained rules
 
 ## Success Metrics
 
 - Number of documents contributed and verified
-- Caseworkers trained using new materials
-- Time savings in benefits screening process
-- Improved accuracy in eligibility determinations
-- User satisfaction with document access
-- Government agency engagement level
+- Percentage reduction in eligibility determination errors
+- Time saved through automated policy interpretation
+- Number of rules successfully encoded from documents
+- Government agencies adopting rules-as-code approach
+- Cost savings from reduced manual rule maintenance
+- Open-source rules published for community use
 
 ## Budget Allocation
 
 The $50,000 will support:
 - Staff time for document identification and verification
-- Training material development and pilot implementation
-- Technical integration work
-- Government partnership development
+- Rules-as-code implementation and testing
+- Accuracy measurement and analysis
+- Government demonstration projects
+- Open-source template development
 - Impact measurement and reporting
 
 ## Timeline
 
-**Months 1-6:** Document contribution, initial integration
-**Months 7-12:** Training development and community pilots  
-**Months 13-18:** Refinement and expansion to new states
-**Months 19-24:** Government partnership development and sustainability planning
+**Months 1-6:** Document contribution, baseline accuracy measurement
+**Months 7-12:** Rules-as-code implementation, accuracy improvement tracking  
+**Months 13-18:** Government demonstrations in expansion states
+**Months 19-24:** Government adoption pilots, open-source template release
+
+## Funding Contingency
+
+This Statement of Work is contingent upon PolicyEngine receiving funding from the Public Benefit Innovation Fund (PBIF). The scope, timeline, and budget outlined herein will only be executed if the PBIF application is successful. Both parties acknowledge that no financial obligations or work commitments exist until PBIF funding is secured and a formal agreement is executed.

@@ -1,5 +1,6 @@
 # Statement of Work - Citizen Codex
 
+**Status:** Conditional upon PolicyEngine receiving PBIF award  
 **Partner:** Citizen Codex  
 **Amount:** $20,000  
 **Period:** 24 months  
@@ -80,3 +81,7 @@ The $20,000 will support:
 **Months 10-12:** Design system development
 **Months 13-18:** Partner integration designs
 **Months 19-24:** Continuous improvement, accessibility compliance
+
+## Funding Contingency
+
+This Statement of Work is contingent upon PolicyEngine receiving funding from the Public Benefit Innovation Fund (PBIF). The scope, timeline, and budget outlined herein will only be executed if the PBIF application is successful. Both parties acknowledge that no financial obligations or work commitments exist until PBIF funding is secured and a formal agreement is executed.

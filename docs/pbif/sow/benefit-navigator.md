@@ -1,5 +1,6 @@
 # Statement of Work - Benefit Navigator
 
+**Status:** Conditional upon PolicyEngine receiving PBIF award  
 **Partner:** Benefit Navigator  
 **Amount:** $50,000  
 **Period:** 24 months  
@@ -77,3 +78,7 @@ The $50,000 will support:
 **Months 7-12:** Initial integration testing (as available), training development
 **Months 13-18:** Multi-jurisdiction rollout, government engagement
 **Months 19-24:** Government pilots, sustainability planning
+
+## Funding Contingency
+
+This Statement of Work is contingent upon PolicyEngine receiving funding from the Public Benefit Innovation Fund (PBIF). The scope, timeline, and budget outlined herein will only be executed if the PBIF application is successful. Both parties acknowledge that no financial obligations or work commitments exist until PBIF funding is secured and a formal agreement is executed.

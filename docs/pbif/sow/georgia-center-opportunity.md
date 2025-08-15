@@ -1,5 +1,6 @@
 # Statement of Work - Georgia Center for Opportunity
 
+**Status:** Conditional upon PolicyEngine receiving PBIF award  
 **Partner:** Georgia Center for Opportunity  
 **Amount:** $30,000  
 **Period:** 24 months  
@@ -74,3 +75,7 @@ The $30,000 will support:
 **Months 7-12:** API testing, technical documentation
 **Months 13-18:** Full integration development
 **Months 19-24:** Optimization, knowledge transfer, sustainability
+
+## Funding Contingency
+
+This Statement of Work is contingent upon PolicyEngine receiving funding from the Public Benefit Innovation Fund (PBIF). The scope, timeline, and budget outlined herein will only be executed if the PBIF application is successful. Both parties acknowledge that no financial obligations or work commitments exist until PBIF funding is secured and a formal agreement is executed.
