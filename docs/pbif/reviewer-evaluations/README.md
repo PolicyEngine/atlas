@@ -4,7 +4,8 @@ This folder contains simulated reviewer evaluations for our PBIF application.
 
 ## PBIF Open Call
 
-Details about the Public Benefit Innovation Fund open call: https://www.pbif.org/open-call
+Full details: `/docs/pbif/pbif-open-call.md`
+Application portal: https://www.publicbenefitinnovationfund.org/summer-2025-open-call.html
 
 ## Application Materials
 
