@@ -1,31 +1,29 @@
-# PBIF Budget Filler Documentation
+# PBIF Budget Filler
+
+Script to populate the PBIF budget spreadsheet for PolicyEngine's Policy Library application.
 
 ## Setup
 
-This directory contains scripts for updating the PBIF budget spreadsheet in Google Sheets.
-
-### Prerequisites
-
-1. **Python Virtual Environment**: The scripts use a local venv with dependencies installed
-2. **Authentication**: Uses `token.pickle` from parent directory for Google Sheets access
+1. **Dependencies**: Install required packages:
+   ```bash
+   pip install gspread google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+   ```
+2. **Authentication**: Ensure `token.pickle` exists in parent directory with Google Sheets credentials
 3. **Spreadsheet ID**: `1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw`
 
-## Running Scripts
+## Main Script
 
-### Important: Always use the virtual environment
+### populate_budget.py - Single consolidated script for entire budget
 
 ```bash
-# Navigate to this directory
-cd pbif_budget_filler
-
-# Activate the virtual environment
-source venv/bin/activate
-
-# Run scripts
-python update_document_pool.py
-python update_partner_allocations.py
-# etc.
+python populate_budget.py
 ```
+
+This single script will:
+- Populate all budget worksheets (Personnel, Equipment, Travel, Contractual, Other, Indirect)
+- Remove any yellow template highlighting
+- Use existing formulas from the template (doesn't overwrite them)
+- Let the template calculate totals automatically
 
 ### Common Issues and Solutions
 
