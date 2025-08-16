@@ -8,22 +8,22 @@ personnel:
   - position_title: "Project Lead"
     effort_pct: 20      # 0.2 FTE
     base_salary: 150000
-    fringe_rate: 0.30
+    fringe_rate: 0.25   # 403b contribution only
   
   - position_title: "Lead Engineer"
     effort_pct: 40      # 0.4 FTE
     base_salary: 140000
-    fringe_rate: 0.30
+    fringe_rate: 0.25   # 403b contribution only
   
   - position_title: "ML/AI Engineer"
     effort_pct: 40      # 0.4 FTE
     base_salary: 120000
-    fringe_rate: 0.30
+    fringe_rate: 0.25   # 403b contribution only
   
   - position_title: "Policy Analyst"
     effort_pct: 30      # 0.3 FTE
     base_salary: 90000
-    fringe_rate: 0.30
+    fringe_rate: 0.25   # 403b contribution only
 
 travel:
   # Travel entries for 2-year grant period with GSA per diem rates
@@ -133,7 +133,7 @@ other_direct:
 
 indirect:
   rate_percentage: 15
-  explanation: "Using 15% de minimis rate per 2 CFR 200.414(f). This covers administrative support, facilities, utilities, and general overhead costs."
+  explanation: "15% indirect rate covers: 7% fiscal sponsor fee, office rent, employer payroll taxes, and administrative overhead. Note: employer 403b contributions are in fringe benefits."
 
 # Additional metadata
 metadata:

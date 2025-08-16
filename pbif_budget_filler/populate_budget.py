@@ -66,7 +66,11 @@ def populate_personnel(ws, data, config):
         # Include: annual salary, FTE %, and 2-year duration
         pay_rate_basis = f"${person['base_salary']:,}/year @ {person['effort_pct']}% FTE for 2 years"
         
+        # Add fringe benefits description in column A
+        fringe_description = f"{person['fringe_rate']:.0%} fringe (403b contribution)"
+        
         # Update individual cells
+        ws.update(values=[[fringe_description]], range_name=f'A{row}')        # Fringe description
         ws.update(values=[[person['position_title']]], range_name=f'B{row}')  # Position Title
         ws.update(values=[[total_hours]], range_name=f'C{row}')               # Time (Hours) - 2 year total
         ws.update(values=[[hourly_rate]], range_name=f'D{row}')               # Pay Rate ($/Hr)
@@ -75,31 +79,38 @@ def populate_personnel(ws, data, config):
     print(f"   ✓ Added {len(data)} personnel entries starting at row {start_row}")
 
 def populate_travel(ws, data, config):
-    """Populate Travel worksheet using batch range update."""
+    """Populate Travel worksheet - avoid overwriting column K formula."""
     print("   Travel...")
     
     # Get configuration for this worksheet
     ws_config = config['worksheets']['travel']
     start_row = ws_config['data_start_row']
     
-    # Clear existing data
-    ws.update(values=[[''] * 12 for _ in range(7)], range_name=ws_config['clear_range'])
+    # Clear existing data in TWO blocks to avoid column K
+    # Clear B4:J10 (before column K)
+    for row in range(start_row, start_row + 7):
+        ws.update(values=[[''] * 9], range_name=f'B{row}:J{row}')
     
-    # Populate each trip individually to avoid overwriting column K formula
+    # Clear L4:M10 (after column K)  
+    for row in range(start_row, start_row + 7):
+        ws.update(values=[[''] * 2], range_name=f'L{row}:M{row}')
+    
+    # Populate each trip
     for i, trip in enumerate(data):
         row = start_row + i
-        # Update columns B-J individually
-        ws.update(values=[[trip['purpose']]], range_name=f'B{row}')
-        ws.update(values=[[trip['depart_from']]], range_name=f'C{row}')
-        ws.update(values=[[trip['destination']]], range_name=f'D{row}')
-        ws.update(values=[[trip['days']]], range_name=f'E{row}')
-        ws.update(values=[[trip['travelers']]], range_name=f'F{row}')
-        ws.update(values=[[trip['lodging_per_traveler']]], range_name=f'G{row}')
-        ws.update(values=[[trip['flight_per_traveler']]], range_name=f'H{row}')
-        ws.update(values=[[trip['vehicle_per_traveler']]], range_name=f'I{row}')
-        ws.update(values=[[trip['mie_per_traveler']]], range_name=f'J{row}')
-        # Skip K - it has the sum formula
-        # Skip L - empty
+        # Update columns B-J and M (skip K which has formula, skip L which is empty)
+        trip_data = [
+            trip['purpose'],              # B
+            trip['depart_from'],          # C
+            trip['destination'],          # D
+            trip['days'],                 # E
+            trip['travelers'],            # F
+            trip['lodging_per_traveler'], # G
+            trip['flight_per_traveler'],  # H
+            trip['vehicle_per_traveler'], # I
+            trip['mie_per_traveler']      # J
+        ]
+        ws.update(values=[trip_data], range_name=f'B{row}:J{row}')
         ws.update(values=[[trip['basis']]], range_name=f'M{row}')
     
     print(f"   ✓ Added {len(data)} travel entries starting at row {start_row}")
@@ -112,8 +123,9 @@ def populate_equipment(ws, data, config):
     ws_config = config['worksheets']['equipment']
     start_row = ws_config['data_start_row']
     
-    # Clear existing data
-    ws.update(values=[[''] * 7 for _ in range(6)], range_name=ws_config['clear_range'])
+    # Clear existing data including column A
+    for row in range(start_row, start_row + 6):
+        ws.update(values=[[''] * 8], range_name=f'A{row}:H{row}')
     
     # Equipment should be empty - all items under $5,000 go to Supplies
     print(f"   ✓ Equipment cleared (all items under $5,000 threshold)")
@@ -126,8 +138,9 @@ def populate_supplies(ws, data, config):
     ws_config = config['worksheets']['supplies']
     start_row = ws_config['data_start_row']
     
-    # Clear existing data
-    ws.update(values=[[''] * 7 for _ in range(6)], range_name=ws_config['clear_range'])
+    # Clear existing data including column A
+    for row in range(start_row, start_row + 6):
+        ws.update(values=[[''] * 8], range_name=f'A{row}:H{row}')
     
     # Populate supplies data
     for i, item in enumerate(data):
