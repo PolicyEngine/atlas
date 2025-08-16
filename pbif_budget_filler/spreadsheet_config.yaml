@@ -44,6 +44,19 @@ worksheets:
       basis: "G"
       justification: "H"
     clear_range: "B5:H10"
+  
+  supplies:
+    name: "e. Supplies"
+    data_start_row: 5  # Data entry starts at row 5
+    columns:
+      category: "B"
+      quantity: "C"
+      unit_cost: "D"
+      total_cost: "E"
+      cost_share: "F"
+      basis: "G"
+      justification: "H"
+    clear_range: "B5:H10"
     
   contractual:
     name: "f. Contractual"

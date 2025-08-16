@@ -85,34 +85,27 @@ def populate_travel(ws, data, config):
     # Clear existing data
     ws.update(values=[[''] * 12 for _ in range(7)], range_name=ws_config['clear_range'])
     
-    # Prepare all travel data as a 2D array
-    travel_rows = []
-    for trip in data:
-        row = [
-            trip['purpose'],              # B
-            trip['depart_from'],          # C
-            trip['destination'],          # D
-            trip['days'],                 # E
-            trip['travelers'],            # F
-            trip['lodging_per_traveler'], # G
-            trip['flight_per_traveler'],  # H
-            trip['vehicle_per_traveler'], # I
-            trip['mie_per_traveler'],     # J
-            '',                           # K (formula)
-            '',                           # L (empty)
-            trip['basis']                 # M
-        ]
-        travel_rows.append(row)
-    
-    # Update all travel rows at once starting at configured row
-    if travel_rows:
-        end_row = start_row - 1 + len(travel_rows)
-        ws.update(values=travel_rows, range_name=f'B{start_row}:M{end_row}')
+    # Populate each trip individually to avoid overwriting column K formula
+    for i, trip in enumerate(data):
+        row = start_row + i
+        # Update columns B-J individually
+        ws.update(values=[[trip['purpose']]], range_name=f'B{row}')
+        ws.update(values=[[trip['depart_from']]], range_name=f'C{row}')
+        ws.update(values=[[trip['destination']]], range_name=f'D{row}')
+        ws.update(values=[[trip['days']]], range_name=f'E{row}')
+        ws.update(values=[[trip['travelers']]], range_name=f'F{row}')
+        ws.update(values=[[trip['lodging_per_traveler']]], range_name=f'G{row}')
+        ws.update(values=[[trip['flight_per_traveler']]], range_name=f'H{row}')
+        ws.update(values=[[trip['vehicle_per_traveler']]], range_name=f'I{row}')
+        ws.update(values=[[trip['mie_per_traveler']]], range_name=f'J{row}')
+        # Skip K - it has the sum formula
+        # Skip L - empty
+        ws.update(values=[[trip['basis']]], range_name=f'M{row}')
     
     print(f"   ✓ Added {len(data)} travel entries starting at row {start_row}")
 
 def populate_equipment(ws, data, config):
-    """Populate Equipment worksheet using batch range update."""
+    """Populate Equipment worksheet - should be empty per federal guidelines."""
     print("   Equipment...")
     
     # Get configuration for this worksheet
@@ -122,26 +115,32 @@ def populate_equipment(ws, data, config):
     # Clear existing data
     ws.update(values=[[''] * 7 for _ in range(6)], range_name=ws_config['clear_range'])
     
-    # Prepare all equipment data as a 2D array
-    equipment_rows = []
-    for item in data:
-        row = [
-            item['item'],          # B
-            item['quantity'],      # C
-            item['unit_cost'],     # D
-            item['total_cost'],    # E
-            item['cost_share'],    # F
-            item['basis_of_cost'], # G
-            item['justification']  # H
-        ]
-        equipment_rows.append(row)
+    # Equipment should be empty - all items under $5,000 go to Supplies
+    print(f"   ✓ Equipment cleared (all items under $5,000 threshold)")
+
+def populate_supplies(ws, data, config):
+    """Populate Supplies worksheet with items under $5,000."""
+    print("   Supplies...")
     
-    # Update all equipment rows at once starting at configured row
-    if equipment_rows:
-        end_row = start_row - 1 + len(equipment_rows)
-        ws.update(values=equipment_rows, range_name=f'B{start_row}:H{end_row}')
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['supplies']
+    start_row = ws_config['data_start_row']
     
-    print(f"   ✓ Added {len(data)} equipment items starting at row {start_row}")
+    # Clear existing data
+    ws.update(values=[[''] * 7 for _ in range(6)], range_name=ws_config['clear_range'])
+    
+    # Populate supplies data
+    for i, item in enumerate(data):
+        row = start_row + i
+        ws.update(values=[[item['category']]], range_name=f'B{row}')          # Category
+        ws.update(values=[[item['quantity']]], range_name=f'C{row}')          # Quantity
+        ws.update(values=[[item['unit_cost']]], range_name=f'D{row}')         # Unit Cost
+        ws.update(values=[[item['total_cost']]], range_name=f'E{row}')        # Total Cost
+        ws.update(values=[[item.get('cost_share', '')]], range_name=f'F{row}') # Cost share
+        ws.update(values=[[item['basis_of_cost']]], range_name=f'G{row}')     # Basis
+        ws.update(values=[[item['justification']]], range_name=f'H{row}')     # Justification
+    
+    print(f"   ✓ Added {len(data)} supplies items starting at row {start_row}")
 
 def populate_contractual(ws, data, config):
     """Populate Contractual worksheet using batch range update."""
@@ -316,6 +315,7 @@ def main():
         'personnel': populate_personnel,
         'travel': populate_travel,
         'equipment': populate_equipment,
+        'supplies': populate_supplies,
         'contractual': populate_contractual,
         'other_direct': populate_other_direct,
         'indirect': populate_indirect

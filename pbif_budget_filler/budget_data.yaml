@@ -72,23 +72,26 @@ travel:
     basis: "GSA FY25 per diem for Austin TX - 2 trips total"
 
 equipment:
-  - item: "Development Workstations"
+  # Empty - all items are under $5,000 per unit threshold
+
+supplies:
+  - category: "Computer Hardware"
     quantity: 2
     unit_cost: 3000
     total_cost: 6000
     cost_share: ""
     basis_of_cost: "Dell.com pricing"
-    justification: "High-performance machines for ML model training and document processing"
+    justification: "Development workstations for ML model training and document processing"
   
-  - item: "Cloud GPU Credits"
-    quantity: 12
+  - category: "Cloud Computing Services"
+    quantity: 24  # 24 months
     unit_cost: 500
-    total_cost: 6000
+    total_cost: 12000
     cost_share: ""
     basis_of_cost: "AWS pricing calculator"
-    justification: "GPU compute for training document classification models"
+    justification: "GPU compute credits for training document classification models over 2 years"
   
-  - item: "Software Licenses"
+  - category: "Software Licenses"
     quantity: 4
     unit_cost: 1500
     total_cost: 6000
