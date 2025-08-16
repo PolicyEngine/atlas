@@ -13,17 +13,17 @@ PolicyEngine Policy Library
 
 **Word Count: 249/250**
 
-SNAP errors cost $10.5 billion annually (FY 2023), with 44 states failing accuracy thresholds in FY 2024. Root cause: ambiguous policy language creates inconsistent caseworker interpretations. Our AI-powered Policy Library analyzes benefit documents to identify ambiguities that drive errors, providing governments actionable insights to write clearer policies.
+We will create the Policy Library, cross-cutting infrastructure to collect, update, store, and distribute primary source documents for benefit programs across all US jurisdictions. This permanent archive solves the critical problem of disappearing documents (18% of 2019 URLs are dead) and enables the rules-as-code ecosystem—replacing the current chaos of broken URLs, Google Docs, and PDFs on local machines with stable, citable sources.
 
-Our solution uses Claude/GPT-4 to scan policy documents across 50+ jurisdictions, scoring ambiguity levels and correlating them with actual SNAP Quality Control error rates by state. We deliver specific recommendations: "Your eligibility criteria has ambiguity score X, correlating with Y% higher error rates—here's how to clarify." This directly addresses PBIF priorities: reducing SNAP errors through clearer documentation, improving income verification consistency, and reducing administrative burden.
+To demonstrate the Library's utility in AI contexts and address the $10.5B in annual SNAP errors, we will develop the Clarity Index—an automated scoring system measuring document comprehensibility, AI consistency in benefit calculations, and encoding accuracy. The Index establishes baselines from human raters, correlates scores with SNAP Quality Control error data, and provides agencies specific revisions to improve clarity. This directly addresses PBIF priorities: reducing errors through clearer documentation and enabling open-source rules engines.
 
 Strong partnerships validate demand. Federal Reserve Bank of Atlanta collaborates on Policy Rules Database integration; NBER leverages our TAXSIM MOU for tax policy analysis; Urban Institute and Georgetown researchers use our pilot archives. MyFriendBen (3,500 monthly users) and Benefit Navigator (500+ caseworkers) demonstrate immediate application—both struggle with interpreting contradictory policy sources.
 
 Our permanent document library provides the stable foundation this analysis requires. AI monitors agency websites, capturing documents before they disappear (18% of 2019 URLs are dead). Human reviewers verify accuracy through GitHub workflows. We provide stable APIs with permanent source IDs, eliminating broken links.
 
-**Year 1:** Deploy ambiguity analysis across 10 pilot states, correlate with actual error data. **Year 2:** Scale nationwide, providing governments evidence-based recommendations for clearer policy writing.
+**Coverage commitment:** Latest statutes, regulations, and manuals for tax credits, SNAP, Medicaid, CHIP, ACA, WIC, TANF, CCDF, LIHEAP, SSI, and state supplements across all 50 states and DC. We start with 2,500+ documents from PolicyEngine-US, deploy AI agents to fill gaps, and run bounty programs with Urban Institute, Georgia Center for Opportunity, and Atlanta Fed for verification and additions.
 
-This transforms policy writing from art to science, enabling error reduction at the source rather than expensive downstream corrections.
+**Year 1:** Build comprehensive library, establish Clarity Index baselines, demonstrate correlation with error rates. **Year 2:** Scale to government adoption, proven error reduction.
 
 ## Stage of Development
 **Status:** Pilot ready / Active pilot

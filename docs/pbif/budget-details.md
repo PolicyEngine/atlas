@@ -51,13 +51,19 @@
 
 *Note: Salaries are set at nonprofit rates, significantly below market for these technical roles.*
 
-**Partner Microgrants ($180,000)**
-- **Deep Integration Pilots:** MyFriendBen ($50,000), Benefit Navigator ($50,000)
-- **Founding Partner:** GCO ($30,000), recognizing their role as original pilot partner
-- **UX Research & Design:** Citizen Codex ($20,000), user research and interface design
-- **Other Partners:** Urban Institute, Mirza, and additional organizations ($30,000)
-- **Purpose:** Compensates partners for deep technical integration, document identification, API testing, and providing feedback
-- **Note:** Prenatal-to-3 Policy Impact Center contributes documents without receiving funding
+**Partner Contributions ($180,000)**
+- **Demonstration Partners:** MyFriendBen ($50,000), Benefit Navigator ($50,000)
+  - Test ambiguity analysis with real users
+  - Measure error reduction from clearer policies
+  - Provide case studies for government adoption
+- **Document Contribution Pool:** ($50,000)
+  - Shared fund for organizations contributing documents
+  - Includes: Urban Institute, Georgia Center for Opportunity, NBER, others
+  - Payment based on volume and quality of contributions
+- **UX Research & Design:** Citizen Codex ($30,000)
+  - User research and interface design
+  - Accessibility testing and compliance
+- **Purpose:** Test AI analysis system, gather evidence of impact, build document corpus
 
 *Note: Atlanta Fed cannot receive funds but participates as voluntary collaborator*
 

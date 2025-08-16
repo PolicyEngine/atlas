@@ -3,19 +3,19 @@ function Overview() {
     <div className="section">
       <div className="hero">
         <h1>Policy Library</h1>
-        <p className="hero-subtitle">Establishing Credibility for Open-Source Rules Engines</p>
+        <p className="hero-subtitle">Comprehensive Document Infrastructure with AI-Powered Clarity Analysis</p>
         <div className="hero-stats">
           <div className="hero-stat">
             <div className="hero-stat-number">50+</div>
             <div className="hero-stat-label">Target Jurisdictions</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">100K+</div>
-            <div className="hero-stat-label">Documents to Archive</div>
+            <div className="hero-stat-number">$10.5B</div>
+            <div className="hero-stat-label">Annual SNAP Errors</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">10K+</div>
-            <div className="hero-stat-label">LLM Tests Planned</div>
+            <div className="hero-stat-number">44</div>
+            <div className="hero-stat-label">States Failing Thresholds</div>
           </div>
         </div>
       </div>
@@ -23,31 +23,31 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">Rules Engines Lack Government Credibility</h2>
+            <h2 className="card-title">Ambiguous Policies Cause Billions in Errors</h2>
             <p>
-              Open-source rules engines encode thousands of benefit policies, but without
-              authoritative documentation, they remain experimental tools. As Tim Shaw from the
-              Gates Foundation notes, document libraries are "an important first step" but need
-              proven utility through real use cases. Currently, 18% of benefit policy URLs from 2019
-              are dead, undermining trust in automated systems.
+              SNAP errors cost $10.5 billion annually (FY 2023), with 44 states failing accuracy
+              thresholds in FY 2024. The root cause: ambiguous policy language creates inconsistent
+              caseworker interpretations. When the same eligibility criteria can be read multiple
+              ways, errors are inevitable.
             </p>
             <br />
             <p>
-              <strong>The credibility gap:</strong> Rules engines can't cite their sources.
-              Government agencies won't adopt tools that can't prove accuracy. Every calculation
-              needs traceable documentation—from SNAP asset limits to EITC phase-outs. Without
-              permanent, versioned documents, rules-as-code remains a promise rather than production
-              infrastructure.
+              <strong>The hidden problem:</strong> Governments don't know which specific policy
+              passages cause errors. Caseworkers waste hours reconciling contradictory guidance.
+              Families receive inconsistent determinations. Yet the solution is straightforward:
+              clearer policy writing. We just haven't had the tools to identify and fix ambiguous
+              language at scale.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">From Experimental to Essential Infrastructure</h2>
+            <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
-              Policy Library provides the missing layer: permanent, versioned documentation that
-              rules engines reference. Year 1 establishes comprehensive coverage (50+ jurisdictions)
-              and proves accuracy improvements through nonprofit demonstrations. Year 2 leverages
-              these results for government adoption.
+              PolicyClarity uses Claude/GPT-4 to analyze policy documents, scoring ambiguity levels
+              and correlating them with actual SNAP error rates. We deliver specific recommendations:
+              "Your eligibility criteria has ambiguity score X, correlating with Y% higher error
+              rates—here's how to clarify." The supporting document library ensures comprehensive
+              analysis across all jurisdictions.
             </p>
             <br />
             <p>
@@ -61,30 +61,30 @@ function Overview() {
         </div>
 
         <div className="workflow-container">
-          <h2 className="workflow-title">How It Works</h2>
+          <h2 className="workflow-title">How PolicyClarity Works</h2>
           <div className="workflow">
             <div className="workflow-step">
-              <div className="workflow-icon">👥</div>
-              <div className="workflow-label">Identify Sources</div>
-              <div className="workflow-desc">Humans point to critical documents</div>
+              <div className="workflow-icon">📄</div>
+              <div className="workflow-label">Collect Policies</div>
+              <div className="workflow-desc">Gather documents from all jurisdictions</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
               <div className="workflow-icon">🤖</div>
-              <div className="workflow-label">AI Monitors</div>
-              <div className="workflow-desc">Crawlers track changes weekly</div>
+              <div className="workflow-label">AI Analysis</div>
+              <div className="workflow-desc">Score ambiguity and complexity</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">📚</div>
-              <div className="workflow-label">Archive Forever</div>
-              <div className="workflow-desc">Version control & permanent IDs</div>
+              <div className="workflow-icon">📊</div>
+              <div className="workflow-label">Correlate Errors</div>
+              <div className="workflow-desc">Match with SNAP QC data</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">🔗</div>
-              <div className="workflow-label">Stable APIs</div>
-              <div className="workflow-desc">Never worry about broken links</div>
+              <div className="workflow-icon">✏️</div>
+              <div className="workflow-label">Recommend Fixes</div>
+              <div className="workflow-desc">Specific rewriting guidance</div>
             </div>
           </div>
         </div>
@@ -279,13 +279,14 @@ function Overview() {
             borderRadius: '12px',
           }}
         >
-          <h2 className="section-title">Year 2 Vision: Government Adoption</h2>
+          <h2 className="section-title">Proven Impact Path</h2>
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-              After proving utility through Year 1 nonprofit demonstrations, Year 2 focuses on
-              government adoption. With documented accuracy improvements and cost savings from
-              MyFriendBen and Benefit Navigator implementations, we'll have the evidence base
-              governments need to adopt rules-as-code infrastructure.
+              <strong>Year 1:</strong> Deploy with nonprofits to demonstrate impact. MyFriendBen's 3,500 monthly users
+              and Benefit Navigator's 500+ caseworkers will show how clearer policies reduce errors.
+              <br /><br />
+              <strong>Year 2:</strong> Scale to government partners using proven results. States see exactly
+              which policy passages cause their errors and get specific rewriting recommendations.
             </p>
             <div
               style={{
@@ -296,20 +297,20 @@ function Overview() {
             >
               <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
                 <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
-                  🏛️ Cross-Jurisdiction Learning
+                  📉 Measurable Error Reduction
                 </h3>
                 <p>
-                  States implementing new SNAP waivers could instantly see how other states handled
-                  similar situations. Counties could learn from each other's interpretations of
-                  state guidance.
+                  States with clearer policies have lower error rates. We'll prove this correlation
+                  and show governments exactly how to improve their documents to reduce costly
+                  errors and administrative burden.
                 </p>
               </div>
               <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
-                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>📊 Policy Continuity</h3>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>💰 Cost Savings</h3>
                 <p>
-                  When administrations change or staff turn over, institutional knowledge is
-                  preserved. New staff can access the complete history of policy interpretations and
-                  implementations.
+                  Reducing SNAP errors saves millions in improper payments and administrative costs.
+                  Clear policies mean faster processing, fewer appeals, and less staff time on
+                  interpretation.
                 </p>
               </div>
             </div>
