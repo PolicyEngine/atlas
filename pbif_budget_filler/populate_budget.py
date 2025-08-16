@@ -129,16 +129,18 @@ def populate_travel(sheet):
     for row in range(5, 11):
         ws.update(f'B{row}:M{row}', [[""] * 12])
     
-    # Travel items with proper column structure
+    # Travel items with proper column structure using GSA FY2025 per diem rates
     # B: Purpose, C: Depart From, D: Destination, E: Days, F: Travelers, 
     # G: Lodging, H: Flight, I: Vehicle, J: M&IE, K: Cost/Trip, M: Basis
+    # GSA rates: Chicago ($223 lodging, $92 M&IE), Denver ($215 lodging, $92 M&IE), 
+    #           Alexandria ($110 lodging, $68 M&IE), DC ($275 lodging, $92 M&IE)
     travel = [
         ["Conference presentations - RWJ Benefits Data Summit", "Washington DC", "Chicago", 
-         3, 2, 200, 400, 0, 75, "", "", "Present Policy Library at annual benefits conference"],
+         3, 2, 223, 400, 0, 92, "", "", "GSA per diem rates for Chicago IL"],
         ["Partner site visits - MyFriendBen integration", "Washington DC", "Denver", 
-         2, 1, 150, 600, 0, 50, "", "", "On-site support for demonstration partner integration"],
+         2, 1, 215, 600, 0, 92, "", "", "GSA per diem rates for Denver CO"],
         ["Government meetings - USDA FNS", "Washington DC", "Alexandria VA", 
-         1, 2, 0, 0, 50, 50, "", "", "Meet with federal SNAP administrators about adoption"],
+         1, 2, 110, 0, 50, 68, "", "", "GSA per diem rates for Alexandria VA"],
     ]
     
     for i, item in enumerate(travel):
