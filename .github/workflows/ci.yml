@@ -74,7 +74,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run Python tests
-        run: python test_python.py
+        run: python python_checks.py
 
   summary:
     name: CI Summary
