@@ -1,0 +1,210 @@
+# PBIF Summer 2025 Application Structure
+# Each question with word limits and requirements
+
+metadata:
+  program: "Public Benefit Innovation Fund"
+  period: "Summer 2025"
+  total_grant_request: 498000
+  project_duration_months: 24
+  submission_deadline: "2025-08-16T23:59:00-07:00"
+
+sections:
+  - id: executive_summary
+    title: "Executive Summary"
+    section: 1
+    required: true
+    word_limit: 250
+    description: "Provide a high-level overview of your project"
+    file: "responses/01_executive_summary.md"
+    status: "needs_update"
+    current_word_count: 88
+
+  - id: stage_of_development
+    title: "Stage of Development Description"
+    section: 1
+    required: true
+    word_limit: 250
+    description: "Describe your current stage and evidence of progress"
+    file: "responses/02_stage_of_development.md"
+    status: "missing"
+    current_word_count: 0
+
+  - id: problem_statement
+    title: "Problem Statement"
+    section: 2
+    required: true
+    word_limit: 250
+    description: "Clearly articulate the specific problem you're solving"
+    file: "responses/03_problem_statement.md"
+    status: "needs_formatting"
+    current_word_count: 0
+
+  - id: solution_beneficiaries
+    title: "Solution & Target Beneficiaries"
+    section: 2
+    required: true
+    word_limit: 250
+    description: "Describe your solution and who will benefit"
+    file: "responses/04_solution_beneficiaries.md"
+    status: "needs_formatting"
+    current_word_count: 0
+
+  - id: impact_evaluation
+    title: "Proposed Benefit and Impact Evaluation"
+    section: 2
+    required: true
+    word_limit: 250
+    description: "How will you measure and evaluate impact"
+    file: "responses/05_impact_evaluation.md"
+    status: "needs_formatting"
+    current_word_count: 0
+
+  - id: responsible_design
+    title: "Responsible Design and Use"
+    section: 2
+    required: true
+    word_limit: 250
+    description: "Address privacy, security, bias, and ethical considerations"
+    file: "responses/06_responsible_design.md"
+    status: "needs_formatting"
+    current_word_count: 0
+
+  - id: adoption_scale
+    title: "Adoption and Path to Scale"
+    section: 2
+    required: true
+    word_limit: 250
+    description: "Explain adoption strategy and scaling plan"
+    file: "responses/07_adoption_scale.md"
+    status: "missing"
+    current_word_count: 0
+
+  - id: dissemination_learning
+    title: "Dissemination & Learning"
+    section: 2
+    required: true
+    word_limit: 250
+    description: "How will you share learnings and best practices"
+    file: "responses/08_dissemination_learning.md"
+    status: "missing"
+    current_word_count: 0
+
+  - id: solution_description
+    title: "Solution Description"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "Technical description of your solution"
+    file: "responses/09_solution_description.md"
+    status: "needs_condensing"
+    current_word_count: 0
+
+  - id: data_sources
+    title: "Data Strategy - Data Sources"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "Describe data sources and collection methods"
+    file: "responses/10_data_sources.md"
+    status: "missing"
+    current_word_count: 0
+
+  - id: data_management
+    title: "Data Strategy - Data Management"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "Explain data governance, quality, and management"
+    file: "responses/11_data_management.md"
+    status: "missing"
+    current_word_count: 0
+
+  - id: stakeholder_engagement
+    title: "Stakeholder Engagement"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "How will you engage with stakeholders and users"
+    file: "responses/12_stakeholder_engagement.md"
+    status: "needs_formatting"
+    current_word_count: 0
+
+  - id: resources_infrastructure
+    title: "Resources and Infrastructure"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "Technical infrastructure and resource requirements"
+    file: "responses/13_resources_infrastructure.md"
+    status: "missing"
+    current_word_count: 0
+
+  - id: scalability_sustainability
+    title: "Scalability & Sustainability"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "Long-term sustainability and scaling approach"
+    file: "responses/14_scalability_sustainability.md"
+    status: "needs_condensing"
+    current_word_count: 0
+
+  - id: financial_viability
+    title: "Financial Viability"
+    section: 3
+    required: true
+    word_limit: 250
+    description: "Financial sustainability beyond grant period"
+    file: "responses/15_financial_viability.md"
+    status: "needs_formatting"
+    current_word_count: 0
+
+attachments:
+  - id: team_bios
+    title: "Team Member Biographies"
+    required: true
+    file: "attachments/team_bios.pdf"
+    status: "pending"
+
+  - id: project_plan
+    title: "Project Plan/Roadmap with Milestones"
+    required: true
+    file: "attachments/project_roadmap.pdf"
+    status: "pending"
+
+  - id: budget_template
+    title: "PBIF Budget Template (Completed)"
+    required: true
+    file: "attachments/pbif_budget.xlsx"
+    status: "completed"
+    notes: "Use pbif_budget_filler to generate"
+
+  - id: org_budget
+    title: "Organizational Budget 2026-2027"
+    required: true
+    file: "attachments/org_budget_2026_2027.pdf"
+    status: "pending"
+
+  - id: letters_support
+    title: "Letters of Support"
+    required: false
+    recommended: true
+    status: "in_progress"
+    expected_from:
+      - "Federal Reserve Bank of Atlanta"
+      - "Georgetown University (Better Government Lab)"
+      - "University of Michigan"
+      - "MyFriendBen"
+      - "Benefit Navigator"
+
+basic_info:
+  project_title: "PolicyEngine Policy Library"
+  organization_name: "PolicyEngine"
+  organization_type: "Non-profit"
+  primary_contact:
+    name: "Max Ghenis"
+    title: "CEO"
+    email: "max@policyengine.org"
+  project_start_date: "2025-11-01"
+  project_end_date: "2027-10-31"
+  stage_of_development: "Pilot ready"
