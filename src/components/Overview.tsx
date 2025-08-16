@@ -4,21 +4,20 @@ function Overview() {
       <div className="hero">
         <h1>PolicyEngine Atlas</h1>
         <p className="hero-subtitle">
-          Navigate the Policy Landscape: AI-Powered Document Mapping and Hidden Eligibility
-          Discovery
+          Making Policies Accessible, Clear, and Computational to Deliver Benefits Effectively
         </p>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-number">50+</div>
-            <div className="hero-stat-label">Target Jurisdictions</div>
-          </div>
-          <div className="hero-stat">
             <div className="hero-stat-number">100K+</div>
-            <div className="hero-stat-label">Documents to Archive</div>
+            <div className="hero-stat-label">Americans Helped</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">44</div>
-            <div className="hero-stat-label">States Failing Thresholds</div>
+            <div className="hero-stat-number">50+</div>
+            <div className="hero-stat-label">Jurisdictions</div>
+          </div>
+          <div className="hero-stat">
+            <div className="hero-stat-number">10.93%</div>
+            <div className="hero-stat-label">SNAP Error Rate</div>
           </div>
         </div>
       </div>
@@ -26,38 +25,37 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">Ambiguous Policies Cause Errors</h2>
+            <h2 className="card-title">Inaccessible, Unclear Policies Block Progress</h2>
             <p>
-              Many states struggle with benefit accuracy due to ambiguous policy language that
-              creates inconsistent caseworker interpretations. When the same eligibility criteria
-              can be read multiple ways, errors are inevitable.
+              Civil society organizations can't help applicants when policy documents disappear or 
+              contradict each other. Agencies deliver benefits inaccurately when regulations are 
+              ambiguous. The 10.93% SNAP error rate costs billions, yet we lack infrastructure to 
+              fix it systematically.
             </p>
             <br />
             <p>
-              <strong>The hidden problem:</strong> Governments don't know which specific policy
-              passages cause errors. Caseworkers waste hours reconciling contradictory guidance.
-              Families receive inconsistent determinations. Yet the solution is straightforward:
-              clearer policy writing. We just haven't had the tools to identify and fix ambiguous
-              language at scale.
+              <strong>The root cause:</strong> Policies aren't accessible, clear, or computational. 
+              Links break overnight. Language varies wildly between jurisdictions. Rules engines can't 
+              cite sources. AI tools hallucinate benefits. Everyone—from caseworkers to researchers—
+              wastes time reinventing document management instead of helping families.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
+            <h2 className="card-title">Cross-Cutting Infrastructure From the Source</h2>
             <p>
-              PolicyEngine Atlas uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
-              levels and revealing program connections. We deliver specific recommendations: "Your
-              eligibility criteria has Atlas Clarity Score X, correlating with Y% higher error
-              rates—here's how to clarify." Plus, our knowledge graph reveals hidden eligibility
-              pathways across programs.
+              PolicyEngine Atlas provides the foundational layer everyone needs: retrieving, storing, 
+              updating, and distributing thousands of policy documents through web, API, and MCP server. 
+              But we go beyond storage—our rules engine connects documents semantically, revealing 
+              hidden eligibility pathways like North Carolina's TANF→SNAP→Lifeline chains.
             </p>
             <br />
             <p>
-              <strong>The transformation:</strong> When rules engines can cite exact policy sources,
-              they transform from experimental tools to trusted infrastructure. MyFriendBen and
-              Benefit Navigator will demonstrate error reduction. Our NSF POSE Phase 1 grant
-              complements PBIF funding to expand the open-source ecosystem. Government adoption
-              follows proven results.
+              <strong>Proven impact at scale:</strong> As the leading open-source rules engine helping 
+              100,000+ Americans through partners like MyFriendBen and Benefit Navigator, we know what 
+              works. Our Clarity Index will show governments exactly which language causes errors—the 
+              difference between 3.2% and 10.93% error rates. This NSF-endorsed infrastructure makes 
+              every tool accurate, every caseworker effective.
             </p>
           </div>
         </div>
