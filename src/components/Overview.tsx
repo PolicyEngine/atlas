@@ -3,7 +3,9 @@ function Overview() {
     <div className="section">
       <div className="hero">
         <h1>Policy Library</h1>
-        <p className="hero-subtitle">Comprehensive Document Infrastructure with AI-Powered Clarity Analysis</p>
+        <p className="hero-subtitle">
+          Comprehensive Document Infrastructure with AI-Powered Clarity Analysis
+        </p>
         <div className="hero-stats">
           <div className="hero-stat">
             <div className="hero-stat-number">50+</div>
@@ -43,11 +45,11 @@ function Overview() {
           <div className="card solution-card">
             <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
-              The Policy Library uses Claude/GPT-4 to analyze policy documents, scoring ambiguity levels
-              and correlating them with actual SNAP error rates. We deliver specific recommendations:
-              "Your eligibility criteria has ambiguity score X, correlating with Y% higher error
-              rates—here's how to clarify." The supporting document library ensures comprehensive
-              analysis across all jurisdictions.
+              The Policy Library uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
+              levels and correlating them with actual SNAP error rates. We deliver specific
+              recommendations: "Your eligibility criteria has ambiguity score X, correlating with Y%
+              higher error rates—here's how to clarify." The supporting document library ensures
+              comprehensive analysis across all jurisdictions.
             </p>
             <br />
             <p>
@@ -282,11 +284,14 @@ function Overview() {
           <h2 className="section-title">Proven Impact Path</h2>
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-              <strong>Year 1:</strong> Deploy with nonprofits to demonstrate impact. MyFriendBen's 3,500 monthly users
-              and Benefit Navigator's 500+ caseworkers will show how clearer policies reduce errors.
-              <br /><br />
-              <strong>Year 2:</strong> Scale to government partners using proven results. States see exactly
-              which policy passages cause their errors and get specific rewriting recommendations.
+              <strong>Year 1:</strong> Deploy with nonprofits to demonstrate impact. MyFriendBen's
+              3,500 monthly users and Benefit Navigator's 500+ caseworkers will show how clearer
+              policies reduce errors.
+              <br />
+              <br />
+              <strong>Year 2:</strong> Scale to government partners using proven results. States see
+              exactly which policy passages cause their errors and get specific rewriting
+              recommendations.
             </p>
             <div
               style={{
