@@ -13,11 +13,18 @@ Detailed budget breakdown for the $675,059 grant request over 2 years, including
 ### [partner-letter-requests.md](partner-letter-requests.md)
 Template letter requests for partner organizations to provide letters of support/collaboration.
 
+### Partner Statements of Work
+- [sow/myfriendben.md](sow/myfriendben.md) - MyFriendBen ($50k, 5-state expansion)
+- [sow/benefit-navigator.md](sow/benefit-navigator.md) - Benefit Navigator ($50k, 7 markets)  
+- [sow/georgia-center-opportunity.md](sow/georgia-center-opportunity.md) - Georgia Center for Opportunity ($30k, technical integration)
+- [sow/citizen-codex.md](sow/citizen-codex.md) - Citizen Codex ($20k, UX research & design)
+
 ## Application Status
 
-- **Budget Request:** $675,059 over 2 years
-- **Key Partners:** Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator
+- **Budget Request:** $700,000 over 2 years
+- **Key Partners:** Federal Reserve Bank of Atlanta, Georgia Center for Opportunity, NBER, Urban Institute, Prenatal-to-3 Policy Impact Center, Better Government Lab, USC, MyFriendBen, Benefit Navigator, Citizen Codex
 - **Deep Integration Pilots:** MyFriendBen ($50k), Benefit Navigator ($50k)
+- **UX Research Partner:** Citizen Codex ($20k)
 - **Timeline:** 24 months with 12-month production deployment requirement
 
 ## Word Count Compliance

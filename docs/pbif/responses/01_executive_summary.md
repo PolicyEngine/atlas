@@ -1,0 +1,9 @@
+PolicyEngine proposes PolicyEngine Atlas, an AI system transforming America's fragmented safety net into an integrated network by connecting policy documents to encoded rules and revealing hidden eligibility pathways. We make rules engines accurate, caseworkers effective, and enable governments to learn from each other's policy language—solving infrastructure failures costing billions in errors annually.
+
+We monitor agency websites across federal, state, and DC jurisdictions weekly, capturing documents before they vanish, then use Claude and GPT-4 to analyze clarity patterns correlating with error rates. Human experts from Urban Institute and Georgia Center for Opportunity validate findings. Our knowledge graph reveals connections invisible in traditional search—like how North Carolina families at 185% FPL qualify for Lifeline through TANF→SNAP categorical eligibility chains.
+
+PolicyEngine Atlas uniquely serves three critical needs: rules-as-code developers get authoritative sources making calculations trustworthy; benefit navigators like MyFriendBen (3,500 monthly users) and Benefit Navigator (500+ caseworkers) discover eligibility pathways; government agencies learn which policy language reduces errors through our Clarity Index comparing all jurisdictions. Only we provide this integration by connecting preserved documents to PolicyEngine's encoded rules serving 72,000 households annually.
+
+Our North Carolina pilot with the Atlanta Fed proves the concept. Year one will connect thousands of documents, power major benefit tools with accurate eligibility determination, establish the national policy navigation standard, and launch the Clarity Index showing agencies how peers reduce errors through clearer language.
+
+This investment creates infrastructure making every rules engine accurate, every caseworker effective, enabling novel analysis of the entire safety net corpus—fundamentally improving benefit access nationwide.

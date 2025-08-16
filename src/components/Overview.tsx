@@ -2,8 +2,11 @@ function Overview() {
   return (
     <div className="section">
       <div className="hero">
-        <h1>Policy Library</h1>
-        <p className="hero-subtitle">Permanent Document Infrastructure for America's Safety Net</p>
+        <h1>PolicyEngine Atlas</h1>
+        <p className="hero-subtitle">
+          Navigate the Policy Landscape: AI-Powered Document Mapping and Hidden Eligibility
+          Discovery
+        </p>
         <div className="hero-stats">
           <div className="hero-stat">
             <div className="hero-stat-number">50+</div>
@@ -14,8 +17,8 @@ function Overview() {
             <div className="hero-stat-label">Documents to Archive</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">10K+</div>
-            <div className="hero-stat-label">LLM Tests Planned</div>
+            <div className="hero-stat-number">44</div>
+            <div className="hero-stat-label">States Failing Thresholds</div>
           </div>
         </div>
       </div>
@@ -23,69 +26,67 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">The Hidden Crisis in Benefit Access</h2>
+            <h2 className="card-title">Ambiguous Policies Cause Errors</h2>
             <p>
-              Every organization building benefit tools faces the same nightmare: finding and
-              understanding the actual rules is nearly impossible. Documents are scattered across
-              hundreds of agency websites, buried in PDFs, hidden behind paywalls, or simply don't
-              exist online. Both humans and AI spend countless hours searching for a single
-              eligibility criterion that might be in a policy manual from 2019, a court case from
-              2022, or an administrative memo that was never digitized.
+              Many states struggle with benefit accuracy due to ambiguous policy language that
+              creates inconsistent caseworker interpretations. When the same eligibility criteria
+              can be read multiple ways, errors are inevitable.
             </p>
             <br />
             <p>
-              <strong>The real cost:</strong> We're all solving the same problem in isolation. Every
-              nonprofit, every government agency, every AI company is independently hunting for the
-              same documents, making the same phone calls to agencies, filing the same FOIA
-              requests. Meanwhile, millions of families can't access benefits because nobody can
-              efficiently understand the rules.
+              <strong>The hidden problem:</strong> Governments don't know which specific policy
+              passages cause errors. Caseworkers waste hours reconciling contradictory guidance.
+              Families receive inconsistent determinations. Yet the solution is straightforward:
+              clearer policy writing. We just haven't had the tools to identify and fix ambiguous
+              language at scale.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">A Public Good for Policy Knowledge</h2>
+            <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
-              Policy Library creates the shared infrastructure America needs: a comprehensive,
-              searchable, permanent archive of every document that defines benefit eligibility. We
-              find documents humans can't—from obscure agency memos to state administrative codes to
-              court decisions. AI monitors every agency website weekly, archives everything
-              permanently, and makes it all accessible through simple APIs.
+              PolicyEngine Atlas uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
+              levels and revealing program connections. We deliver specific recommendations: "Your
+              eligibility criteria has Atlas Clarity Score X, correlating with Y% higher error
+              rates—here's how to clarify." Plus, our knowledge graph reveals hidden eligibility
+              pathways across programs.
             </p>
             <br />
             <p>
-              <strong>Unlock innovation at scale:</strong> When every tool builder, researcher, and
-              AI company can instantly access the same authoritative documents, we stop duplicating
-              work and start building solutions. Thousands of hours shift from document hunting to
-              helping families. The entire ecosystem accelerates.
+              <strong>The transformation:</strong> When rules engines can cite exact policy sources,
+              they transform from experimental tools to trusted infrastructure. MyFriendBen and
+              Benefit Navigator will demonstrate error reduction. Our NSF POSE Phase 1 grant
+              complements PBIF funding to expand the open-source ecosystem. Government adoption
+              follows proven results.
             </p>
           </div>
         </div>
 
         <div className="workflow-container">
-          <h2 className="workflow-title">How It Works</h2>
+          <h2 className="workflow-title">How the Clarity Index Works</h2>
           <div className="workflow">
             <div className="workflow-step">
-              <div className="workflow-icon">👥</div>
-              <div className="workflow-label">Identify Sources</div>
-              <div className="workflow-desc">Humans point to critical documents</div>
+              <div className="workflow-icon">📄</div>
+              <div className="workflow-label">Collect Policies</div>
+              <div className="workflow-desc">Gather documents from all jurisdictions</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
               <div className="workflow-icon">🤖</div>
-              <div className="workflow-label">AI Monitors</div>
-              <div className="workflow-desc">Crawlers track changes weekly</div>
+              <div className="workflow-label">AI Analysis</div>
+              <div className="workflow-desc">Score ambiguity and complexity</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">📚</div>
-              <div className="workflow-label">Archive Forever</div>
-              <div className="workflow-desc">Version control & permanent IDs</div>
+              <div className="workflow-icon">📊</div>
+              <div className="workflow-label">Correlate Errors</div>
+              <div className="workflow-desc">Match with SNAP QC data</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">🔗</div>
-              <div className="workflow-label">Stable APIs</div>
-              <div className="workflow-desc">Never worry about broken links</div>
+              <div className="workflow-icon">✏️</div>
+              <div className="workflow-label">Recommend Fixes</div>
+              <div className="workflow-desc">Specific rewriting guidance</div>
             </div>
           </div>
         </div>
@@ -153,7 +154,7 @@ function Overview() {
         </div>
 
         <div className="benefits-section">
-          <h2 className="section-title">Built for AI & Rules-as-Code</h2>
+          <h2 className="section-title">Enabling Trusted Rules-as-Code</h2>
           <div className="benefits-grid">
             <div className="benefit-item">
               <h3>MCP Server Integration</h3>
@@ -195,12 +196,12 @@ function Overview() {
             </p>
             <div className="integration-grid">
               <div className="integration-item">
-                <h3>🏛️ OpenStates Integration</h3>
+                <h3>🏛️ OpenStates Standards</h3>
                 <p>
-                  Leveraging OpenStates' proven schema and API for legislative documents. They
-                  handle bills and statutes across all 50 states, DC, and Puerto Rico, while we
-                  focus on the regulatory and administrative documents that actually define benefit
-                  eligibility.
+                  Adopting OpenStates' proven schema and API standards for legislative documents.
+                  We'll follow their successful approach to state data uniformity, focusing on the
+                  regulatory and administrative documents that actually define benefit eligibility
+                  while maintaining compatibility with their legislative tracking infrastructure.
                 </p>
               </div>
               <div className="integration-item">
@@ -230,10 +231,10 @@ function Overview() {
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
               PolicyEngine has encoded thousands of rules into our open-source benefit calculators,
-              with <strong>nearly 4,000 source document references</strong> (2,500 unique documents)
-              including page-specific citations to IRS publications, federal regulations, and state
-              codes. We know firsthand the pain: every parameter needs authoritative backing, from
-              SNAP asset limits to EITC phase-out rates.
+              with <strong>nearly 4,000 source document references</strong> (2,500 unique
+              documents). But without permanent access to these documents, our rules engine—and
+              others like it—can't achieve the credibility needed for government adoption. Policy
+              Library solves this by ensuring every rule can be traced to its authoritative source.
             </p>
             <div
               style={{
@@ -280,13 +281,17 @@ function Overview() {
             borderRadius: '12px',
           }}
         >
-          <h2 className="section-title">Vision: Government-to-Government Infrastructure</h2>
+          <h2 className="section-title">Proven Impact Path</h2>
           <div style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-              Beyond serving nonprofits and AI tools, Policy Library could transform how governments
-              themselves share information. Imagine if states could instantly access county
-              implementation manuals, or counties could see how neighboring jurisdictions interpret
-              the same federal regulations.
+              <strong>Year 1:</strong> Deploy with nonprofits to demonstrate impact. MyFriendBen's
+              3,500 monthly users and Benefit Navigator's 500+ caseworkers will show how clearer
+              policies reduce errors.
+              <br />
+              <br />
+              <strong>Year 2:</strong> Scale to government partners using proven results. States see
+              exactly which policy passages cause their errors and get specific rewriting
+              recommendations.
             </p>
             <div
               style={{
@@ -297,20 +302,20 @@ function Overview() {
             >
               <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
                 <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
-                  🏛️ Cross-Jurisdiction Learning
+                  📉 Measurable Error Reduction
                 </h3>
                 <p>
-                  States implementing new SNAP waivers could instantly see how other states handled
-                  similar situations. Counties could learn from each other's interpretations of
-                  state guidance.
+                  States with clearer policies have lower error rates. We'll prove this correlation
+                  and show governments exactly how to improve their documents to reduce costly
+                  errors and administrative burden.
                 </p>
               </div>
               <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
-                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>📊 Policy Continuity</h3>
+                <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>💰 Cost Savings</h3>
                 <p>
-                  When administrations change or staff turn over, institutional knowledge is
-                  preserved. New staff can access the complete history of policy interpretations and
-                  implementations.
+                  Reducing SNAP errors saves millions in improper payments and administrative costs.
+                  Clear policies mean faster processing, fewer appeals, and less staff time on
+                  interpretation.
                 </p>
               </div>
             </div>

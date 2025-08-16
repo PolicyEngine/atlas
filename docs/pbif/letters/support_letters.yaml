@@ -1,0 +1,82 @@
+# Support Letters for PBIF Application
+
+pdf_letters:
+  - organization: Better Government Lab (BGL)
+    institution: Georgetown University
+    contact: Eric Giannella
+    title: Director
+    file: BGL Letter of Support - PolicyEngine PBIF Application.pdf
+    date: 2025-08-15
+
+  - organization: Prenatal-to-3 Policy Impact Center
+    institution: Vanderbilt University
+    contact: Cynthia Osborne
+    title: Executive Director
+    file: Letter of Support - Prenatal-to-3 Policy Impact Center.pdf
+    date: 2025-08-16
+
+  - organization: Benefit Kitchen
+    contact: Daniel Beeby
+    file: Letter of Support_ PBIF Application for Policy Library - Google Docs.pdf
+    date: 2025-08-15
+    notes: Relies on authoritative policy documents for benefit eligibility nationwide
+
+  - organization: National Bureau of Economic Research (NBER)
+    contact: James M. Poterba
+    title: President and CEO
+    file: PolicyEngine collaboration 081525.pdf
+    date: 2025-08-15
+    contribution: Dan Feenberg's historical tax form archive from TAXSIM
+
+  - organization: Urban Institute
+    contact: Catalina Carrizosa
+    title: Contracts Administrator
+    file: PolicyEngine Letterhead - CC.pdf
+    date: 2025-08-14
+    notes: Would explore subgrant arrangement for contributing policy documents
+
+word_documents:
+  - organization: USC
+    full_name: University of Southern California
+    file: USC-PolicyEngine-PBIF.docx
+    format: docx
+    status: unread
+
+  - organization: Policy Simulation Library (PSL)
+    file: Letter of Support - Policy Simulation Library.pdf
+    date: 2025-08-16
+    status: confirmed
+
+markdown_drafts:
+  - organization: SnapScreener
+    contact: Ben Molin
+    file: snapscreener-ben-molin.md
+    status: draft
+    word_count: ~200
+    notes: Awaiting confirmation
+
+summary:
+  total_letters: 8
+  confirmed_pdfs: 7
+  pending_drafts: 1
+  word_document: 0
+
+  key_supporters:
+    research_institutions:
+      - Georgetown University (BGL)
+      - Vanderbilt University (PN3)
+      - NBER
+      - Urban Institute
+      - USC
+
+    benefit_tools:
+      - Benefit Kitchen
+      - SnapScreener
+
+    policy_modeling:
+      - Policy Simulation Library
+
+  major_contributions:
+    - 'NBER: Historical tax form archive'
+    - 'Urban: Policy documents from microsimulation models'
+    - 'PSL: Federal tax forms and IRS documentation'

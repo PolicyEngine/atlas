@@ -9,14 +9,14 @@ This is the **PolicyEngine Policy Library** repository - a PBIF (Public Benefit 
 ## Project Context
 
 ### Core Concept
-- **Purpose**: Create an immutable archive of benefit program documents to prevent link rot and document disappearance (18% of 2019 benefit URLs are now dead)
+- **Purpose**: Create an immutable archive of benefit program documents to prevent link rot and document disappearance
 - **Approach**: AI crawlers monitor agency websites → Human reviewers verify via GitHub PRs → Stable API serves documents with permanent source IDs
 - **Target**: 50+ jurisdictions (federal + states) with 100,000+ documents archived in Year 1
-- **AI Integration**: Uses Claude/GPT-4 for intelligent document extraction, provides 24pp accuracy improvement in LLM benefit calculations
+- **AI Integration**: Uses Claude/GPT-4 for intelligent document extraction and improves LLM benefit calculations
 
 ### PBIF Application Details
 - **Application Deadline**: August 16, 2025, 11:59 PM Pacific Time
-- **Funding Request**: $498,000 (within PBIF range of $500K-$2M)
+- **Funding Request**: $700,000 (within PBIF range of $500K-$2M)
 - **Grant Period**: 2 years with 12-month production deployment requirement
 - **Focus**: AI-enabled technology reducing administrative burden for SNAP, Medicaid, and other safety net programs
 
@@ -92,16 +92,41 @@ policy-library/
 └── README.md          # Public-facing documentation
 ```
 
-## Budget Breakdown (Year 1)
+## Budget Breakdown (Total 2 Years)
 
-- **Personnel (2.5 FTE)**: $405,000
+- **Personnel (1.85 FTE)**: $425,235
   - Lead Engineer: 1.0 FTE
   - ML/AI Engineer: 0.8 FTE  
-  - Policy Analyst: 0.7 FTE
-- **Partner Micro-grants**: $60,000
-- **Cloud & Infrastructure**: $18,000
-- **Contingency**: $15,000
-- **Total**: $498,000
+  - Policy Analyst: 0.05 FTE
+- **Partner Contracts**: $180,000
+  - MyFriendBen: $50,000 (5-state expansion: CO, NC, MA, IL, TX)
+  - Benefit Navigator: $50,000 (7 markets via PolicyEngine API)
+  - Georgia Center for Opportunity: $30,000 (technical integration)
+  - Citizen Codex: $20,000 (UX research & design)
+  - Others: $30,000 (Urban Institute, Mirza, additional partners)
+- **Cloud & Infrastructure**: $20,000
+- **Other Direct Costs**: $11,141
+- **Indirect (10% de minimis)**: $63,637
+- **Total**: $700,000
+
+## PBIF Budget Google Sheets Automation
+
+**IMPORTANT**: We have a Python package `pbif_budget_filler/` that directly updates the PBIF budget in Google Sheets.
+
+### Key Scripts:
+- `update_partner_allocations.py` - Updates partner funding amounts (MFB, BN, GCO, etc.)
+- `update_expanded_partners.py` - Updates budget to $700k with expanded partner network
+- `final_correct_fill.py` - Main script to fill the entire budget spreadsheet
+- Uses `gspread` with credentials in `token.pickle`
+- Spreadsheet ID: `1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw`
+
+### To Update Budget in Google Sheets:
+```bash
+cd pbif_budget_filler
+python update_partner_allocations.py  # Or create new script with updated amounts
+```
+
+**Note**: Prenatal-to-3 Policy Impact Center contributes documents without receiving funding
 
 ## Timeline
 
