@@ -1,47 +1,28 @@
-# Reviewer Evaluations
+# PBIF Reviewer Evaluations
 
-This folder contains simulated PBIF reviewer evaluations for the Policy Library application.
+This folder will contain simulated reviewer evaluations for the PolicyEngine Policy Library PBIF application.
 
-## Previous Evaluations
+## Application Materials
 
-The comprehensive reviewer evaluations from commit `a57d337` included:
-- **5 PBIF Leadership Reviewers**: Cassandra Madison (PBIF Director), Yuri Kim (Gates), Korey Klein (Ballmer), Kumar Garg (Renaissance), Andrew Coy (Digital Harbor)
-- **Average Score**: 92/100
-- **Funding Probability**: 92%
-- Full evaluations available in git history: `git show a57d337:pbif_reviewer_evaluations.md`
+The complete PBIF application is located in:
+- **Application sections**: `/src/content/pbif/` (01-executive-summary.md through 09-financial-viability.md)
+- **Budget data**: `/pbif_budget_filler/budget_data.yaml`
+- **Partner letters**: `/docs/pbif/letters/`
+- **Live spreadsheet**: https://docs.google.com/spreadsheets/d/1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw
 
-## Instructions for Generating New Evaluations
+## Key Application Details
 
-When ready to generate fresh reviewer simulations based on the updated 5K document scope:
+- **Funding Request**: ~$700,000 over 2 years
+- **Document Target**: 5,000 operational benefit documents
+- **Coverage**: Federal + 50 states + DC for SNAP, Medicaid, CHIP, ACA, SSI, WIC, LIHEAP, TANF, CCDF, tax credits
+- **Partners**: MyFriendBen ($50k), Benefit Navigator ($50k), Georgia Center for Opportunity ($30k), Citizen Codex ($20k)
+- **AI Features**: Intelligent crawling, document classification, ambiguity detection
 
-### Reviewer Types
-1. **External Reviewers (3)**: Academic experts, industry practitioners, or government officials evaluating technical merit and feasibility
-2. **PBIF Leadership (5)**: Program officers evaluating alignment with PBIF goals and impact potential
+## Evaluation Focus Areas
 
-### Scoring Guidelines
-- Score out of 100 with category breakdowns:
-  - Innovation & Impact: 30 points
-  - Technical Feasibility: 25 points
-  - Responsible AI: 20 points
-  - Implementation Plan: 15 points
-  - Team & Partnerships: 10 points
-- Address the 5K document scope (including historical versions)
-- Emphasize AI-powered features and administrative burden reduction
-- Focus on SNAP, Medicaid, and other safety net programs
-
-### Key Evaluation Criteria
-- Innovation in AI/ML approach (Clarity Index, intelligent crawling)
-- Scalability across 50+ jurisdictions
-- Partner integration strength (MyFriendBen, Benefit Navigator, etc.)
-- Open source commitment and public good creation
-- Sustainability plan post-grant
-- Community engagement beyond academic partners
-
-### Common Concerns to Address
-Based on previous evaluations:
-- Multilingual support timeline
-- Government relations strategy
-- Community engagement with affected populations
-- Technical complexity vs implementation timeline
-
-Each evaluation should be saved as a separate markdown file in this directory.
+When generating reviewer simulations, consider:
+- Technical feasibility of archiving 5,000 documents
+- AI/ML innovation for reducing administrative burden
+- Partner integration and adoption pathways
+- Sustainability beyond grant period
+- Impact on SNAP/Medicaid beneficiaries
