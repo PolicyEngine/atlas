@@ -113,8 +113,8 @@ function Overview() {
               </h3>
               <p style={{ marginBottom: '10px' }}>
                 GAO reports found SNAP regulations are "extremely complex and inherently error-prone." 
-                States with simplified rules reduced errors from <strong>9.86% to 3.2%</strong> while 
-                increasing participation by 25%.
+                SNAP achieved record-low <strong>3.2% error rate in FY2013</strong> through simplification, 
+                but rates have climbed back to 10.93% by FY2024.
               </p>
               <a
                 href="https://www.gao.gov/assets/a246247.html"
@@ -147,7 +147,7 @@ function Overview() {
                 📈 Current SNAP Error Crisis
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                SNAP improper payments reached <strong>over $10 billion (10.93%)</strong> in FY2024. 
+                SNAP error rate reached <strong>10.93% in FY2024</strong>, up from record-low 3.2% in FY2013. 
                 44 states fail error thresholds. 99% are administrative errors from policy interpretation, not fraud.
               </p>
               <a
@@ -198,16 +198,16 @@ function Overview() {
                 💡 The Solution Works
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                States implementing plain language saw <strong>2-3% error rates vs 10-12%</strong> for complex policies. 
-                Every 1-point clarity increase correlates with 0.5-1% fewer errors, saving millions.
+                The FY2013 record-low <strong>3.2% error rate</strong> proved simplification works. 
+                Current 10.93% rate shows regression when complexity returns. Primary source: USDA SNAP Quality Control data.
               </p>
               <a
-                href="https://www.cbpp.org/research/food-assistance/snap-includes-extensive-payment-accuracy-system"
+                href="https://www.usda.gov/media/blog/2013/06/21/snap-payment-accuracy-best-record"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'var(--blue)', textDecoration: 'underline' }}
               >
-                CBPP Payment Accuracy Analysis →
+                USDA: SNAP Payment Accuracy Best on Record →
               </a>
             </div>
           </div>
