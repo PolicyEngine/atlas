@@ -4,23 +4,24 @@
 personnel:
   # Row 4-7: Position Title (B), Effort % (C), Base Salary (E), Fringe Rate (G)
   # Column A should be left empty for names (not using names per instructions)
+  # Adjusted FTE to keep under $700k total budget for 2 years
   - position_title: "Project Lead"
-    effort_pct: 50
+    effort_pct: 20      # 0.2 FTE
     base_salary: 150000
     fringe_rate: 0.30
   
   - position_title: "Lead Engineer"
-    effort_pct: 100
+    effort_pct: 40      # 0.4 FTE
     base_salary: 140000
     fringe_rate: 0.30
   
   - position_title: "ML/AI Engineer"
-    effort_pct: 80
+    effort_pct: 40      # 0.4 FTE
     base_salary: 120000
     fringe_rate: 0.30
   
   - position_title: "Policy Analyst"
-    effort_pct: 70
+    effort_pct: 30      # 0.3 FTE
     base_salary: 90000
     fringe_rate: 0.30
 
@@ -99,30 +100,30 @@ contractual:
   - subaward_number: "LOI-1"
     subawardee: "MyFriendBen"
     pi_pd: ""
-    total_cost: 50000
+    total_cost: 40000  # Reduced from 50k
     justification: "Demonstration partner - test ambiguity analysis with 3,500 monthly users"
   
   - subaward_number: "LOI-2"
     subawardee: "Benefit Navigator"
     pi_pd: ""
-    total_cost: 50000
+    total_cost: 40000  # Reduced from 50k
     justification: "Demonstration partner - test with 500+ caseworkers"
   
   - subaward_number: "LOI-3"
     subawardee: "Citizen Codex"
     pi_pd: ""
-    total_cost: 30000
+    total_cost: 20000  # Reduced from 30k
     justification: "UX research and interface design"
 
 other_direct:
   - expense_type: "Technical Advisory Services"
-    total_cost: 40000
+    total_cost: 30000  # Reduced from 40k
     unit_cost: ""
     category: "Professional services"
     justification: "Expert guidance from Urban Institute, GCO, NBER, Benefit Kitchen, NCCP and others on document collection strategy and policy implementation"
   
   - expense_type: "Document Bounty Program"
-    total_cost: 35000
+    total_cost: 25000  # Reduced from 35k
     unit_cost: ""
     category: "Performance-based awards"
     justification: "Incentives for partners to verify AI-collected documents and contribute missing ones"

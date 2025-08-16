@@ -174,8 +174,8 @@ def populate_contractual(ws, data, config):
     # Add explanation in configured cell
     if 'explanation_cell' in ws_config:
         explanation = (
-            "MyFriendBen and Benefit Navigator each receive $50k as demonstration partners "
-            "to test ambiguity analysis. Citizen Codex receives $30k for UX research and design."
+            "MyFriendBen and Benefit Navigator each receive $40k as demonstration partners "
+            "to test ambiguity analysis. Citizen Codex receives $20k for UX research and design."
         )
         ws.update(values=[[explanation]], range_name=ws_config['explanation_cell'])
     
