@@ -28,7 +28,6 @@ function Demo() {
     console.log(`Searching for ${jurisdiction} ${program} documents`);
   };
 
-
   return (
     <div className="section">
       <div className="content">
@@ -42,8 +41,8 @@ function Demo() {
               fontStyle: 'italic',
             }}
           >
-            Navigate the policy landscape with AI-powered document mapping and clarity analysis to reduce $10.5B
-            in annual SNAP errors.
+            Navigate the policy landscape with AI-powered document mapping and clarity analysis to
+            reduce $10.5B in annual SNAP errors.
           </p>
 
           <div className="demo-tabs">
@@ -84,8 +83,9 @@ function Demo() {
               <h3>Clarity Index: Learning from Policy Language Nationwide</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
                 The Clarity Index uses AI analysis validated by human experts to identify policy
-                language patterns that cause benefit errors. By comparing documents across all jurisdictions,
-                agencies learn which wording reduces errors and improves caseworker effectiveness.
+                language patterns that cause benefit errors. By comparing documents across all
+                jurisdictions, agencies learn which wording reduces errors and improves caseworker
+                effectiveness.
               </p>
 
               <div style={{ marginBottom: '25px' }}>
@@ -1265,7 +1265,8 @@ function Demo() {
             <div className="demo-api-section">
               <h3>Developer Tools</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Integrate PolicyEngine Atlas into your applications via REST API or native AI assistant support through MCP.
+                Integrate PolicyEngine Atlas into your applications via REST API or native AI
+                assistant support through MCP.
               </p>
 
               {/* REST API Section */}
@@ -1337,8 +1338,9 @@ function Demo() {
               <div style={{ marginBottom: '30px' }}>
                 <h4>🤖 MCP Server - Native AI Integration</h4>
                 <p style={{ marginBottom: '15px', color: 'var(--gray)', fontSize: '14px' }}>
-                  The Model Context Protocol server enables AI assistants like Claude to query Atlas directly during conversations,
-                  providing accurate policy information without hallucination.
+                  The Model Context Protocol server enables AI assistants like Claude to query Atlas
+                  directly during conversations, providing accurate policy information without
+                  hallucination.
                 </p>
 
                 <div style={{ marginBottom: '20px' }}>
@@ -1370,13 +1372,17 @@ function Demo() {
 
                 <div style={{ marginBottom: '20px' }}>
                   <h5>Available MCP Tools</h5>
-                  <div style={{ background: 'var(--blue-98)', padding: '15px', borderRadius: '8px' }}>
+                  <div
+                    style={{ background: 'var(--blue-98)', padding: '15px', borderRadius: '8px' }}
+                  >
                     <div style={{ fontFamily: 'monospace', fontSize: '13px' }}>
                       <div style={{ marginBottom: '8px' }}>
-                        <strong>search_documents</strong> - Find policy documents by jurisdiction/program
+                        <strong>search_documents</strong> - Find policy documents by
+                        jurisdiction/program
                       </div>
                       <div style={{ marginBottom: '8px' }}>
-                        <strong>get_eligibility_path</strong> - Discover categorical eligibility chains
+                        <strong>get_eligibility_path</strong> - Discover categorical eligibility
+                        chains
                       </div>
                       <div style={{ marginBottom: '8px' }}>
                         <strong>check_clarity</strong> - Get Clarity Index scores for documents
@@ -1388,16 +1394,19 @@ function Demo() {
                   </div>
                 </div>
 
-                <div style={{
-                  background: '#fff3cd',
-                  border: '1px solid #ffc107',
-                  padding: '15px',
-                  borderRadius: '4px',
-                  fontSize: '14px',
-                }}>
-                  <strong>Example Use Case:</strong> A caseworker asks Claude: "Is this family eligible for Lifeline in NC?"
-                  Claude uses the MCP server to check current documents, discover the TANF→SNAP→Lifeline pathway,
-                  and provide an accurate answer with citations.
+                <div
+                  style={{
+                    background: '#fff3cd',
+                    border: '1px solid #ffc107',
+                    padding: '15px',
+                    borderRadius: '4px',
+                    fontSize: '14px',
+                  }}
+                >
+                  <strong>Example Use Case:</strong> A caseworker asks Claude: "Is this family
+                  eligible for Lifeline in NC?" Claude uses the MCP server to check current
+                  documents, discover the TANF→SNAP→Lifeline pathway, and provide an accurate answer
+                  with citations.
                 </div>
               </div>
 
@@ -1420,23 +1429,35 @@ function Demo() {
             </div>
           )}
 
-
           {activeTab === 'knowledge' && (
             <div className="demo-knowledge-section">
               <h3>PolicyEngine Atlas: Bridging Analysis and Access</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                <strong>For Policy Analysts:</strong> Authoritative documents with version history and citations.
+                <strong>For Policy Analysts:</strong> Authoritative documents with version history
+                and citations.
                 <strong> For Caseworkers:</strong> Instant eligibility pathways and clear guidance.
-                Atlas uniquely serves both communities by connecting documents to real-world eligibility.
+                Atlas uniquely serves both communities by connecting documents to real-world
+                eligibility.
               </p>
 
               {/* Simple Document Search */}
               <div style={{ marginBottom: '30px' }}>
                 <h4 style={{ marginBottom: '15px' }}>📂 Document Search</h4>
                 <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-                  <div className="demo-controls" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '20px' }}>
+                  <div
+                    className="demo-controls"
+                    style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '20px' }}
+                  >
                     <div className="demo-select" style={{ flex: '1', minWidth: '150px' }}>
-                      <label htmlFor="jurisdiction" style={{ display: 'block', marginBottom: '5px', fontSize: '12px', fontWeight: 'bold' }}>
+                      <label
+                        htmlFor="jurisdiction"
+                        style={{
+                          display: 'block',
+                          marginBottom: '5px',
+                          fontSize: '12px',
+                          fontWeight: 'bold',
+                        }}
+                      >
                         Jurisdiction
                       </label>
                       <select
@@ -1458,7 +1479,15 @@ function Demo() {
                       </select>
                     </div>
                     <div className="demo-select" style={{ flex: '1', minWidth: '150px' }}>
-                      <label htmlFor="program" style={{ display: 'block', marginBottom: '5px', fontSize: '12px', fontWeight: 'bold' }}>
+                      <label
+                        htmlFor="program"
+                        style={{
+                          display: 'block',
+                          marginBottom: '5px',
+                          fontSize: '12px',
+                          fontWeight: 'bold',
+                        }}
+                      >
                         Program
                       </label>
                       <select
@@ -1481,7 +1510,15 @@ function Demo() {
                       </select>
                     </div>
                     <div className="demo-select" style={{ flex: '1', minWidth: '150px' }}>
-                      <label htmlFor="doctype" style={{ display: 'block', marginBottom: '5px', fontSize: '12px', fontWeight: 'bold' }}>
+                      <label
+                        htmlFor="doctype"
+                        style={{
+                          display: 'block',
+                          marginBottom: '5px',
+                          fontSize: '12px',
+                          fontWeight: 'bold',
+                        }}
+                      >
                         Document Type
                       </label>
                       <select
@@ -1502,8 +1539,8 @@ function Demo() {
                       </select>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-                      <button 
-                        className="demo-button" 
+                      <button
+                        className="demo-button"
                         onClick={searchDocuments}
                         style={{
                           padding: '8px 20px',
@@ -1521,71 +1558,88 @@ function Demo() {
                   </div>
 
                   {/* Search Results Preview */}
-                  <div style={{ 
-                    background: 'white', 
-                    border: '1px solid #dee2e6', 
-                    borderRadius: '4px', 
-                    padding: '15px',
-                  }}>
+                  <div
+                    style={{
+                      background: 'white',
+                      border: '1px solid #dee2e6',
+                      borderRadius: '4px',
+                      padding: '15px',
+                    }}
+                  >
                     <div style={{ marginBottom: '10px', fontSize: '13px', color: 'var(--gray)' }}>
-                      Showing results for: <strong>{jurisdictionNames[jurisdiction]} - {programNames[program]}</strong>
+                      Showing results for:{' '}
+                      <strong>
+                        {jurisdictionNames[jurisdiction]} - {programNames[program]}
+                      </strong>
                     </div>
                     <div style={{ display: 'grid', gap: '10px' }}>
-                      <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        padding: '10px',
-                        background: '#f8f9fa',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                      }}
-                      onMouseEnter={(e) => e.currentTarget.style.background = '#e3f2fd'}
-                      onMouseLeave={(e) => e.currentTarget.style.background = '#f8f9fa'}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          padding: '10px',
+                          background: '#f8f9fa',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = '#e3f2fd')}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = '#f8f9fa')}
+                      >
                         <div>
-                          <strong style={{ fontSize: '14px' }}>📄 {program.toUpperCase()} Eligibility Requirements</strong>
+                          <strong style={{ fontSize: '14px' }}>
+                            📄 {program.toUpperCase()} Eligibility Requirements
+                          </strong>
                           <div style={{ fontSize: '12px', color: 'var(--gray)', marginTop: '3px' }}>
-                            Regulation • Last updated: Jan 2025 • ID: {jurisdiction.toUpperCase()}_{program.toUpperCase()}_001
+                            Regulation • Last updated: Jan 2025 • ID: {jurisdiction.toUpperCase()}_
+                            {program.toUpperCase()}_001
                           </div>
                         </div>
-                        <button style={{
-                          padding: '5px 10px',
-                          background: 'var(--blue)',
-                          color: 'white',
-                          border: 'none',
-                          borderRadius: '3px',
-                          fontSize: '12px',
-                          cursor: 'pointer',
-                        }}>
+                        <button
+                          style={{
+                            padding: '5px 10px',
+                            background: 'var(--blue)',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '3px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                          }}
+                        >
                           Download
                         </button>
                       </div>
-                      <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        padding: '10px',
-                        background: '#f8f9fa',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                      }}
-                      onMouseEnter={(e) => e.currentTarget.style.background = '#e3f2fd'}
-                      onMouseLeave={(e) => e.currentTarget.style.background = '#f8f9fa'}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          padding: '10px',
+                          background: '#f8f9fa',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.background = '#e3f2fd')}
+                        onMouseLeave={(e) => (e.currentTarget.style.background = '#f8f9fa')}
+                      >
                         <div>
                           <strong style={{ fontSize: '14px' }}>📋 Application Form</strong>
                           <div style={{ fontSize: '12px', color: 'var(--gray)', marginTop: '3px' }}>
-                            Form • Version 2024-10 • ID: {jurisdiction.toUpperCase()}_{program.toUpperCase()}_FORM_001
+                            Form • Version 2024-10 • ID: {jurisdiction.toUpperCase()}_
+                            {program.toUpperCase()}_FORM_001
                           </div>
                         </div>
-                        <button style={{
-                          padding: '5px 10px',
-                          background: 'var(--blue)',
-                          color: 'white',
-                          border: 'none',
-                          borderRadius: '3px',
-                          fontSize: '12px',
-                          cursor: 'pointer',
-                        }}>
+                        <button
+                          style={{
+                            padding: '5px 10px',
+                            background: 'var(--blue)',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '3px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                          }}
+                        >
                           Download
                         </button>
                       </div>
@@ -1599,7 +1653,10 @@ function Demo() {
                 <h4 style={{ marginBottom: '15px' }}>🔍 Advanced Search</h4>
                 <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
                   <div style={{ marginBottom: '20px' }}>
-                    <label htmlFor="knowledge-search" style={{ display: 'block', marginBottom: '10px', fontWeight: 'bold' }}>
+                    <label
+                      htmlFor="knowledge-search"
+                      style={{ display: 'block', marginBottom: '10px', fontWeight: 'bold' }}
+                    >
                       Natural Language Query:
                     </label>
                     <input
@@ -1621,40 +1678,48 @@ function Demo() {
 
                   <div style={{ marginBottom: '20px' }}>
                     <h5 style={{ marginBottom: '15px' }}>🔗 Three-Layer Knowledge Graph</h5>
-                    
+
                     {/* Three-layer visualization: Programs → Parameters → Documents */}
-                    <div style={{
-                      background: 'white',
-                      border: '2px solid var(--teal-accent)',
-                      borderRadius: '8px',
-                      padding: '25px',
-                      overflow: 'auto',
-                    }}>
-                      <div style={{
-                        display: 'flex',
-                        gap: '15px',
-                        alignItems: 'stretch',
-                        minWidth: '900px',
-                      }}>
+                    <div
+                      style={{
+                        background: 'white',
+                        border: '2px solid var(--teal-accent)',
+                        borderRadius: '8px',
+                        padding: '25px',
+                        overflow: 'auto',
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: 'flex',
+                          gap: '15px',
+                          alignItems: 'stretch',
+                          minWidth: '900px',
+                        }}
+                      >
                         {/* Layer 1: Program Eligibility Flow */}
-                        <div style={{
-                          flex: '1',
-                          background: 'var(--blue-98)',
-                          borderRadius: '8px',
-                          padding: '15px',
-                        }}>
+                        <div
+                          style={{
+                            flex: '1',
+                            background: 'var(--blue-98)',
+                            borderRadius: '8px',
+                            padding: '15px',
+                          }}
+                        >
                           <h6 style={{ marginBottom: '15px', color: 'var(--blue-pressed)' }}>
                             Program Flow
                           </h6>
-                          
+
                           {/* TANF */}
-                          <div style={{
-                            background: '#d4edda',
-                            border: '2px solid #28a745',
-                            borderRadius: '6px',
-                            padding: '10px',
-                            marginBottom: '10px',
-                          }}>
+                          <div
+                            style={{
+                              background: '#d4edda',
+                              border: '2px solid #28a745',
+                              borderRadius: '6px',
+                              padding: '10px',
+                              marginBottom: '10px',
+                            }}
+                          >
                             <strong>TANF Non-Cash</strong>
                             <div style={{ fontSize: '12px', marginTop: '5px' }}>
                               NC Work First Services
@@ -1662,48 +1727,58 @@ function Demo() {
                               <span style={{ color: '#28a745', fontWeight: 'bold' }}>200% FPL</span>
                             </div>
                           </div>
-                          
-                          <div style={{
-                            textAlign: 'center',
-                            fontSize: '20px',
-                            color: 'var(--gray)',
-                            margin: '5px 0',
-                          }}>
+
+                          <div
+                            style={{
+                              textAlign: 'center',
+                              fontSize: '20px',
+                              color: 'var(--gray)',
+                              margin: '5px 0',
+                            }}
+                          >
                             ↓
                           </div>
-                          
+
                           {/* SNAP */}
-                          <div style={{
-                            background: '#fff3cd',
-                            border: '2px solid #ffc107',
-                            borderRadius: '6px',
-                            padding: '10px',
-                            marginBottom: '10px',
-                          }}>
+                          <div
+                            style={{
+                              background: '#fff3cd',
+                              border: '2px solid #ffc107',
+                              borderRadius: '6px',
+                              padding: '10px',
+                              marginBottom: '10px',
+                            }}
+                          >
                             <strong>SNAP</strong>
                             <div style={{ fontSize: '12px', marginTop: '5px' }}>
                               via BBCE
                               <br />
-                              <span style={{ color: '#ffc107', fontWeight: 'bold' }}>Auto-qualifies</span>
+                              <span style={{ color: '#ffc107', fontWeight: 'bold' }}>
+                                Auto-qualifies
+                              </span>
                             </div>
                           </div>
-                          
-                          <div style={{
-                            textAlign: 'center',
-                            fontSize: '20px',
-                            color: 'var(--gray)',
-                            margin: '5px 0',
-                          }}>
+
+                          <div
+                            style={{
+                              textAlign: 'center',
+                              fontSize: '20px',
+                              color: 'var(--gray)',
+                              margin: '5px 0',
+                            }}
+                          >
                             ↓
                           </div>
-                          
+
                           {/* Lifeline */}
-                          <div style={{
-                            background: 'var(--teal-light)',
-                            border: '2px solid var(--teal-accent)',
-                            borderRadius: '6px',
-                            padding: '10px',
-                          }}>
+                          <div
+                            style={{
+                              background: 'var(--teal-light)',
+                              border: '2px solid var(--teal-accent)',
+                              borderRadius: '6px',
+                              padding: '10px',
+                            }}
+                          >
                             <strong>📱 Lifeline</strong>
                             <div style={{ fontSize: '12px', marginTop: '5px' }}>
                               Categorical Eligibility
@@ -1716,55 +1791,67 @@ function Demo() {
                         </div>
 
                         {/* Connection arrows */}
-                        <div style={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          justifyContent: 'space-around',
-                          width: '30px',
-                        }}>
-                          <div style={{ 
-                            borderTop: '2px dashed var(--gray)',
-                            borderRight: '2px dashed var(--gray)',
-                            width: '100%',
-                            height: '20px',
-                            opacity: 0.3,
-                          }} />
-                          <div style={{ 
-                            borderTop: '2px dashed var(--gray)',
-                            borderRight: '2px dashed var(--gray)',
-                            width: '100%',
-                            height: '20px',
-                            opacity: 0.3,
-                          }} />
-                          <div style={{ 
-                            borderTop: '2px dashed var(--gray)',
-                            borderRight: '2px dashed var(--gray)',
-                            width: '100%',
-                            height: '20px',
-                            opacity: 0.3,
-                          }} />
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-around',
+                            width: '30px',
+                          }}
+                        >
+                          <div
+                            style={{
+                              borderTop: '2px dashed var(--gray)',
+                              borderRight: '2px dashed var(--gray)',
+                              width: '100%',
+                              height: '20px',
+                              opacity: 0.3,
+                            }}
+                          />
+                          <div
+                            style={{
+                              borderTop: '2px dashed var(--gray)',
+                              borderRight: '2px dashed var(--gray)',
+                              width: '100%',
+                              height: '20px',
+                              opacity: 0.3,
+                            }}
+                          />
+                          <div
+                            style={{
+                              borderTop: '2px dashed var(--gray)',
+                              borderRight: '2px dashed var(--gray)',
+                              width: '100%',
+                              height: '20px',
+                              opacity: 0.3,
+                            }}
+                          />
                         </div>
 
                         {/* Layer 2: PolicyEngine Parameters */}
-                        <div style={{
-                          flex: '1',
-                          background: 'var(--teal-light)',
-                          borderRadius: '8px',
-                          padding: '15px',
-                        }}>
+                        <div
+                          style={{
+                            flex: '1',
+                            background: 'var(--teal-light)',
+                            borderRadius: '8px',
+                            padding: '15px',
+                          }}
+                        >
                           <h6 style={{ marginBottom: '15px', color: 'var(--teal-pressed)' }}>
                             PolicyEngine Rules
                           </h6>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid var(--teal-accent)',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '12px',
-                            fontSize: '11px',
-                            position: 'relative',
-                          }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid var(--teal-accent)',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '12px',
+                              fontSize: '11px',
+                              position: 'relative',
+                            }}
+                          >
                             <div style={{ fontFamily: 'monospace' }}>
                               <strong>gov/hhs/tanf/non_cash/income_limit</strong>
                             </div>
@@ -1773,46 +1860,55 @@ function Demo() {
                               <br />
                               ref: <span style={{ textDecoration: 'underline' }}>NC_WF_001</span>
                             </div>
-                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/parameters/gov/hhs/tanf" 
+                            <a
+                              href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/parameters/gov/hhs/tanf"
                               style={{ fontSize: '10px', color: 'var(--blue)' }}
                               target="_blank"
-                              rel="noopener noreferrer">
+                              rel="noopener noreferrer"
+                            >
                               View in GitHub →
                             </a>
                           </div>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid var(--teal-accent)',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '12px',
-                            fontSize: '11px',
-                          }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid var(--teal-accent)',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '12px',
+                              fontSize: '11px',
+                            }}
+                          >
                             <div style={{ fontFamily: 'monospace' }}>
                               <strong>gov/usda/snap/bbce/tanf_eligible</strong>
                             </div>
                             <div style={{ color: 'var(--gray)', marginTop: '3px' }}>
                               condition: receives_tanf_non_cash
                               <br />
-                              ref: <span style={{ textDecoration: 'underline' }}>USDA_BBCE_001</span>
+                              ref:{' '}
+                              <span style={{ textDecoration: 'underline' }}>USDA_BBCE_001</span>
                             </div>
-                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/variables/gov/usda/snap" 
+                            <a
+                              href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/variables/gov/usda/snap"
                               style={{ fontSize: '10px', color: 'var(--blue)' }}
                               target="_blank"
-                              rel="noopener noreferrer">
+                              rel="noopener noreferrer"
+                            >
                               View in GitHub →
                             </a>
                           </div>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid var(--teal-accent)',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '12px',
-                            fontSize: '11px',
-                          }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid var(--teal-accent)',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '12px',
+                              fontSize: '11px',
+                            }}
+                          >
                             <div style={{ fontFamily: 'monospace' }}>
                               <strong>gov/fcc/lifeline/categorical/snap</strong>
                             </div>
@@ -1821,22 +1917,26 @@ function Demo() {
                               <br />
                               ref: <span style={{ textDecoration: 'underline' }}>FCC_038_001</span>
                             </div>
-                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/variables/gov/fcc/lifeline" 
+                            <a
+                              href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/variables/gov/fcc/lifeline"
                               style={{ fontSize: '10px', color: 'var(--blue)' }}
                               target="_blank"
-                              rel="noopener noreferrer">
+                              rel="noopener noreferrer"
+                            >
                               View in GitHub →
                             </a>
                           </div>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid var(--teal-accent)',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            fontFamily: 'monospace',
-                            fontSize: '11px',
-                          }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid var(--teal-accent)',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              fontFamily: 'monospace',
+                              fontSize: '11px',
+                            }}
+                          >
                             <div>
                               <strong>gov/fcc/lifeline/income_limit</strong>
                             </div>
@@ -1845,89 +1945,107 @@ function Demo() {
                               <br />
                               ref: <span style={{ textDecoration: 'underline' }}>FCC_038_002</span>
                             </div>
-                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/parameters/gov/fcc/lifeline" 
+                            <a
+                              href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/parameters/gov/fcc/lifeline"
                               style={{ fontSize: '10px', color: 'var(--blue)' }}
                               target="_blank"
-                              rel="noopener noreferrer">
+                              rel="noopener noreferrer"
+                            >
                               View in GitHub →
                             </a>
                           </div>
                         </div>
 
                         {/* Connection arrows */}
-                        <div style={{
-                          display: 'flex',
-                          flexDirection: 'column',
-                          justifyContent: 'space-around',
-                          width: '30px',
-                        }}>
-                          <div style={{ 
-                            borderTop: '2px dashed var(--gray)',
-                            borderRight: '2px dashed var(--gray)',
-                            width: '100%',
-                            height: '20px',
-                            opacity: 0.3,
-                          }} />
-                          <div style={{ 
-                            borderTop: '2px dashed var(--gray)',
-                            borderRight: '2px dashed var(--gray)',
-                            width: '100%',
-                            height: '20px',
-                            opacity: 0.3,
-                          }} />
-                          <div style={{ 
-                            borderTop: '2px dashed var(--gray)',
-                            borderRight: '2px dashed var(--gray)',
-                            width: '100%',
-                            height: '20px',
-                            opacity: 0.3,
-                          }} />
+                        <div
+                          style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-around',
+                            width: '30px',
+                          }}
+                        >
+                          <div
+                            style={{
+                              borderTop: '2px dashed var(--gray)',
+                              borderRight: '2px dashed var(--gray)',
+                              width: '100%',
+                              height: '20px',
+                              opacity: 0.3,
+                            }}
+                          />
+                          <div
+                            style={{
+                              borderTop: '2px dashed var(--gray)',
+                              borderRight: '2px dashed var(--gray)',
+                              width: '100%',
+                              height: '20px',
+                              opacity: 0.3,
+                            }}
+                          />
+                          <div
+                            style={{
+                              borderTop: '2px dashed var(--gray)',
+                              borderRight: '2px dashed var(--gray)',
+                              width: '100%',
+                              height: '20px',
+                              opacity: 0.3,
+                            }}
+                          />
                         </div>
 
                         {/* Layer 3: Source Documents */}
-                        <div style={{
-                          flex: '1',
-                          background: '#f8f9fa',
-                          borderRadius: '8px',
-                          padding: '15px',
-                        }}>
+                        <div
+                          style={{
+                            flex: '1',
+                            background: '#f8f9fa',
+                            borderRadius: '8px',
+                            padding: '15px',
+                          }}
+                        >
                           <h6 style={{ marginBottom: '15px', color: 'var(--dark-gray)' }}>
                             Source Documents
                           </h6>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid #dee2e6',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '10px',
-                            fontSize: '12px',
-                            cursor: 'pointer',
-                            transition: 'all 0.2s',
-                            position: 'relative',
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = '#e3f2fd';
-                            e.currentTarget.style.borderColor = 'var(--blue)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'white';
-                            e.currentTarget.style.borderColor = '#dee2e6';
-                          }}
-                          title="Click to download">
-                            <div style={{ 
-                              position: 'absolute', 
-                              top: '5px', 
-                              right: '5px',
-                              fontSize: '10px',
-                              color: 'var(--blue)',
-                              fontFamily: 'monospace',
-                              fontWeight: 'bold',
-                            }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid #dee2e6',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '10px',
+                              fontSize: '12px',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s',
+                              position: 'relative',
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = '#e3f2fd';
+                              e.currentTarget.style.borderColor = 'var(--blue)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = 'white';
+                              e.currentTarget.style.borderColor = '#dee2e6';
+                            }}
+                            title="Click to download"
+                          >
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: '5px',
+                                right: '5px',
+                                fontSize: '10px',
+                                color: 'var(--blue)',
+                                fontFamily: 'monospace',
+                                fontWeight: 'bold',
+                              }}
+                            >
                               NC_WF_001
                             </div>
                             📘 <strong>NC Work First Manual</strong>
-                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                            <div
+                              style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}
+                            >
                               Chapter 3, Section 3.2
                               <br />
                               Pages 47-52
@@ -1935,40 +2053,46 @@ function Demo() {
                               <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
                             </div>
                           </div>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid #dee2e6',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '10px',
-                            fontSize: '12px',
-                            cursor: 'pointer',
-                            transition: 'all 0.2s',
-                            position: 'relative',
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = '#e3f2fd';
-                            e.currentTarget.style.borderColor = 'var(--blue)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'white';
-                            e.currentTarget.style.borderColor = '#dee2e6';
-                          }}
-                          title="Click to download">
-                            <div style={{ 
-                              position: 'absolute', 
-                              top: '5px', 
-                              right: '5px',
-                              fontSize: '10px',
-                              color: 'var(--blue)',
-                              fontFamily: 'monospace',
-                              fontWeight: 'bold',
-                            }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid #dee2e6',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '10px',
+                              fontSize: '12px',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s',
+                              position: 'relative',
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = '#e3f2fd';
+                              e.currentTarget.style.borderColor = 'var(--blue)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = 'white';
+                              e.currentTarget.style.borderColor = '#dee2e6';
+                            }}
+                            title="Click to download"
+                          >
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: '5px',
+                                right: '5px',
+                                fontSize: '10px',
+                                color: 'var(--blue)',
+                                fontFamily: 'monospace',
+                                fontWeight: 'bold',
+                              }}
+                            >
                               USDA_BBCE_001
                             </div>
                             📋 <strong>USDA SNAP BBCE Report</strong>
-                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                            <div
+                              style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}
+                            >
                               2024 State Options
                               <br />
                               Page 47, Table 3
@@ -1976,40 +2100,46 @@ function Demo() {
                               <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
                             </div>
                           </div>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid #dee2e6',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '10px',
-                            fontSize: '12px',
-                            cursor: 'pointer',
-                            transition: 'all 0.2s',
-                            position: 'relative',
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = '#e3f2fd';
-                            e.currentTarget.style.borderColor = 'var(--blue)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'white';
-                            e.currentTarget.style.borderColor = '#dee2e6';
-                          }}
-                          title="Click to download">
-                            <div style={{ 
-                              position: 'absolute', 
-                              top: '5px', 
-                              right: '5px',
-                              fontSize: '10px',
-                              color: 'var(--blue)',
-                              fontFamily: 'monospace',
-                              fontWeight: 'bold',
-                            }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid #dee2e6',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '10px',
+                              fontSize: '12px',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s',
+                              position: 'relative',
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = '#e3f2fd';
+                              e.currentTarget.style.borderColor = 'var(--blue)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = 'white';
+                              e.currentTarget.style.borderColor = '#dee2e6';
+                            }}
+                            title="Click to download"
+                          >
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: '5px',
+                                right: '5px',
+                                fontSize: '10px',
+                                color: 'var(--blue)',
+                                fontFamily: 'monospace',
+                                fontWeight: 'bold',
+                              }}
+                            >
                               FCC_038_001
                             </div>
                             📄 <strong>FCC Order 16-38</strong>
-                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                            <div
+                              style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}
+                            >
                               47 CFR §54.409
                               <br />
                               Paragraphs (a), (b)(2)
@@ -2017,40 +2147,46 @@ function Demo() {
                               <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
                             </div>
                           </div>
-                          
-                          <div style={{
-                            background: 'white',
-                            border: '1px solid #dee2e6',
-                            borderRadius: '4px',
-                            padding: '8px',
-                            marginBottom: '10px',
-                            fontSize: '12px',
-                            cursor: 'pointer',
-                            transition: 'all 0.2s',
-                            position: 'relative',
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = '#e3f2fd';
-                            e.currentTarget.style.borderColor = 'var(--blue)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = 'white';
-                            e.currentTarget.style.borderColor = '#dee2e6';
-                          }}
-                          title="Click to download">
-                            <div style={{ 
-                              position: 'absolute', 
-                              top: '5px', 
-                              right: '5px',
-                              fontSize: '10px',
-                              color: 'var(--blue)',
-                              fontFamily: 'monospace',
-                              fontWeight: 'bold',
-                            }}>
+
+                          <div
+                            style={{
+                              background: 'white',
+                              border: '1px solid #dee2e6',
+                              borderRadius: '4px',
+                              padding: '8px',
+                              marginBottom: '10px',
+                              fontSize: '12px',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s',
+                              position: 'relative',
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.background = '#e3f2fd';
+                              e.currentTarget.style.borderColor = 'var(--blue)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.background = 'white';
+                              e.currentTarget.style.borderColor = '#dee2e6';
+                            }}
+                            title="Click to download"
+                          >
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: '5px',
+                                right: '5px',
+                                fontSize: '10px',
+                                color: 'var(--blue)',
+                                fontFamily: 'monospace',
+                                fontWeight: 'bold',
+                              }}
+                            >
                               CFR_260_001
                             </div>
                             📖 <strong>45 CFR 260-265</strong>
-                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                            <div
+                              style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}
+                            >
                               TANF Federal Regulations
                               <br />
                               §260.31 Non-cash benefits
@@ -2062,19 +2198,22 @@ function Demo() {
                       </div>
 
                       {/* Query context */}
-                      <div style={{
-                        marginTop: '20px',
-                        padding: '12px',
-                        background: 'var(--blue-98)',
-                        borderRadius: '6px',
-                        fontSize: '13px',
-                      }}>
+                      <div
+                        style={{
+                          marginTop: '20px',
+                          padding: '12px',
+                          background: 'var(--blue-98)',
+                          borderRadius: '6px',
+                          fontSize: '13px',
+                        }}
+                      >
                         <strong>Query: "lifeline income limit"</strong>
                         <div style={{ marginTop: '8px', color: 'var(--dark-gray)' }}>
                           <strong>Traditional search:</strong> Returns "135% FPL" from FCC Order
                           <br />
-                          <strong>Knowledge graph:</strong> Reveals complete pathway - household at 185% FPL qualifies through
-                          TANF (200% limit) → SNAP (BBCE) → Lifeline (categorical eligibility)
+                          <strong>Knowledge graph:</strong> Reveals complete pathway - household at
+                          185% FPL qualifies through TANF (200% limit) → SNAP (BBCE) → Lifeline
+                          (categorical eligibility)
                         </div>
                       </div>
                     </div>
@@ -2082,108 +2221,141 @@ function Demo() {
 
                   <div style={{ marginBottom: '20px' }}>
                     <h5 style={{ marginBottom: '15px' }}>📊 Discovered Eligibility Pathway</h5>
-                    <div style={{
-                      background: 'white',
-                      border: '1px solid #dee2e6',
-                      borderRadius: '4px',
-                      padding: '15px',
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                        <div style={{
-                          background: '#f8d7da',
-                          padding: '8px 12px',
-                          borderRadius: '4px',
-                          fontSize: '13px',
-                          border: '1px solid #dc3545',
-                        }}>
-                          NC Work First<br/>
+                    <div
+                      style={{
+                        background: 'white',
+                        border: '1px solid #dee2e6',
+                        borderRadius: '4px',
+                        padding: '15px',
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '10px',
+                          flexWrap: 'wrap',
+                        }}
+                      >
+                        <div
+                          style={{
+                            background: '#f8d7da',
+                            padding: '8px 12px',
+                            borderRadius: '4px',
+                            fontSize: '13px',
+                            border: '1px solid #dc3545',
+                          }}
+                        >
+                          NC Work First
+                          <br />
                           <strong>200% FPL</strong>
                         </div>
                         <span style={{ color: 'var(--gray)' }}>→</span>
-                        <div style={{
-                          background: '#fff3cd',
-                          padding: '8px 12px',
-                          borderRadius: '4px',
-                          fontSize: '13px',
-                          border: '1px solid #ffc107',
-                        }}>
-                          SNAP BBCE<br/>
+                        <div
+                          style={{
+                            background: '#fff3cd',
+                            padding: '8px 12px',
+                            borderRadius: '4px',
+                            fontSize: '13px',
+                            border: '1px solid #ffc107',
+                          }}
+                        >
+                          SNAP BBCE
+                          <br />
                           <strong>Auto-qualify</strong>
                         </div>
                         <span style={{ color: 'var(--gray)' }}>→</span>
-                        <div style={{
-                          background: 'var(--teal-light)',
-                          padding: '8px 12px',
-                          borderRadius: '4px',
-                          fontSize: '13px',
-                          border: '1px solid var(--teal-accent)',
-                        }}>
-                          Lifeline<br/>
+                        <div
+                          style={{
+                            background: 'var(--teal-light)',
+                            padding: '8px 12px',
+                            borderRadius: '4px',
+                            fontSize: '13px',
+                            border: '1px solid var(--teal-accent)',
+                          }}
+                        >
+                          Lifeline
+                          <br />
                           <strong>Eligible!</strong>
                         </div>
                       </div>
                       <p style={{ marginTop: '15px', fontSize: '14px', color: 'var(--gray)' }}>
-                        <strong>Hidden pathway discovered:</strong> Households at 185% FPL can qualify for Lifeline 
-                        (normally 135% limit) through TANF non-cash → SNAP → Lifeline categorical eligibility chain.
+                        <strong>Hidden pathway discovered:</strong> Households at 185% FPL can
+                        qualify for Lifeline (normally 135% limit) through TANF non-cash → SNAP →
+                        Lifeline categorical eligibility chain.
                       </p>
                     </div>
                   </div>
 
-                  <div style={{
-                    background: '#d4edda',
-                    border: '1px solid #28a745',
-                    padding: '15px',
-                    borderRadius: '4px',
-                    marginBottom: '20px'
-                  }}>
-                    <strong>💡 Key Insight:</strong> Traditional document search would return the Lifeline 135% FPL limit. 
-                    Our knowledge graph reveals the complete eligibility network, showing all pathways including 
-                    categorical eligibility through connected programs.
+                  <div
+                    style={{
+                      background: '#d4edda',
+                      border: '1px solid #28a745',
+                      padding: '15px',
+                      borderRadius: '4px',
+                      marginBottom: '20px',
+                    }}
+                  >
+                    <strong>💡 Key Insight:</strong> Traditional document search would return the
+                    Lifeline 135% FPL limit. Our knowledge graph reveals the complete eligibility
+                    network, showing all pathways including categorical eligibility through
+                    connected programs.
                   </div>
 
                   <div style={{ marginBottom: '20px' }}>
                     <h5 style={{ marginBottom: '10px' }}>📚 Document Details</h5>
-                    <div style={{ 
-                      display: 'grid', 
-                      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                      gap: '10px'
-                    }}>
-                      <div style={{ 
-                        background: 'white', 
-                        border: '1px solid #dee2e6', 
-                        borderRadius: '4px', 
-                        padding: '10px',
-                        fontSize: '13px',
-                      }}>
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                        gap: '10px',
+                      }}
+                    >
+                      <div
+                        style={{
+                          background: 'white',
+                          border: '1px solid #dee2e6',
+                          borderRadius: '4px',
+                          padding: '10px',
+                          fontSize: '13px',
+                        }}
+                      >
                         <strong style={{ color: 'var(--blue)' }}>FCC Order 16-38</strong>
                         <div style={{ color: 'var(--gray)', marginTop: '5px' }}>
-                          Federal • Regulation • 2016<br/>
+                          Federal • Regulation • 2016
+                          <br />
                           Defines Lifeline qualifying programs
                         </div>
                       </div>
-                      <div style={{ 
-                        background: 'white', 
-                        border: '1px solid #dee2e6', 
-                        borderRadius: '4px', 
-                        padding: '10px',
-                        fontSize: '13px',
-                      }}>
+                      <div
+                        style={{
+                          background: 'white',
+                          border: '1px solid #dee2e6',
+                          borderRadius: '4px',
+                          padding: '10px',
+                          fontSize: '13px',
+                        }}
+                      >
                         <strong style={{ color: 'var(--blue)' }}>USDA SNAP BBCE Report</strong>
                         <div style={{ color: 'var(--gray)', marginTop: '5px' }}>
-                          Federal • Guidance • 2024<br/>
+                          Federal • Guidance • 2024
+                          <br />
                           State-by-state BBCE policies
                         </div>
                       </div>
-                      <div style={{ 
-                        background: 'white', 
-                        border: '1px solid #dee2e6', 
-                        borderRadius: '4px', 
-                        padding: '10px',
-                        fontSize: '13px',
-                      }}>
+                      <div
+                        style={{
+                          background: 'white',
+                          border: '1px solid #dee2e6',
+                          borderRadius: '4px',
+                          padding: '10px',
+                          fontSize: '13px',
+                        }}
+                      >
                         <strong style={{ color: 'var(--blue)' }}>NC Work First Manual</strong>
                         <div style={{ color: 'var(--gray)', marginTop: '5px' }}>
-                          State • Policy Manual • 2024<br/>
+                          State • Policy Manual • 2024
+                          <br />
                           Income limits for non-cash TANF
                         </div>
                       </div>
@@ -2194,53 +2366,64 @@ function Demo() {
 
               <div style={{ marginBottom: '25px' }}>
                 <h4>Why This Matters</h4>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                  gap: '15px'
-                }}>
-                  <div style={{
-                    background: 'white',
-                    border: '1px solid #dee2e6',
-                    padding: '15px',
-                    borderRadius: '8px'
-                  }}>
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                    gap: '15px',
+                  }}
+                >
+                  <div
+                    style={{
+                      background: 'white',
+                      border: '1px solid #dee2e6',
+                      padding: '15px',
+                      borderRadius: '8px',
+                    }}
+                  >
                     <div style={{ fontSize: '24px', marginBottom: '10px' }}>👨‍👩‍👧‍👦</div>
                     <strong>For Families</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Discover benefits you didn't know you qualified for through hidden eligibility pathways
+                      Discover benefits you didn't know you qualified for through hidden eligibility
+                      pathways
                     </p>
                   </div>
-                  <div style={{
-                    background: 'white',
-                    border: '1px solid #dee2e6',
-                    padding: '15px',
-                    borderRadius: '8px'
-                  }}>
+                  <div
+                    style={{
+                      background: 'white',
+                      border: '1px solid #dee2e6',
+                      padding: '15px',
+                      borderRadius: '8px',
+                    }}
+                  >
                     <div style={{ fontSize: '24px', marginBottom: '10px' }}>🏢</div>
                     <strong>For Caseworkers</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
                       Understand complex program interactions without memorizing hundreds of rules
                     </p>
                   </div>
-                  <div style={{
-                    background: 'white',
-                    border: '1px solid #dee2e6',
-                    padding: '15px',
-                    borderRadius: '8px'
-                  }}>
+                  <div
+                    style={{
+                      background: 'white',
+                      border: '1px solid #dee2e6',
+                      padding: '15px',
+                      borderRadius: '8px',
+                    }}
+                  >
                     <div style={{ fontSize: '24px', marginBottom: '10px' }}>🔬</div>
                     <strong>For Researchers</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
                       Analyze participation gaps by tracing all possible eligibility pathways
                     </p>
                   </div>
-                  <div style={{
-                    background: 'white',
-                    border: '1px solid #dee2e6',
-                    padding: '15px',
-                    borderRadius: '8px'
-                  }}>
+                  <div
+                    style={{
+                      background: 'white',
+                      border: '1px solid #dee2e6',
+                      padding: '15px',
+                      borderRadius: '8px',
+                    }}
+                  >
                     <div style={{ fontSize: '24px', marginBottom: '10px' }}>🤖</div>
                     <strong>For AI Tools</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
@@ -2250,15 +2433,18 @@ function Demo() {
                 </div>
               </div>
 
-              <div style={{
-                background: 'var(--blue-98)',
-                border: '1px solid var(--blue)',
-                padding: '15px',
-                borderRadius: '4px'
-              }}>
-                <strong>🔗 Unique Advantage:</strong> Only PolicyEngine combines document archives with 
-                encoded rules and structured metadata. Traditional RAG or document search alone would never 
-                reveal these critical program connections that determine real-world eligibility.
+              <div
+                style={{
+                  background: 'var(--blue-98)',
+                  border: '1px solid var(--blue)',
+                  padding: '15px',
+                  borderRadius: '4px',
+                }}
+              >
+                <strong>🔗 Unique Advantage:</strong> Only PolicyEngine combines document archives
+                with encoded rules and structured metadata. Traditional RAG or document search alone
+                would never reveal these critical program connections that determine real-world
+                eligibility.
               </div>
             </div>
           )}
