@@ -6,10 +6,15 @@ import yaml
 import gspread
 from pathlib import Path
 
-def load_budget_data():
-    """Load budget data from YAML file."""
+def load_config():
+    """Load both budget data and spreadsheet configuration."""
     with open('budget_data.yaml', 'r') as f:
-        return yaml.safe_load(f)
+        budget_data = yaml.safe_load(f)
+    
+    with open('spreadsheet_config.yaml', 'r') as f:
+        spreadsheet_config = yaml.safe_load(f)
+    
+    return budget_data, spreadsheet_config
 
 def get_client():
     """Initialize gspread client."""
@@ -18,27 +23,22 @@ def get_client():
         creds = pickle.load(token)
     return gspread.authorize(creds)
 
-def populate_personnel(ws, data):
+def populate_personnel(ws, data, config):
     """Populate Personnel worksheet using batch range update."""
     print("   Personnel...")
     
-    # Clear existing data first (rows 4-11)
-    clear_rows = [[''] * 7 for _ in range(8)]  # 8 rows, 7 columns (A-G)
-    ws.update(values=clear_rows, range_name='A4:G11')
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['personnel']
+    start_row = ws_config['data_start_row']
+    
+    # Clear existing data
+    ws.update(values=[[''] * 7 for _ in range(8)], range_name=ws_config['clear_range'])
     
     # Prepare all personnel data as a 2D array
     personnel_rows = []
     for person in data:
-        # Create row with proper column spacing
-        # A: Name (leave empty per instructions)
-        # B: Position Title
-        # C: Effort %
-        # D: Pay Rate (calculated by formula)
-        # E: Base Salary
-        # F: Personnel Cost (calculated by formula)
-        # G: Fringe Rate
         row = [
-            '',                           # A (Name - leave empty)
+            '',                           # A (Name - leave empty per instructions)
             person['position_title'],     # B (Position Title)
             person['effort_pct'],         # C (Effort %)
             '',                           # D (Pay Rate - formula)
@@ -48,25 +48,27 @@ def populate_personnel(ws, data):
         ]
         personnel_rows.append(row)
     
-    # Update all personnel rows at once starting at A4
+    # Update all personnel rows at once starting at configured row
     if personnel_rows:
-        end_row = 3 + len(personnel_rows)
-        ws.update(values=personnel_rows, range_name=f'A4:G{end_row}')
+        end_row = start_row - 1 + len(personnel_rows)
+        ws.update(values=personnel_rows, range_name=f'A{start_row}:G{end_row}')
     
-    print(f"   ✓ Added {len(data)} personnel entries")
+    print(f"   ✓ Added {len(data)} personnel entries starting at row {start_row}")
 
-def populate_travel(ws, data):
+def populate_travel(ws, data, config):
     """Populate Travel worksheet using batch range update."""
     print("   Travel...")
     
-    # Clear existing data first
-    clear_rows = [[''] * 12 for _ in range(7)]  # 7 rows, 12 columns (B-M)
-    ws.update(values=clear_rows, range_name='B4:M10')
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['travel']
+    start_row = ws_config['data_start_row']
+    
+    # Clear existing data
+    ws.update(values=[[''] * 12 for _ in range(7)], range_name=ws_config['clear_range'])
     
     # Prepare all travel data as a 2D array
     travel_rows = []
     for trip in data:
-        # Columns B through M (skip K which is formula)
         row = [
             trip['purpose'],              # B
             trip['depart_from'],          # C
@@ -83,20 +85,23 @@ def populate_travel(ws, data):
         ]
         travel_rows.append(row)
     
-    # Update all travel rows at once starting at B4
+    # Update all travel rows at once starting at configured row
     if travel_rows:
-        end_row = 3 + len(travel_rows)
-        ws.update(values=travel_rows, range_name=f'B4:M{end_row}')
+        end_row = start_row - 1 + len(travel_rows)
+        ws.update(values=travel_rows, range_name=f'B{start_row}:M{end_row}')
     
-    print(f"   ✓ Added {len(data)} travel entries")
+    print(f"   ✓ Added {len(data)} travel entries starting at row {start_row}")
 
-def populate_equipment(ws, data):
+def populate_equipment(ws, data, config):
     """Populate Equipment worksheet using batch range update."""
     print("   Equipment...")
     
-    # Clear existing data first
-    clear_rows = [[''] * 7 for _ in range(6)]  # 6 rows, 7 columns (B-H)
-    ws.update(values=clear_rows, range_name='B5:H10')
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['equipment']
+    start_row = ws_config['data_start_row']
+    
+    # Clear existing data
+    ws.update(values=[[''] * 7 for _ in range(6)], range_name=ws_config['clear_range'])
     
     # Prepare all equipment data as a 2D array
     equipment_rows = []
@@ -112,20 +117,23 @@ def populate_equipment(ws, data):
         ]
         equipment_rows.append(row)
     
-    # Update all equipment rows at once starting at B5
+    # Update all equipment rows at once starting at configured row
     if equipment_rows:
-        end_row = 4 + len(equipment_rows)
-        ws.update(values=equipment_rows, range_name=f'B5:H{end_row}')
+        end_row = start_row - 1 + len(equipment_rows)
+        ws.update(values=equipment_rows, range_name=f'B{start_row}:H{end_row}')
     
-    print(f"   ✓ Added {len(data)} equipment items")
+    print(f"   ✓ Added {len(data)} equipment items starting at row {start_row}")
 
-def populate_contractual(ws, data):
+def populate_contractual(ws, data, config):
     """Populate Contractual worksheet using batch range update."""
     print("   Contractual partners...")
     
-    # Clear existing rows
-    clear_rows = [[''] * 5 for _ in range(8)]  # 8 rows (5-12), 5 columns (A-E)
-    ws.update(values=clear_rows, range_name='A5:E12')
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['contractual']
+    start_row = ws_config['data_start_row']
+    
+    # Clear existing data
+    ws.update(values=[[''] * 5 for _ in range(8)], range_name=ws_config['clear_range'])
     
     # Prepare all contractual data as a 2D array
     contractual_rows = []
@@ -139,23 +147,28 @@ def populate_contractual(ws, data):
         ]
         contractual_rows.append(row)
     
-    # Update all contractual rows at once starting at A5
+    # Update all contractual rows at once starting at configured row
     if contractual_rows:
-        end_row = 4 + len(contractual_rows)
-        ws.update(values=contractual_rows, range_name=f'A5:E{end_row}')
+        end_row = start_row - 1 + len(contractual_rows)
+        ws.update(values=contractual_rows, range_name=f'A{start_row}:E{end_row}')
     
-    # Add explanation in A15
-    explanation = (
-        "MyFriendBen and Benefit Navigator each receive $50k as demonstration partners "
-        "to test ambiguity analysis. Citizen Codex receives $30k for UX research and design."
-    )
-    ws.update(values=[[explanation]], range_name='A15')
+    # Add explanation in configured cell
+    if 'explanation_cell' in ws_config:
+        explanation = (
+            "MyFriendBen and Benefit Navigator each receive $50k as demonstration partners "
+            "to test ambiguity analysis. Citizen Codex receives $30k for UX research and design."
+        )
+        ws.update(values=[[explanation]], range_name=ws_config['explanation_cell'])
     
-    print(f"   ✓ Added {len(data)} contractual partners")
+    print(f"   ✓ Added {len(data)} contractual partners starting at row {start_row}")
 
-def populate_other_direct(ws, data):
+def populate_other_direct(ws, data, config):
     """Populate Other Direct Costs worksheet using batch range update."""
     print("   Other direct costs...")
+    
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['other_direct']
+    start_row = ws_config['data_start_row']
     
     # Prepare all other direct cost data as a 2D array
     other_rows = []
@@ -169,22 +182,25 @@ def populate_other_direct(ws, data):
         ]
         other_rows.append(row)
     
-    # Update all other direct cost rows at once starting at B7
+    # Update all other direct cost rows at once starting at configured row
     if other_rows:
-        end_row = 6 + len(other_rows)
-        ws.update(values=other_rows, range_name=f'B7:F{end_row}')
+        end_row = start_row - 1 + len(other_rows)
+        ws.update(values=other_rows, range_name=f'B{start_row}:F{end_row}')
     
-    print(f"   ✓ Added {len(data)} other direct cost items")
+    print(f"   ✓ Added {len(data)} other direct cost items starting at row {start_row}")
 
-def populate_indirect(ws, data):
+def populate_indirect(ws, data, config):
     """Populate Indirect Costs worksheet using batch update."""
     print("   Indirect costs...")
     
-    # Update rate percentage in B5
-    ws.update(values=[[data['rate_percentage']]], range_name='B5')
+    # Get configuration for this worksheet
+    ws_config = config['worksheets']['indirect']
     
-    # Update explanation in A7
-    ws.update(values=[[data['explanation']]], range_name='A7')
+    # Update rate percentage in configured cell
+    ws.update(values=[[data['rate_percentage']]], range_name=ws_config['rate_cell'])
+    
+    # Update explanation in configured cell
+    ws.update(values=[[data['explanation']]], range_name=ws_config['explanation_cell'])
     
     print(f"   ✓ Set {data['rate_percentage']}% indirect rate")
 
@@ -195,47 +211,42 @@ def main():
     print("="*60)
     print()
     
-    # Load data
-    print("Loading budget data from YAML...")
-    budget_data = load_budget_data()
+    # Load configurations
+    print("Loading configurations...")
+    budget_data, spreadsheet_config = load_config()
     
     # Get client
     client = get_client()
-    spreadsheet_id = budget_data['metadata']['spreadsheet_id']
+    spreadsheet_id = spreadsheet_config['spreadsheet']['id']
     sheet = client.open_by_key(spreadsheet_id)
-    
-    # Process each worksheet
-    worksheet_mapping = budget_data['metadata']['worksheet_mapping']
     
     print("\nPopulating worksheets:")
     
-    for data_key, worksheet_name in worksheet_mapping.items():
+    # Process each worksheet
+    worksheet_functions = {
+        'personnel': populate_personnel,
+        'travel': populate_travel,
+        'equipment': populate_equipment,
+        'contractual': populate_contractual,
+        'other_direct': populate_other_direct,
+        'indirect': populate_indirect
+    }
+    
+    for data_key, populate_func in worksheet_functions.items():
         if data_key in budget_data:
             try:
+                worksheet_name = spreadsheet_config['worksheets'][data_key]['name']
                 ws = sheet.worksheet(worksheet_name)
-                
-                if data_key == 'personnel':
-                    populate_personnel(ws, budget_data[data_key])
-                elif data_key == 'travel':
-                    populate_travel(ws, budget_data[data_key])
-                elif data_key == 'equipment':
-                    populate_equipment(ws, budget_data[data_key])
-                elif data_key == 'contractual':
-                    populate_contractual(ws, budget_data[data_key])
-                elif data_key == 'other_direct':
-                    populate_other_direct(ws, budget_data[data_key])
-                elif data_key == 'indirect':
-                    populate_indirect(ws, budget_data[data_key])
-                    
+                populate_func(ws, budget_data[data_key], spreadsheet_config)
             except Exception as e:
-                print(f"   ✗ Error in {worksheet_name}: {e}")
+                print(f"   ✗ Error in {data_key}: {e}")
     
     print("\n" + "="*60)
     print("COMPLETE!")
     print("="*60)
-    print(f"\nView spreadsheet: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
+    print(f"\nView spreadsheet: {spreadsheet_config['spreadsheet']['url']}")
     print("\nKey allocations:")
-    print("  • Personnel: 2.5 FTE")
+    print("  • Personnel: 2.5 FTE (starting at row 6)")
     print("  • Partners: MyFriendBen ($50k), Benefit Navigator ($50k), Citizen Codex ($30k)")
     print("  • Technical Advisory: $40,000")
     print("  • Document Bounty: $35,000")

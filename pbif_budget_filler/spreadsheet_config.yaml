@@ -1,0 +1,79 @@
+# PBIF Spreadsheet Configuration
+# Defines the structure and layout of each worksheet
+
+worksheets:
+  personnel:
+    name: "a. Personnel"
+    data_start_row: 6  # Data entry starts at row 6
+    columns:
+      name: "A"        # Employee name (optional)
+      position: "B"    # Position title
+      effort_pct: "C"  # Effort percentage
+      pay_rate: "D"    # Calculated field
+      base_salary: "E" # Annual base salary
+      cost: "F"        # Calculated field
+      fringe_rate: "G" # Fringe rate
+    clear_range: "A6:G13"  # Range to clear before populating
+    
+  travel:
+    name: "c. Travel"
+    data_start_row: 4  # Data entry starts at row 4
+    columns:
+      purpose: "B"
+      depart_from: "C"
+      destination: "D"
+      days: "E"
+      travelers: "F"
+      lodging: "G"
+      flight: "H"
+      vehicle: "I"
+      mie: "J"
+      cost_per_trip: "K"  # Calculated field
+      basis: "M"
+    clear_range: "B4:M10"
+    
+  equipment:
+    name: "d. Equipment"
+    data_start_row: 5  # Data entry starts at row 5
+    columns:
+      item: "B"
+      quantity: "C"
+      unit_cost: "D"
+      total_cost: "E"
+      cost_share: "F"
+      basis: "G"
+      justification: "H"
+    clear_range: "B5:H10"
+    
+  contractual:
+    name: "f. Contractual"
+    data_start_row: 5  # Data entry starts at row 5
+    columns:
+      subaward_number: "A"
+      subawardee: "B"
+      pi_pd: "C"
+      total_cost: "D"
+      justification: "E"
+    clear_range: "A5:E12"
+    explanation_cell: "A15"  # Cell for additional explanation text
+    
+  other_direct:
+    name: "h. Other"
+    data_start_row: 7  # Data entry starts at row 7
+    columns:
+      expense_type: "B"
+      total_cost: "C"
+      unit_cost: "D"
+      category: "E"
+      justification: "F"
+    clear_range: "B7:F10"
+    
+  indirect:
+    name: "i. Indirect"
+    rate_cell: "B5"        # Cell for indirect rate percentage
+    explanation_cell: "A7" # Cell for explanation text
+
+# Spreadsheet metadata
+spreadsheet:
+  id: "1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw"
+  url: "https://docs.google.com/spreadsheets/d/1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw"
