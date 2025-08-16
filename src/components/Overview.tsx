@@ -147,7 +147,7 @@ function Overview() {
                 📈 Current SNAP Error Crisis
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                SNAP improper payments reached <strong>$10.5 billion (11.7%)</strong> in FY2023. 
+                SNAP improper payments reached <strong>$10.9 billion (10.93%)</strong> in FY2024. 
                 44 states fail error thresholds. 99% are administrative errors from policy interpretation, not fraud.
               </p>
               <a
