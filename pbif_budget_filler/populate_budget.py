@@ -116,7 +116,20 @@ def populate_equipment(sheet):
 
 def populate_travel(sheet):
     """Populate Travel worksheet."""
-    ws = sheet.worksheet('d. Travel')
+    # Try different possible worksheet names
+    possible_names = ['d. Travel', 'e. Travel', 'Travel', 'd.Travel']
+    ws = None
+    for name in possible_names:
+        try:
+            ws = sheet.worksheet(name)
+            print(f"   Found Travel worksheet as '{name}'")
+            break
+        except:
+            continue
+    
+    if ws is None:
+        print("   ⚠️  Could not find Travel worksheet - skipping")
+        return
     
     # Travel items
     travel = [
@@ -227,30 +240,54 @@ def main():
     client, service = get_clients()
     sheet = client.open_by_key(SPREADSHEET_ID)
     
+    # First, list all worksheets
+    print("Available worksheets:")
+    for ws in sheet.worksheets():
+        print(f"  - '{ws.title}'")
+    print()
+    
     # Populate each worksheet
     print("1. Populating Personnel...")
-    populate_personnel(sheet)
-    print("   ✓ Personnel data added")
+    try:
+        populate_personnel(sheet)
+        print("   ✓ Personnel data added")
+    except Exception as e:
+        print(f"   ✗ Error: {e}")
     
     print("\n2. Populating Equipment...")
-    populate_equipment(sheet)
-    print("   ✓ Equipment items added")
+    try:
+        populate_equipment(sheet)
+        print("   ✓ Equipment items added")
+    except Exception as e:
+        print(f"   ✗ Error: {e}")
     
     print("\n3. Populating Travel...")
-    populate_travel(sheet)
-    print("   ✓ Travel expenses added")
+    try:
+        populate_travel(sheet)
+        print("   ✓ Travel expenses added")
+    except Exception as e:
+        print(f"   ✗ Error: {e}")
     
     print("\n4. Populating Contractual...")
-    populate_contractual(sheet)
-    print("   ✓ Partners added")
+    try:
+        populate_contractual(sheet)
+        print("   ✓ Partners added")
+    except Exception as e:
+        print(f"   ✗ Error: {e}")
     
     print("\n5. Populating Other Direct Costs...")
-    populate_other_direct(sheet)
-    print("   ✓ Advisory and bounty programs added")
+    try:
+        populate_other_direct(sheet)
+        print("   ✓ Advisory and bounty programs added")
+    except Exception as e:
+        print(f"   ✗ Error: {e}")
     
     print("\n6. Populating Indirect Costs...")
-    populate_indirect(sheet)
-    print("   ✓ 15% de minimis rate set")
+    try:
+        populate_indirect(sheet)
+        print("   ✓ 15% de minimis rate set")
+    except Exception as e:
+        print(f"   ✗ Error: {e}")
     
     print("\n7. Removing yellow highlights...")
     remove_yellow_highlights(service)
