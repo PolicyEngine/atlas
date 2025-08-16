@@ -42,25 +42,24 @@ word_documents:
     format: docx
     status: unread
 
+  - organization: Policy Simulation Library (PSL)
+    file: Letter of Support - Policy Simulation Library.pdf
+    date: 2025-08-16
+    status: confirmed
+
 markdown_drafts:
   - organization: SnapScreener
     contact: Ben Molin
     file: snapscreener-ben-molin.md
-    status: simplified
+    status: draft
     word_count: ~200
-    notes: Last-minute review version
-
-  - organization: Policy Simulation Library (PSL)
-    file: policy-simulation-library.md
-    status: simplified
-    word_count: ~200
-    focus: IRS forms and revenue procedures
+    notes: Awaiting confirmation
 
 summary:
   total_letters: 8
-  confirmed_pdfs: 5
-  pending_drafts: 2
-  word_document: 1
+  confirmed_pdfs: 7
+  pending_drafts: 1
+  word_document: 0
 
   key_supporters:
     research_institutions:

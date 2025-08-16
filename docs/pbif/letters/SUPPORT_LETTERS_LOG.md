@@ -1,6 +1,6 @@
 # Support Letters Log for PBIF Application
 
-## PDF Letters (5 total)
+## PDF Letters (7 total)
 
 1. **Better Government Lab (BGL)** - Georgetown University
    - Contact: Eric Giannella, Director
@@ -23,23 +23,21 @@
    - Contact: Catalina Carrizosa, Contracts Administrator
    - File: PolicyEngine Letterhead - CC.pdf
 
-## Word Document (1 total)
+6. **University of Southern California (USC)**
+   - Contact: Matthew Unrath, Assistant Professor
+   - File: USC-PolicyEngine-PBIF.pdf (converted from .docx)
 
-6. **USC** (University of Southern California)
-   - File: USC-PolicyEngine-PBIF.docx
-   - Note: Cannot read .docx format directly
+7. **Policy Simulation Library (PSL)**
+   - File: Letter of Support - Policy Simulation Library.pdf
+   - Date: August 16, 2025
 
-## Markdown Letters (2 total)
+## Markdown Letters (1 total - draft)
 
-7. **SnapScreener**
+8. **SnapScreener**
    - Contact: Ben Molin
    - File: snapscreener-ben-molin.md
-   - Status: Simplified to ~200 words for last-minute review
+   - Status: Simplified to ~200 words for last-minute review (DRAFT)
 
-8. **Policy Simulation Library (PSL)**
-   - File: policy-simulation-library.md  
-   - Status: Simplified to focus on IRS forms and revenue procedures
-
-## Total: 8 Support Letters
+## Total: 8 Support Letters (7 confirmed + 1 draft)
 
 All letters support the Policy Library project for creating a permanent archive of benefit policy documents to prevent link rot and improve accuracy of benefit eligibility tools.
