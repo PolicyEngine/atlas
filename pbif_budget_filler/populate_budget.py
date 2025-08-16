@@ -5,6 +5,7 @@ import pickle
 import yaml
 import gspread
 from pathlib import Path
+from googleapiclient.discovery import build
 
 def load_config():
     """Load both budget data and spreadsheet configuration."""
@@ -16,42 +17,51 @@ def load_config():
     
     return budget_data, spreadsheet_config
 
-def get_client():
-    """Initialize gspread client."""
+def get_clients():
+    """Initialize both gspread and Google Sheets API clients."""
     token_path = Path(__file__).parent.parent / "token.pickle"
     with open(token_path, 'rb') as token:
         creds = pickle.load(token)
-    return gspread.authorize(creds)
+    
+    client = gspread.authorize(creds)
+    service = build('sheets', 'v4', credentials=creds)
+    
+    return client, service
 
 def populate_personnel(ws, data, config):
-    """Populate Personnel worksheet using batch range update."""
+    """Populate Personnel worksheet - only non-formula columns."""
     print("   Personnel...")
     
     # Get configuration for this worksheet
     ws_config = config['worksheets']['personnel']
     start_row = ws_config['data_start_row']
     
-    # Clear existing data
-    ws.update(values=[[''] * 7 for _ in range(8)], range_name=ws_config['clear_range'])
+    # Clear only the data entry columns (B, C, G) to preserve formulas
+    for i in range(8):
+        row = start_row + i
+        ws.update(values=[['']], range_name=f'B{row}')  # Clear Position Title
+        ws.update(values=[['']], range_name=f'C{row}')  # Clear Time (Hrs)
+        ws.update(values=[['']], range_name=f'G{row}')  # Clear Pay Rate Basis
     
-    # Prepare all personnel data as a 2D array
-    personnel_rows = []
-    for person in data:
-        row = [
-            '',                           # A (Name - leave empty per instructions)
-            person['position_title'],     # B (Position Title)
-            person['effort_pct'],         # C (Effort %)
-            '',                           # D (Pay Rate - formula)
-            person['base_salary'],        # E (Base Salary)
-            '',                           # F (Personnel Cost - formula)
-            person['fringe_rate']         # G (Fringe Rate)
-        ]
-        personnel_rows.append(row)
+    # Populate data for each person
+    # We only populate:
+    # B: Position Title
+    # C: Time (Hrs) - effort as hours (% * 2080)
+    # G: Pay Rate Basis - the annual salary
+    # The other columns have formulas that calculate automatically:
+    # D: Pay Rate ($/Hr) = G/2080
+    # E: Project Total = C*D
+    # F: Cost share - leave empty
     
-    # Update all personnel rows at once starting at configured row
-    if personnel_rows:
-        end_row = start_row - 1 + len(personnel_rows)
-        ws.update(values=personnel_rows, range_name=f'A{start_row}:G{end_row}')
+    for i, person in enumerate(data):
+        # Convert effort percentage to hours (% of 2080 hours/year)
+        hours = int(person['effort_pct'] * 2080 / 100)
+        row = start_row + i
+        
+        # Update individual cells to avoid overwriting formulas
+        ws.update(values=[[person['position_title']]], range_name=f'B{row}')  # Position Title
+        ws.update(values=[[hours]], range_name=f'C{row}')                     # Time (Hours)
+        ws.update(values=[[person['base_salary']]], range_name=f'G{row}')     # Pay Rate Basis (annual salary)
     
     print(f"   ✓ Added {len(data)} personnel entries starting at row {start_row}")
 
@@ -204,6 +214,57 @@ def populate_indirect(ws, data, config):
     
     print(f"   ✓ Set {data['rate_percentage']}% indirect rate")
 
+def remove_yellow_highlights(service, spreadsheet_id):
+    """Remove all yellow highlighting from the personnel worksheet."""
+    print("   Removing yellow highlights...")
+    
+    # Get the sheet ID for the Personnel worksheet
+    spreadsheet = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+    personnel_sheet_id = None
+    
+    for sheet in spreadsheet['sheets']:
+        if sheet['properties']['title'] == 'a. Personnel':
+            personnel_sheet_id = sheet['properties']['sheetId']
+            break
+    
+    if personnel_sheet_id is None:
+        print("   ✗ Could not find Personnel worksheet")
+        return
+    
+    # Create request to remove yellow background from rows 6-9
+    requests = []
+    for row in range(5, 9):  # Rows 6-9 (0-indexed so 5-8)
+        requests.append({
+            'repeatCell': {
+                'range': {
+                    'sheetId': personnel_sheet_id,
+                    'startRowIndex': row,
+                    'endRowIndex': row + 1,
+                    'startColumnIndex': 0,  # Column A
+                    'endColumnIndex': 8      # Through column H
+                },
+                'cell': {
+                    'userEnteredFormat': {
+                        'backgroundColor': {
+                            'red': 1.0,
+                            'green': 1.0,
+                            'blue': 1.0
+                        }
+                    }
+                },
+                'fields': 'userEnteredFormat.backgroundColor'
+            }
+        })
+    
+    # Execute batch update
+    if requests:
+        body = {'requests': requests}
+        service.spreadsheets().batchUpdate(
+            spreadsheetId=spreadsheet_id,
+            body=body
+        ).execute()
+        print("   ✓ Removed yellow highlights from Personnel tab")
+
 def main():
     """Main function to populate the budget from YAML."""
     print("="*60)
@@ -215,8 +276,8 @@ def main():
     print("Loading configurations...")
     budget_data, spreadsheet_config = load_config()
     
-    # Get client
-    client = get_client()
+    # Get clients
+    client, service = get_clients()
     spreadsheet_id = spreadsheet_config['spreadsheet']['id']
     sheet = client.open_by_key(spreadsheet_id)
     
@@ -240,6 +301,9 @@ def main():
                 populate_func(ws, budget_data[data_key], spreadsheet_config)
             except Exception as e:
                 print(f"   ✗ Error in {data_key}: {e}")
+    
+    # Remove yellow highlights from Personnel tab
+    remove_yellow_highlights(service, spreadsheet_id)
     
     print("\n" + "="*60)
     print("COMPLETE!")
