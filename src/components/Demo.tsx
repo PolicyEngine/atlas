@@ -4,7 +4,7 @@ function Demo() {
   const [jurisdiction, setJurisdiction] = useState('federal');
   const [program, setProgram] = useState('snap');
   const [activeTab, setActiveTab] = useState<
-    'library' | 'clarity' | 'bounty' | 'dashboard' | 'api' | 'mcp'
+    'library' | 'clarity' | 'bounty' | 'dashboard' | 'api' | 'mcp' | 'knowledge'
   >('library');
 
   const jurisdictionNames: Record<string, string> = {
@@ -96,6 +96,12 @@ documents = response.json()`;
               onClick={() => setActiveTab('mcp')}
             >
               🤖 MCP Server
+            </button>
+            <button
+              className={`demo-tab ${activeTab === 'knowledge' ? 'active' : ''}`}
+              onClick={() => setActiveTab('knowledge')}
+            >
+              🔗 Knowledge Graph
             </button>
           </div>
 
@@ -1696,6 +1702,233 @@ documents = response.json()`;
                   <li>Works with Claude, ChatGPT, and other MCP-compatible tools</li>
                   <li>Zero integration effort for end users</li>
                 </ul>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'knowledge' && (
+            <div className="demo-knowledge-section">
+              <h3>Knowledge Graph: Revealing Hidden Eligibility Pathways</h3>
+              <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
+                Our unique integration with PolicyEngine's rules engine creates a knowledge graph that
+                reveals program connections invisible to traditional document search. Discover how
+                categorical eligibility creates hidden pathways to benefits.
+              </p>
+
+              <div style={{ marginBottom: '25px' }}>
+                <h4>Live Example: North Carolina Lifeline Eligibility Chain</h4>
+                <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
+                  <div style={{ marginBottom: '20px' }}>
+                    <label htmlFor="knowledge-search" style={{ display: 'block', marginBottom: '10px', fontWeight: 'bold' }}>
+                      Search Query:
+                    </label>
+                    <input
+                      id="knowledge-search"
+                      type="text"
+                      value="Why is my NC household with 185% FPL income eligible for Lifeline?"
+                      disabled
+                      style={{
+                        width: '100%',
+                        padding: '10px',
+                        border: '1px solid #ccc',
+                        borderRadius: '4px',
+                        background: '#e9ecef',
+                        fontSize: '14px',
+                      }}
+                    />
+                  </div>
+
+                  <div style={{ marginBottom: '20px' }}>
+                    <h5 style={{ marginBottom: '15px' }}>📊 Knowledge Graph Analysis:</h5>
+                    
+                    <div style={{
+                      background: 'white',
+                      border: '2px solid var(--teal-accent)',
+                      borderRadius: '8px',
+                      padding: '20px',
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                        <div style={{
+                          background: 'var(--teal-accent)',
+                          color: 'white',
+                          padding: '10px 15px',
+                          borderRadius: '20px',
+                          fontWeight: 'bold',
+                          marginRight: '15px'
+                        }}>
+                          Step 1
+                        </div>
+                        <div>
+                          <strong>TANF Non-Cash Benefits (NC Work First)</strong>
+                          <div style={{ fontSize: '14px', color: 'var(--gray)', marginTop: '5px' }}>
+                            North Carolina provides Work First services (childcare, transportation, counseling) 
+                            to families up to <span style={{ color: 'var(--blue)', fontWeight: 'bold' }}>200% FPL</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style={{ 
+                        marginLeft: '25px',
+                        borderLeft: '3px solid var(--teal-accent)',
+                        height: '30px',
+                        marginBottom: '20px'
+                      }} />
+
+                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                        <div style={{
+                          background: 'var(--teal-accent)',
+                          color: 'white',
+                          padding: '10px 15px',
+                          borderRadius: '20px',
+                          fontWeight: 'bold',
+                          marginRight: '15px'
+                        }}>
+                          Step 2
+                        </div>
+                        <div>
+                          <strong>SNAP Broad-Based Categorical Eligibility (BBCE)</strong>
+                          <div style={{ fontSize: '14px', color: 'var(--gray)', marginTop: '5px' }}>
+                            Receipt of TANF non-cash benefits makes household categorically eligible for SNAP
+                            at <span style={{ color: 'var(--blue)', fontWeight: 'bold' }}>200% FPL</span> (instead of standard 130%)
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style={{ 
+                        marginLeft: '25px',
+                        borderLeft: '3px solid var(--teal-accent)',
+                        height: '30px',
+                        marginBottom: '20px'
+                      }} />
+
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{
+                          background: 'var(--teal-accent)',
+                          color: 'white',
+                          padding: '10px 15px',
+                          borderRadius: '20px',
+                          fontWeight: 'bold',
+                          marginRight: '15px'
+                        }}>
+                          Step 3
+                        </div>
+                        <div>
+                          <strong>Lifeline Categorical Eligibility</strong>
+                          <div style={{ fontSize: '14px', color: 'var(--gray)', marginTop: '5px' }}>
+                            SNAP enrollment automatically qualifies household for Lifeline phone/internet discount
+                            (Your household at <span style={{ color: 'var(--blue)', fontWeight: 'bold' }}>185% FPL</span> qualifies!)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{
+                    background: '#d4edda',
+                    border: '1px solid #28a745',
+                    padding: '15px',
+                    borderRadius: '4px',
+                    marginBottom: '20px'
+                  }}>
+                    <strong>✅ Result:</strong> Your household qualifies for Lifeline through this eligibility chain,
+                    even though 185% FPL exceeds Lifeline's direct income limit of 135% FPL.
+                  </div>
+
+                  <div style={{ marginBottom: '20px' }}>
+                    <h5 style={{ marginBottom: '10px' }}>📚 Source Documents:</h5>
+                    <div style={{ background: 'white', border: '1px solid #dee2e6', borderRadius: '4px', padding: '15px' }}>
+                      <div style={{ marginBottom: '10px' }}>
+                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
+                          • NC Work First Manual Ch. 3 - Income Eligibility (200% FPL)
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: '10px' }}>
+                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
+                          • USDA SNAP BBCE State Options Report - North Carolina
+                        </a>
+                      </div>
+                      <div style={{ marginBottom: '10px' }}>
+                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
+                          • FCC Lifeline Order 16-38 - Categorical Eligibility Programs
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
+                          • PolicyEngine US Parameters: gov/hhs/tanf/non_cash/income_limit
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '25px' }}>
+                <h4>Why This Matters</h4>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                  gap: '15px'
+                }}>
+                  <div style={{
+                    background: 'white',
+                    border: '1px solid #dee2e6',
+                    padding: '15px',
+                    borderRadius: '8px'
+                  }}>
+                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>👨‍👩‍👧‍👦</div>
+                    <strong>For Families</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Discover benefits you didn't know you qualified for through hidden eligibility pathways
+                    </p>
+                  </div>
+                  <div style={{
+                    background: 'white',
+                    border: '1px solid #dee2e6',
+                    padding: '15px',
+                    borderRadius: '8px'
+                  }}>
+                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>🏢</div>
+                    <strong>For Caseworkers</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Understand complex program interactions without memorizing hundreds of rules
+                    </p>
+                  </div>
+                  <div style={{
+                    background: 'white',
+                    border: '1px solid #dee2e6',
+                    padding: '15px',
+                    borderRadius: '8px'
+                  }}>
+                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>🔬</div>
+                    <strong>For Researchers</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Analyze participation gaps by tracing all possible eligibility pathways
+                    </p>
+                  </div>
+                  <div style={{
+                    background: 'white',
+                    border: '1px solid #dee2e6',
+                    padding: '15px',
+                    borderRadius: '8px'
+                  }}>
+                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>🤖</div>
+                    <strong>For AI Tools</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Provide accurate eligibility determinations with full reasoning chains
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{
+                background: 'var(--blue-98)',
+                border: '1px solid var(--blue)',
+                padding: '15px',
+                borderRadius: '4px'
+              }}>
+                <strong>🔗 Unique Advantage:</strong> Only PolicyEngine combines document archives with 
+                encoded rules and structured metadata. Traditional RAG or document search alone would never 
+                reveal these critical program connections that determine real-world eligibility.
               </div>
             </div>
           )}
