@@ -3,7 +3,6 @@ import { useState } from 'react';
 function Demo() {
   const [jurisdiction, setJurisdiction] = useState('federal');
   const [program, setProgram] = useState('snap');
-  const [doctype, setDoctype] = useState('statute');
   const [activeTab, setActiveTab] = useState<
     'library' | 'clarity' | 'bounty' | 'dashboard' | 'api' | 'mcp'
   >('library');
@@ -26,7 +25,7 @@ function Demo() {
 
   const searchDocuments = () => {
     // Mock search functionality
-    console.log(`Searching for ${jurisdiction} ${program} ${doctype} documents`);
+    console.log(`Searching for ${jurisdiction} ${program} documents`);
   };
 
   const apiExample = `# Python example
@@ -37,7 +36,7 @@ response = requests.get(
   params={
     "jurisdiction": "${jurisdiction}",
     "program": "${program}",
-    "type": "${doctype}"
+    "type": "statute"
   },
   headers={"Authorization": "Bearer YOUR_API_KEY"}
 )
@@ -1508,7 +1507,7 @@ documents = response.json()`;
       "title": "${jurisdictionNames[jurisdiction]} ${programNames[program]} Eligibility",
       "jurisdiction": "${jurisdiction}",
       "program": "${program}",
-      "type": "${doctype}",
+      "type": "statute",
       "url": "https://policy-library.org/docs/...",
       "last_updated": "2025-01-15",
       "versions": 12,
