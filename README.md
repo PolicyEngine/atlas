@@ -1,10 +1,10 @@
-# PolicyEngine Policy Library
+# PolicyEngine Atlas
 
-AI-powered infrastructure for preserving and serving America's safety net policy documents.
+AI-powered navigation system for America's safety net: mapping policy documents and revealing hidden eligibility pathways.
 
 ## Overview
 
-The Policy Library addresses a critical infrastructure failure: benefit program documents disappear constantly. This system uses AI-powered crawlers to monitor 50+ jurisdictions, capturing statutes, regulations, and forms before they vanish.
+PolicyEngine Atlas addresses a critical infrastructure failure: benefit program documents disappear constantly while their connections remain hidden. This system monitors 50+ jurisdictions, capturing statutes, regulations, and forms before they vanish, while our knowledge graph reveals how programs interact—like how TANF enables SNAP which enables Lifeline.
 
 **Live Application**: https://policyengine.github.io/policy-library/
 

@@ -163,7 +163,7 @@ attachments:
       - 'Benefit Navigator'
 
 basic_info:
-  project_title: 'PolicyEngine Policy Library'
+  project_title: 'PolicyEngine Atlas'
   organization_name: 'PolicyEngine'
   organization_type: 'Non-profit'
   primary_contact:

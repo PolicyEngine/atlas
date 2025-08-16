@@ -1,4 +1,4 @@
-The Policy Library implements comprehensive safeguards ensuring ethical, secure, and equitable access to public benefit documentation while protecting privacy and preventing misuse.
+PolicyEngine Atlas implements comprehensive safeguards ensuring ethical, secure, and equitable access to public benefit documentation while protecting privacy and preventing misuse.
 
 Privacy protection begins with archiving only publicly available government documents, never collecting personal data. System architecture actively prevents PII storage even if accidentally encountered. We maintain no user tracking beyond basic API metrics, ensuring complete privacy while complying with GDPR, CCPA, and government standards through regular security audits.
 

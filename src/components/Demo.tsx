@@ -4,8 +4,8 @@ function Demo() {
   const [jurisdiction, setJurisdiction] = useState('federal');
   const [program, setProgram] = useState('snap');
   const [activeTab, setActiveTab] = useState<
-    'library' | 'clarity' | 'bounty' | 'dashboard' | 'api' | 'mcp' | 'knowledge'
-  >('library');
+    'knowledge' | 'clarity' | 'bounty' | 'dashboard' | 'api'
+  >('knowledge');
 
   const jurisdictionNames: Record<string, string> = {
     federal: 'Federal',
@@ -47,7 +47,7 @@ documents = response.json()`;
     <div className="section">
       <div className="content">
         <div className="demo-container">
-          <h2 className="demo-title">Policy Library with Clarity Index</h2>
+          <h2 className="demo-title">PolicyEngine Atlas</h2>
           <p
             style={{
               textAlign: 'center',
@@ -56,16 +56,16 @@ documents = response.json()`;
               fontStyle: 'italic',
             }}
           >
-            Comprehensive document infrastructure with AI-powered clarity analysis to reduce $10.5B
+            Navigate the policy landscape with AI-powered document mapping and clarity analysis to reduce $10.5B
             in annual SNAP errors.
           </p>
 
           <div className="demo-tabs">
             <button
-              className={`demo-tab ${activeTab === 'library' ? 'active' : ''}`}
-              onClick={() => setActiveTab('library')}
+              className={`demo-tab ${activeTab === 'knowledge' ? 'active' : ''}`}
+              onClick={() => setActiveTab('knowledge')}
             >
-              📚 Document Library
+              🔗 Atlas Search
             </button>
             <button
               className={`demo-tab ${activeTab === 'clarity' ? 'active' : ''}`}
@@ -74,200 +74,32 @@ documents = response.json()`;
               ✨ Clarity Index
             </button>
             <button
-              className={`demo-tab ${activeTab === 'bounty' ? 'active' : ''}`}
-              onClick={() => setActiveTab('bounty')}
-            >
-              🏆 Partner Verification Program
-            </button>
-            <button
               className={`demo-tab ${activeTab === 'dashboard' ? 'active' : ''}`}
               onClick={() => setActiveTab('dashboard')}
             >
-              📊 Government Dashboard
+              📊 State Dashboard
+            </button>
+            <button
+              className={`demo-tab ${activeTab === 'bounty' ? 'active' : ''}`}
+              onClick={() => setActiveTab('bounty')}
+            >
+              🏆 Partner Network
             </button>
             <button
               className={`demo-tab ${activeTab === 'api' ? 'active' : ''}`}
               onClick={() => setActiveTab('api')}
             >
-              🔌 API Access
-            </button>
-            <button
-              className={`demo-tab ${activeTab === 'mcp' ? 'active' : ''}`}
-              onClick={() => setActiveTab('mcp')}
-            >
-              🤖 MCP Server
-            </button>
-            <button
-              className={`demo-tab ${activeTab === 'knowledge' ? 'active' : ''}`}
-              onClick={() => setActiveTab('knowledge')}
-            >
-              🔗 Knowledge Graph
+              🔧 Developer Tools
             </button>
           </div>
 
-          {activeTab === 'library' && (
-            <div className="demo-library-section">
-              <h3>Comprehensive Document Coverage</h3>
-              <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Permanent archive of benefit program documents across all 50 states and DC,
-                replacing broken URLs and scattered PDFs with stable, citable sources.
-              </p>
-
-              <div style={{ marginBottom: '25px' }}>
-                <h4>Coverage Commitment</h4>
-                <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-                  <p style={{ marginBottom: '15px' }}>
-                    <strong>Programs:</strong> Tax Credits, SNAP, Medicaid, CHIP, ACA, WIC, TANF,
-                    CCDF, LIHEAP, SSI, State Supplements
-                  </p>
-                  <p style={{ marginBottom: '15px' }}>
-                    <strong>Document Types:</strong> Statutes, Regulations, Policy Manuals, Forms,
-                    Court Decisions
-                  </p>
-                  <p style={{ marginBottom: '15px' }}>
-                    <strong>Jurisdictions:</strong> Federal + All 50 States + DC
-                  </p>
-                  <p>
-                    <strong>Starting Corpus:</strong> 2,500+ documents from PolicyEngine-US
-                    citations
-                  </p>
-                </div>
-              </div>
-
-              <div style={{ marginBottom: '25px' }}>
-                <h4>Collection Strategy</h4>
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                    gap: '15px',
-                  }}
-                >
-                  <div
-                    style={{
-                      background: 'white',
-                      border: '1px solid #dee2e6',
-                      padding: '15px',
-                      borderRadius: '8px',
-                    }}
-                  >
-                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>📚</div>
-                    <strong>Phase 1: Existing Sources</strong>
-                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      2,500+ documents from PolicyEngine-US rules engine citations
-                    </p>
-                  </div>
-                  <div
-                    style={{
-                      background: 'white',
-                      border: '1px solid #dee2e6',
-                      padding: '15px',
-                      borderRadius: '8px',
-                    }}
-                  >
-                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>🤖</div>
-                    <strong>Phase 2: AI Agents</strong>
-                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Deploy Claude/GPT-4 to crawl agency sites for missing documents
-                    </p>
-                  </div>
-                  <div
-                    style={{
-                      background: 'white',
-                      border: '1px solid #dee2e6',
-                      padding: '15px',
-                      borderRadius: '8px',
-                    }}
-                  >
-                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>✅</div>
-                    <strong>Phase 3: Verification Bounty</strong>
-                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Partners review AI contributions for accuracy
-                    </p>
-                  </div>
-                  <div
-                    style={{
-                      background: 'white',
-                      border: '1px solid #dee2e6',
-                      padding: '15px',
-                      borderRadius: '8px',
-                    }}
-                  >
-                    <div style={{ fontSize: '24px', marginBottom: '10px' }}>🏆</div>
-                    <strong>Phase 4: Completion Bounty</strong>
-                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Fill remaining gaps through partner contributions
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ marginBottom: '25px' }}>
-                <h4>Value for Rules-as-Code Providers</h4>
-                <div
-                  style={{
-                    background: '#d4edda',
-                    border: '1px solid #28a745',
-                    padding: '15px',
-                    borderRadius: '4px',
-                  }}
-                >
-                  <ul style={{ paddingLeft: '20px', margin: 0 }}>
-                    <li>Replace fragmented local PDFs with single source of truth</li>
-                    <li>Automate rules development with structured documents</li>
-                    <li>Permanent citations that never break</li>
-                    <li>Version history for all policy changes</li>
-                    <li>API access for automated encoding</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div style={{ marginBottom: '25px' }}>
-                <h4>Search Documents</h4>
-                <div className="demo-controls">
-                  <div className="demo-select">
-                    <label htmlFor="jurisdiction">Jurisdiction</label>
-                    <select
-                      id="jurisdiction"
-                      value={jurisdiction}
-                      onChange={(e) => setJurisdiction(e.target.value)}
-                    >
-                      <option value="federal">Federal</option>
-                      <option value="nc">North Carolina</option>
-                      <option value="ca">California</option>
-                      <option value="ny">New York</option>
-                      <option value="tx">Texas</option>
-                    </select>
-                  </div>
-                  <div className="demo-select">
-                    <label htmlFor="program">Program</label>
-                    <select
-                      id="program"
-                      value={program}
-                      onChange={(e) => setProgram(e.target.value)}
-                    >
-                      <option value="snap">SNAP</option>
-                      <option value="medicaid">Medicaid</option>
-                      <option value="tanf">TANF</option>
-                      <option value="wic">WIC</option>
-                      <option value="ssi">SSI</option>
-                    </select>
-                  </div>
-                  <button className="demo-button" onClick={searchDocuments}>
-                    Search Library
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
           {activeTab === 'clarity' && (
             <div className="demo-clarity-section">
-              <h3>Clarity Index: AI Analysis Validated by Humans</h3>
+              <h3>Clarity Index: Learning from Policy Language Nationwide</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                The Clarity Index combines AI analysis with human validation to identify policy
-                language causing benefit errors. Scores correlate directly with SNAP Quality Control
-                error rates.
+                The Clarity Index uses AI analysis validated by human experts to identify policy
+                language patterns that cause benefit errors. By comparing documents across all jurisdictions,
+                agencies learn which wording reduces errors and improves caseworker effectiveness.
               </p>
 
               <div style={{ marginBottom: '25px' }}>
@@ -1445,92 +1277,142 @@ documents = response.json()`;
 
           {activeTab === 'api' && (
             <div className="demo-api-section">
-              <h3>API Access</h3>
+              <h3>Developer Tools</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Integrate the Policy Library directly into your applications with our RESTful API.
+                Integrate PolicyEngine Atlas into your applications via REST API or native AI assistant support through MCP.
               </p>
 
-              <div style={{ marginBottom: '20px' }}>
-                <h4>Endpoints</h4>
-                <div
-                  style={{
-                    background: 'var(--blue-98)',
-                    padding: '15px',
-                    borderRadius: '8px',
-                    fontFamily: 'monospace',
-                  }}
-                >
-                  <div style={{ marginBottom: '10px' }}>
-                    <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
-                    <code> /v1/documents</code> - Search and retrieve documents
+              {/* REST API Section */}
+              <div style={{ marginBottom: '30px' }}>
+                <h4>🔌 REST API</h4>
+                <div style={{ marginBottom: '20px' }}>
+                  <div
+                    style={{
+                      background: 'var(--blue-98)',
+                      padding: '15px',
+                      borderRadius: '8px',
+                      fontFamily: 'monospace',
+                    }}
+                  >
+                    <div style={{ marginBottom: '10px' }}>
+                      <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
+                      <code> /v1/documents</code> - Search and retrieve documents
+                    </div>
+                    <div style={{ marginBottom: '10px' }}>
+                      <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
+                      <code> /v1/documents/:id</code> - Get specific document
+                    </div>
+                    <div style={{ marginBottom: '10px' }}>
+                      <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
+                      <code> /v1/documents/:id/versions</code> - Get version history
+                    </div>
+                    <div style={{ marginBottom: '10px' }}>
+                      <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
+                      <code> /v1/graph/eligibility</code> - Get eligibility pathways
+                    </div>
                   </div>
-                  <div style={{ marginBottom: '10px' }}>
-                    <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
-                    <code> /v1/documents/:id</code> - Get specific document
-                  </div>
-                  <div style={{ marginBottom: '10px' }}>
-                    <code style={{ color: 'var(--teal-pressed)' }}>GET</code>
-                    <code> /v1/documents/:id/versions</code> - Get version history
-                  </div>
-                  <div style={{ marginBottom: '10px' }}>
-                    <code style={{ color: 'var(--green)' }}>POST</code>
-                    <code> /v1/documents</code> - Submit new document
-                  </div>
+                </div>
+
+                <div style={{ marginBottom: '20px' }}>
+                  <h5>Example: Retrieve NC SNAP Document</h5>
+                  <pre
+                    style={{
+                      background: '#2d2d2d',
+                      color: '#f8f8f2',
+                      padding: '15px',
+                      borderRadius: '8px',
+                      overflow: 'auto',
+                      fontSize: '13px',
+                    }}
+                  >
+                    <code>{`curl -H "Authorization: Bearer YOUR_API_KEY" \\
+  "https://api.policyengine.org/atlas/v1/documents/NC_SNAP_001"
+
+# Returns:
+{
+  "id": "NC_SNAP_001",
+  "title": "North Carolina SNAP Eligibility Manual",
+  "jurisdiction": "nc",
+  "program": "snap",
+  "type": "manual",
+  "current_version": "2025.01",
+  "versions_available": 12,
+  "download_url": "https://api.policyengine.org/atlas/v1/documents/NC_SNAP_001/download",
+  "policyengine_refs": [
+    "gov/usda/snap/income_limit",
+    "gov/states/nc/snap/categorical_eligibility"
+  ]
+}`}</code>
+                  </pre>
                 </div>
               </div>
 
-              <div style={{ marginBottom: '20px' }}>
-                <h4>Example Code</h4>
-                <pre
-                  style={{
-                    background: '#2d2d2d',
-                    color: '#f8f8f2',
-                    padding: '15px',
-                    borderRadius: '8px',
-                    overflow: 'auto',
-                  }}
-                >
-                  <code>{apiExample}</code>
-                </pre>
-              </div>
+              {/* MCP Server Section */}
+              <div style={{ marginBottom: '30px' }}>
+                <h4>🤖 MCP Server - Native AI Integration</h4>
+                <p style={{ marginBottom: '15px', color: 'var(--gray)', fontSize: '14px' }}>
+                  The Model Context Protocol server enables AI assistants like Claude to query Atlas directly during conversations,
+                  providing accurate policy information without hallucination.
+                </p>
 
-              <div style={{ marginBottom: '20px' }}>
-                <h4>Response Format</h4>
-                <pre
-                  style={{
-                    background: '#2d2d2d',
-                    color: '#f8f8f2',
-                    padding: '15px',
-                    borderRadius: '8px',
-                    overflow: 'auto',
-                    fontSize: '14px',
-                  }}
-                >
-                  <code>{`{
-  "documents": [
-    {
-      "id": "${jurisdiction}_${program}_001",
-      "title": "${jurisdictionNames[jurisdiction]} ${programNames[program]} Eligibility",
-      "jurisdiction": "${jurisdiction}",
-      "program": "${program}",
-      "type": "statute",
-      "url": "https://policy-library.org/docs/...",
-      "last_updated": "2025-01-15",
-      "versions": 12,
-      "metadata": {
-        "ai_verified": true,
-        "source": "official",
-        "format": "pdf"
+                <div style={{ marginBottom: '20px' }}>
+                  <h5>Installation</h5>
+                  <pre
+                    style={{
+                      background: '#2d2d2d',
+                      color: '#f8f8f2',
+                      padding: '15px',
+                      borderRadius: '8px',
+                      overflow: 'auto',
+                      fontSize: '13px',
+                    }}
+                  >
+                    <code>{`// claude_desktop_config.json
+{
+  "mcpServers": {
+    "policyengine-atlas": {
+      "command": "npx",
+      "args": ["-y", "@policyengine/atlas-mcp"],
+      "env": {
+        "ATLAS_API_KEY": "your-api-key"
       }
     }
-  ],
-  "pagination": {
-    "page": 1,
-    "per_page": 20,
-    "total": 156
   }
 }`}</code>
-                </pre>
+                  </pre>
+                </div>
+
+                <div style={{ marginBottom: '20px' }}>
+                  <h5>Available MCP Tools</h5>
+                  <div style={{ background: 'var(--blue-98)', padding: '15px', borderRadius: '8px' }}>
+                    <div style={{ fontFamily: 'monospace', fontSize: '13px' }}>
+                      <div style={{ marginBottom: '8px' }}>
+                        <strong>search_documents</strong> - Find policy documents by jurisdiction/program
+                      </div>
+                      <div style={{ marginBottom: '8px' }}>
+                        <strong>get_eligibility_path</strong> - Discover categorical eligibility chains
+                      </div>
+                      <div style={{ marginBottom: '8px' }}>
+                        <strong>check_clarity</strong> - Get Clarity Index scores for documents
+                      </div>
+                      <div style={{ marginBottom: '8px' }}>
+                        <strong>compare_versions</strong> - Track policy changes over time
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{
+                  background: '#fff3cd',
+                  border: '1px solid #ffc107',
+                  padding: '15px',
+                  borderRadius: '4px',
+                  fontSize: '14px',
+                }}>
+                  <strong>Example Use Case:</strong> A caseworker asks Claude: "Is this family eligible for Lifeline in NC?"
+                  Claude uses the MCP server to check current documents, discover the TANF→SNAP→Lifeline pathway,
+                  and provide an accurate answer with citations.
+                </div>
               </div>
 
               <div
@@ -1541,13 +1423,12 @@ documents = response.json()`;
                   borderRadius: '4px',
                 }}
               >
-                <strong>🔑 Mock-up Note:</strong> The production API will include:
-                <ul style={{ marginTop: '10px', paddingLeft: '20px' }}>
-                  <li>Authentication via API keys</li>
-                  <li>Rate limiting (1000 requests/hour)</li>
-                  <li>Webhook notifications for document updates</li>
-                  <li>Batch operations for bulk retrieval</li>
-                  <li>Full OpenAPI/Swagger documentation</li>
+                <strong>🚀 Why This Matters:</strong>
+                <ul style={{ marginTop: '10px', paddingLeft: '20px', margin: 0 }}>
+                  <li>Rules engines get authoritative sources for every calculation</li>
+                  <li>AI tools provide accurate benefits info without hallucination</li>
+                  <li>Developers can build on stable infrastructure that won't break</li>
+                  <li>Every response includes traceable citations to official documents</li>
                 </ul>
               </div>
             </div>
@@ -1708,118 +1589,709 @@ documents = response.json()`;
 
           {activeTab === 'knowledge' && (
             <div className="demo-knowledge-section">
-              <h3>Knowledge Graph: Revealing Hidden Eligibility Pathways</h3>
+              <h3>PolicyEngine Atlas: Bridging Analysis and Access</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Our unique integration with PolicyEngine's rules engine creates a knowledge graph that
-                reveals program connections invisible to traditional document search. Discover how
-                categorical eligibility creates hidden pathways to benefits.
+                <strong>For Policy Analysts:</strong> Authoritative documents with version history and citations.
+                <strong> For Caseworkers:</strong> Instant eligibility pathways and clear guidance.
+                Atlas uniquely serves both communities by connecting documents to real-world eligibility.
               </p>
 
+              {/* Simple Document Search */}
+              <div style={{ marginBottom: '30px' }}>
+                <h4 style={{ marginBottom: '15px' }}>📂 Document Search</h4>
+                <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
+                  <div className="demo-controls" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '20px' }}>
+                    <div className="demo-select" style={{ flex: '1', minWidth: '150px' }}>
+                      <label htmlFor="jurisdiction" style={{ display: 'block', marginBottom: '5px', fontSize: '12px', fontWeight: 'bold' }}>
+                        Jurisdiction
+                      </label>
+                      <select
+                        id="jurisdiction"
+                        value={jurisdiction}
+                        onChange={(e) => setJurisdiction(e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc',
+                        }}
+                      >
+                        <option value="federal">Federal</option>
+                        <option value="nc">North Carolina</option>
+                        <option value="ca">California</option>
+                        <option value="ny">New York</option>
+                        <option value="tx">Texas</option>
+                      </select>
+                    </div>
+                    <div className="demo-select" style={{ flex: '1', minWidth: '150px' }}>
+                      <label htmlFor="program" style={{ display: 'block', marginBottom: '5px', fontSize: '12px', fontWeight: 'bold' }}>
+                        Program
+                      </label>
+                      <select
+                        id="program"
+                        value={program}
+                        onChange={(e) => setProgram(e.target.value)}
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc',
+                        }}
+                      >
+                        <option value="snap">SNAP</option>
+                        <option value="medicaid">Medicaid</option>
+                        <option value="tanf">TANF</option>
+                        <option value="wic">WIC</option>
+                        <option value="ssi">SSI</option>
+                        <option value="lifeline">Lifeline</option>
+                      </select>
+                    </div>
+                    <div className="demo-select" style={{ flex: '1', minWidth: '150px' }}>
+                      <label htmlFor="doctype" style={{ display: 'block', marginBottom: '5px', fontSize: '12px', fontWeight: 'bold' }}>
+                        Document Type
+                      </label>
+                      <select
+                        id="doctype"
+                        style={{
+                          width: '100%',
+                          padding: '8px',
+                          borderRadius: '4px',
+                          border: '1px solid #ccc',
+                        }}
+                      >
+                        <option value="all">All Types</option>
+                        <option value="statute">Statutes</option>
+                        <option value="regulation">Regulations</option>
+                        <option value="manual">Policy Manuals</option>
+                        <option value="form">Forms</option>
+                        <option value="guidance">Guidance</option>
+                      </select>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+                      <button 
+                        className="demo-button" 
+                        onClick={searchDocuments}
+                        style={{
+                          padding: '8px 20px',
+                          background: 'var(--teal-accent)',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                          fontWeight: 'bold',
+                        }}
+                      >
+                        Search Atlas
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Search Results Preview */}
+                  <div style={{ 
+                    background: 'white', 
+                    border: '1px solid #dee2e6', 
+                    borderRadius: '4px', 
+                    padding: '15px',
+                  }}>
+                    <div style={{ marginBottom: '10px', fontSize: '13px', color: 'var(--gray)' }}>
+                      Showing results for: <strong>{jurisdictionNames[jurisdiction]} - {programNames[program]}</strong>
+                    </div>
+                    <div style={{ display: 'grid', gap: '10px' }}>
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '10px',
+                        background: '#f8f9fa',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.background = '#e3f2fd'}
+                      onMouseLeave={(e) => e.currentTarget.style.background = '#f8f9fa'}>
+                        <div>
+                          <strong style={{ fontSize: '14px' }}>📄 {program.toUpperCase()} Eligibility Requirements</strong>
+                          <div style={{ fontSize: '12px', color: 'var(--gray)', marginTop: '3px' }}>
+                            Regulation • Last updated: Jan 2025 • ID: {jurisdiction.toUpperCase()}_{program.toUpperCase()}_001
+                          </div>
+                        </div>
+                        <button style={{
+                          padding: '5px 10px',
+                          background: 'var(--blue)',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '3px',
+                          fontSize: '12px',
+                          cursor: 'pointer',
+                        }}>
+                          Download
+                        </button>
+                      </div>
+                      <div style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '10px',
+                        background: '#f8f9fa',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.background = '#e3f2fd'}
+                      onMouseLeave={(e) => e.currentTarget.style.background = '#f8f9fa'}>
+                        <div>
+                          <strong style={{ fontSize: '14px' }}>📋 Application Form</strong>
+                          <div style={{ fontSize: '12px', color: 'var(--gray)', marginTop: '3px' }}>
+                            Form • Version 2024-10 • ID: {jurisdiction.toUpperCase()}_{program.toUpperCase()}_FORM_001
+                          </div>
+                        </div>
+                        <button style={{
+                          padding: '5px 10px',
+                          background: 'var(--blue)',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '3px',
+                          fontSize: '12px',
+                          cursor: 'pointer',
+                        }}>
+                          Download
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Advanced Search with Knowledge Graph */}
               <div style={{ marginBottom: '25px' }}>
-                <h4>Live Example: North Carolina Lifeline Eligibility Chain</h4>
+                <h4 style={{ marginBottom: '15px' }}>🔍 Advanced Search</h4>
                 <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
                   <div style={{ marginBottom: '20px' }}>
                     <label htmlFor="knowledge-search" style={{ display: 'block', marginBottom: '10px', fontWeight: 'bold' }}>
-                      Search Query:
+                      Natural Language Query:
                     </label>
                     <input
                       id="knowledge-search"
                       type="text"
-                      value="Why is my NC household with 185% FPL income eligible for Lifeline?"
+                      value="lifeline income limit in North Carolina"
                       disabled
                       style={{
                         width: '100%',
                         padding: '10px',
                         border: '1px solid #ccc',
                         borderRadius: '4px',
-                        background: '#e9ecef',
+                        background: '#f0f0f0',
                         fontSize: '14px',
+                        cursor: 'not-allowed',
                       }}
                     />
                   </div>
 
                   <div style={{ marginBottom: '20px' }}>
-                    <h5 style={{ marginBottom: '15px' }}>📊 Knowledge Graph Analysis:</h5>
+                    <h5 style={{ marginBottom: '15px' }}>🔗 Three-Layer Knowledge Graph</h5>
                     
+                    {/* Three-layer visualization: Programs → Parameters → Documents */}
                     <div style={{
                       background: 'white',
                       border: '2px solid var(--teal-accent)',
                       borderRadius: '8px',
-                      padding: '20px',
+                      padding: '25px',
+                      overflow: 'auto',
                     }}>
-                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+                      <div style={{
+                        display: 'flex',
+                        gap: '15px',
+                        alignItems: 'stretch',
+                        minWidth: '900px',
+                      }}>
+                        {/* Layer 1: Program Eligibility Flow */}
                         <div style={{
-                          background: 'var(--teal-accent)',
-                          color: 'white',
-                          padding: '10px 15px',
-                          borderRadius: '20px',
-                          fontWeight: 'bold',
-                          marginRight: '15px'
+                          flex: '1',
+                          background: 'var(--blue-98)',
+                          borderRadius: '8px',
+                          padding: '15px',
                         }}>
-                          Step 1
+                          <h6 style={{ marginBottom: '15px', color: 'var(--blue-pressed)' }}>
+                            Program Flow
+                          </h6>
+                          
+                          {/* TANF */}
+                          <div style={{
+                            background: '#d4edda',
+                            border: '2px solid #28a745',
+                            borderRadius: '6px',
+                            padding: '10px',
+                            marginBottom: '10px',
+                          }}>
+                            <strong>TANF Non-Cash</strong>
+                            <div style={{ fontSize: '12px', marginTop: '5px' }}>
+                              NC Work First Services
+                              <br />
+                              <span style={{ color: '#28a745', fontWeight: 'bold' }}>200% FPL</span>
+                            </div>
+                          </div>
+                          
+                          <div style={{
+                            textAlign: 'center',
+                            fontSize: '20px',
+                            color: 'var(--gray)',
+                            margin: '5px 0',
+                          }}>
+                            ↓
+                          </div>
+                          
+                          {/* SNAP */}
+                          <div style={{
+                            background: '#fff3cd',
+                            border: '2px solid #ffc107',
+                            borderRadius: '6px',
+                            padding: '10px',
+                            marginBottom: '10px',
+                          }}>
+                            <strong>SNAP</strong>
+                            <div style={{ fontSize: '12px', marginTop: '5px' }}>
+                              via BBCE
+                              <br />
+                              <span style={{ color: '#ffc107', fontWeight: 'bold' }}>Auto-qualifies</span>
+                            </div>
+                          </div>
+                          
+                          <div style={{
+                            textAlign: 'center',
+                            fontSize: '20px',
+                            color: 'var(--gray)',
+                            margin: '5px 0',
+                          }}>
+                            ↓
+                          </div>
+                          
+                          {/* Lifeline */}
+                          <div style={{
+                            background: 'var(--teal-light)',
+                            border: '2px solid var(--teal-accent)',
+                            borderRadius: '6px',
+                            padding: '10px',
+                          }}>
+                            <strong>📱 Lifeline</strong>
+                            <div style={{ fontSize: '12px', marginTop: '5px' }}>
+                              Categorical Eligibility
+                              <br />
+                              <span style={{ color: 'var(--teal-pressed)', fontWeight: 'bold' }}>
+                                Qualifies at 185% FPL!
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <strong>TANF Non-Cash Benefits (NC Work First)</strong>
-                          <div style={{ fontSize: '14px', color: 'var(--gray)', marginTop: '5px' }}>
-                            North Carolina provides Work First services (childcare, transportation, counseling) 
-                            to families up to <span style={{ color: 'var(--blue)', fontWeight: 'bold' }}>200% FPL</span>
+
+                        {/* Connection arrows */}
+                        <div style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-around',
+                          width: '30px',
+                        }}>
+                          <div style={{ 
+                            borderTop: '2px dashed var(--gray)',
+                            borderRight: '2px dashed var(--gray)',
+                            width: '100%',
+                            height: '20px',
+                            opacity: 0.3,
+                          }} />
+                          <div style={{ 
+                            borderTop: '2px dashed var(--gray)',
+                            borderRight: '2px dashed var(--gray)',
+                            width: '100%',
+                            height: '20px',
+                            opacity: 0.3,
+                          }} />
+                          <div style={{ 
+                            borderTop: '2px dashed var(--gray)',
+                            borderRight: '2px dashed var(--gray)',
+                            width: '100%',
+                            height: '20px',
+                            opacity: 0.3,
+                          }} />
+                        </div>
+
+                        {/* Layer 2: PolicyEngine Parameters */}
+                        <div style={{
+                          flex: '1',
+                          background: 'var(--teal-light)',
+                          borderRadius: '8px',
+                          padding: '15px',
+                        }}>
+                          <h6 style={{ marginBottom: '15px', color: 'var(--teal-pressed)' }}>
+                            PolicyEngine Rules
+                          </h6>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid var(--teal-accent)',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '12px',
+                            fontSize: '11px',
+                            position: 'relative',
+                          }}>
+                            <div style={{ fontFamily: 'monospace' }}>
+                              <strong>gov/hhs/tanf/non_cash/income_limit</strong>
+                            </div>
+                            <div style={{ color: 'var(--gray)', marginTop: '3px' }}>
+                              value: 2.0 × FPL
+                              <br />
+                              ref: <span style={{ textDecoration: 'underline' }}>NC_WF_001</span>
+                            </div>
+                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/parameters/gov/hhs/tanf" 
+                              style={{ fontSize: '10px', color: 'var(--blue)' }}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              View in GitHub →
+                            </a>
+                          </div>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid var(--teal-accent)',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '12px',
+                            fontSize: '11px',
+                          }}>
+                            <div style={{ fontFamily: 'monospace' }}>
+                              <strong>gov/usda/snap/bbce/tanf_eligible</strong>
+                            </div>
+                            <div style={{ color: 'var(--gray)', marginTop: '3px' }}>
+                              condition: receives_tanf_non_cash
+                              <br />
+                              ref: <span style={{ textDecoration: 'underline' }}>USDA_BBCE_001</span>
+                            </div>
+                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/variables/gov/usda/snap" 
+                              style={{ fontSize: '10px', color: 'var(--blue)' }}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              View in GitHub →
+                            </a>
+                          </div>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid var(--teal-accent)',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '12px',
+                            fontSize: '11px',
+                          }}>
+                            <div style={{ fontFamily: 'monospace' }}>
+                              <strong>gov/fcc/lifeline/categorical/snap</strong>
+                            </div>
+                            <div style={{ color: 'var(--gray)', marginTop: '3px' }}>
+                              condition: snap_recipient
+                              <br />
+                              ref: <span style={{ textDecoration: 'underline' }}>FCC_038_001</span>
+                            </div>
+                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/variables/gov/fcc/lifeline" 
+                              style={{ fontSize: '10px', color: 'var(--blue)' }}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              View in GitHub →
+                            </a>
+                          </div>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid var(--teal-accent)',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            fontFamily: 'monospace',
+                            fontSize: '11px',
+                          }}>
+                            <div>
+                              <strong>gov/fcc/lifeline/income_limit</strong>
+                            </div>
+                            <div style={{ color: 'var(--gray)', marginTop: '3px' }}>
+                              value: 1.35 × FPL
+                              <br />
+                              ref: <span style={{ textDecoration: 'underline' }}>FCC_038_002</span>
+                            </div>
+                            <a href="https://github.com/PolicyEngine/policyengine-us/tree/master/policyengine_us/parameters/gov/fcc/lifeline" 
+                              style={{ fontSize: '10px', color: 'var(--blue)' }}
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              View in GitHub →
+                            </a>
+                          </div>
+                        </div>
+
+                        {/* Connection arrows */}
+                        <div style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-around',
+                          width: '30px',
+                        }}>
+                          <div style={{ 
+                            borderTop: '2px dashed var(--gray)',
+                            borderRight: '2px dashed var(--gray)',
+                            width: '100%',
+                            height: '20px',
+                            opacity: 0.3,
+                          }} />
+                          <div style={{ 
+                            borderTop: '2px dashed var(--gray)',
+                            borderRight: '2px dashed var(--gray)',
+                            width: '100%',
+                            height: '20px',
+                            opacity: 0.3,
+                          }} />
+                          <div style={{ 
+                            borderTop: '2px dashed var(--gray)',
+                            borderRight: '2px dashed var(--gray)',
+                            width: '100%',
+                            height: '20px',
+                            opacity: 0.3,
+                          }} />
+                        </div>
+
+                        {/* Layer 3: Source Documents */}
+                        <div style={{
+                          flex: '1',
+                          background: '#f8f9fa',
+                          borderRadius: '8px',
+                          padding: '15px',
+                        }}>
+                          <h6 style={{ marginBottom: '15px', color: 'var(--dark-gray)' }}>
+                            Source Documents
+                          </h6>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid #dee2e6',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '10px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s',
+                            position: 'relative',
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = '#e3f2fd';
+                            e.currentTarget.style.borderColor = 'var(--blue)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'white';
+                            e.currentTarget.style.borderColor = '#dee2e6';
+                          }}
+                          title="Click to download">
+                            <div style={{ 
+                              position: 'absolute', 
+                              top: '5px', 
+                              right: '5px',
+                              fontSize: '10px',
+                              color: 'var(--blue)',
+                              fontFamily: 'monospace',
+                              fontWeight: 'bold',
+                            }}>
+                              NC_WF_001
+                            </div>
+                            📘 <strong>NC Work First Manual</strong>
+                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                              Chapter 3, Section 3.2
+                              <br />
+                              Pages 47-52
+                              <br />
+                              <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
+                            </div>
+                          </div>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid #dee2e6',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '10px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s',
+                            position: 'relative',
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = '#e3f2fd';
+                            e.currentTarget.style.borderColor = 'var(--blue)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'white';
+                            e.currentTarget.style.borderColor = '#dee2e6';
+                          }}
+                          title="Click to download">
+                            <div style={{ 
+                              position: 'absolute', 
+                              top: '5px', 
+                              right: '5px',
+                              fontSize: '10px',
+                              color: 'var(--blue)',
+                              fontFamily: 'monospace',
+                              fontWeight: 'bold',
+                            }}>
+                              USDA_BBCE_001
+                            </div>
+                            📋 <strong>USDA SNAP BBCE Report</strong>
+                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                              2024 State Options
+                              <br />
+                              Page 47, Table 3
+                              <br />
+                              <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
+                            </div>
+                          </div>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid #dee2e6',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '10px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s',
+                            position: 'relative',
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = '#e3f2fd';
+                            e.currentTarget.style.borderColor = 'var(--blue)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'white';
+                            e.currentTarget.style.borderColor = '#dee2e6';
+                          }}
+                          title="Click to download">
+                            <div style={{ 
+                              position: 'absolute', 
+                              top: '5px', 
+                              right: '5px',
+                              fontSize: '10px',
+                              color: 'var(--blue)',
+                              fontFamily: 'monospace',
+                              fontWeight: 'bold',
+                            }}>
+                              FCC_038_001
+                            </div>
+                            📄 <strong>FCC Order 16-38</strong>
+                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                              47 CFR §54.409
+                              <br />
+                              Paragraphs (a), (b)(2)
+                              <br />
+                              <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
+                            </div>
+                          </div>
+                          
+                          <div style={{
+                            background: 'white',
+                            border: '1px solid #dee2e6',
+                            borderRadius: '4px',
+                            padding: '8px',
+                            marginBottom: '10px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                            transition: 'all 0.2s',
+                            position: 'relative',
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = '#e3f2fd';
+                            e.currentTarget.style.borderColor = 'var(--blue)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'white';
+                            e.currentTarget.style.borderColor = '#dee2e6';
+                          }}
+                          title="Click to download">
+                            <div style={{ 
+                              position: 'absolute', 
+                              top: '5px', 
+                              right: '5px',
+                              fontSize: '10px',
+                              color: 'var(--blue)',
+                              fontFamily: 'monospace',
+                              fontWeight: 'bold',
+                            }}>
+                              CFR_260_001
+                            </div>
+                            📖 <strong>45 CFR 260-265</strong>
+                            <div style={{ fontSize: '11px', color: 'var(--gray)', marginTop: '3px' }}>
+                              TANF Federal Regulations
+                              <br />
+                              §260.31 Non-cash benefits
+                              <br />
+                              <span style={{ color: 'var(--blue)' }}>📥 Download PDF</span>
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      <div style={{ 
-                        marginLeft: '25px',
-                        borderLeft: '3px solid var(--teal-accent)',
-                        height: '30px',
-                        marginBottom: '20px'
-                      }} />
-
-                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-                        <div style={{
-                          background: 'var(--teal-accent)',
-                          color: 'white',
-                          padding: '10px 15px',
-                          borderRadius: '20px',
-                          fontWeight: 'bold',
-                          marginRight: '15px'
-                        }}>
-                          Step 2
-                        </div>
-                        <div>
-                          <strong>SNAP Broad-Based Categorical Eligibility (BBCE)</strong>
-                          <div style={{ fontSize: '14px', color: 'var(--gray)', marginTop: '5px' }}>
-                            Receipt of TANF non-cash benefits makes household categorically eligible for SNAP
-                            at <span style={{ color: 'var(--blue)', fontWeight: 'bold' }}>200% FPL</span> (instead of standard 130%)
-                          </div>
+                      {/* Query context */}
+                      <div style={{
+                        marginTop: '20px',
+                        padding: '12px',
+                        background: 'var(--blue-98)',
+                        borderRadius: '6px',
+                        fontSize: '13px',
+                      }}>
+                        <strong>Query: "lifeline income limit"</strong>
+                        <div style={{ marginTop: '8px', color: 'var(--dark-gray)' }}>
+                          <strong>Traditional search:</strong> Returns "135% FPL" from FCC Order
+                          <br />
+                          <strong>Knowledge graph:</strong> Reveals complete pathway - household at 185% FPL qualifies through
+                          TANF (200% limit) → SNAP (BBCE) → Lifeline (categorical eligibility)
                         </div>
                       </div>
+                    </div>
+                  </div>
 
-                      <div style={{ 
-                        marginLeft: '25px',
-                        borderLeft: '3px solid var(--teal-accent)',
-                        height: '30px',
-                        marginBottom: '20px'
-                      }} />
-
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{ marginBottom: '20px' }}>
+                    <h5 style={{ marginBottom: '15px' }}>📊 Discovered Eligibility Pathway</h5>
+                    <div style={{
+                      background: 'white',
+                      border: '1px solid #dee2e6',
+                      borderRadius: '4px',
+                      padding: '15px',
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                         <div style={{
-                          background: 'var(--teal-accent)',
-                          color: 'white',
-                          padding: '10px 15px',
-                          borderRadius: '20px',
-                          fontWeight: 'bold',
-                          marginRight: '15px'
+                          background: '#f8d7da',
+                          padding: '8px 12px',
+                          borderRadius: '4px',
+                          fontSize: '13px',
+                          border: '1px solid #dc3545',
                         }}>
-                          Step 3
+                          NC Work First<br/>
+                          <strong>200% FPL</strong>
                         </div>
-                        <div>
-                          <strong>Lifeline Categorical Eligibility</strong>
-                          <div style={{ fontSize: '14px', color: 'var(--gray)', marginTop: '5px' }}>
-                            SNAP enrollment automatically qualifies household for Lifeline phone/internet discount
-                            (Your household at <span style={{ color: 'var(--blue)', fontWeight: 'bold' }}>185% FPL</span> qualifies!)
-                          </div>
+                        <span style={{ color: 'var(--gray)' }}>→</span>
+                        <div style={{
+                          background: '#fff3cd',
+                          padding: '8px 12px',
+                          borderRadius: '4px',
+                          fontSize: '13px',
+                          border: '1px solid #ffc107',
+                        }}>
+                          SNAP BBCE<br/>
+                          <strong>Auto-qualify</strong>
+                        </div>
+                        <span style={{ color: 'var(--gray)' }}>→</span>
+                        <div style={{
+                          background: 'var(--teal-light)',
+                          padding: '8px 12px',
+                          borderRadius: '4px',
+                          fontSize: '13px',
+                          border: '1px solid var(--teal-accent)',
+                        }}>
+                          Lifeline<br/>
+                          <strong>Eligible!</strong>
                         </div>
                       </div>
+                      <p style={{ marginTop: '15px', fontSize: '14px', color: 'var(--gray)' }}>
+                        <strong>Hidden pathway discovered:</strong> Households at 185% FPL can qualify for Lifeline 
+                        (normally 135% limit) through TANF non-cash → SNAP → Lifeline categorical eligibility chain.
+                      </p>
                     </div>
                   </div>
 
@@ -1830,32 +2302,56 @@ documents = response.json()`;
                     borderRadius: '4px',
                     marginBottom: '20px'
                   }}>
-                    <strong>✅ Result:</strong> Your household qualifies for Lifeline through this eligibility chain,
-                    even though 185% FPL exceeds Lifeline's direct income limit of 135% FPL.
+                    <strong>💡 Key Insight:</strong> Traditional document search would return the Lifeline 135% FPL limit. 
+                    Our knowledge graph reveals the complete eligibility network, showing all pathways including 
+                    categorical eligibility through connected programs.
                   </div>
 
                   <div style={{ marginBottom: '20px' }}>
-                    <h5 style={{ marginBottom: '10px' }}>📚 Source Documents:</h5>
-                    <div style={{ background: 'white', border: '1px solid #dee2e6', borderRadius: '4px', padding: '15px' }}>
-                      <div style={{ marginBottom: '10px' }}>
-                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
-                          • NC Work First Manual Ch. 3 - Income Eligibility (200% FPL)
-                        </a>
+                    <h5 style={{ marginBottom: '10px' }}>📚 Document Details</h5>
+                    <div style={{ 
+                      display: 'grid', 
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                      gap: '10px'
+                    }}>
+                      <div style={{ 
+                        background: 'white', 
+                        border: '1px solid #dee2e6', 
+                        borderRadius: '4px', 
+                        padding: '10px',
+                        fontSize: '13px',
+                      }}>
+                        <strong style={{ color: 'var(--blue)' }}>FCC Order 16-38</strong>
+                        <div style={{ color: 'var(--gray)', marginTop: '5px' }}>
+                          Federal • Regulation • 2016<br/>
+                          Defines Lifeline qualifying programs
+                        </div>
                       </div>
-                      <div style={{ marginBottom: '10px' }}>
-                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
-                          • USDA SNAP BBCE State Options Report - North Carolina
-                        </a>
+                      <div style={{ 
+                        background: 'white', 
+                        border: '1px solid #dee2e6', 
+                        borderRadius: '4px', 
+                        padding: '10px',
+                        fontSize: '13px',
+                      }}>
+                        <strong style={{ color: 'var(--blue)' }}>USDA SNAP BBCE Report</strong>
+                        <div style={{ color: 'var(--gray)', marginTop: '5px' }}>
+                          Federal • Guidance • 2024<br/>
+                          State-by-state BBCE policies
+                        </div>
                       </div>
-                      <div style={{ marginBottom: '10px' }}>
-                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
-                          • FCC Lifeline Order 16-38 - Categorical Eligibility Programs
-                        </a>
-                      </div>
-                      <div>
-                        <a href="#" style={{ color: 'var(--blue)', textDecoration: 'none' }}>
-                          • PolicyEngine US Parameters: gov/hhs/tanf/non_cash/income_limit
-                        </a>
+                      <div style={{ 
+                        background: 'white', 
+                        border: '1px solid #dee2e6', 
+                        borderRadius: '4px', 
+                        padding: '10px',
+                        fontSize: '13px',
+                      }}>
+                        <strong style={{ color: 'var(--blue)' }}>NC Work First Manual</strong>
+                        <div style={{ color: 'var(--gray)', marginTop: '5px' }}>
+                          State • Policy Manual • 2024<br/>
+                          Income limits for non-cash TANF
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -2,9 +2,9 @@ function Overview() {
   return (
     <div className="section">
       <div className="hero">
-        <h1>Policy Library</h1>
+        <h1>PolicyEngine Atlas</h1>
         <p className="hero-subtitle">
-          Comprehensive Document Infrastructure with AI-Powered Clarity Analysis
+          Navigate the Policy Landscape: AI-Powered Document Mapping and Hidden Eligibility Discovery
         </p>
         <div className="hero-stats">
           <div className="hero-stat">
@@ -44,10 +44,10 @@ function Overview() {
           <div className="card solution-card">
             <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
-              The Policy Library uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
-              levels. We deliver specific recommendations: "Your eligibility criteria has ambiguity
-              score X, correlating with Y% higher error rates—here's how to clarify." The supporting
-              document library ensures comprehensive analysis across all jurisdictions.
+              PolicyEngine Atlas uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
+              levels and revealing program connections. We deliver specific recommendations: "Your eligibility 
+              criteria has Atlas Clarity Score X, correlating with Y% higher error rates—here's how to clarify." 
+              Plus, our knowledge graph reveals hidden eligibility pathways across programs.
             </p>
             <br />
             <p>
