@@ -27,9 +27,9 @@ function Overview() {
           <div className="card problem-card">
             <h2 className="card-title">Ambiguous Policies Cause Errors</h2>
             <p>
-              Many states struggle with benefit accuracy due to ambiguous policy language that creates inconsistent
-              caseworker interpretations. When the same eligibility criteria can be read multiple
-              ways, errors are inevitable.
+              Many states struggle with benefit accuracy due to ambiguous policy language that
+              creates inconsistent caseworker interpretations. When the same eligibility criteria
+              can be read multiple ways, errors are inevitable.
             </p>
             <br />
             <p>
@@ -45,10 +45,9 @@ function Overview() {
             <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
               The Policy Library uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
-              levels. We deliver specific
-              recommendations: "Your eligibility criteria has ambiguity score X, correlating with Y%
-              higher error rates—here's how to clarify." The supporting document library ensures
-              comprehensive analysis across all jurisdictions.
+              levels. We deliver specific recommendations: "Your eligibility criteria has ambiguity
+              score X, correlating with Y% higher error rates—here's how to clarify." The supporting
+              document library ensures comprehensive analysis across all jurisdictions.
             </p>
             <br />
             <p>

@@ -2,174 +2,174 @@
 # Each question with word limits and requirements
 
 metadata:
-  program: "Public Benefit Innovation Fund"
-  period: "Summer 2025"
+  program: 'Public Benefit Innovation Fund'
+  period: 'Summer 2025'
   total_grant_request: 700000
   project_duration_months: 24
-  submission_deadline: "2025-08-16T23:59:00-07:00"
+  submission_deadline: '2025-08-16T23:59:00-07:00'
 
 sections:
   - id: executive_summary
-    title: "Executive Summary"
+    title: 'Executive Summary'
     section: 1
     required: true
     word_limit: 250
-    description: "Provide a high-level overview of your project"
-    file: "responses/01_executive_summary.md"
+    description: 'Provide a high-level overview of your project'
+    file: 'responses/01_executive_summary.md'
 
   - id: stage_of_development
-    title: "Stage of Development Description"
+    title: 'Stage of Development Description'
     section: 1
     required: true
     word_limit: 250
-    description: "Describe your current stage and evidence of progress"
-    file: "responses/02_stage_of_development.md"
+    description: 'Describe your current stage and evidence of progress'
+    file: 'responses/02_stage_of_development.md'
 
   - id: problem_statement
-    title: "Problem Statement"
+    title: 'Problem Statement'
     section: 2
     required: true
     word_limit: 250
     description: "Clearly articulate the specific problem you're solving"
-    file: "responses/03_problem_statement.md"
+    file: 'responses/03_problem_statement.md'
 
   - id: solution_beneficiaries
-    title: "Solution & Target Beneficiaries"
+    title: 'Solution & Target Beneficiaries'
     section: 2
     required: true
     word_limit: 250
-    description: "Describe your solution and who will benefit"
-    file: "responses/04_solution_beneficiaries.md"
+    description: 'Describe your solution and who will benefit'
+    file: 'responses/04_solution_beneficiaries.md'
 
   - id: impact_evaluation
-    title: "Proposed Benefit and Impact Evaluation"
+    title: 'Proposed Benefit and Impact Evaluation'
     section: 2
     required: true
     word_limit: 250
-    description: "How will you measure and evaluate impact"
-    file: "responses/05_impact_evaluation.md"
+    description: 'How will you measure and evaluate impact'
+    file: 'responses/05_impact_evaluation.md'
 
   - id: responsible_design
-    title: "Responsible Design and Use"
+    title: 'Responsible Design and Use'
     section: 2
     required: true
     word_limit: 250
-    description: "Address privacy, security, bias, and ethical considerations"
-    file: "responses/06_responsible_design.md"
+    description: 'Address privacy, security, bias, and ethical considerations'
+    file: 'responses/06_responsible_design.md'
 
   - id: adoption_scale
-    title: "Adoption and Path to Scale"
+    title: 'Adoption and Path to Scale'
     section: 2
     required: true
     word_limit: 250
-    description: "Explain adoption strategy and scaling plan"
-    file: "responses/07_adoption_scale.md"
+    description: 'Explain adoption strategy and scaling plan'
+    file: 'responses/07_adoption_scale.md'
 
   - id: dissemination_learning
-    title: "Dissemination & Learning"
+    title: 'Dissemination & Learning'
     section: 2
     required: true
     word_limit: 250
-    description: "How will you share learnings and best practices"
-    file: "responses/08_dissemination_learning.md"
+    description: 'How will you share learnings and best practices'
+    file: 'responses/08_dissemination_learning.md'
 
   - id: solution_description
-    title: "Solution Description"
+    title: 'Solution Description'
     section: 3
     required: true
     word_limit: 250
-    description: "Technical description of your solution"
-    file: "responses/09_solution_description.md"
+    description: 'Technical description of your solution'
+    file: 'responses/09_solution_description.md'
 
   - id: data_sources
-    title: "Data Strategy - Data Sources"
+    title: 'Data Strategy - Data Sources'
     section: 3
     required: true
     word_limit: 250
-    description: "Describe data sources and collection methods"
-    file: "responses/10_data_sources.md"
+    description: 'Describe data sources and collection methods'
+    file: 'responses/10_data_sources.md'
 
   - id: data_management
-    title: "Data Strategy - Data Management"
+    title: 'Data Strategy - Data Management'
     section: 3
     required: true
     word_limit: 250
-    description: "Explain data governance, quality, and management"
-    file: "responses/11_data_management.md"
+    description: 'Explain data governance, quality, and management'
+    file: 'responses/11_data_management.md'
 
   - id: stakeholder_engagement
-    title: "Stakeholder Engagement"
+    title: 'Stakeholder Engagement'
     section: 3
     required: true
     word_limit: 250
-    description: "How will you engage with stakeholders and users"
-    file: "responses/12_stakeholder_engagement.md"
+    description: 'How will you engage with stakeholders and users'
+    file: 'responses/12_stakeholder_engagement.md'
 
   - id: resources_infrastructure
-    title: "Resources and Infrastructure"
+    title: 'Resources and Infrastructure'
     section: 3
     required: true
     word_limit: 250
-    description: "Technical infrastructure and resource requirements"
-    file: "responses/13_resources_infrastructure.md"
+    description: 'Technical infrastructure and resource requirements'
+    file: 'responses/13_resources_infrastructure.md'
 
   - id: scalability_sustainability
-    title: "Scalability & Sustainability"
+    title: 'Scalability & Sustainability'
     section: 3
     required: true
     word_limit: 250
-    description: "Long-term sustainability and scaling approach"
-    file: "responses/14_scalability_sustainability.md"
+    description: 'Long-term sustainability and scaling approach'
+    file: 'responses/14_scalability_sustainability.md'
 
   - id: financial_viability
-    title: "Financial Viability"
+    title: 'Financial Viability'
     section: 3
     required: true
     word_limit: 250
-    description: "Financial sustainability beyond grant period"
-    file: "responses/15_financial_viability.md"
+    description: 'Financial sustainability beyond grant period'
+    file: 'responses/15_financial_viability.md'
 
 attachments:
   - id: team_bios
-    title: "Team Member Biographies"
+    title: 'Team Member Biographies'
     required: true
-    file: "attachments/team_bios.pdf"
+    file: 'attachments/team_bios.pdf'
 
   - id: project_plan
-    title: "Project Plan/Roadmap with Milestones"
+    title: 'Project Plan/Roadmap with Milestones'
     required: true
-    file: "attachments/project_roadmap.pdf"
+    file: 'attachments/project_roadmap.pdf'
 
   - id: budget_template
-    title: "PBIF Budget Template (Completed)"
+    title: 'PBIF Budget Template (Completed)'
     required: true
-    file: "attachments/pbif_budget.xlsx"
-    notes: "Use pbif_budget_filler to generate"
+    file: 'attachments/pbif_budget.xlsx'
+    notes: 'Use pbif_budget_filler to generate'
 
   - id: org_budget
-    title: "Organizational Budget 2026-2027"
+    title: 'Organizational Budget 2026-2027'
     required: true
-    file: "attachments/org_budget_2026_2027.pdf"
+    file: 'attachments/org_budget_2026_2027.pdf'
 
   - id: letters_support
-    title: "Letters of Support"
+    title: 'Letters of Support'
     required: false
     recommended: true
     expected_from:
-      - "Federal Reserve Bank of Atlanta"
-      - "Georgetown University (Better Government Lab)"
-      - "University of Michigan"
-      - "MyFriendBen"
-      - "Benefit Navigator"
+      - 'Federal Reserve Bank of Atlanta'
+      - 'Georgetown University (Better Government Lab)'
+      - 'University of Michigan'
+      - 'MyFriendBen'
+      - 'Benefit Navigator'
 
 basic_info:
-  project_title: "PolicyEngine Policy Library"
-  organization_name: "PolicyEngine"
-  organization_type: "Non-profit"
+  project_title: 'PolicyEngine Policy Library'
+  organization_name: 'PolicyEngine'
+  organization_type: 'Non-profit'
   primary_contact:
-    name: "Max Ghenis"
-    title: "CEO"
-    email: "max@policyengine.org"
-  project_start_date: "2025-11-01"
-  project_end_date: "2027-10-31"
-  stage_of_development: "Pilot ready"
+    name: 'Max Ghenis'
+    title: 'CEO'
+    email: 'max@policyengine.org'
+  project_start_date: '2025-11-01'
+  project_end_date: '2027-10-31'
+  stage_of_development: 'Pilot ready'

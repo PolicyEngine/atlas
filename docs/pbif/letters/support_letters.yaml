@@ -7,27 +7,27 @@ pdf_letters:
     title: Director
     file: BGL Letter of Support - PolicyEngine PBIF Application.pdf
     date: 2025-08-15
-    
+
   - organization: Prenatal-to-3 Policy Impact Center
     institution: Vanderbilt University
     contact: Cynthia Osborne
     title: Executive Director
     file: Letter of Support - Prenatal-to-3 Policy Impact Center.pdf
     date: 2025-08-16
-    
+
   - organization: Benefit Kitchen
     contact: Daniel Beeby
     file: Letter of Support_ PBIF Application for Policy Library - Google Docs.pdf
     date: 2025-08-15
     notes: Relies on authoritative policy documents for benefit eligibility nationwide
-    
+
   - organization: National Bureau of Economic Research (NBER)
     contact: James M. Poterba
     title: President and CEO
     file: PolicyEngine collaboration 081525.pdf
     date: 2025-08-15
     contribution: Dan Feenberg's historical tax form archive from TAXSIM
-    
+
   - organization: Urban Institute
     contact: Catalina Carrizosa
     title: Contracts Administrator
@@ -49,7 +49,7 @@ markdown_drafts:
     status: simplified
     word_count: ~200
     notes: Last-minute review version
-    
+
   - organization: Policy Simulation Library (PSL)
     file: policy-simulation-library.md
     status: simplified
@@ -61,7 +61,7 @@ summary:
   confirmed_pdfs: 5
   pending_drafts: 2
   word_document: 1
-  
+
   key_supporters:
     research_institutions:
       - Georgetown University (BGL)
@@ -69,15 +69,15 @@ summary:
       - NBER
       - Urban Institute
       - USC
-    
+
     benefit_tools:
       - Benefit Kitchen
       - SnapScreener
-    
+
     policy_modeling:
       - Policy Simulation Library
-      
+
   major_contributions:
-    - "NBER: Historical tax form archive"
-    - "Urban: Policy documents from microsimulation models"
-    - "PSL: Federal tax forms and IRS documentation"
+    - 'NBER: Historical tax form archive'
+    - 'Urban: Policy documents from microsimulation models'
+    - 'PSL: Federal tax forms and IRS documentation'

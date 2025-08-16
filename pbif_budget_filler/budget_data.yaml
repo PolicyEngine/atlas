@@ -5,145 +5,145 @@ personnel:
   # Row 4-7: Position Title (B), Effort % (C), Base Salary (E), Fringe Rate (G)
   # Column A should be left empty for names (not using names per instructions)
   # Adjusted FTE to keep under $700k total budget for 2 years
-  - position_title: "Project Lead"
-    effort_pct: 20      # 0.2 FTE
+  - position_title: 'Project Lead'
+    effort_pct: 20 # 0.2 FTE
     base_salary: 150000
-    fringe_rate: 0.25   # 403b contribution only
-  
-  - position_title: "Lead Engineer"
-    effort_pct: 40      # 0.4 FTE
+    fringe_rate: 0.25 # 403b contribution only
+
+  - position_title: 'Lead Engineer'
+    effort_pct: 40 # 0.4 FTE
     base_salary: 140000
-    fringe_rate: 0.25   # 403b contribution only
-  
-  - position_title: "ML/AI Engineer"
-    effort_pct: 40      # 0.4 FTE
+    fringe_rate: 0.25 # 403b contribution only
+
+  - position_title: 'ML/AI Engineer'
+    effort_pct: 40 # 0.4 FTE
     base_salary: 120000
-    fringe_rate: 0.25   # 403b contribution only
-  
-  - position_title: "Policy Analyst"
-    effort_pct: 30      # 0.3 FTE
+    fringe_rate: 0.25 # 403b contribution only
+
+  - position_title: 'Policy Analyst'
+    effort_pct: 30 # 0.3 FTE
     base_salary: 90000
-    fringe_rate: 0.25   # 403b contribution only
+    fringe_rate: 0.25 # 403b contribution only
 
 travel:
   # Travel entries for 2-year grant period with GSA per diem rates
-  - purpose: "Partner integration - MyFriendBen (2x over 2 years)"
-    depart_from: "Washington DC"
-    destination: "Denver CO"
+  - purpose: 'Partner integration - MyFriendBen (2x over 2 years)'
+    depart_from: 'Washington DC'
+    destination: 'Denver CO'
     days: 2
     travelers: 1
-    lodging_per_traveler: 215  # GSA FY25 rate
+    lodging_per_traveler: 215 # GSA FY25 rate
     flight_per_traveler: 600
     vehicle_per_traveler: 0
-    mie_per_traveler: 92  # GSA FY25 rate
-    basis: "GSA FY25 per diem for Denver CO - 2 trips total"
-  
-  - purpose: "Partner integration - Benefit Navigator (2x over 2 years)"
-    depart_from: "Washington DC"
-    destination: "Los Angeles CA"
+    mie_per_traveler: 92 # GSA FY25 rate
+    basis: 'GSA FY25 per diem for Denver CO - 2 trips total'
+
+  - purpose: 'Partner integration - Benefit Navigator (2x over 2 years)'
+    depart_from: 'Washington DC'
+    destination: 'Los Angeles CA'
     days: 2
     travelers: 1
-    lodging_per_traveler: 220  # GSA FY25 rate
+    lodging_per_traveler: 220 # GSA FY25 rate
     flight_per_traveler: 650
     vehicle_per_traveler: 0
-    mie_per_traveler: 89  # GSA FY25 rate
-    basis: "GSA FY25 per diem for Los Angeles CA - 2 trips total"
-  
-  - purpose: "Code for America Summit (2x over 2 years)"
-    depart_from: "Washington DC"
-    destination: "San Francisco CA"
+    mie_per_traveler: 89 # GSA FY25 rate
+    basis: 'GSA FY25 per diem for Los Angeles CA - 2 trips total'
+
+  - purpose: 'Code for America Summit (2x over 2 years)'
+    depart_from: 'Washington DC'
+    destination: 'San Francisco CA'
     days: 3
     travelers: 1
-    lodging_per_traveler: 272  # GSA FY25 rate
+    lodging_per_traveler: 272 # GSA FY25 rate
     flight_per_traveler: 700
     vehicle_per_traveler: 0
-    mie_per_traveler: 92  # GSA FY25 rate
-    basis: "GSA FY25 per diem for San Francisco CA - 2 trips total"
-  
-  - purpose: "NAWRS Conference (2x over 2 years)"
-    depart_from: "Washington DC"
-    destination: "Chicago IL"
+    mie_per_traveler: 92 # GSA FY25 rate
+    basis: 'GSA FY25 per diem for San Francisco CA - 2 trips total'
+
+  - purpose: 'NAWRS Conference (2x over 2 years)'
+    depart_from: 'Washington DC'
+    destination: 'Chicago IL'
     days: 3
     travelers: 2
-    lodging_per_traveler: 205  # GSA FY25 rate
+    lodging_per_traveler: 205 # GSA FY25 rate
     flight_per_traveler: 400
     vehicle_per_traveler: 0
-    mie_per_traveler: 85  # GSA FY25 rate
-    basis: "GSA FY25 per diem for Chicago IL - 2 trips total"
+    mie_per_traveler: 85 # GSA FY25 rate
+    basis: 'GSA FY25 per diem for Chicago IL - 2 trips total'
 
 equipment:
   # Empty - all items are under $5,000 per unit threshold
 
-supplies: []  # Empty - all items moved to Other Direct Costs or removed
+supplies: [] # Empty - all items moved to Other Direct Costs or removed
 
 contractual:
-  - subaward_number: "LOI-1"
-    subawardee: "MyFriendBen"
-    pi_pd: ""
+  - subaward_number: 'LOI-1'
+    subawardee: 'MyFriendBen'
+    pi_pd: ''
     total_cost: 50000
-    justification: "Demonstration partner to integrate and test Policy Library with 3,500 monthly users for document retrieval and AI-powered benefit calculations"
-  
-  - subaward_number: "LOI-2"
-    subawardee: "Benefit Navigator"
-    pi_pd: ""
+    justification: 'Demonstration partner to integrate and test Policy Library with 3,500 monthly users for document retrieval and AI-powered benefit calculations'
+
+  - subaward_number: 'LOI-2'
+    subawardee: 'Benefit Navigator'
+    pi_pd: ''
     total_cost: 50000
-    justification: "Demonstration partner to test Policy Library integration with 500+ caseworkers for source validation and benefit eligibility"
-  
-  - subaward_number: "LOI-3"
-    subawardee: "Citizen Codex"
-    pi_pd: ""
+    justification: 'Demonstration partner to test Policy Library integration with 500+ caseworkers for source validation and benefit eligibility'
+
+  - subaward_number: 'LOI-3'
+    subawardee: 'Citizen Codex'
+    pi_pd: ''
     total_cost: 30000
-    justification: "UX research and interface design for Policy Library user experience"
+    justification: 'UX research and interface design for Policy Library user experience'
 
 other_direct:
-  - expense_type: "Cloud Computing & Storage"
+  - expense_type: 'Cloud Computing & Storage'
     total_cost: 15000
-    unit_cost: ""
-    category: "Cloud services"
-    justification: "Cloud compute for ML training, document storage (5K docs), and API hosting over 2 years"
-  
-  - expense_type: "AI API Services"
+    unit_cost: ''
+    category: 'Cloud services'
+    justification: 'Cloud compute for ML training, document storage (5K docs), and API hosting over 2 years'
+
+  - expense_type: 'AI API Services'
     total_cost: 12000
-    unit_cost: ""
-    category: "API services"
-    justification: "OpenAI/Anthropic API usage for document extraction, classification, Clarity Index scoring, and semantic search embeddings for 5K documents"
-  
-  - expense_type: "AI Coding Tools"
+    unit_cost: ''
+    category: 'API services'
+    justification: 'OpenAI/Anthropic API usage for document extraction, classification, Clarity Index scoring, and semantic search embeddings for 5K documents'
+
+  - expense_type: 'AI Coding Tools'
     total_cost: 5000
-    unit_cost: ""
-    category: "Development tools"
-    justification: "AI coding assistants for development team"
-  
-  - expense_type: "Code for America Summit Registration"
-    total_cost: 1000  # 2 conferences x $500 each
-    unit_cost: ""
-    category: "Conference registration"
-    justification: "Registration fees for 2 Code for America Summit conferences over 2 years"
-  
-  - expense_type: "NAWRS Conference Registration"
-    total_cost: 1600  # 2 conferences x 2 people x $400 each
-    unit_cost: ""
-    category: "Conference registration"
-    justification: "Registration fees for 2 NAWRS conferences (2 attendees each) over 2 years"
-  
-  - expense_type: "Technical Advisory Services"
+    unit_cost: ''
+    category: 'Development tools'
+    justification: 'AI coding assistants for development team'
+
+  - expense_type: 'Code for America Summit Registration'
+    total_cost: 1000 # 2 conferences x $500 each
+    unit_cost: ''
+    category: 'Conference registration'
+    justification: 'Registration fees for 2 Code for America Summit conferences over 2 years'
+
+  - expense_type: 'NAWRS Conference Registration'
+    total_cost: 1600 # 2 conferences x 2 people x $400 each
+    unit_cost: ''
+    category: 'Conference registration'
+    justification: 'Registration fees for 2 NAWRS conferences (2 attendees each) over 2 years'
+
+  - expense_type: 'Technical Advisory Services'
     total_cost: 20000
-    unit_cost: ""
-    category: "Professional services"
-    justification: "Expert guidance from Urban Institute, GCO, NBER and others on document collection strategy and policy implementation"
-  
-  - expense_type: "Search & Clarity Index Infrastructure"
+    unit_cost: ''
+    category: 'Professional services'
+    justification: 'Expert guidance from Urban Institute, GCO, NBER and others on document collection strategy and policy implementation'
+
+  - expense_type: 'Search & Clarity Index Infrastructure'
     total_cost: 10000
-    unit_cost: ""
-    category: "Search and analysis services"
-    justification: "Basic search functionality for 5K documents plus Clarity Index scoring system to measure document ambiguity across all programs"
-  
-  - expense_type: "Document Verification Program"
+    unit_cost: ''
+    category: 'Search and analysis services'
+    justification: 'Basic search functionality for 5K documents plus Clarity Index scoring system to measure document ambiguity across all programs'
+
+  - expense_type: 'Document Verification Program'
     total_cost: 15000
-    unit_cost: ""
-    category: "Performance-based awards"
-    justification: "Performance-based payments to trusted research partners for verifying AI-collected documents and contributing missing ones"
+    unit_cost: ''
+    category: 'Performance-based awards'
+    justification: 'Performance-based payments to trusted research partners for verifying AI-collected documents and contributing missing ones'
 
 indirect:
   rate_percentage: 15
-  explanation: "15% indirect rate covers: 7% fiscal sponsor fee, office rent, employer payroll taxes, and administrative overhead. Note: employer 403b contributions are in fringe benefits."
+  explanation: '15% indirect rate covers: 7% fiscal sponsor fee, office rent, employer payroll taxes, and administrative overhead. Note: employer 403b contributions are in fringe benefits.'
