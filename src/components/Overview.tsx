@@ -43,7 +43,7 @@ function Overview() {
           <div className="card solution-card">
             <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
-              PolicyClarity uses Claude/GPT-4 to analyze policy documents, scoring ambiguity levels
+              The Policy Library uses Claude/GPT-4 to analyze policy documents, scoring ambiguity levels
               and correlating them with actual SNAP error rates. We deliver specific recommendations:
               "Your eligibility criteria has ambiguity score X, correlating with Y% higher error
               rates—here's how to clarify." The supporting document library ensures comprehensive
@@ -61,7 +61,7 @@ function Overview() {
         </div>
 
         <div className="workflow-container">
-          <h2 className="workflow-title">How PolicyClarity Works</h2>
+          <h2 className="workflow-title">How the Clarity Index Works</h2>
           <div className="workflow">
             <div className="workflow-step">
               <div className="workflow-icon">📄</div>

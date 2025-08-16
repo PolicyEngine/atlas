@@ -1,22 +1,10 @@
 import { useState } from 'react';
 
-interface MockDocument {
-  title: string;
-  id: string;
-  lastUpdated: string;
-  versions: number;
-  excerpt: string;
-  url?: string;
-}
 
 function Demo() {
   const [jurisdiction, setJurisdiction] = useState('federal');
   const [program, setProgram] = useState('snap');
-  const [doctype, setDoctype] = useState('statute');
-  const [showResults, setShowResults] = useState(false);
   const [activeTab, setActiveTab] = useState<'library' | 'clarity' | 'bounty' | 'dashboard' | 'api' | 'mcp'>('library');
-  const [uploadFile, setUploadFile] = useState<File | null>(null);
-  const [uploadUrl, setUploadUrl] = useState('');
 
   const jurisdictionNames: Record<string, string> = {
     federal: 'Federal',
@@ -34,64 +22,7 @@ function Demo() {
     liheap: 'LIHEAP',
   };
 
-  const doctypeNames: Record<string, string> = {
-    statute: 'Statute',
-    regulation: 'Regulation',
-    form: 'Form',
-    guidance: 'Guidance',
-  };
 
-  const searchDocuments = () => {
-    setShowResults(true);
-  };
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setUploadFile(e.target.files[0]);
-    }
-  };
-
-  const handleSubmitDocument = () => {
-    alert(
-      'Mock-up: This would create a GitHub PR with your document for review by PolicyEngine maintainers.'
-    );
-  };
-
-  const handleDownload = (docId: string) => {
-    alert(`Mock-up: This would download document ${docId}`);
-  };
-
-  const generateMockResults = (): MockDocument[] => {
-    return [
-      {
-        title: `${jurisdictionNames[jurisdiction]} ${programNames[program]} Eligibility ${doctypeNames[doctype]}`,
-        id: `${jurisdiction}_${program}_001`,
-        lastUpdated: '2025-01-15',
-        versions: 12,
-        excerpt:
-          'This document defines the eligibility criteria and application procedures for benefits under this program...',
-        url: `https://policy-library.org/docs/${jurisdiction}/${program}/eligibility.pdf`,
-      },
-      {
-        title: `${programNames[program]} Income Limits and Asset Tests`,
-        id: `${jurisdiction}_${program}_002`,
-        lastUpdated: '2025-01-08',
-        versions: 8,
-        excerpt:
-          'Income and asset limits are adjusted annually based on federal poverty guidelines and cost of living...',
-        url: `https://policy-library.org/docs/${jurisdiction}/${program}/income-limits.pdf`,
-      },
-      {
-        title: `Administrative Procedures for ${programNames[program]}`,
-        id: `${jurisdiction}_${program}_003`,
-        lastUpdated: '2024-12-20',
-        versions: 15,
-        excerpt:
-          'State agencies must follow these procedures when processing applications and conducting reviews...',
-        url: `https://policy-library.org/docs/${jurisdiction}/${program}/admin-procedures.pdf`,
-      },
-    ];
-  };
 
   const apiExample = `# Python example
 import requests
@@ -665,7 +596,7 @@ documents = response.json()`;
                   <h5 style={{ marginBottom: '15px' }}>Clarity Improvement Timeline</h5>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                     <span>Current State</span>
-                    <span>After PolicyClarity</span>
+                    <span>After Clarity Analysis</span>
                   </div>
                   <div style={{ background: 'white', height: '40px', borderRadius: '20px', position: 'relative', overflow: 'hidden' }}>
                     <div style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '60%', background: 'linear-gradient(to right, #dc3545, #ffc107)', borderRadius: '20px 0 0 20px' }} />
@@ -701,7 +632,8 @@ documents = response.json()`;
             </div>
           )}
 
-          {false && activeTab === 'impact' && (
+          {/* Hidden impact tab with made-up numbers - commented out
+          {activeTab === 'impact' && (
             <div className="demo-impact-section">
               <h3>ROI Calculator for Your State</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
@@ -748,7 +680,7 @@ documents = response.json()`;
                   </div>
 
                   <div>
-                    <strong>After PolicyClarity</strong>
+                    <strong>After Clarity Analysis</strong>
                     <div style={{ background: '#d4edda', padding: '15px', borderRadius: '8px', marginTop: '10px' }}>
                       <div style={{ marginBottom: '10px' }}>
                         <div style={{ fontSize: '12px', color: 'var(--gray)' }}>Projected Error Rate</div>
@@ -770,7 +702,7 @@ documents = response.json()`;
                   <strong>5-Year Projection</strong>
                   <div style={{ marginTop: '10px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                      <span>PolicyClarity Investment:</span>
+                      <span>Policy Library Investment:</span>
                       <span>$50,000</span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
@@ -806,7 +738,9 @@ documents = response.json()`;
               </div>
             </div>
           )}
+          */}
 
+          {/* Hidden search tab - not in UI
           {activeTab === 'search' && (
             <>
               <div className="demo-controls">
@@ -905,7 +839,9 @@ documents = response.json()`;
               )}
             </>
           )}
+          */}
 
+          {/* Hidden upload tab - not in UI
           {activeTab === 'upload' && (
             <div className="demo-upload-section">
               <h3>Submit a New Document</h3>
@@ -1026,7 +962,9 @@ documents = response.json()`;
               </div>
             </div>
           )}
+          */}
 
+          {/* Hidden bulk tab - not in UI
           {activeTab === 'bulk' && (
             <div className="demo-bulk-section">
               <h3>Partner Bulk Document Ingestion</h3>
@@ -1210,6 +1148,7 @@ documents = response.json()`;
               </div>
             </div>
           )}
+          */}
 
           {activeTab === 'api' && (
             <div className="demo-api-section">
