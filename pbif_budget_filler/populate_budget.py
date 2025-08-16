@@ -1,317 +1,246 @@
 #!/usr/bin/env python3
-"""Single script to populate the entire PBIF budget spreadsheet."""
+"""Populate PBIF budget spreadsheet from YAML configuration."""
 
 import pickle
+import yaml
 import gspread
 from pathlib import Path
-from googleapiclient.discovery import build
 
-# Configuration
-SPREADSHEET_ID = '1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw'
+def load_budget_data():
+    """Load budget data from YAML file."""
+    with open('budget_data.yaml', 'r') as f:
+        return yaml.safe_load(f)
 
-def get_clients():
-    """Initialize both gspread and Google Sheets API clients."""
+def get_client():
+    """Initialize gspread client."""
     token_path = Path(__file__).parent.parent / "token.pickle"
     with open(token_path, 'rb') as token:
         creds = pickle.load(token)
-    
-    client = gspread.authorize(creds)
-    service = build('sheets', 'v4', credentials=creds)
-    
-    return client, service
+    return gspread.authorize(creds)
 
-def populate_contractual(sheet):
-    """Populate the Contractual worksheet."""
-    ws = sheet.worksheet('f. Contractual')
+def populate_personnel(ws, data):
+    """Populate Personnel worksheet using batch range update."""
+    print("   Personnel...")
     
-    # Partners data
-    partners = [
-        ["LOI-1", "MyFriendBen", "", 50000, 
-         "Demonstration partner - test ambiguity analysis with 3,500 monthly users"],
-        ["LOI-2", "Benefit Navigator", "", 50000, 
-         "Demonstration partner - test with 500+ caseworkers"],
-        ["LOI-3", "Citizen Codex", "", 30000, 
-         "UX research and interface design"],
-    ]
+    # Clear existing data first (rows 4-11)
+    clear_rows = [[''] * 7 for _ in range(8)]  # 8 rows, 7 columns (A-G)
+    ws.update(values=clear_rows, range_name='A4:G11')
     
-    # Clear and populate rows
-    for i, partner in enumerate(partners):
-        row = 5 + i
-        ws.update(f'A{row}:E{row}', [partner])
+    # Prepare all personnel data as a 2D array
+    personnel_rows = []
+    for person in data:
+        # Create row with proper column spacing
+        # A: Name (leave empty per instructions)
+        # B: Position Title
+        # C: Effort %
+        # D: Pay Rate (calculated by formula)
+        # E: Base Salary
+        # F: Personnel Cost (calculated by formula)
+        # G: Fringe Rate
+        row = [
+            '',                           # A (Name - leave empty)
+            person['position_title'],     # B (Position Title)
+            person['effort_pct'],         # C (Effort %)
+            '',                           # D (Pay Rate - formula)
+            person['base_salary'],        # E (Base Salary)
+            '',                           # F (Personnel Cost - formula)
+            person['fringe_rate']         # G (Fringe Rate)
+        ]
+        personnel_rows.append(row)
     
-    # Clear unused rows
-    for row in range(8, 13):
-        ws.update(f'A{row}:E{row}', [[""] * 5])
+    # Update all personnel rows at once starting at A4
+    if personnel_rows:
+        end_row = 3 + len(personnel_rows)
+        ws.update(values=personnel_rows, range_name=f'A4:G{end_row}')
     
-    # Don't add formula - it's already in the template
+    print(f"   ✓ Added {len(data)} personnel entries")
+
+def populate_travel(ws, data):
+    """Populate Travel worksheet using batch range update."""
+    print("   Travel...")
     
-    # Add explanation
+    # Clear existing data first
+    clear_rows = [[''] * 12 for _ in range(7)]  # 7 rows, 12 columns (B-M)
+    ws.update(values=clear_rows, range_name='B4:M10')
+    
+    # Prepare all travel data as a 2D array
+    travel_rows = []
+    for trip in data:
+        # Columns B through M (skip K which is formula)
+        row = [
+            trip['purpose'],              # B
+            trip['depart_from'],          # C
+            trip['destination'],          # D
+            trip['days'],                 # E
+            trip['travelers'],            # F
+            trip['lodging_per_traveler'], # G
+            trip['flight_per_traveler'],  # H
+            trip['vehicle_per_traveler'], # I
+            trip['mie_per_traveler'],     # J
+            '',                           # K (formula)
+            '',                           # L (empty)
+            trip['basis']                 # M
+        ]
+        travel_rows.append(row)
+    
+    # Update all travel rows at once starting at B4
+    if travel_rows:
+        end_row = 3 + len(travel_rows)
+        ws.update(values=travel_rows, range_name=f'B4:M{end_row}')
+    
+    print(f"   ✓ Added {len(data)} travel entries")
+
+def populate_equipment(ws, data):
+    """Populate Equipment worksheet using batch range update."""
+    print("   Equipment...")
+    
+    # Clear existing data first
+    clear_rows = [[''] * 7 for _ in range(6)]  # 6 rows, 7 columns (B-H)
+    ws.update(values=clear_rows, range_name='B5:H10')
+    
+    # Prepare all equipment data as a 2D array
+    equipment_rows = []
+    for item in data:
+        row = [
+            item['item'],          # B
+            item['quantity'],      # C
+            item['unit_cost'],     # D
+            item['total_cost'],    # E
+            item['cost_share'],    # F
+            item['basis_of_cost'], # G
+            item['justification']  # H
+        ]
+        equipment_rows.append(row)
+    
+    # Update all equipment rows at once starting at B5
+    if equipment_rows:
+        end_row = 4 + len(equipment_rows)
+        ws.update(values=equipment_rows, range_name=f'B5:H{end_row}')
+    
+    print(f"   ✓ Added {len(data)} equipment items")
+
+def populate_contractual(ws, data):
+    """Populate Contractual worksheet using batch range update."""
+    print("   Contractual partners...")
+    
+    # Clear existing rows
+    clear_rows = [[''] * 5 for _ in range(8)]  # 8 rows (5-12), 5 columns (A-E)
+    ws.update(values=clear_rows, range_name='A5:E12')
+    
+    # Prepare all contractual data as a 2D array
+    contractual_rows = []
+    for partner in data:
+        row = [
+            partner['subaward_number'],  # A
+            partner['subawardee'],       # B
+            partner['pi_pd'],            # C
+            partner['total_cost'],       # D
+            partner['justification']     # E
+        ]
+        contractual_rows.append(row)
+    
+    # Update all contractual rows at once starting at A5
+    if contractual_rows:
+        end_row = 4 + len(contractual_rows)
+        ws.update(values=contractual_rows, range_name=f'A5:E{end_row}')
+    
+    # Add explanation in A15
     explanation = (
         "MyFriendBen and Benefit Navigator each receive $50k as demonstration partners "
         "to test ambiguity analysis. Citizen Codex receives $30k for UX research and design."
     )
-    ws.update('A15', [[explanation]])
+    ws.update(values=[[explanation]], range_name='A15')
+    
+    print(f"   ✓ Added {len(data)} contractual partners")
 
-def populate_other_direct(sheet):
-    """Populate the Other Direct Costs worksheet."""
-    ws = sheet.worksheet('h. Other')
+def populate_other_direct(ws, data):
+    """Populate Other Direct Costs worksheet using batch range update."""
+    print("   Other direct costs...")
     
-    # Other direct costs items
-    items = [
-        ["Technical Advisory Services", 40000, "", "Professional services", 
-         "Expert guidance from Urban Institute, GCO, NBER, Benefit Kitchen, NCCP and others "
-         "on document collection strategy and policy implementation"],
-        ["Document Bounty Program", 35000, "", "Performance-based awards", 
-         "Incentives for partners to verify AI-collected documents and contribute missing ones"],
-    ]
+    # Prepare all other direct cost data as a 2D array
+    other_rows = []
+    for item in data:
+        row = [
+            item['expense_type'],         # B
+            item['total_cost'],          # C
+            item.get('unit_cost', ''),  # D
+            item['category'],            # E
+            item['justification']       # F
+        ]
+        other_rows.append(row)
     
-    # Add items
-    for i, item in enumerate(items):
-        row = 7 + i
-        ws.update(f'B{row}:F{row}', [item])
+    # Update all other direct cost rows at once starting at B7
+    if other_rows:
+        end_row = 6 + len(other_rows)
+        ws.update(values=other_rows, range_name=f'B7:F{end_row}')
+    
+    print(f"   ✓ Added {len(data)} other direct cost items")
 
-def populate_personnel(sheet):
-    """Populate the Personnel worksheet with standard values."""
-    ws = sheet.worksheet('a. Personnel')
+def populate_indirect(ws, data):
+    """Populate Indirect Costs worksheet using batch update."""
+    print("   Indirect costs...")
     
-    # Personnel data: Name, Title, Effort %, Base Salary, Fringe Rate
-    personnel = [
-        ["Max Ghenis", "Project Lead", 50, 150000, 0.30],
-        ["Nikhil Woodruff", "Lead Engineer", 100, 140000, 0.30],
-        ["Pavel Makarchuk", "ML/AI Engineer", 80, 120000, 0.30],
-        ["TBD", "Policy Analyst", 70, 90000, 0.30],
-    ]
+    # Update rate percentage in B5
+    ws.update(values=[[data['rate_percentage']]], range_name='B5')
     
-    # Update personnel rows
-    for i, person in enumerate(personnel):
-        row = 4 + i
-        ws.update(f'A{row}', [[person[0]]])  # Name
-        ws.update(f'B{row}', [[person[1]]])  # Title
-        ws.update(f'C{row}', [[person[2]]])  # Effort %
-        ws.update(f'E{row}', [[person[3]]])  # Base salary
-        ws.update(f'G{row}', [[person[4]]])  # Fringe rate
-        # Don't add formulas - they're already in the template
-
-def populate_equipment(sheet):
-    """Populate Equipment worksheet."""
-    ws = sheet.worksheet('d. Equipment')
+    # Update explanation in A7
+    ws.update(values=[[data['explanation']]], range_name='A7')
     
-    # Clear existing data first (rows 5-10)
-    for row in range(5, 11):
-        ws.update(f'B{row}:H{row}', [[""] * 7])
-    
-    # Equipment items - proper column structure
-    # B: Equipment Item, C: Qty, D: Unit Cost, E: Total Cost, F: Cost share, G: Basis, H: Justification
-    equipment = [
-        ["Development Workstations", 2, 3000, 6000, "", "Dell.com pricing",
-         "High-performance machines for ML model training and document processing"],
-        ["Cloud GPU Credits", 12, 500, 6000, "", "AWS pricing calculator",
-         "GPU compute for training document classification models"],
-        ["Software Licenses", 4, 1500, 6000, "", "Vendor quotes",
-         "Development tools, monitoring, and security software"],
-    ]
-    
-    for i, item in enumerate(equipment):
-        row = 5 + i
-        ws.update(f'B{row}', [[item[0]]])  # Equipment Item
-        ws.update(f'C{row}', [[item[1]]])  # Quantity
-        ws.update(f'D{row}', [[item[2]]])  # Unit Cost
-        ws.update(f'E{row}', [[item[3]]])  # Total Cost
-        ws.update(f'F{row}', [[item[4]]])  # Cost share (empty)
-        ws.update(f'G{row}', [[item[5]]])  # Basis of Cost
-        ws.update(f'H{row}', [[item[6]]])  # Justification
-
-def populate_travel(sheet):
-    """Populate Travel worksheet."""
-    ws = sheet.worksheet('c. Travel')
-    
-    # Clear existing data first (rows 4-10)
-    for row in range(4, 11):
-        ws.update(f'B{row}:M{row}', [[""] * 12])
-    
-    # Travel items with proper column structure using GSA FY2025 per diem rates
-    # B: Purpose, C: Depart From, D: Destination, E: Days, F: Travelers, 
-    # G: Lodging, H: Flight, I: Vehicle, J: M&IE, K: Cost/Trip, M: Basis
-    # GSA rates: Atlanta ($189 lodging, $86 M&IE), Denver ($215 lodging, $92 M&IE), 
-    #           San Francisco ($381 lodging, $92 M&IE), Austin ($213 lodging, $86 M&IE)
-    travel = [
-        ["National Benefits Conference presentation", "Washington DC", "Atlanta GA", 
-         3, 2, 189, 350, 0, 86, "", "", "GSA FY25 per diem for Atlanta GA"],
-        ["Partner integration - MyFriendBen Colorado", "Washington DC", "Denver CO", 
-         2, 1, 215, 600, 0, 92, "", "", "GSA FY25 per diem for Denver CO"],
-        ["Code for America Summit presentation", "Washington DC", "San Francisco CA", 
-         3, 1, 381, 700, 0, 92, "", "", "GSA FY25 per diem for San Francisco CA"],
-        ["Policy Simulation Library annual meeting", "Washington DC", "Austin TX", 
-         2, 2, 213, 500, 0, 86, "", "", "GSA FY25 per diem for Austin TX"],
-    ]
-    
-    for i, item in enumerate(travel):
-        row = 4 + i  # Start at row 4, not row 5
-        ws.update(f'B{row}', [[item[0]]])   # Purpose of Travel
-        ws.update(f'C{row}', [[item[1]]])   # Depart From
-        ws.update(f'D{row}', [[item[2]]])   # Destination
-        ws.update(f'E{row}', [[item[3]]])   # No. of Days
-        ws.update(f'F{row}', [[item[4]]])   # No. of Travelers
-        ws.update(f'G{row}', [[item[5]]])   # Lodging per Traveler
-        ws.update(f'H{row}', [[item[6]]])   # Flight per Traveler
-        ws.update(f'I{row}', [[item[7]]])   # Vehicle per Traveler
-        ws.update(f'J{row}', [[item[8]]])   # M&IE Per Traveler
-        # K is calculated by formula
-        ws.update(f'M{row}', [[item[11]]])  # Basis for Estimating Costs
-
-def populate_indirect(sheet):
-    """Populate Indirect Costs."""
-    ws = sheet.worksheet('i. Indirect')
-    
-    # Set indirect rate (percentage value only, formula already in template)
-    ws.update('B5', [[15]])  # 15% de minimis rate
-    
-    # Add explanation
-    explanation = (
-        "Using 15% de minimis rate per 2 CFR 200.414(f). This covers administrative support, "
-        "facilities, utilities, and general overhead costs."
-    )
-    ws.update('A7', [[explanation]])
-
-def remove_yellow_highlights(service):
-    """Remove all yellow highlighting from the spreadsheet."""
-    
-    # Get all sheet data with formatting
-    result = service.spreadsheets().get(
-        spreadsheetId=SPREADSHEET_ID,
-        includeGridData=True
-    ).execute()
-    
-    requests = []
-    
-    # Find all yellow cells
-    for sheet_data in result.get('sheets', []):
-        sheet_id = sheet_data['properties']['sheetId']
-        
-        if 'data' not in sheet_data:
-            continue
-        
-        for data in sheet_data['data']:
-            if 'rowData' not in data:
-                continue
-                
-            start_row = data.get('startRow', 0)
-            start_col = data.get('startColumn', 0)
-            
-            for row_idx, row in enumerate(data.get('rowData', [])):
-                for col_idx, cell in enumerate(row.get('values', [])):
-                    if 'effectiveFormat' in cell and 'backgroundColor' in cell['effectiveFormat']:
-                        bg = cell['effectiveFormat']['backgroundColor']
-                        red = bg.get('red', 0)
-                        green = bg.get('green', 0)
-                        blue = bg.get('blue', 0)
-                        
-                        # Check if yellow (high red, high green, low blue)
-                        if red > 0.9 and green > 0.8 and blue < 0.3:
-                            # Add request to remove yellow
-                            requests.append({
-                                'repeatCell': {
-                                    'range': {
-                                        'sheetId': sheet_id,
-                                        'startRowIndex': start_row + row_idx,
-                                        'endRowIndex': start_row + row_idx + 1,
-                                        'startColumnIndex': start_col + col_idx,
-                                        'endColumnIndex': start_col + col_idx + 1
-                                    },
-                                    'cell': {
-                                        'userEnteredFormat': {
-                                            'backgroundColor': {
-                                                'red': 1.0,
-                                                'green': 1.0,
-                                                'blue': 1.0
-                                            }
-                                        }
-                                    },
-                                    'fields': 'userEnteredFormat.backgroundColor'
-                                }
-                            })
-    
-    # Execute batch update if there are yellow cells to remove
-    if requests:
-        service.spreadsheets().batchUpdate(
-            spreadsheetId=SPREADSHEET_ID,
-            body={'requests': requests}
-        ).execute()
-        print(f"  ✓ Removed {len(requests)} yellow highlighted cells")
+    print(f"   ✓ Set {data['rate_percentage']}% indirect rate")
 
 def main():
-    """Main function to populate the entire budget."""
+    """Main function to populate the budget from YAML."""
     print("="*60)
-    print("POPULATING PBIF BUDGET SPREADSHEET")
+    print("POPULATING PBIF BUDGET FROM YAML")
     print("="*60)
     print()
     
-    # Get clients
-    client, service = get_clients()
-    sheet = client.open_by_key(SPREADSHEET_ID)
+    # Load data
+    print("Loading budget data from YAML...")
+    budget_data = load_budget_data()
     
-    # First, list all worksheets
-    print("Available worksheets:")
-    for ws in sheet.worksheets():
-        print(f"  - '{ws.title}'")
-    print()
+    # Get client
+    client = get_client()
+    spreadsheet_id = budget_data['metadata']['spreadsheet_id']
+    sheet = client.open_by_key(spreadsheet_id)
     
-    # Populate each worksheet
-    print("1. Populating Personnel...")
-    try:
-        populate_personnel(sheet)
-        print("   ✓ Personnel data added")
-    except Exception as e:
-        print(f"   ✗ Error: {e}")
+    # Process each worksheet
+    worksheet_mapping = budget_data['metadata']['worksheet_mapping']
     
-    print("\n2. Populating Equipment...")
-    try:
-        populate_equipment(sheet)
-        print("   ✓ Equipment items added")
-    except Exception as e:
-        print(f"   ✗ Error: {e}")
+    print("\nPopulating worksheets:")
     
-    print("\n3. Populating Travel...")
-    try:
-        populate_travel(sheet)
-        print("   ✓ Travel expenses added")
-    except Exception as e:
-        print(f"   ✗ Error: {e}")
-    
-    print("\n4. Populating Contractual...")
-    try:
-        populate_contractual(sheet)
-        print("   ✓ Partners added")
-    except Exception as e:
-        print(f"   ✗ Error: {e}")
-    
-    print("\n5. Populating Other Direct Costs...")
-    try:
-        populate_other_direct(sheet)
-        print("   ✓ Advisory and bounty programs added")
-    except Exception as e:
-        print(f"   ✗ Error: {e}")
-    
-    print("\n6. Populating Indirect Costs...")
-    try:
-        populate_indirect(sheet)
-        print("   ✓ 15% de minimis rate set")
-    except Exception as e:
-        print(f"   ✗ Error: {e}")
-    
-    print("\n7. Removing yellow highlights...")
-    remove_yellow_highlights(service)
+    for data_key, worksheet_name in worksheet_mapping.items():
+        if data_key in budget_data:
+            try:
+                ws = sheet.worksheet(worksheet_name)
+                
+                if data_key == 'personnel':
+                    populate_personnel(ws, budget_data[data_key])
+                elif data_key == 'travel':
+                    populate_travel(ws, budget_data[data_key])
+                elif data_key == 'equipment':
+                    populate_equipment(ws, budget_data[data_key])
+                elif data_key == 'contractual':
+                    populate_contractual(ws, budget_data[data_key])
+                elif data_key == 'other_direct':
+                    populate_other_direct(ws, budget_data[data_key])
+                elif data_key == 'indirect':
+                    populate_indirect(ws, budget_data[data_key])
+                    
+            except Exception as e:
+                print(f"   ✗ Error in {worksheet_name}: {e}")
     
     print("\n" + "="*60)
     print("COMPLETE!")
     print("="*60)
-    print("\nKey allocations populated:")
+    print(f"\nView spreadsheet: https://docs.google.com/spreadsheets/d/{spreadsheet_id}")
+    print("\nKey allocations:")
     print("  • Personnel: 2.5 FTE")
-    print("  • Contractual partners: MyFriendBen, Benefit Navigator, Citizen Codex")
+    print("  • Partners: MyFriendBen ($50k), Benefit Navigator ($50k), Citizen Codex ($30k)")
     print("  • Technical Advisory: $40,000")
     print("  • Document Bounty: $35,000")
+    print("  • Travel: 4 trips using GSA FY2025 per diem rates")
     print("  • Indirect: 15% de minimis rate")
-    print(f"\nView spreadsheet: https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}")
 
 if __name__ == "__main__":
     main()
