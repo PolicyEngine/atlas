@@ -30,7 +30,7 @@ def load_response(file_path):
     return content, word_count
 
 def format_section(section, content, word_count):
-    """Format a section with word count indicator."""
+    """Format a section with word count indicator and copy button."""
     limit = section['word_limit']
     
     if word_count == 0:
@@ -41,9 +41,21 @@ def format_section(section, content, word_count):
         status = "⚠️"  # Over limit
     
     header = f"## {section['title']}"
+    
+    # Add copy button HTML (works in markdown renderers that support HTML)
+    copy_button = f"""
+<details>
+<summary>📋 Copy this response ({word_count}/{limit} words {status})</summary>
+
+```
+{content}
+```
+
+</details>"""
+    
     footer = f"\n*[Word count: {word_count}/{limit} {status}]*\n"
     
-    return f"{header}\n\n{content}\n{footer}"
+    return f"{header}\n\n{content}\n{copy_button}\n{footer}"
 
 def main():
     # Load configuration
@@ -121,8 +133,10 @@ def main():
     # Check attachments
     output.append("\n## Required Attachments:\n")
     for attachment in config['attachments']:
-        status = "✅" if attachment['status'] == 'completed' else "⚠️"
-        if attachment['status'] == 'pending':
+        # Check if status field exists, default to pending if not
+        attachment_status = attachment.get('status', 'pending')
+        status = "✅" if attachment_status == 'completed' else "⚠️"
+        if attachment_status == 'pending':
             status = "❌"
         output.append(f"- {status} {attachment['title']}")
     

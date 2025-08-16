@@ -11,7 +11,7 @@ Dear Review Committee,
 
 The Policy Simulation Library (PSL) strongly supports PolicyEngine's Policy Library application. As maintainers of Tax-Calculator and other open-source policy models, we understand the critical need for reliable policy documentation.
 
-**Our Documentation Challenge:** Tax-Calculator primarily references a small set of federal tax documents - IRS forms (1040, schedules), annual revenue procedures with inflation adjustments, and tax code updates. Yet even this limited documentation constantly breaks: IRS reorganizes websites, old revenue procedures disappear, and historical forms become inaccessible. We waste significant time updating broken links instead of improving our models.
+**Our Documentation Challenge:** Tax-Calculator primarily references a small set of federal tax documents - IRS forms (1040, schedules), annual revenue procedures with inflation adjustments, and tax code updates. While IRS documents are relatively stable, we still face challenges: finding historical forms and revenue procedures from specific years, programmatically accessing parameter updates, and maintaining consistent documentation across our open-source projects.
 
 **Why This Matters:** The Policy Library would provide:
 - Permanent archives of IRS forms and revenue procedures

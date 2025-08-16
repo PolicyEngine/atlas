@@ -86,6 +86,8 @@ def main():
     
     # Find all PDF and markdown files
     pdf_files = sorted(letters_dir.glob("*.pdf"))
+    # Exclude the combined output file
+    pdf_files = [f for f in pdf_files if 'combined_support_letters' not in f.name]
     md_files = sorted(letters_dir.glob("*.md"))
     
     # Skip README files
