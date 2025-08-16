@@ -28,20 +28,6 @@ function Demo() {
     console.log(`Searching for ${jurisdiction} ${program} documents`);
   };
 
-  const apiExample = `# Python example
-import requests
-
-response = requests.get(
-  "https://api.policy-library.org/v1/documents",
-  params={
-    "jurisdiction": "${jurisdiction}",
-    "program": "${program}",
-    "type": "statute"
-  },
-  headers={"Authorization": "Bearer YOUR_API_KEY"}
-)
-
-documents = response.json()`;
 
   return (
     <div className="section">
