@@ -98,7 +98,7 @@ def populate_equipment(sheet):
     
     # Clear existing data first (rows 5-10)
     for row in range(5, 11):
-        ws.update(f'B{row}:H{row}', [[""] * 8])
+        ws.update(f'B{row}:H{row}', [[""] * 7])
     
     # Equipment items - proper column structure
     # B: Equipment Item, C: Qty, D: Unit Cost, E: Total Cost, F: Cost share, G: Basis, H: Justification
@@ -133,12 +133,12 @@ def populate_travel(sheet):
     # B: Purpose, C: Depart From, D: Destination, E: Days, F: Travelers, 
     # G: Lodging, H: Flight, I: Vehicle, J: M&IE, K: Cost/Trip, M: Basis
     travel = [
-        ["Conference presentations - RWJ Benefits Data Summit", "San Francisco", "Washington DC", 
-         3, 2, 200, 600, 0, 75, "", "", "Present Policy Library at annual benefits conference"],
-        ["Partner site visits - MyFriendBen integration", "San Francisco", "Denver", 
-         2, 1, 150, 400, 0, 50, "", "", "On-site support for demonstration partner integration"],
-        ["Government meetings - CA state agency", "San Francisco", "Sacramento", 
-         1, 2, 0, 0, 100, 50, "", "", "Meet with state SNAP administrators about adoption"],
+        ["Conference presentations - RWJ Benefits Data Summit", "Washington DC", "Chicago", 
+         3, 2, 200, 400, 0, 75, "", "", "Present Policy Library at annual benefits conference"],
+        ["Partner site visits - MyFriendBen integration", "Washington DC", "Denver", 
+         2, 1, 150, 600, 0, 50, "", "", "On-site support for demonstration partner integration"],
+        ["Government meetings - USDA FNS", "Washington DC", "Alexandria VA", 
+         1, 2, 0, 0, 50, 50, "", "", "Meet with federal SNAP administrators about adoption"],
     ]
     
     for i, item in enumerate(travel):
