@@ -27,29 +27,31 @@ Based on analysis of the PolicyEngine-US codebase:
 
 ### Required Additions (3,167 documents needed)
 
-1. **State Program Expansion** (~1,350 documents)
-   - SNAP: Add 116 documents (50 states - current 34)
-   - Medicaid: Add 156 documents (state plans, waivers)
-   - TANF: Add 114 documents (state plans)
-   - LIHEAP: Add 138 documents (50 states - current 12)
-   - WIC: Add 91 documents (state agency docs)
-   - CCDF: Add 84 documents (state plans)
-   - CHIP: Add 93 documents (state programs)
-   - ACA marketplaces: Add 85 documents (36 states)
+1. **State Program Expansion** (~1,600 documents)
+   - SNAP: Add 150 documents (eligibility manuals, provider handbooks, forms)
+   - Medicaid: Add 250 documents (state plans, waivers, provider manuals)
+   - TANF: Add 200 documents (state plans, work requirements, time limits)
+   - LIHEAP: Add 200 documents (50 states - current 12)
+   - WIC: Add 150 documents (vendor agreements, approved foods lists)
+   - CCDF: Add 200 documents (provider requirements, subsidy schedules)
+   - CHIP: Add 150 documents (enrollment forms, coverage documents)
+   - ACA marketplaces: Add 100 documents (36 state exchanges)
    - SSI state supplements: Add 100 documents (30 states)
-   - State tax forms: Add 250 documents (~5 per state)
-   - Remaining state income tax: Add 200 documents
+   - State tax forms: Add 100 documents (current year forms)
 
-2. **Historical Versions** (~1,000 documents)
-   - 2020-2024 versions of key statutes
-   - Prior year tax forms
-   - Previous program manuals
-   - Historical eligibility rules
+2. **Operational Documents** (~1,000 documents)
+   - County-level implementation guides: 300 documents
+   - Provider agreements and contracts: 200 documents
+   - Emergency allotment notices: 100 documents
+   - Waiver approvals and modifications: 150 documents
+   - Administrative hearing procedures: 100 documents
+   - Quality control manuals: 150 documents
 
-3. **Supporting Documents** (~650 documents)
-   - Regulatory guidance & memos: 300 documents
-   - Application forms: 200 documents
-   - Eligibility manuals: 150 documents
+3. **Eligibility & Access Documents** (~567 documents)
+   - Application forms (multi-program): 250 documents
+   - Eligibility verification procedures: 150 documents
+   - Income calculation worksheets: 100 documents
+   - Asset test guidelines: 67 documents
 
 ### Total Projection
 - Current unique documents: 1,833
@@ -58,25 +60,25 @@ Based on analysis of the PolicyEngine-US codebase:
 
 ## Feasibility Assessment
 
-### ✅ **VERDICT: 5,000 documents is achievable but requires:**
+### ✅ **VERDICT: 5,000 documents is achievable by focusing on operational documents**
 
 1. **Comprehensive state coverage** - Must archive documents for all 50 states + DC for each program
-2. **Historical documents** - Including 2020-2024 versions is essential to reach target
-3. **Supporting materials** - Forms, manuals, and guidance documents beyond just statutes
+2. **Operational focus** - County implementation guides, provider manuals, eligibility procedures
+3. **Supporting materials** - Forms, worksheets, and guidance documents that caseworkers actually use
 
 ### Key Insights
 
 - **Strengths**: PolicyEngine already has excellent tax credit coverage (742 docs)
-- **Low-hanging fruit**: LIHEAP, WIC, and CHIP have minimal coverage (28 docs total) - expanding to 50 states adds 300+ documents
-- **Multiplier effect**: Each program × 50 states × multiple document types quickly scales
-- **Historical necessity**: Without historical versions, reaching 5,000 would be very difficult
+- **Low-hanging fruit**: LIHEAP, WIC, and CHIP have minimal coverage (28 docs total) - expanding to 50 states adds 500+ documents
+- **Multiplier effect**: Each program × 50 states × multiple document types (eligibility manual, forms, provider guides) quickly scales
+- **Operational necessity**: Focus on documents that benefit navigators and caseworkers need daily
 
 ## Recommendation
 
 **Keep the 5,000 document target** but clarify in the proposal that this includes:
 - Complete federal coverage for all 10 programs
-- All 50 states + DC for each program
-- Key historical versions (2020-2024) for tracking policy changes
-- Essential supporting documents (forms, manuals, guidance)
+- All 50 states + DC for each program  
+- Operational documents (eligibility manuals, provider agreements, forms)
+- County-level implementation materials where programs vary locally
 
-This positions the Policy Library as truly comprehensive while remaining achievable within the 2-year grant period.
+This positions the Policy Library as essential infrastructure for benefit delivery, not just research.
