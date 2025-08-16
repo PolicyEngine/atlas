@@ -58,10 +58,17 @@ def populate_personnel(ws, data, config):
         hours = int(person['effort_pct'] * 2080 / 100)
         row = start_row + i
         
-        # Update individual cells to avoid overwriting formulas
+        # Calculate hourly rate for column D
+        hourly_rate = person['base_salary'] / 2080
+        
+        # Create pay rate basis text for column G
+        pay_rate_basis = f"${person['base_salary']:,} annual salary"
+        
+        # Update individual cells
         ws.update(values=[[person['position_title']]], range_name=f'B{row}')  # Position Title
         ws.update(values=[[hours]], range_name=f'C{row}')                     # Time (Hours)
-        ws.update(values=[[person['base_salary']]], range_name=f'G{row}')     # Pay Rate Basis (annual salary)
+        ws.update(values=[[hourly_rate]], range_name=f'D{row}')               # Pay Rate ($/Hr)
+        ws.update(values=[[pay_rate_basis]], range_name=f'G{row}')            # Pay Rate Basis text
     
     print(f"   ✓ Added {len(data)} personnel entries starting at row {start_row}")
 
@@ -215,55 +222,74 @@ def populate_indirect(ws, data, config):
     print(f"   ✓ Set {data['rate_percentage']}% indirect rate")
 
 def remove_yellow_highlights(service, spreadsheet_id):
-    """Remove all yellow highlighting from the personnel worksheet."""
+    """Remove only yellow highlighting from all worksheets, preserving other colors."""
     print("   Removing yellow highlights...")
     
-    # Get the sheet ID for the Personnel worksheet
-    spreadsheet = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
-    personnel_sheet_id = None
+    # Get all sheet data with formatting
+    result = service.spreadsheets().get(
+        spreadsheetId=spreadsheet_id,
+        includeGridData=True
+    ).execute()
     
-    for sheet in spreadsheet['sheets']:
-        if sheet['properties']['title'] == 'a. Personnel':
-            personnel_sheet_id = sheet['properties']['sheetId']
-            break
-    
-    if personnel_sheet_id is None:
-        print("   ✗ Could not find Personnel worksheet")
-        return
-    
-    # Create request to remove yellow background from rows 6-9
     requests = []
-    for row in range(5, 9):  # Rows 6-9 (0-indexed so 5-8)
-        requests.append({
-            'repeatCell': {
-                'range': {
-                    'sheetId': personnel_sheet_id,
-                    'startRowIndex': row,
-                    'endRowIndex': row + 1,
-                    'startColumnIndex': 0,  # Column A
-                    'endColumnIndex': 8      # Through column H
-                },
-                'cell': {
-                    'userEnteredFormat': {
-                        'backgroundColor': {
-                            'red': 1.0,
-                            'green': 1.0,
-                            'blue': 1.0
-                        }
-                    }
-                },
-                'fields': 'userEnteredFormat.backgroundColor'
-            }
-        })
     
-    # Execute batch update
+    # Find all yellow cells
+    for sheet_data in result.get('sheets', []):
+        sheet_id = sheet_data['properties']['sheetId']
+        sheet_name = sheet_data['properties']['title']
+        
+        if 'data' not in sheet_data:
+            continue
+        
+        for data in sheet_data['data']:
+            if 'rowData' not in data:
+                continue
+                
+            start_row = data.get('startRow', 0)
+            start_col = data.get('startColumn', 0)
+            
+            for row_idx, row in enumerate(data.get('rowData', [])):
+                for col_idx, cell in enumerate(row.get('values', [])):
+                    if 'effectiveFormat' in cell and 'backgroundColor' in cell['effectiveFormat']:
+                        bg = cell['effectiveFormat']['backgroundColor']
+                        red = bg.get('red', 0)
+                        green = bg.get('green', 0)
+                        blue = bg.get('blue', 0)
+                        
+                        # Check if yellow (high red, high green, low blue)
+                        # Yellow is typically RGB(1, 1, 0) or close to it
+                        if red > 0.9 and green > 0.8 and blue < 0.3:
+                            # Add request to remove yellow by setting to white
+                            requests.append({
+                                'repeatCell': {
+                                    'range': {
+                                        'sheetId': sheet_id,
+                                        'startRowIndex': start_row + row_idx,
+                                        'endRowIndex': start_row + row_idx + 1,
+                                        'startColumnIndex': start_col + col_idx,
+                                        'endColumnIndex': start_col + col_idx + 1
+                                    },
+                                    'cell': {
+                                        'userEnteredFormat': {
+                                            'backgroundColor': {
+                                                'red': 1.0,
+                                                'green': 1.0,
+                                                'blue': 1.0
+                                            }
+                                        }
+                                    },
+                                    'fields': 'userEnteredFormat.backgroundColor'
+                                }
+                            })
+    
+    # Execute batch update if there are yellow cells to remove
     if requests:
         body = {'requests': requests}
         service.spreadsheets().batchUpdate(
             spreadsheetId=spreadsheet_id,
             body=body
         ).execute()
-        print("   ✓ Removed yellow highlights from Personnel tab")
+        print(f"   ✓ Removed {len(requests)} yellow highlighted cells")
 
 def main():
     """Main function to populate the budget from YAML."""
