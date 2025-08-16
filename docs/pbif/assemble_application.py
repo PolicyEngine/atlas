@@ -32,10 +32,13 @@ def load_response(file_path):
 def format_section(section, content, word_count):
     """Format a section with word count indicator."""
     limit = section['word_limit']
-    status = "✅" if 0.9 * limit <= word_count <= 1.1 * limit else "⚠️"
     
     if word_count == 0:
         status = "❌"
+    elif word_count <= limit:
+        status = "✅"
+    else:
+        status = "⚠️"  # Over limit
     
     header = f"## {section['title']}"
     footer = f"\n*[Word count: {word_count}/{limit} {status}]*\n"
@@ -76,13 +79,14 @@ def main():
         
         # Update stats
         if content:
-            if 0.9 * section['word_limit'] <= word_count <= 1.1 * section['word_limit']:
+            if word_count > 0 and word_count <= section['word_limit']:
                 completed_sections += 1
-            else:
+            elif word_count > section['word_limit']:
                 sections_needing_work.append({
                     'title': section['title'],
                     'current': word_count,
-                    'target': section['word_limit']
+                    'target': section['word_limit'],
+                    'issue': 'over_limit'
                 })
             
             # Add formatted section
@@ -108,13 +112,11 @@ def main():
     if sections_needing_work:
         output.append("\n## Sections Needing Attention:\n")
         for section in sections_needing_work:
-            diff = section['target'] - section['current']
-            if section['current'] == 0:
-                output.append(f"- **{section['title']}**: Missing (need {section['target']} words)")
-            elif diff > 0:
-                output.append(f"- **{section['title']}**: Need {diff} more words ({section['current']}/{section['target']})")
-            else:
-                output.append(f"- **{section['title']}**: Reduce by {-diff} words ({section['current']}/{section['target']})")
+            if section.get('issue') == 'over_limit':
+                over_by = section['current'] - section['target']
+                output.append(f"- **{section['title']}**: Reduce by {over_by} words ({section['current']}/{section['target']})")
+            elif section['current'] == 0:
+                output.append(f"- **{section['title']}**: Missing (need up to {section['target']} words)")
     
     # Check attachments
     output.append("\n## Required Attachments:\n")

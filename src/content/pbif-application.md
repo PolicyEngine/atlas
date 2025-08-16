@@ -2,7 +2,7 @@
 **Organization:** PolicyEngine
 **Project:** PolicyEngine Policy Library
 **Grant Request:** $498,000
-**Generated:** 2025-08-16 10:21
+**Generated:** 2025-08-16 10:24
 
 ---
 
@@ -157,19 +157,19 @@ The human cost is staggering. Georgetown University researchers found that histo
 
 ## Sections Needing Attention:
 
-- **Stage of Development Description**: Missing (need 250 words)
-- **Solution & Target Beneficiaries**: Missing (need 250 words)
-- **Proposed Benefit and Impact Evaluation**: Missing (need 250 words)
-- **Responsible Design and Use**: Missing (need 250 words)
-- **Adoption and Path to Scale**: Missing (need 250 words)
-- **Dissemination & Learning**: Missing (need 250 words)
-- **Solution Description**: Missing (need 250 words)
-- **Data Strategy - Data Sources**: Missing (need 250 words)
-- **Data Strategy - Data Management**: Missing (need 250 words)
-- **Stakeholder Engagement**: Missing (need 250 words)
-- **Resources and Infrastructure**: Missing (need 250 words)
-- **Scalability & Sustainability**: Missing (need 250 words)
-- **Financial Viability**: Missing (need 250 words)
+- **Stage of Development Description**: Missing (need up to 250 words)
+- **Solution & Target Beneficiaries**: Missing (need up to 250 words)
+- **Proposed Benefit and Impact Evaluation**: Missing (need up to 250 words)
+- **Responsible Design and Use**: Missing (need up to 250 words)
+- **Adoption and Path to Scale**: Missing (need up to 250 words)
+- **Dissemination & Learning**: Missing (need up to 250 words)
+- **Solution Description**: Missing (need up to 250 words)
+- **Data Strategy - Data Sources**: Missing (need up to 250 words)
+- **Data Strategy - Data Management**: Missing (need up to 250 words)
+- **Stakeholder Engagement**: Missing (need up to 250 words)
+- **Resources and Infrastructure**: Missing (need up to 250 words)
+- **Scalability & Sustainability**: Missing (need up to 250 words)
+- **Financial Viability**: Missing (need up to 250 words)
 
 ## Required Attachments:
 
