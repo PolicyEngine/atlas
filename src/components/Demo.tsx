@@ -457,44 +457,61 @@ documents = response.json()`;
 
           {activeTab === 'bounty' && (
             <div className="demo-bounty-section">
-              <h3>Document Bounty Program</h3>
-              <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                Partners earn rewards for reviewing AI-collected documents and contributing missing ones.
-                $50,000 pool distributed based on contribution quality and volume.
-              </p>
+              <h3>Technical Advisory and Content Partnership</h3>
+              <div style={{ marginBottom: '20px', color: 'var(--gray)' }}>
+                <div style={{ marginBottom: '10px' }}>
+                  <strong>Total allocation: $75,000</strong>
+                </div>
+                <div style={{ paddingLeft: '20px' }}>
+                  <div>• $40,000 for technical advisory services from leading research organizations</div>
+                  <div>• $35,000 for document bounty rewards based on contribution quality and volume</div>
+                </div>
+              </div>
 
               <div style={{ marginBottom: '25px' }}>
-                <h4>Participating Organizations</h4>
+                <h4>Potential Advisory Partners ($40,000)</h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '15px' }}>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
                     <strong>Urban Institute</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Safety net research archive, multi-state policy documents
+                      Federal program expertise, safety net research guidance
                     </p>
                   </div>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
                     <strong>Georgia Center for Opportunity</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      13-state benefits documentation from benefitscliffs.org
-                    </p>
-                  </div>
-                  <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
-                    <strong>Atlanta Fed</strong>
-                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Policy Rules Database (participates without compensation)
+                      State agency relationships, multi-state documentation
                     </p>
                   </div>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
                     <strong>NBER</strong>
                     <p style={{ fontSize: '14px', marginTop: '10px' }}>
-                      Tax policy documents via TAXSIM collaboration
+                      Tax policy expertise and historical documentation
+                    </p>
+                  </div>
+                  <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
+                    <strong>Benefit Kitchen</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Benefits administration expertise and implementation insights
+                    </p>
+                  </div>
+                  <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
+                    <strong>NCCP</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Child and family policy expertise, state-level analysis
+                    </p>
+                  </div>
+                  <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
+                    <strong>Atlanta Fed</strong>
+                    <p style={{ fontSize: '14px', marginTop: '10px' }}>
+                      Policy Rules Database collaboration (unfunded advisor)
                     </p>
                   </div>
                 </div>
               </div>
 
               <div style={{ marginBottom: '25px' }}>
-                <h4>Bounty Types</h4>
+                <h4>Document Bounty Program ($35,000)</h4>
                 <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <thead>
