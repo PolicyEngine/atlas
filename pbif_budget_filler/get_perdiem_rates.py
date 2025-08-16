@@ -24,9 +24,10 @@ def get_perdiem_rates():
     
     # Locations we need
     locations = [
-        ('Chicago', 'IL'),  # RWJ Benefits Data Summit
-        ('Denver', 'CO'),   # MyFriendBen site visit
-        ('Alexandria', 'VA')  # USDA FNS meetings
+        ('Atlanta', 'GA'),      # National Benefits Conference
+        ('Denver', 'CO'),       # MyFriendBen integration
+        ('San Francisco', 'CA'), # Code for America Summit
+        ('Austin', 'TX')        # Policy Simulation Library meeting
     ]
     
     rates = {}

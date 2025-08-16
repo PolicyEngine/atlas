@@ -125,26 +125,28 @@ def populate_travel(sheet):
     """Populate Travel worksheet."""
     ws = sheet.worksheet('c. Travel')
     
-    # Clear existing data first (rows 5-10)
-    for row in range(5, 11):
+    # Clear existing data first (rows 4-10)
+    for row in range(4, 11):
         ws.update(f'B{row}:M{row}', [[""] * 12])
     
     # Travel items with proper column structure using GSA FY2025 per diem rates
     # B: Purpose, C: Depart From, D: Destination, E: Days, F: Travelers, 
     # G: Lodging, H: Flight, I: Vehicle, J: M&IE, K: Cost/Trip, M: Basis
-    # GSA rates: Chicago ($223 lodging, $92 M&IE), Denver ($215 lodging, $92 M&IE), 
-    #           Alexandria ($110 lodging, $68 M&IE), DC ($275 lodging, $92 M&IE)
+    # GSA rates: Atlanta ($189 lodging, $86 M&IE), Denver ($215 lodging, $92 M&IE), 
+    #           San Francisco ($381 lodging, $92 M&IE), Austin ($213 lodging, $86 M&IE)
     travel = [
-        ["Conference presentations - RWJ Benefits Data Summit", "Washington DC", "Chicago", 
-         3, 2, 223, 400, 0, 92, "", "", "GSA per diem rates for Chicago IL"],
-        ["Partner site visits - MyFriendBen integration", "Washington DC", "Denver", 
-         2, 1, 215, 600, 0, 92, "", "", "GSA per diem rates for Denver CO"],
-        ["Government meetings - USDA FNS", "Washington DC", "Alexandria VA", 
-         1, 2, 110, 0, 50, 68, "", "", "GSA per diem rates for Alexandria VA"],
+        ["National Benefits Conference presentation", "Washington DC", "Atlanta GA", 
+         3, 2, 189, 350, 0, 86, "", "", "GSA FY25 per diem for Atlanta GA"],
+        ["Partner integration - MyFriendBen Colorado", "Washington DC", "Denver CO", 
+         2, 1, 215, 600, 0, 92, "", "", "GSA FY25 per diem for Denver CO"],
+        ["Code for America Summit presentation", "Washington DC", "San Francisco CA", 
+         3, 1, 381, 700, 0, 92, "", "", "GSA FY25 per diem for San Francisco CA"],
+        ["Policy Simulation Library annual meeting", "Washington DC", "Austin TX", 
+         2, 2, 213, 500, 0, 86, "", "", "GSA FY25 per diem for Austin TX"],
     ]
     
     for i, item in enumerate(travel):
-        row = 5 + i
+        row = 4 + i  # Start at row 4, not row 5
         ws.update(f'B{row}', [[item[0]]])   # Purpose of Travel
         ws.update(f'C{row}', [[item[1]]])   # Depart From
         ws.update(f'D{row}', [[item[2]]])   # Destination

@@ -1,0 +1,146 @@
+# PBIF Budget Data
+# All budget entries organized by worksheet tab
+
+personnel:
+  # Row 4-7: Name, Title, Effort %, Base Salary, Fringe Rate
+  - name: "Max Ghenis"
+    title: "Project Lead"
+    effort_pct: 50
+    base_salary: 150000
+    fringe_rate: 0.30
+  
+  - name: "Nikhil Woodruff"
+    title: "Lead Engineer"
+    effort_pct: 100
+    base_salary: 140000
+    fringe_rate: 0.30
+  
+  - name: "Pavel Makarchuk"
+    title: "ML/AI Engineer"
+    effort_pct: 80
+    base_salary: 120000
+    fringe_rate: 0.30
+  
+  - name: "TBD"
+    title: "Policy Analyst"
+    effort_pct: 70
+    base_salary: 90000
+    fringe_rate: 0.30
+
+travel:
+  # All travel entries with GSA per diem rates
+  - purpose: "National Benefits Conference presentation"
+    depart_from: "Washington DC"
+    destination: "Atlanta GA"
+    days: 3
+    travelers: 2
+    lodging_per_traveler: 182  # GSA FY25 rate
+    flight_per_traveler: 350
+    vehicle_per_traveler: 0
+    mie_per_traveler: 86  # GSA FY25 rate
+    basis: "GSA FY25 per diem for Atlanta GA"
+  
+  - purpose: "Partner integration - MyFriendBen Colorado"
+    depart_from: "Washington DC"
+    destination: "Denver CO"
+    days: 2
+    travelers: 1
+    lodging_per_traveler: 215  # GSA FY25 rate
+    flight_per_traveler: 600
+    vehicle_per_traveler: 0
+    mie_per_traveler: 92  # GSA FY25 rate
+    basis: "GSA FY25 per diem for Denver CO"
+  
+  - purpose: "Code for America Summit presentation"
+    depart_from: "Washington DC"
+    destination: "San Francisco CA"
+    days: 3
+    travelers: 1
+    lodging_per_traveler: 272  # GSA FY25 rate (using actual from data)
+    flight_per_traveler: 700
+    vehicle_per_traveler: 0
+    mie_per_traveler: 92  # GSA FY25 rate
+    basis: "GSA FY25 per diem for San Francisco CA"
+  
+  - purpose: "Policy Simulation Library annual meeting"
+    depart_from: "Washington DC"
+    destination: "Austin TX"
+    days: 2
+    travelers: 2
+    lodging_per_traveler: 173  # GSA FY25 rate
+    flight_per_traveler: 500
+    vehicle_per_traveler: 0
+    mie_per_traveler: 80  # GSA FY25 rate (using actual from data)
+    basis: "GSA FY25 per diem for Austin TX"
+
+equipment:
+  - item: "Development Workstations"
+    quantity: 2
+    unit_cost: 3000
+    total_cost: 6000
+    cost_share: ""
+    basis_of_cost: "Dell.com pricing"
+    justification: "High-performance machines for ML model training and document processing"
+  
+  - item: "Cloud GPU Credits"
+    quantity: 12
+    unit_cost: 500
+    total_cost: 6000
+    cost_share: ""
+    basis_of_cost: "AWS pricing calculator"
+    justification: "GPU compute for training document classification models"
+  
+  - item: "Software Licenses"
+    quantity: 4
+    unit_cost: 1500
+    total_cost: 6000
+    cost_share: ""
+    basis_of_cost: "Vendor quotes"
+    justification: "Development tools, monitoring, and security software"
+
+contractual:
+  - subaward_number: "LOI-1"
+    subawardee: "MyFriendBen"
+    pi_pd: ""
+    total_cost: 50000
+    justification: "Demonstration partner - test ambiguity analysis with 3,500 monthly users"
+  
+  - subaward_number: "LOI-2"
+    subawardee: "Benefit Navigator"
+    pi_pd: ""
+    total_cost: 50000
+    justification: "Demonstration partner - test with 500+ caseworkers"
+  
+  - subaward_number: "LOI-3"
+    subawardee: "Citizen Codex"
+    pi_pd: ""
+    total_cost: 30000
+    justification: "UX research and interface design"
+
+other_direct:
+  - expense_type: "Technical Advisory Services"
+    total_cost: 40000
+    unit_cost: ""
+    category: "Professional services"
+    justification: "Expert guidance from Urban Institute, GCO, NBER, Benefit Kitchen, NCCP and others on document collection strategy and policy implementation"
+  
+  - expense_type: "Document Bounty Program"
+    total_cost: 35000
+    unit_cost: ""
+    category: "Performance-based awards"
+    justification: "Incentives for partners to verify AI-collected documents and contribute missing ones"
+
+indirect:
+  rate_percentage: 15
+  explanation: "Using 15% de minimis rate per 2 CFR 200.414(f). This covers administrative support, facilities, utilities, and general overhead costs."
+
+# Additional metadata
+metadata:
+  spreadsheet_id: "1sJdmn3IF09h0YA7hYeem80CCfDc1z8jYdeCkq5Phknw"
+  worksheet_mapping:
+    personnel: "a. Personnel"
+    travel: "c. Travel"
+    equipment: "d. Equipment"
+    contractual: "f. Contractual"
+    other_direct: "h. Other"
+    indirect: "i. Indirect"
