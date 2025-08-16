@@ -22,24 +22,36 @@ def populate_personnel(ws, data):
     """Populate Personnel worksheet using batch range update."""
     print("   Personnel...")
     
+    # Clear existing data first (rows 4-11)
+    clear_rows = [[''] * 7 for _ in range(8)]  # 8 rows, 7 columns (A-G)
+    ws.update(values=clear_rows, range_name='A4:G11')
+    
     # Prepare all personnel data as a 2D array
     personnel_rows = []
     for person in data:
-        # Create row with proper column spacing (A, B, C, skip D, E, skip F, G)
+        # Create row with proper column spacing
+        # A: Name (leave empty per instructions)
+        # B: Position Title
+        # C: Effort %
+        # D: Pay Rate (calculated by formula)
+        # E: Base Salary
+        # F: Personnel Cost (calculated by formula)
+        # G: Fringe Rate
         row = [
-            person['name'],           # A
-            person['title'],          # B  
-            person['effort_pct'],     # C
-            '',                       # D (skip)
-            person['base_salary'],    # E
-            '',                       # F (skip)
-            person['fringe_rate']     # G
+            '',                           # A (Name - leave empty)
+            person['position_title'],     # B (Position Title)
+            person['effort_pct'],         # C (Effort %)
+            '',                           # D (Pay Rate - formula)
+            person['base_salary'],        # E (Base Salary)
+            '',                           # F (Personnel Cost - formula)
+            person['fringe_rate']         # G (Fringe Rate)
         ]
         personnel_rows.append(row)
     
-    # Update all personnel rows at once (A4:G7)
+    # Update all personnel rows at once starting at A4
     if personnel_rows:
-        ws.update(values=personnel_rows, range_name='A4:G7')
+        end_row = 3 + len(personnel_rows)
+        ws.update(values=personnel_rows, range_name=f'A4:G{end_row}')
     
     print(f"   ✓ Added {len(data)} personnel entries")
 

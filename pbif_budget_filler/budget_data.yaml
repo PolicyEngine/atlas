@@ -2,27 +2,24 @@
 # All budget entries organized by worksheet tab
 
 personnel:
-  # Row 4-7: Name, Title, Effort %, Base Salary, Fringe Rate
-  - name: "Max Ghenis"
-    title: "Project Lead"
+  # Row 4-7: Position Title (B), Effort % (C), Base Salary (E), Fringe Rate (G)
+  # Column A should be left empty for names (not using names per instructions)
+  - position_title: "Project Lead"
     effort_pct: 50
     base_salary: 150000
     fringe_rate: 0.30
   
-  - name: "Nikhil Woodruff"
-    title: "Lead Engineer"
+  - position_title: "Lead Engineer"
     effort_pct: 100
     base_salary: 140000
     fringe_rate: 0.30
   
-  - name: "Pavel Makarchuk"
-    title: "ML/AI Engineer"
+  - position_title: "ML/AI Engineer"
     effort_pct: 80
     base_salary: 120000
     fringe_rate: 0.30
   
-  - name: "TBD"
-    title: "Policy Analyst"
+  - position_title: "Policy Analyst"
     effort_pct: 70
     base_salary: 90000
     fringe_rate: 0.30
