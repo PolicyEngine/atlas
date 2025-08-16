@@ -94,7 +94,7 @@ def populate_personnel(sheet):
 
 def populate_equipment(sheet):
     """Populate Equipment worksheet."""
-    ws = sheet.worksheet('c. Equipment')
+    ws = sheet.worksheet('d. Equipment')
     
     # Equipment items
     equipment = [
@@ -116,20 +116,7 @@ def populate_equipment(sheet):
 
 def populate_travel(sheet):
     """Populate Travel worksheet."""
-    # Try different possible worksheet names
-    possible_names = ['d. Travel', 'e. Travel', 'Travel', 'd.Travel']
-    ws = None
-    for name in possible_names:
-        try:
-            ws = sheet.worksheet(name)
-            print(f"   Found Travel worksheet as '{name}'")
-            break
-        except:
-            continue
-    
-    if ws is None:
-        print("   ⚠️  Could not find Travel worksheet - skipping")
-        return
+    ws = sheet.worksheet('c. Travel')
     
     # Travel items
     travel = [
