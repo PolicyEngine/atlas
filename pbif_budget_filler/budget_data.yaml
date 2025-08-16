@@ -25,8 +25,8 @@ personnel:
     fringe_rate: 0.30
 
 travel:
-  # All travel entries with GSA per diem rates
-  - purpose: "National Benefits Conference presentation"
+  # Travel entries for 2-year grant period with GSA per diem rates
+  - purpose: "National Benefits Conference (2x over 2 years)"
     depart_from: "Washington DC"
     destination: "Atlanta GA"
     days: 3
@@ -35,9 +35,9 @@ travel:
     flight_per_traveler: 350
     vehicle_per_traveler: 0
     mie_per_traveler: 86  # GSA FY25 rate
-    basis: "GSA FY25 per diem for Atlanta GA"
+    basis: "GSA FY25 per diem for Atlanta GA - 2 trips total"
   
-  - purpose: "Partner integration - MyFriendBen Colorado"
+  - purpose: "Partner integration - MyFriendBen (4x over 2 years)"
     depart_from: "Washington DC"
     destination: "Denver CO"
     days: 2
@@ -46,20 +46,20 @@ travel:
     flight_per_traveler: 600
     vehicle_per_traveler: 0
     mie_per_traveler: 92  # GSA FY25 rate
-    basis: "GSA FY25 per diem for Denver CO"
+    basis: "GSA FY25 per diem for Denver CO - 4 trips total"
   
-  - purpose: "Code for America Summit presentation"
+  - purpose: "Code for America Summit (2x over 2 years)"
     depart_from: "Washington DC"
     destination: "San Francisco CA"
     days: 3
     travelers: 1
-    lodging_per_traveler: 272  # GSA FY25 rate (using actual from data)
+    lodging_per_traveler: 272  # GSA FY25 rate
     flight_per_traveler: 700
     vehicle_per_traveler: 0
     mie_per_traveler: 92  # GSA FY25 rate
-    basis: "GSA FY25 per diem for San Francisco CA"
+    basis: "GSA FY25 per diem for San Francisco CA - 2 trips total"
   
-  - purpose: "Policy Simulation Library annual meeting"
+  - purpose: "Policy Simulation Library meetings (2x over 2 years)"
     depart_from: "Washington DC"
     destination: "Austin TX"
     days: 2
@@ -67,8 +67,8 @@ travel:
     lodging_per_traveler: 173  # GSA FY25 rate
     flight_per_traveler: 500
     vehicle_per_traveler: 0
-    mie_per_traveler: 80  # GSA FY25 rate (using actual from data)
-    basis: "GSA FY25 per diem for Austin TX"
+    mie_per_traveler: 80  # GSA FY25 rate
+    basis: "GSA FY25 per diem for Austin TX - 2 trips total"
 
 equipment:
   - item: "Development Workstations"

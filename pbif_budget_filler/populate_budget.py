@@ -54,19 +54,21 @@ def populate_personnel(ws, data, config):
     # F: Cost share - leave empty
     
     for i, person in enumerate(data):
-        # Convert effort percentage to hours (% of 2080 hours/year)
-        hours = int(person['effort_pct'] * 2080 / 100)
+        # Convert effort percentage to hours (% of 2080 hours/year * 2 years)
+        hours_per_year = int(person['effort_pct'] * 2080 / 100)
+        total_hours = hours_per_year * 2  # 2-year grant period
         row = start_row + i
         
         # Calculate hourly rate for column D
         hourly_rate = person['base_salary'] / 2080
         
         # Create pay rate basis text for column G
-        pay_rate_basis = f"${person['base_salary']:,} annual salary"
+        # Include: annual salary, FTE %, and 2-year duration
+        pay_rate_basis = f"${person['base_salary']:,}/year @ {person['effort_pct']}% FTE for 2 years"
         
         # Update individual cells
         ws.update(values=[[person['position_title']]], range_name=f'B{row}')  # Position Title
-        ws.update(values=[[hours]], range_name=f'C{row}')                     # Time (Hours)
+        ws.update(values=[[total_hours]], range_name=f'C{row}')               # Time (Hours) - 2 year total
         ws.update(values=[[hourly_rate]], range_name=f'D{row}')               # Pay Rate ($/Hr)
         ws.update(values=[[pay_rate_basis]], range_name=f'G{row}')            # Pay Rate Basis text
     
