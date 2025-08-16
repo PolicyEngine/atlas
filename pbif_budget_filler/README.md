@@ -12,9 +12,15 @@ Automated tool for populating the PBIF budget spreadsheet from YAML configuratio
    ```
 
 2. **Authentication:**
-   - Ensure you have `token.pickle` in the parent directory (`../token.pickle`)
-   - This file contains Google Sheets API credentials
-   - If missing, you'll need to run the authentication flow
+   ```bash
+   source venv/bin/activate
+   python auth_setup.py
+   ```
+   This will:
+   - Check for existing `../token.pickle` credentials
+   - Guide you through OAuth setup if needed
+   - Test the connection to the spreadsheet
+   - Save credentials for future use
 
 ## Usage
 
@@ -109,11 +115,12 @@ The script automatically removes yellow highlighting while preserving:
 ## Files
 
 - `populate_budget_batch.py` - Main script using efficient batch updates (~3 API calls)
-- `populate_budget.py` - Alternative script with individual cell updates (slower)
 - `check_total.py` - Verify budget total and breakdown
+- `auth_setup.py` - Setup and test Google Sheets authentication
 - `budget_data.yaml` - Budget line items and amounts
 - `spreadsheet_config.yaml` - Spreadsheet structure and mappings
 - `restore_formulas.py` - Restore formulas if accidentally cleared
+- `populate_budget.py` - Alternative script with individual cell updates (slower, backup only)
 
 ## Current Budget Components (Updated for 5K Document Scope)
 
