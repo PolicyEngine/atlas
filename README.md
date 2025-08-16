@@ -4,7 +4,7 @@ AI-powered infrastructure for preserving and serving America's safety net policy
 
 ## Overview
 
-The Policy Library addresses a critical infrastructure failure: benefit program documents disappear constantly. Our analysis shows 18% of benefit program URLs from 2019 are dead today. This system uses AI-powered crawlers to monitor 50+ jurisdictions, capturing statutes, regulations, and forms before they vanish.
+The Policy Library addresses a critical infrastructure failure: benefit program documents disappear constantly. This system uses AI-powered crawlers to monitor 50+ jurisdictions, capturing statutes, regulations, and forms before they vanish.
 
 **Live Application**: https://policyengine.github.io/policy-library/
 
@@ -21,6 +21,10 @@ The Policy Library addresses a critical infrastructure failure: benefit program 
 - **MCP Server Integration**: Native AI assistant support for accurate policy lookups
 - **REST API**: Simple endpoints for document access
 - **Community Maintained**: Civic tech groups help maintain jurisdiction coverage
+
+## PBIF Budget
+
+**Important**: The budget is maintained in `pbif_budget_filler/budget_data.yaml` and automatically synced to Google Sheets. Check this file for the authoritative budget numbers before making changes.
 
 ## Development
 

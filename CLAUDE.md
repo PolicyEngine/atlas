@@ -9,10 +9,10 @@ This is the **PolicyEngine Policy Library** repository - a PBIF (Public Benefit 
 ## Project Context
 
 ### Core Concept
-- **Purpose**: Create an immutable archive of benefit program documents to prevent link rot and document disappearance (18% of 2019 benefit URLs are now dead)
+- **Purpose**: Create an immutable archive of benefit program documents to prevent link rot and document disappearance
 - **Approach**: AI crawlers monitor agency websites → Human reviewers verify via GitHub PRs → Stable API serves documents with permanent source IDs
 - **Target**: 50+ jurisdictions (federal + states) with 100,000+ documents archived in Year 1
-- **AI Integration**: Uses Claude/GPT-4 for intelligent document extraction, provides 24pp accuracy improvement in LLM benefit calculations
+- **AI Integration**: Uses Claude/GPT-4 for intelligent document extraction and improves LLM benefit calculations
 
 ### PBIF Application Details
 - **Application Deadline**: August 16, 2025, 11:59 PM Pacific Time

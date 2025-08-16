@@ -12,8 +12,8 @@ function Overview() {
             <div className="hero-stat-label">Target Jurisdictions</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">$10.5B</div>
-            <div className="hero-stat-label">Annual SNAP Errors</div>
+            <div className="hero-stat-number">100K+</div>
+            <div className="hero-stat-label">Documents to Archive</div>
           </div>
           <div className="hero-stat">
             <div className="hero-stat-number">44</div>
@@ -25,10 +25,9 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">Ambiguous Policies Cause Billions in Errors</h2>
+            <h2 className="card-title">Ambiguous Policies Cause Errors</h2>
             <p>
-              SNAP errors cost $10.5 billion annually (FY 2023), with 44 states failing accuracy
-              thresholds in FY 2024. The root cause: ambiguous policy language creates inconsistent
+              Many states struggle with benefit accuracy due to ambiguous policy language that creates inconsistent
               caseworker interpretations. When the same eligibility criteria can be read multiple
               ways, errors are inevitable.
             </p>
@@ -46,7 +45,7 @@ function Overview() {
             <h2 className="card-title">AI That Shows Exactly What to Fix</h2>
             <p>
               The Policy Library uses Claude/GPT-4 to analyze policy documents, scoring ambiguity
-              levels and correlating them with actual SNAP error rates. We deliver specific
+              levels. We deliver specific
               recommendations: "Your eligibility criteria has ambiguity score X, correlating with Y%
               higher error rates—here's how to clarify." The supporting document library ensures
               comprehensive analysis across all jurisdictions.

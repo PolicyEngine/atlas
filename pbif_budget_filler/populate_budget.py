@@ -66,11 +66,8 @@ def populate_personnel(ws, data, config):
         # Include: annual salary, FTE %, and 2-year duration
         pay_rate_basis = f"${person['base_salary']:,}/year @ {person['effort_pct']}% FTE for 2 years"
         
-        # Add fringe benefits description in column A
-        fringe_description = f"{person['fringe_rate']:.0%} fringe (403b contribution)"
-        
-        # Update individual cells
-        ws.update(values=[[fringe_description]], range_name=f'A{row}')        # Fringe description
+        # Update individual cells (skip column A - no names)
+        ws.update(values=[['']], range_name=f'A{row}')                        # Empty - no names
         ws.update(values=[[person['position_title']]], range_name=f'B{row}')  # Position Title
         ws.update(values=[[total_hours]], range_name=f'C{row}')               # Time (Hours) - 2 year total
         ws.update(values=[[hourly_rate]], range_name=f'D{row}')               # Pay Rate ($/Hr)
@@ -172,9 +169,9 @@ def populate_contractual(ws, data, config):
         row = [
             partner['subaward_number'],  # A
             partner['subawardee'],       # B
-            partner['pi_pd'],            # C
+            partner['justification'],    # C (Purpose of Subaward)
             partner['total_cost'],       # D
-            partner['justification']     # E
+            ''                           # E (empty)
         ]
         contractual_rows.append(row)
     
@@ -186,8 +183,9 @@ def populate_contractual(ws, data, config):
     # Add explanation in configured cell
     if 'explanation_cell' in ws_config:
         explanation = (
-            "MyFriendBen and Benefit Navigator each receive $40k as demonstration partners "
-            "to test ambiguity analysis. Citizen Codex receives $20k for UX research and design."
+            "MyFriendBen and Benefit Navigator each receive $50k as demonstration partners "
+            "to integrate and test the Policy Library's document retrieval, source validation, "
+            "and AI-powered benefit calculations. Citizen Codex receives $30k for UX research and design."
         )
         ws.update(values=[[explanation]], range_name=ws_config['explanation_cell'])
     

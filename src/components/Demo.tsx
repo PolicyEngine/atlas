@@ -77,7 +77,7 @@ documents = response.json()`;
               className={`demo-tab ${activeTab === 'bounty' ? 'active' : ''}`}
               onClick={() => setActiveTab('bounty')}
             >
-              🏆 Bounty Program
+              🏆 Partner Verification Program
             </button>
             <button
               className={`demo-tab ${activeTab === 'dashboard' ? 'active' : ''}`}
@@ -477,7 +477,7 @@ documents = response.json()`;
                     • $40,000 for technical advisory services from leading research organizations
                   </div>
                   <div>
-                    • $35,000 for document bounty rewards based on contribution quality and volume
+                    • $35,000 for document verification payments to trusted research partners
                   </div>
                 </div>
               </div>
@@ -573,7 +573,7 @@ documents = response.json()`;
               </div>
 
               <div style={{ marginBottom: '25px' }}>
-                <h4>Document Bounty Program ($35,000)</h4>
+                <h4>Document Verification Partners ($35,000)</h4>
                 <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <thead>

@@ -15,6 +15,16 @@ worksheets:
       fringe_rate: "G" # Fringe rate
     clear_range: "A6:G13"  # Range to clear before populating
     
+  fringe:
+    name: "b. Fringe"
+    data_start_row: 4
+    columns:
+      labor_type: "A"
+      personnel_costs: "B"
+      rate: "C"
+      total: "D"
+    clear_range: "A4:C9"
+    
   travel:
     name: "c. Travel"
     data_start_row: 4  # Data entry starts at row 4
@@ -72,19 +82,19 @@ worksheets:
     
   other_direct:
     name: "h. Other"
-    data_start_row: 7  # Data entry starts at row 7
+    data_start_row: 4  # Data entry starts at row 4
     columns:
       expense_type: "B"
       total_cost: "C"
       unit_cost: "D"
       category: "E"
       justification: "F"
-    clear_range: "B7:F10"
+    clear_range: "B4:F10"
     
   indirect:
     name: "i. Indirect"
-    rate_cell: "B5"        # Cell for indirect rate percentage
-    explanation_cell: "A7" # Cell for explanation text
+    rate_cell: "B4"        # Cell for indirect rate percentage
+    explanation_cell: "A8" # Cell for explanation text (Additional Explanation row)
 
 # Spreadsheet metadata
 spreadsheet:
