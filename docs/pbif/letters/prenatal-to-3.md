@@ -16,6 +16,8 @@ The Prenatal-to-3 Policy Impact Center at Vanderbilt University enthusiastically
 
 We have been active users of PolicyEngine's tax credit modeling capabilities since 2023, utilizing their open-source tools to analyze the impacts of Child Tax Credit expansions, Earned Income Tax Credit modifications, and state-level family tax policies. Their microsimulation models have enabled us to produce more accurate estimates of policy impacts on families with young children across all 50 states.
 
+The Policy Library's Clarity Analysis feature is particularly valuable for our work. By scoring policy documents for ambiguity and complexity, it will help us identify which state policies create confusion for families trying to access prenatal care, childcare subsidies, and nutritional assistance. This aligns perfectly with our mission to reduce barriers for families with young children.
+
 ## Contribution to the Policy Library
 
 We are committed to contributing our extensive research archive to seed the Policy Library with critical documents related to early childhood policies, including:
@@ -37,19 +39,29 @@ The Policy Library will transform our research capabilities by:
 3. **Improving accuracy** - Direct access to source documents will reduce errors in our policy analyses
 4. **Accelerating research** - Comprehensive search capabilities will speed our systematic reviews
 
-## Commitment Without Compensation
+## Technical Advisory Partnership
 
-While we are not requesting financial support from this grant, we commit to:
+As part of the $40,000 technical advisory services allocation, the Prenatal-to-3 Policy Impact Center will provide:
 
-- Contributing our full document archive within the first 3 months
+- **Document Collection Strategy**: Share our methodology for systematically collecting and organizing state policy documents
+- **Quality Assurance**: Review and validate AI-collected documents in our areas of expertise (TANF, WIC, child care subsidies)
+- **State Relationships**: Leverage our connections with state agencies to identify hard-to-find policy manuals
+- **Research Integration**: Help design the document structure to support academic research workflows
+- **Network Engagement**: Connect PolicyEngine with our network of state policymakers and early childhood researchers
+
+Additionally, we commit to:
+- Contributing our full document archive of 500+ documents within the first 3 months
 - Providing ongoing documents as we discover them through our research
-- Participating in quarterly feedback sessions
+- Participating in monthly advisory meetings
 - Testing and validating the system with our research team
-- Sharing the Policy Library with our network of state policymakers and researchers
 
 ## Alignment with PBIF Priorities
 
-This project directly supports PBIF's goal of reducing administrative burden in safety net programs. Our research consistently shows that policy complexity and documentation challenges create barriers for families with young children accessing benefits. The Policy Library will help caseworkers, families, and researchers navigate these complex systems more effectively.
+This project directly supports PBIF's goal of reducing administrative burden and the $10.5 billion in annual SNAP errors. Our research consistently shows that policy complexity and documentation challenges create barriers for families with young children accessing benefits. 
+
+The Clarity Analysis component is especially critical - by identifying ambiguous policy language and correlating it with error rates, PolicyEngine will help states rewrite policies to be clearer. This will reduce caseworker confusion, decrease improper payments, and ensure eligible families receive the support they need during the critical prenatal-to-3 period.
+
+The Policy Library will help caseworkers, families, and researchers navigate these complex systems more effectively, ultimately improving outcomes for America's youngest children and their families.
 
 We look forward to collaborating with PolicyEngine and other partners to build this essential infrastructure for America's safety net programs.
 
