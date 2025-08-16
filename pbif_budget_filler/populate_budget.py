@@ -96,45 +96,64 @@ def populate_equipment(sheet):
     """Populate Equipment worksheet."""
     ws = sheet.worksheet('d. Equipment')
     
-    # Equipment items
+    # Clear existing data first (rows 5-10)
+    for row in range(5, 11):
+        ws.update(f'B{row}:H{row}', [[""] * 8])
+    
+    # Equipment items - proper column structure
+    # B: Equipment Item, C: Qty, D: Unit Cost, E: Total Cost, F: Cost share, G: Basis, H: Justification
     equipment = [
-        ["Development Workstations", 2, 3000, 6000,
+        ["Development Workstations", 2, 3000, 6000, "", "Dell.com pricing",
          "High-performance machines for ML model training and document processing"],
-        ["Cloud GPU Credits", 12, 500, 6000,
+        ["Cloud GPU Credits", 12, 500, 6000, "", "AWS pricing calculator",
          "GPU compute for training document classification models"],
-        ["Software Licenses", 4, 1500, 6000,
+        ["Software Licenses", 4, 1500, 6000, "", "Vendor quotes",
          "Development tools, monitoring, and security software"],
     ]
     
     for i, item in enumerate(equipment):
         row = 5 + i
-        ws.update(f'A{row}', [[item[0]]])  # Description
-        ws.update(f'B{row}', [[item[1]]])  # Quantity
-        ws.update(f'C{row}', [[item[2]]])  # Unit cost
-        ws.update(f'D{row}', [[item[3]]])  # Total cost
-        ws.update(f'E{row}', [[item[4]]])  # Justification
+        ws.update(f'B{row}', [[item[0]]])  # Equipment Item
+        ws.update(f'C{row}', [[item[1]]])  # Quantity
+        ws.update(f'D{row}', [[item[2]]])  # Unit Cost
+        ws.update(f'E{row}', [[item[3]]])  # Total Cost
+        ws.update(f'F{row}', [[item[4]]])  # Cost share (empty)
+        ws.update(f'G{row}', [[item[5]]])  # Basis of Cost
+        ws.update(f'H{row}', [[item[6]]])  # Justification
 
 def populate_travel(sheet):
     """Populate Travel worksheet."""
     ws = sheet.worksheet('c. Travel')
     
-    # Travel items
+    # Clear existing data first (rows 5-10)
+    for row in range(5, 11):
+        ws.update(f'B{row}:M{row}', [[""] * 12])
+    
+    # Travel items with proper column structure
+    # B: Purpose, C: Depart From, D: Destination, E: Days, F: Travelers, 
+    # G: Lodging, H: Flight, I: Vehicle, J: M&IE, K: Cost/Trip, M: Basis
     travel = [
-        ["Conference presentations", 2, 2000, 4000,
-         "Present Policy Library at benefits administration conferences"],
-        ["Partner site visits", 3, 1500, 4500,
-         "On-site integration support for demonstration partners"],
-        ["Government meetings", 2, 1000, 2000,
-         "Meet with state agencies interested in adoption"],
+        ["Conference presentations - RWJ Benefits Data Summit", "San Francisco", "Washington DC", 
+         3, 2, 200, 600, 0, 75, "", "", "Present Policy Library at annual benefits conference"],
+        ["Partner site visits - MyFriendBen integration", "San Francisco", "Denver", 
+         2, 1, 150, 400, 0, 50, "", "", "On-site support for demonstration partner integration"],
+        ["Government meetings - CA state agency", "San Francisco", "Sacramento", 
+         1, 2, 0, 0, 100, 50, "", "", "Meet with state SNAP administrators about adoption"],
     ]
     
     for i, item in enumerate(travel):
         row = 5 + i
-        ws.update(f'A{row}', [[item[0]]])  # Purpose
-        ws.update(f'B{row}', [[item[1]]])  # Number of trips
-        ws.update(f'C{row}', [[item[2]]])  # Cost per trip
-        ws.update(f'D{row}', [[item[3]]])  # Total
-        ws.update(f'E{row}', [[item[4]]])  # Justification
+        ws.update(f'B{row}', [[item[0]]])   # Purpose of Travel
+        ws.update(f'C{row}', [[item[1]]])   # Depart From
+        ws.update(f'D{row}', [[item[2]]])   # Destination
+        ws.update(f'E{row}', [[item[3]]])   # No. of Days
+        ws.update(f'F{row}', [[item[4]]])   # No. of Travelers
+        ws.update(f'G{row}', [[item[5]]])   # Lodging per Traveler
+        ws.update(f'H{row}', [[item[6]]])   # Flight per Traveler
+        ws.update(f'I{row}', [[item[7]]])   # Vehicle per Traveler
+        ws.update(f'J{row}', [[item[8]]])   # M&IE Per Traveler
+        # K is calculated by formula
+        ws.update(f'M{row}', [[item[11]]])  # Basis for Estimating Costs
 
 def populate_indirect(sheet):
     """Populate Indirect Costs."""
