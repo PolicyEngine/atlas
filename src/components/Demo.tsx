@@ -14,7 +14,7 @@ function Demo() {
   const [program, setProgram] = useState('snap');
   const [doctype, setDoctype] = useState('statute');
   const [showResults, setShowResults] = useState(false);
-  const [activeTab, setActiveTab] = useState<'library' | 'clarity' | 'bounty' | 'dashboard' | 'api'>('library');
+  const [activeTab, setActiveTab] = useState<'library' | 'clarity' | 'bounty' | 'dashboard' | 'api' | 'mcp'>('library');
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadUrl, setUploadUrl] = useState('');
 
@@ -155,6 +155,12 @@ documents = response.json()`;
             >
               🔌 API Access
             </button>
+            <button
+              className={`demo-tab ${activeTab === 'mcp' ? 'active' : ''}`}
+              onClick={() => setActiveTab('mcp')}
+            >
+              🤖 MCP Server
+            </button>
           </div>
 
           {activeTab === 'library' && (
@@ -282,7 +288,7 @@ documents = response.json()`;
                           marginRight: '10px',
                         }}
                       />
-                      <strong style={{ color: '#dc3545' }}>Low Clarity (Score: 1.3/10)</strong>
+                      <strong style={{ color: '#dc3545' }}>Low Clarity Score</strong>
                     </div>
                     <div
                       style={{
@@ -315,9 +321,8 @@ documents = response.json()`;
                     <div style={{ marginBottom: '15px' }}>
                       <strong>📊 Error Correlation:</strong>
                       <p style={{ marginTop: '10px' }}>
-                        States using similar language show 34% higher error rates in self-employment
-                        income calculations. Texas reported $12.3M in QC errors related to this section
-                        in FY 2024.
+                        Analysis will correlate this type of language with actual SNAP Quality Control
+                        error data to demonstrate the impact of unclear policies.
                       </p>
                     </div>
 
@@ -365,8 +370,8 @@ documents = response.json()`;
                     </div>
                   </div>
                   <div style={{ marginTop: '20px', padding: '15px', background: 'white', borderRadius: '8px' }}>
-                    <strong>Validation Results:</strong> AI scores show 87% correlation with human rater baselines 
-                    and 91% correlation with actual SNAP error rates by state
+                    <strong>Validation Approach:</strong> AI scores will be validated against human rater baselines 
+                    and correlated with actual SNAP Quality Control error data
                   </div>
                 </div>
               </div>
@@ -393,34 +398,34 @@ documents = response.json()`;
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Mississippi</td>
                         <td style={{ padding: '10px' }}>
-                          <span style={{ color: '#dc3545' }}>1.8/10</span>
+                          <span style={{ color: '#dc3545' }}>Low</span>
                         </td>
-                        <td style={{ padding: '10px' }}>14.3%</td>
-                        <td style={{ padding: '10px' }}>$43.2M</td>
+                        <td style={{ padding: '10px' }}>High</td>
+                        <td style={{ padding: '10px' }}>High</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Louisiana</td>
                         <td style={{ padding: '10px' }}>
-                          <span style={{ color: '#dc3545' }}>2.1/10</span>
+                          <span style={{ color: '#dc3545' }}>Low</span>
                         </td>
-                        <td style={{ padding: '10px' }}>13.8%</td>
-                        <td style={{ padding: '10px' }}>$67.5M</td>
+                        <td style={{ padding: '10px' }}>High</td>
+                        <td style={{ padding: '10px' }}>High</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Vermont</td>
                         <td style={{ padding: '10px' }}>
-                          <span style={{ color: '#28a745' }}>8.9/10</span>
+                          <span style={{ color: '#28a745' }}>High</span>
                         </td>
-                        <td style={{ padding: '10px' }}>4.2%</td>
-                        <td style={{ padding: '10px' }}>$2.8M</td>
+                        <td style={{ padding: '10px' }}>Low</td>
+                        <td style={{ padding: '10px' }}>Low</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Minnesota</td>
                         <td style={{ padding: '10px' }}>
-                          <span style={{ color: '#28a745' }}>8.6/10</span>
+                          <span style={{ color: '#28a745' }}>High</span>
                         </td>
-                        <td style={{ padding: '10px' }}>4.7%</td>
-                        <td style={{ padding: '10px' }}>$8.1M</td>
+                        <td style={{ padding: '10px' }}>Low</td>
+                        <td style={{ padding: '10px' }}>Low</td>
                       </tr>
                     </tbody>
                   </table>
@@ -502,22 +507,22 @@ documents = response.json()`;
                     <tbody>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Verify AI-collected document</td>
-                        <td style={{ padding: '10px' }}>$5 per document</td>
+                        <td style={{ padding: '10px' }}>TBD</td>
                         <td style={{ padding: '10px' }}><span style={{ color: '#28a745' }}>Active</span></td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Contribute missing statute/regulation</td>
-                        <td style={{ padding: '10px' }}>$25 per document</td>
+                        <td style={{ padding: '10px' }}>TBD</td>
                         <td style={{ padding: '10px' }}><span style={{ color: '#28a745' }}>Active</span></td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Provide policy manual</td>
-                        <td style={{ padding: '10px' }}>$50 per manual</td>
+                        <td style={{ padding: '10px' }}>TBD</td>
                         <td style={{ padding: '10px' }}><span style={{ color: '#ffc107' }}>Limited</span></td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>Complete state coverage</td>
-                        <td style={{ padding: '10px' }}>$500 bonus</td>
+                        <td style={{ padding: '10px' }}>TBD</td>
                         <td style={{ padding: '10px' }}><span style={{ color: '#17a2b8' }}>Upcoming</span></td>
                       </tr>
                     </tbody>
@@ -540,21 +545,21 @@ documents = response.json()`;
                     <tbody>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>🥇 Urban Institute</td>
-                        <td style={{ padding: '10px', textAlign: 'center' }}>142</td>
-                        <td style={{ padding: '10px', textAlign: 'center' }}>328</td>
-                        <td style={{ padding: '10px', textAlign: 'right' }}>$5,190</td>
+                        <td style={{ padding: '10px', textAlign: 'center' }}>-</td>
+                        <td style={{ padding: '10px', textAlign: 'center' }}>-</td>
+                        <td style={{ padding: '10px', textAlign: 'right' }}>TBD</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>🥈 Georgia Center</td>
-                        <td style={{ padding: '10px', textAlign: 'center' }}>98</td>
-                        <td style={{ padding: '10px', textAlign: 'center' }}>256</td>
-                        <td style={{ padding: '10px', textAlign: 'right' }}>$3,730</td>
+                        <td style={{ padding: '10px', textAlign: 'center' }}>-</td>
+                        <td style={{ padding: '10px', textAlign: 'center' }}>-</td>
+                        <td style={{ padding: '10px', textAlign: 'right' }}>TBD</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>🥉 Individual Contributors</td>
-                        <td style={{ padding: '10px', textAlign: 'center' }}>67</td>
-                        <td style={{ padding: '10px', textAlign: 'center' }}>189</td>
-                        <td style={{ padding: '10px', textAlign: 'right' }}>$2,620</td>
+                        <td style={{ padding: '10px', textAlign: 'center' }}>-</td>
+                        <td style={{ padding: '10px', textAlign: 'center' }}>-</td>
+                        <td style={{ padding: '10px', textAlign: 'right' }}>TBD</td>
                       </tr>
                     </tbody>
                   </table>
@@ -576,19 +581,19 @@ documents = response.json()`;
                 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px', marginBottom: '20px' }}>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#dc3545' }}>44</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#dc3545' }}>TBD</div>
                     <div style={{ fontSize: '14px', color: 'var(--gray)' }}>Low Clarity Sections</div>
                   </div>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#ffc107' }}>$178M</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#ffc107' }}>TBD</div>
                     <div style={{ fontSize: '14px', color: 'var(--gray)' }}>Annual Error Cost</div>
                   </div>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#17a2b8' }}>11.4%</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#17a2b8' }}>TBD</div>
                     <div style={{ fontSize: '14px', color: 'var(--gray)' }}>Current Error Rate</div>
                   </div>
                   <div style={{ background: 'white', border: '1px solid #dee2e6', padding: '15px', borderRadius: '8px' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#28a745' }}>6.8%</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#28a745' }}>TBD</div>
                     <div style={{ fontSize: '14px', color: 'var(--gray)' }}>Projected After Fixes</div>
                   </div>
                 </div>
@@ -607,8 +612,8 @@ documents = response.json()`;
                     <tbody>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>3.2.1 Self-Employment Income</td>
-                        <td style={{ padding: '10px' }}><span style={{ color: '#dc3545' }}>1.3/10</span></td>
-                        <td style={{ padding: '10px' }}>342</td>
+                        <td style={{ padding: '10px' }}><span style={{ color: '#dc3545' }}>Low</span></td>
+                        <td style={{ padding: '10px' }}>High</td>
                         <td style={{ padding: '10px' }}>
                           <button style={{ padding: '5px 10px', background: 'var(--teal-accent)', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
                             View Fix
@@ -617,8 +622,8 @@ documents = response.json()`;
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>4.1.3 Household Composition</td>
-                        <td style={{ padding: '10px' }}><span style={{ color: '#dc3545' }}>1.9/10</span></td>
-                        <td style={{ padding: '10px' }}>287</td>
+                        <td style={{ padding: '10px' }}><span style={{ color: '#dc3545' }}>Low</span></td>
+                        <td style={{ padding: '10px' }}>High</td>
                         <td style={{ padding: '10px' }}>
                           <button style={{ padding: '5px 10px', background: 'var(--teal-accent)', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
                             View Fix
@@ -627,8 +632,8 @@ documents = response.json()`;
                       </tr>
                       <tr style={{ borderBottom: '1px solid #dee2e6' }}>
                         <td style={{ padding: '10px' }}>2.4.7 Resource Limits</td>
-                        <td style={{ padding: '10px' }}><span style={{ color: '#ffc107' }}>3.7/10</span></td>
-                        <td style={{ padding: '10px' }}>156</td>
+                        <td style={{ padding: '10px' }}><span style={{ color: '#ffc107' }}>Medium</span></td>
+                        <td style={{ padding: '10px' }}>Medium</td>
                         <td style={{ padding: '10px' }}>
                           <button style={{ padding: '5px 10px', background: 'var(--teal-accent)', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
                             View Fix
@@ -649,12 +654,12 @@ documents = response.json()`;
                     <div style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '60%', background: 'linear-gradient(to right, #dc3545, #ffc107)', borderRadius: '20px 0 0 20px' }} />
                     <div style={{ position: 'absolute', right: 0, top: 0, height: '100%', width: '40%', background: '#28a745', borderRadius: '0 20px 20px 0' }} />
                     <div style={{ position: 'absolute', left: '60%', top: '50%', transform: 'translate(-50%, -50%)', background: 'white', padding: '5px 10px', borderRadius: '4px', fontWeight: 'bold', fontSize: '12px' }}>
-                      40% Reduction
+                      Improvement Target
                     </div>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontSize: '14px' }}>
-                    <span>11.4% Error Rate</span>
-                    <span>6.8% Projected</span>
+                    <span>Current State</span>
+                    <span>Target State</span>
                   </div>
                 </div>
               </div>
@@ -679,7 +684,7 @@ documents = response.json()`;
             </div>
           )}
 
-          {activeTab === 'impact' && (
+          {false && activeTab === 'impact' && (
             <div className="demo-impact-section">
               <h3>ROI Calculator for Your State</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
