@@ -27,8 +27,8 @@ function Overview() {
           <div className="card problem-card">
             <h2 className="card-title">The Hidden Crisis in Benefit Delivery</h2>
             <p>
-              <strong>Not Accessible:</strong> Documents disappear overnight. Links break. Civil society 
-              organizations waste 40+ hours monthly fixing references instead of helping families.
+              <strong>Not Accessible:</strong> Documents disappear from agency websites. Links break without warning. 
+              Finding authoritative sources requires navigating dozens of fragmented sites.
             </p>
             <p>
               <strong>Not Clear:</strong> Language varies wildly between jurisdictions. The same eligibility 

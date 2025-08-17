@@ -1433,7 +1433,7 @@ function Demo() {
               <h3>Making Policies Accessible and Computable</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
                 <strong>Accessible:</strong> Documents with permanent IDs that never break. Version history. 
-                No more 40+ hours monthly fixing links.
+                One source instead of fragmented agency websites.
                 <strong> Computable:</strong> Semantic connections reveal hidden eligibility pathways. 
                 Rules engines cite authoritative sources. AI tools stop hallucinating benefits.
               </p>
