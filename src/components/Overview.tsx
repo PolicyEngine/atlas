@@ -25,66 +25,63 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">Inaccessible, Unclear Policies Block Progress</h2>
+            <h2 className="card-title">Policies Aren't Accessible, Clear, or Computable</h2>
             <p>
-              Civil society organizations can't help applicants when policy documents disappear or 
-              contradict each other. Agencies deliver benefits inaccurately when regulations are 
-              ambiguous. The 10.93% SNAP error rate costs billions, yet we lack infrastructure to 
-              fix it systematically.
+              <strong>Not Accessible:</strong> Documents disappear overnight. Links break. Civil society 
+              organizations waste 40+ hours monthly fixing references instead of helping families.
             </p>
-            <br />
             <p>
-              <strong>The root cause:</strong> Policies aren't accessible, clear, or computable. 
-              Links break overnight. Language varies wildly between jurisdictions. Rules engines can't 
-              cite sources. AI tools hallucinate benefits. Everyone—from caseworkers to researchers—
-              wastes time reinventing document management instead of helping families.
+              <strong>Not Clear:</strong> Language varies wildly between jurisdictions. The same eligibility 
+              criteria gets interpreted differently. Administrative burden drives costly errors.
+            </p>
+            <p>
+              <strong>Not Computable:</strong> Rules engines can't cite sources. AI tools hallucinate 
+              benefits. Hidden eligibility pathways stay buried. Everyone reinvents document management.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">Cross-Cutting Infrastructure From the Source</h2>
+            <h2 className="card-title">Making Policies Accessible, Clear, and Computable</h2>
             <p>
-              PolicyEngine Atlas provides the foundational layer everyone needs: retrieving, storing, 
-              updating, and distributing thousands of policy documents through web, API, and MCP server. 
-              But we go beyond storage—our rules engine connects documents semantically, revealing 
-              hidden eligibility pathways like North Carolina's TANF→SNAP→Lifeline chains.
+              <strong>Accessible:</strong> Permanent IDs that never break. Documents preserved before they 
+              vanish. Web, API, and MCP server access. Civil society organizations save time for helping families.
             </p>
-            <br />
             <p>
-              <strong>Proven impact at scale:</strong> As the leading open-source rules engine helping 
-              100,000+ Americans through partners like MyFriendBen and Benefit Navigator, we know what 
-              works. Our Clarity Index will show governments exactly which language causes errors—the 
-              difference between 3.2% and 10.93% error rates. This NSF-endorsed infrastructure makes 
-              every tool accurate, every caseworker effective.
+              <strong>Clear:</strong> Clarity Index scores every document. AI + human experts identify 
+              problematic language. Agencies learn from successful peers. Systematic improvement replaces guesswork.
+            </p>
+            <p>
+              <strong>Computable:</strong> Semantic connections reveal hidden pathways. TANF→SNAP→Lifeline 
+              chains become discoverable. Rules engines cite authoritative sources. AI tools stop hallucinating.
             </p>
           </div>
         </div>
 
         <div className="workflow-container">
-          <h2 className="workflow-title">How the Clarity Index Works</h2>
+          <h2 className="workflow-title">How PolicyEngine Atlas Works</h2>
           <div className="workflow">
             <div className="workflow-step">
-              <div className="workflow-icon">📄</div>
-              <div className="workflow-label">Collect Policies</div>
-              <div className="workflow-desc">Gather documents from all jurisdictions</div>
-            </div>
-            <div className="workflow-arrow">→</div>
-            <div className="workflow-step">
-              <div className="workflow-icon">🤖</div>
-              <div className="workflow-label">AI Analysis</div>
-              <div className="workflow-desc">Score ambiguity and complexity</div>
+              <div className="workflow-icon">🔍</div>
+              <div className="workflow-label">Make Accessible</div>
+              <div className="workflow-desc">Monitor, capture, preserve documents</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
               <div className="workflow-icon">📊</div>
-              <div className="workflow-label">Correlate Errors</div>
-              <div className="workflow-desc">Match with SNAP QC data</div>
+              <div className="workflow-label">Make Clear</div>
+              <div className="workflow-desc">Score clarity, identify problems</div>
             </div>
             <div className="workflow-arrow">→</div>
             <div className="workflow-step">
-              <div className="workflow-icon">✏️</div>
-              <div className="workflow-label">Recommend Fixes</div>
-              <div className="workflow-desc">Specific rewriting guidance</div>
+              <div className="workflow-icon">🔗</div>
+              <div className="workflow-label">Make Computable</div>
+              <div className="workflow-desc">Connect semantically to rules</div>
+            </div>
+            <div className="workflow-arrow">→</div>
+            <div className="workflow-step">
+              <div className="workflow-icon">🚀</div>
+              <div className="workflow-label">Deliver Impact</div>
+              <div className="workflow-desc">Power tools, reduce errors</div>
             </div>
           </div>
         </div>
@@ -95,9 +92,9 @@ function Overview() {
           background: 'var(--blue-light)',
           borderRadius: '12px'
         }}>
-          <h2 className="section-title">Research Evidence: Policy Clarity Drives Accuracy</h2>
+          <h2 className="section-title">Research Evidence: Why Accessible, Clear, Computable Matters</h2>
           <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-            Extensive research demonstrates the direct link between policy document clarity and benefit administration accuracy:
+            Extensive research proves that making policies accessible, clear, and computable dramatically improves benefit delivery:
           </p>
           <div style={{
             display: 'grid',

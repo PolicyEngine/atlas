@@ -41,8 +41,8 @@ function Demo() {
               fontStyle: 'italic',
             }}
           >
-            Navigate the policy landscape with AI-powered document mapping and clarity analysis to
-            reduce $10.5B in annual SNAP errors.
+            Making policies accessible, clear, and computable to deliver benefits effectively—
+            helping 100,000+ Americans through cross-cutting infrastructure.
           </p>
 
           <div className="demo-tabs">
@@ -80,12 +80,11 @@ function Demo() {
 
           {activeTab === 'clarity' && (
             <div className="demo-clarity-section">
-              <h3>Clarity Index: Learning from Policy Language Nationwide</h3>
+              <h3>Making Policies Clear Through Systematic Analysis</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                The Clarity Index uses AI analysis validated by human experts to identify policy
-                language patterns that cause benefit errors. By comparing documents across all
-                jurisdictions, agencies learn which wording reduces errors and improves caseworker
-                effectiveness.
+                The Clarity Index combines AI analysis with human expertise to score every document 
+                objectively. Agencies see which specific language drives administrative burden and 
+                costly errors. Learn from successful peers—adopt proven approaches that work.
               </p>
 
               <div style={{ marginBottom: '25px' }}>
@@ -1431,13 +1430,12 @@ function Demo() {
 
           {activeTab === 'knowledge' && (
             <div className="demo-knowledge-section">
-              <h3>PolicyEngine Atlas: Bridging Analysis and Access</h3>
+              <h3>Making Policies Accessible and Computable</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                <strong>For Policy Analysts:</strong> Authoritative documents with version history
-                and citations.
-                <strong> For Caseworkers:</strong> Instant eligibility pathways and clear guidance.
-                Atlas uniquely serves both communities by connecting documents to real-world
-                eligibility.
+                <strong>Accessible:</strong> Documents with permanent IDs that never break. Version history. 
+                No more 40+ hours monthly fixing links.
+                <strong> Computable:</strong> Semantic connections reveal hidden eligibility pathways. 
+                Rules engines cite authoritative sources. AI tools stop hallucinating benefits.
               </p>
 
               {/* Simple Document Search */}
