@@ -4,25 +4,30 @@
 personnel:
   # Row 4-7: Position Title (B), Effort % (C), Base Salary (E), Fringe Rate (G)
   # Column A should be left empty for names (not using names per instructions)
-  # Adjusted FTE to keep under $700k total budget for 2 years
-  - position_title: 'Project Lead'
+  # Breaking out 1.3 FTE total across team members to match bios
+  - position_title: 'CEO/Project Lead'
     effort_pct: 20 # 0.2 FTE
     base_salary: 150000
     fringe_rate: 0.25 # 403b contribution only
 
-  - position_title: 'Lead Engineer'
-    effort_pct: 40 # 0.4 FTE
+  - position_title: 'CTO/Technical Lead'
+    effort_pct: 30 # 0.3 FTE
     base_salary: 140000
     fringe_rate: 0.25 # 403b contribution only
 
-  - position_title: 'ML/AI Engineer'
-    effort_pct: 40 # 0.4 FTE
+  - position_title: 'Economist/Policy Lead'
+    effort_pct: 30 # 0.3 FTE
+    base_salary: 90000
+    fringe_rate: 0.25 # 403b contribution only
+
+  - position_title: 'Data Scientist'
+    effort_pct: 30 # 0.3 FTE
     base_salary: 120000
     fringe_rate: 0.25 # 403b contribution only
 
-  - position_title: 'Policy Analyst'
-    effort_pct: 30 # 0.3 FTE
-    base_salary: 90000
+  - position_title: 'Full-Stack Engineer'
+    effort_pct: 20 # 0.2 FTE
+    base_salary: 100000
     fringe_rate: 0.25 # 403b contribution only
 
 travel:
@@ -60,7 +65,7 @@ travel:
     mie_per_traveler: 92 # GSA FY25 rate
     basis: 'GSA FY25 per diem for San Francisco CA - 2 trips total'
 
-  - purpose: 'NAWRS Conference (2x over 2 years)'
+  - purpose: 'APHSA Conference (2x over 2 years)'
     depart_from: 'Washington DC'
     destination: 'Chicago IL'
     days: 3
@@ -70,6 +75,17 @@ travel:
     vehicle_per_traveler: 0
     mie_per_traveler: 85 # GSA FY25 rate
     basis: 'GSA FY25 per diem for Chicago IL - 2 trips total'
+
+  - purpose: 'NAWRS Conference (2x over 2 years)'
+    depart_from: 'Washington DC'
+    destination: 'Seattle WA'
+    days: 3
+    travelers: 1
+    lodging_per_traveler: 230 # GSA FY25 rate
+    flight_per_traveler: 500
+    vehicle_per_traveler: 0
+    mie_per_traveler: 92 # GSA FY25 rate
+    basis: 'GSA FY25 per diem for Seattle WA - 2 trips total'
 
 equipment:
   # Empty - all items are under $5,000 per unit threshold
@@ -94,6 +110,12 @@ contractual:
     pi_pd: ''
     total_cost: 30000
     justification: 'UX research and interface design for Policy Library user experience'
+
+  - subaward_number: 'LOI-4'
+    subawardee: 'Independent Evaluator (TBD)'
+    pi_pd: ''
+    total_cost: 30000
+    justification: 'Year 2 independent evaluation to assess whether Atlas achieved system-level goals including government adoption, screener confidence, and ecosystem transformation'
 
 other_direct:
   - expense_type: 'Cloud Computing & Storage'
@@ -120,11 +142,17 @@ other_direct:
     category: 'Conference registration'
     justification: 'Registration fees for 2 Code for America Summit conferences over 2 years'
 
-  - expense_type: 'NAWRS Conference Registration'
+  - expense_type: 'APHSA Conference Registration'
     total_cost: 1600 # 2 conferences x 2 people x $400 each
     unit_cost: ''
     category: 'Conference registration'
-    justification: 'Registration fees for 2 NAWRS conferences (2 attendees each) over 2 years'
+    justification: 'Registration fees for 2 APHSA conferences (2 attendees each) over 2 years'
+
+  - expense_type: 'NAWRS Conference Registration'
+    total_cost: 1600 # 2 conferences x 1 person x $800 each
+    unit_cost: ''
+    category: 'Conference registration'
+    justification: 'Registration fees for 2 NAWRS conferences over 2 years'
 
   - expense_type: 'Technical Advisory Services'
     total_cost: 20000

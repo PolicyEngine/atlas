@@ -5,15 +5,15 @@ pdf_letters:
     institution: Georgetown University
     contact: Eric Giannella
     title: Director
-    file: BGL Letter of Support - PolicyEngine PBIF Application.pdf
+    file: BGL_Letter of Collaboration for PolicyEngine Policy Library.pdf
     date: 2025-08-15
 
   - organization: Prenatal-to-3 Policy Impact Center
     institution: Vanderbilt University
     contact: Cynthia Osborne
     title: Executive Director
-    file: Letter of Support - Prenatal-to-3 Policy Impact Center.pdf
-    date: 2025-08-16
+    file: Letter of Support - Prenatal-to-3 Policy Impact Center NEW.pdf
+    date: 2025-08-17
 
   - organization: Benefit Kitchen
     contact: Daniel Beeby
@@ -47,18 +47,12 @@ word_documents:
     date: 2025-08-16
     status: confirmed
 
-markdown_drafts:
-  - organization: SnapScreener
-    contact: Ben Molin
-    file: snapscreener-ben-molin.md
-    status: draft
-    word_count: ~200
-    notes: Awaiting confirmation
+markdown_drafts: []
 
 summary:
-  total_letters: 8
+  total_letters: 7
   confirmed_pdfs: 7
-  pending_drafts: 1
+  pending_drafts: 0
   word_document: 0
 
   key_supporters:
@@ -71,7 +65,6 @@ summary:
 
     benefit_tools:
       - Benefit Kitchen
-      - SnapScreener
 
     policy_modeling:
       - Policy Simulation Library

@@ -44,6 +44,12 @@ git push origin main
 
 # The site will be available at:
 # https://[username].github.io/policy-library/
+
+# PBIF Application Content Generation
+# IMPORTANT: DO NOT manually edit src/content/pbif/applicationContent.ts
+# ONLY edit the markdown files in docs/pbif/responses/
+# Then regenerate TypeScript with:
+python scripts/build_application_content.py
 ```
 
 ## Technical Architecture

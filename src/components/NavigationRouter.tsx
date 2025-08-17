@@ -5,13 +5,16 @@ function NavigationRouter() {
   const location = useLocation();
 
   // Only show sensitive sections if user navigated to them directly
-  const showAllSections = ['/partners', '/application', '/engine'].includes(location.pathname);
+  const showAllSections = ['/partners', '/application', '/engine', '/blog'].includes(
+    location.pathname
+  );
 
   const publicItems = [
     { path: '/', label: 'Overview' },
     { path: '/demo', label: 'Mock-up' },
     { path: '/partners', label: 'Partners' },
     { path: '/community', label: 'Community' },
+    { path: '/blog', label: 'Blog' },
   ];
 
   const allItems = [
@@ -21,6 +24,7 @@ function NavigationRouter() {
     { path: '/application', label: 'PBIF Application' },
     { path: '/community', label: 'Community' },
     { path: '/engine', label: 'ENG(INE) Application' },
+    { path: '/blog', label: 'Blog' },
   ];
 
   const navItems = showAllSections ? allItems : publicItems;
