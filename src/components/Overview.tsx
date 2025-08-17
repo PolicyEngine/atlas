@@ -25,7 +25,7 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">Policies Aren't Accessible, Clear, or Computable</h2>
+            <h2 className="card-title">The Hidden Crisis in Benefit Delivery</h2>
             <p>
               <strong>Not Accessible:</strong> Documents disappear overnight. Links break. Civil society 
               organizations waste 40+ hours monthly fixing references instead of helping families.
@@ -41,7 +41,7 @@ function Overview() {
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">Making Policies Accessible, Clear, and Computable</h2>
+            <h2 className="card-title">Cross-Cutting Infrastructure That Works</h2>
             <p>
               <strong>Accessible:</strong> Permanent IDs that never break. Documents preserved before they 
               vanish. Web, API, and MCP server access. Civil society organizations save time for helping families.
