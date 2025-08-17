@@ -43,13 +43,18 @@ git commit -m "Your commit message"
 git push origin main
 
 # The site will be available at:
-# https://[username].github.io/policy-library/
+# https://policyengine.github.io/atlas/
 
 # PBIF Application Content Generation
 # IMPORTANT: DO NOT manually edit src/content/pbif/applicationContent.ts
 # ONLY edit the markdown files in docs/pbif/responses/
 # Then regenerate TypeScript with:
 python scripts/build_application_content.py
+
+# Running the app locally
+npm install
+npm run dev
+# Visit http://localhost:5173
 ```
 
 ## Technical Architecture
@@ -88,14 +93,22 @@ python scripts/build_application_content.py
 ## Repository Structure
 
 ```
-policy-library/
-├── index.html           # Combined app (one-pager + interactive mock)
-├── one-pager.html      # Standalone PBIF proposal one-pager
-├── mock.jsx            # Original mock design
-├── conversation.md     # Strategic planning notes
-├── CLAUDE.md          # This file
-├── LICENSE            # Public domain (Unlicense)
-└── README.md          # Public-facing documentation
+atlas/
+├── src/
+│   ├── components/      # React components (Overview, Demo, BlogPost, etc.)
+│   ├── content/pbif/    # Auto-generated TypeScript from markdown
+│   └── styles/          # Component-specific CSS
+├── docs/pbif/
+│   ├── responses/       # 15 markdown files (source of truth for PBIF answers)
+│   ├── letters/         # Support letters and combination scripts
+│   └── attachments/     # Team bios, roadmap, budget PDFs
+├── pbif_budget_filler/  # Python package for Google Sheets automation
+├── scripts/             # Build scripts (build_application_content.py)
+├── public/              # Static assets
+├── CLAUDE.md           # This file (AI guidance)
+├── LICENSE             # Public domain (Unlicense)
+├── README.md           # Public documentation
+└── vite.config.ts      # Vite configuration (base: '/atlas/')
 ```
 
 ## Budget Breakdown (Total 2 Years)
@@ -152,3 +165,34 @@ python update_partner_allocations.py  # Or create new script with updated amount
 4. **Open Source**: Maintain open access to maximize impact and partner adoption.
 
 5. **Sustainability**: After Year 2, system becomes self-sustaining through PolicyEngine's API revenue model.
+
+## Working with Claude Code - Best Practices
+
+### Managing Hallucinations
+- **NEVER make up statistics or claims** - Use placeholders like [X%] or [CITATION NEEDED] when data is unknown
+- **Verify all facts** - Search the repository to confirm claims before adding them
+- **Be precise with corrections** - When user corrects a fact (e.g., "Pavel worked WITH not AT Atlanta Fed"), propagate the correction everywhere
+
+### Teaching Through Feedback
+- **Like a manager reviewing drafts** - User provides specific corrections to teach desired behavior
+- **Apply feedback consistently** - When user says "change X to Y", apply that pattern throughout the codebase
+- **Learn preferences** - User may ask for specific changes (e.g., "will increasingly seek" vs "increasingly seek") to model precise language
+
+### Repository Management
+- **Maintain consistency** - When renaming (e.g., policy-library → atlas), update:
+  - Repository name on GitHub
+  - Local folder name  
+  - vite.config.ts base path
+  - BrowserRouter basename
+  - All documentation references
+  
+### Budget & Financial Accuracy
+- **Final budget is $728,907** over 2 years
+- **Team is 1.3 FTE** broken across 5 actual team members
+- **27% of expanded budget** (not 37% - be precise with math)
+- **No made-up funding sources** - Only cite confirmed partners
+
+### Word Limits
+- **Strict 250-word limits** per PBIF question
+- **Always verify word counts** after edits
+- **Trim ruthlessly** - Remove filler words to stay under limit
