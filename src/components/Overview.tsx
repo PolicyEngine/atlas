@@ -25,34 +25,40 @@ function Overview() {
       <div className="content">
         <div className="cards-grid">
           <div className="card problem-card">
-            <h2 className="card-title">The Hidden Crisis in Benefit Delivery</h2>
+            <h2 className="card-title">The Hidden Crisis Organizations Face</h2>
             <p>
-              <strong>Not Accessible:</strong> Documents disappear from agency websites. Links break without warning. 
-              Finding authoritative sources requires navigating dozens of fragmented sites.
+              <strong>Duplicated Effort:</strong> Every caseworker, navigator tool, and research group 
+              builds their own document libraries. Organizations waste resources solving the same problem 
+              separately while documents disappear and links break.
             </p>
             <p>
-              <strong>Not Clear:</strong> Language varies wildly between jurisdictions. The same eligibility 
-              criteria gets interpreted differently. Administrative burden drives costly errors.
+              <strong>Unclear Language:</strong> Policy language varies wildly between jurisdictions. 
+              The same eligibility criteria gets interpreted differently. Caseworkers can't find clear 
+              guidance, leading to errors and improper denials.
             </p>
             <p>
               <strong>Not Computable:</strong> Rules engines can't cite sources. AI tools hallucinate 
-              benefits. Hidden eligibility pathways stay buried. Everyone reinvents document management.
+              benefits. Hidden eligibility pathways stay buried. Organizations can't prove their 
+              calculations are correct without authoritative sources.
             </p>
           </div>
 
           <div className="card solution-card">
-            <h2 className="card-title">Cross-Cutting Infrastructure That Works</h2>
+            <h2 className="card-title">Solving It Once, For Everyone</h2>
             <p>
-              <strong>Accessible:</strong> Permanent IDs that never break. Documents preserved before they 
-              vanish. Web, API, and MCP server access. Civil society organizations save time for helping families.
+              <strong>Shared Infrastructure:</strong> One comprehensive archive serves the entire ecosystem. 
+              Organizations stop duplicating effort. MyFriendBen saves 20% engineering time. Benefit Navigator 
+              accelerates deployment. Everyone focuses on helping families.
             </p>
             <p>
-              <strong>Clear:</strong> Clarity Index scores every document. AI + human experts identify 
-              problematic language. Agencies learn from successful peers. Systematic improvement replaces guesswork.
+              <strong>Clarity Index:</strong> AI + human expertise analyzes which policy language causes 
+              errors and delays. Agencies learn from successful peers. Strategic subgrants ensure insights 
+              become clearer communication, not policy changes.
             </p>
             <p>
-              <strong>Computable:</strong> Semantic connections reveal hidden pathways. TANF→SNAP→Lifeline 
-              chains become discoverable. Rules engines cite authoritative sources. AI tools stop hallucinating.
+              <strong>Semantic Knowledge Graph:</strong> Documents connect to reveal hidden pathways. 
+              TANF→SNAP→Lifeline chains become discoverable. Caseworkers find answers quickly. 
+              AI tools access authoritative sources without hallucinating.
             </p>
           </div>
         </div>
