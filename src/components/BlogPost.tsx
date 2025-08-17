@@ -248,9 +248,20 @@ if word_count > 250:
           far more convincing than promises to "update the budget later."
         </p>
 
-        <h3>4. Managing Hallucinations (Like Managing Human Employees)</h3>
+        <h3>4. Managing Like a Manager (Teaching Through Correction)</h3>
 
         <p>
+          The phrase "didn't type a single word" deserves clarification. Like a manager reviewing
+          a junior employee's draft, I could have directly edited files myself - but that would miss
+          the point. When a manager redlines a document, they don't just fix it themselves; they
+          mark it up so the employee learns the desired approach. Similarly, when I spotted an error
+          like "Government agencies increasingly seek," I didn't open the file and change it to 
+          "will increasingly seek." Instead, I told Claude Code exactly what needed changing, so it
+          would learn my preferences and apply them consistently across the entire codebase.
+        </p>
+
+        <p>
+          This teaching-through-correction approach proved essential when managing hallucinations.
           Even using Opus 4.1 exclusively (I'm on Claude Code Max 20x and still approached limits),
           Claude Code would occasionally invent compelling but false details. It loved claiming that
           "18% of policy document links are dead" - which would have been a perfect statistic if it
@@ -284,9 +295,9 @@ if word_count > 250:
         </p>
 
         <p>
-          This mirrors managing human employees - you need oversight, but far less than in the past.
-          The key difference is that Claude Code could search the entire repository instantly to
-          verify claims:
+          This precision in feedback - being specific about what's wrong and how to fix it - helped
+          Claude Code learn my standards. The key difference from human management is that Claude 
+          Code could search the entire repository instantly to verify claims:
         </p>
 
         <p>

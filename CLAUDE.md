@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is the **PolicyEngine Policy Library** repository - a PBIF (Public Benefit Innovation Fund) application project aimed at creating an AI-powered, permanently archived collection of policy documents for safety net programs across jurisdictions. The project preserves source documents (statutes, regulations, forms) that PolicyEngine and other tools then encode into rules.
+This is the **PolicyEngine Atlas** repository (formerly policy-library) - a PBIF (Public Benefit Innovation Fund) application project aimed at creating an AI-powered, permanently archived collection of policy documents for safety net programs across jurisdictions. The project preserves source documents (statutes, regulations, forms) that PolicyEngine and other tools then encode into rules.
 
 ## Project Context
 
