@@ -5,7 +5,9 @@ function NavigationRouter() {
   const location = useLocation();
 
   // Only show sensitive sections if user navigated to them directly
-  const showAllSections = ['/partners', '/application', '/engine', '/blog'].includes(location.pathname);
+  const showAllSections = ['/partners', '/application', '/engine', '/blog'].includes(
+    location.pathname
+  );
 
   const publicItems = [
     { path: '/', label: 'Overview' },

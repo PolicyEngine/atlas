@@ -82,8 +82,8 @@ function Demo() {
             <div className="demo-clarity-section">
               <h3>Making Policies Clear Through Systematic Analysis</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                The Clarity Index combines AI analysis with human expertise to score every document 
-                objectively. Agencies see which specific language drives administrative burden and 
+                The Clarity Index combines AI analysis with human expertise to score every document
+                objectively. Agencies see which specific language drives administrative burden and
                 costly errors. Learn from successful peers—adopt proven approaches that work.
               </p>
 
@@ -1432,10 +1432,11 @@ function Demo() {
             <div className="demo-knowledge-section">
               <h3>Making Policies Accessible and Computable</h3>
               <p style={{ marginBottom: '20px', color: 'var(--gray)' }}>
-                <strong>Accessible:</strong> Documents with permanent IDs that never break. Version history. 
-                One source instead of fragmented agency websites.
-                <strong> Computable:</strong> Semantic connections reveal hidden eligibility pathways. 
-                Rules engines cite authoritative sources. AI tools stop hallucinating benefits.
+                <strong>Accessible:</strong> Documents with permanent IDs that never break. Version
+                history. One source instead of fragmented agency websites.
+                <strong> Computable:</strong> Semantic connections reveal hidden eligibility
+                pathways. Rules engines cite authoritative sources. AI tools stop hallucinating
+                benefits.
               </p>
 
               {/* Simple Document Search */}

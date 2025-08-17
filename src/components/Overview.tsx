@@ -27,38 +27,38 @@ function Overview() {
           <div className="card problem-card">
             <h2 className="card-title">The Hidden Crisis Organizations Face</h2>
             <p>
-              <strong>Duplicated Effort:</strong> Every caseworker, navigator tool, and research group 
-              builds their own document libraries. Organizations waste resources solving the same problem 
-              separately while documents disappear and links break.
+              <strong>Duplicated Effort:</strong> Every caseworker, navigator tool, and research
+              group builds their own document libraries. Organizations waste resources solving the
+              same problem separately while documents disappear and links break.
             </p>
             <p>
-              <strong>Unclear Language:</strong> Policy language varies wildly between jurisdictions. 
-              The same eligibility criteria gets interpreted differently. Caseworkers can't find clear 
-              guidance, leading to errors and improper denials.
+              <strong>Unclear Language:</strong> Policy language varies wildly between
+              jurisdictions. The same eligibility criteria gets interpreted differently. Caseworkers
+              can't find clear guidance, leading to errors and improper denials.
             </p>
             <p>
-              <strong>Not Computable:</strong> Rules engines can't cite sources. AI tools hallucinate 
-              benefits. Hidden eligibility pathways stay buried. Organizations can't prove their 
-              calculations are correct without authoritative sources.
+              <strong>Not Computable:</strong> Rules engines can't cite sources. AI tools
+              hallucinate benefits. Hidden eligibility pathways stay buried. Organizations can't
+              prove their calculations are correct without authoritative sources.
             </p>
           </div>
 
           <div className="card solution-card">
             <h2 className="card-title">Solving It Once, For Everyone</h2>
             <p>
-              <strong>Shared Infrastructure:</strong> One comprehensive archive serves the entire ecosystem. 
-              Organizations stop duplicating effort. MyFriendBen saves 20% engineering time. Benefit Navigator 
-              accelerates deployment. Everyone focuses on helping families.
+              <strong>Shared Infrastructure:</strong> One comprehensive archive serves the entire
+              ecosystem. Organizations stop duplicating effort. MyFriendBen saves 20% engineering
+              time. Benefit Navigator accelerates deployment. Everyone focuses on helping families.
             </p>
             <p>
-              <strong>Clarity Index:</strong> AI + human expertise analyzes which policy language causes 
-              errors and delays. Agencies learn from successful peers. Strategic subgrants ensure insights 
-              become clearer communication, not policy changes.
+              <strong>Clarity Index:</strong> AI + human expertise analyzes which policy language
+              causes errors and delays. Agencies learn from successful peers. Strategic subgrants
+              ensure insights become clearer communication, not policy changes.
             </p>
             <p>
-              <strong>Semantic Knowledge Graph:</strong> Documents connect to reveal hidden pathways. 
-              TANF→SNAP→Lifeline chains become discoverable. Caseworkers find answers quickly. 
-              AI tools access authoritative sources without hallucinating.
+              <strong>Semantic Knowledge Graph:</strong> Documents connect to reveal hidden
+              pathways. TANF→SNAP→Lifeline chains become discoverable. Caseworkers find answers
+              quickly. AI tools access authoritative sources without hallucinating.
             </p>
           </div>
         </div>
@@ -92,30 +92,38 @@ function Overview() {
           </div>
         </div>
 
-        <div className="research-evidence-section" style={{
-          marginTop: '60px',
-          padding: '30px',
-          background: 'var(--blue-light)',
-          borderRadius: '12px'
-        }}>
-          <h2 className="section-title">Research Evidence: Why Accessible, Clear, Computable Matters</h2>
+        <div
+          className="research-evidence-section"
+          style={{
+            marginTop: '60px',
+            padding: '30px',
+            background: 'var(--blue-light)',
+            borderRadius: '12px',
+          }}
+        >
+          <h2 className="section-title">
+            Research Evidence: Why Accessible, Clear, Computable Matters
+          </h2>
           <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-            Extensive research proves that making policies accessible, clear, and computable dramatically improves benefit delivery:
+            Extensive research proves that making policies accessible, clear, and computable
+            dramatically improves benefit delivery:
           </p>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '20px',
-            marginBottom: '20px'
-          }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '20px',
+              marginBottom: '20px',
+            }}
+          >
             <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
               <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
                 📊 GAO Analysis (2001-2024)
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                GAO reports found SNAP regulations are "extremely complex and inherently error-prone." 
-                SNAP achieved record-low <strong>3.2% error rate in FY2013</strong> through simplification, 
-                but rates have climbed back to 10.93% by FY2024.
+                GAO reports found SNAP regulations are "extremely complex and inherently
+                error-prone." SNAP achieved record-low <strong>3.2% error rate in FY2013</strong>{' '}
+                through simplification, but rates have climbed back to 10.93% by FY2024.
               </p>
               <a
                 href="https://www.gao.gov/assets/a246247.html"
@@ -131,8 +139,9 @@ function Overview() {
                 🔬 Administrative Burden Research
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                2023 study found states with complex UI policies had <strong>significantly higher error rates</strong>. 
-                Each additional requirement increased errors by 0.5-1%. Simplification impact equals expanding eligibility.
+                2023 study found states with complex UI policies had{' '}
+                <strong>significantly higher error rates</strong>. Each additional requirement
+                increased errors by 0.5-1%. Simplification impact equals expanding eligibility.
               </p>
               <a
                 href="https://www.tandfonline.com/doi/full/10.1080/14719037.2023.2288247"
@@ -148,8 +157,9 @@ function Overview() {
                 📈 Current SNAP Error Crisis
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                SNAP error rate reached <strong>10.93% in FY2024</strong>, up from record-low 3.2% in FY2013. 
-                44 states fail error thresholds. 99% are administrative errors from policy interpretation, not fraud.
+                SNAP error rate reached <strong>10.93% in FY2024</strong>, up from record-low 3.2%
+                in FY2013. 44 states fail error thresholds. 99% are administrative errors from
+                policy interpretation, not fraud.
               </p>
               <a
                 href="https://www.fns.usda.gov/snap/qc/per"
@@ -165,8 +175,9 @@ function Overview() {
                 ⚖️ Racial Disparities in Errors
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                Analysis of 53 UI programs (2002-2018) found non-white claimants <strong>more likely to experience 
-                underpayment errors</strong>. Complex policies amplify disparities in administrative outcomes.
+                Analysis of 53 UI programs (2002-2018) found non-white claimants{' '}
+                <strong>more likely to experience underpayment errors</strong>. Complex policies
+                amplify disparities in administrative outcomes.
               </p>
               <a
                 href="https://academic.oup.com/jpart/article-abstract/33/3/512/6680693"
@@ -178,12 +189,11 @@ function Overview() {
               </a>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
-              <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
-                📖 Readability Impact
-              </h3>
+              <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>📖 Readability Impact</h3>
               <p style={{ marginBottom: '10px' }}>
-                2024 Israeli study: Poor readability of welfare documents <strong>directly correlates with 
-                lower engagement and higher error rates</strong>. Plain language initiatives show 20-30% error reduction.
+                2024 Israeli study: Poor readability of welfare documents{' '}
+                <strong>directly correlates with lower engagement and higher error rates</strong>.
+                Plain language initiatives show 20-30% error reduction.
               </p>
               <a
                 href="https://link.springer.com/article/10.1007/s10209-024-01167-2"
@@ -195,12 +205,11 @@ function Overview() {
               </a>
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
-              <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
-                💡 The Solution Works
-              </h3>
+              <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>💡 The Solution Works</h3>
               <p style={{ marginBottom: '10px' }}>
-                The FY2013 record-low <strong>3.2% error rate</strong> proved simplification works. 
-                Current 10.93% rate shows regression when complexity returns. Primary source: USDA SNAP Quality Control data.
+                The FY2013 record-low <strong>3.2% error rate</strong> proved simplification works.
+                Current 10.93% rate shows regression when complexity returns. Primary source: USDA
+                SNAP Quality Control data.
               </p>
               <a
                 href="https://www.usda.gov/media/blog/2013/06/21/snap-payment-accuracy-best-record"
@@ -213,9 +222,10 @@ function Overview() {
             </div>
           </div>
           <p style={{ fontSize: '16px', fontStyle: 'italic', marginTop: '20px' }}>
-            <strong>The evidence is clear:</strong> Policy language complexity is the primary driver of administrative errors, 
-            costing billions annually and disproportionately harming vulnerable populations. The Clarity Index will quantify 
-            this relationship for the first time, enabling targeted improvements that reduce errors while increasing access.
+            <strong>The evidence is clear:</strong> Policy language complexity is the primary driver
+            of administrative errors, costing billions annually and disproportionately harming
+            vulnerable populations. The Clarity Index will quantify this relationship for the first
+            time, enabling targeted improvements that reduce errors while increasing access.
           </p>
         </div>
 
