@@ -4,7 +4,7 @@ function Overview() {
       <div className="hero">
         <h1>PolicyEngine Atlas</h1>
         <p className="hero-subtitle">
-          Making Policies Accessible, Clear, and Computational to Deliver Benefits Effectively
+          Making Policies Accessible, Clear, and Computable to Deliver Benefits Effectively
         </p>
         <div className="hero-stats">
           <div className="hero-stat">
@@ -34,7 +34,7 @@ function Overview() {
             </p>
             <br />
             <p>
-              <strong>The root cause:</strong> Policies aren't accessible, clear, or computational. 
+              <strong>The root cause:</strong> Policies aren't accessible, clear, or computable. 
               Links break overnight. Language varies wildly between jurisdictions. Rules engines can't 
               cite sources. AI tools hallucinate benefits. Everyone—from caseworkers to researchers—
               wastes time reinventing document management instead of helping families.
