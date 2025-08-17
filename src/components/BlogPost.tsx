@@ -191,18 +191,42 @@ const BlogPost: React.FC = () => {
           isolated projects.
         </p>
 
-        <h3>2. Word Count Enforcement via Python</h3>
+        <h3>2. Iterative Word Count Refinement</h3>
 
         <p>
-          We built a Python script that reads all markdown files, combines them into TypeScript, and
-          enforces word limits:
+          PBIF's strict 250-word limits meant every word mattered. We built a Python script that 
+          reads all markdown files and enforces these limits:
         </p>
 
         <pre className="code-block">{`word_count = len(content.split())
 if word_count > 250:
     print(f"⚠️ WARNING: Answer {q_num} exceeds 250 words ({word_count} words)")`}</pre>
 
-        <p>Whenever Claude Code edited a section, it would run this script and trim if needed.</p>
+        <p>
+          But here's where it got interesting - Claude Code would iteratively refine responses when 
+          they exceeded limits. It wouldn't just truncate; it would rewrite for conciseness:
+        </p>
+
+        <p>
+          <strong>First attempt:</strong> 267 words - "PolicyEngine Atlas represents a comprehensive 
+          solution to the infrastructure crisis facing organizations..."
+        </p>
+
+        <p>
+          <strong>Second attempt:</strong> 254 words - Removes filler words like "comprehensive" and 
+          "represents"
+        </p>
+
+        <p>
+          <strong>Final version:</strong> 249 words - Combines sentences, uses active voice, cuts 
+          redundancy while preserving all key points
+        </p>
+
+        <p>
+          This iterative refinement happened automatically. Claude Code would run the script, see 
+          the warning, trim the content, regenerate the TypeScript, and verify again - all without 
+          me intervening. It learned to write more concisely with each iteration.
+        </p>
 
         <h3>3. Building a Custom Budget Tool (Despite Claude Code's Protests)</h3>
 
@@ -340,6 +364,53 @@ if word_count > 250:
         <p>
           Claude Code wrote scripts to read a YAML configuration, create a cover page noting our
           project name change, and combine everything into a single PDF.
+        </p>
+
+        <h3>6. Simulated Grant Reviews and CI as Quality Control</h3>
+
+        <p>
+          Perhaps the most powerful aspect was treating the grant like production software with 
+          continuous integration. Every change went through the same rigorous process:
+        </p>
+
+        <ol>
+          <li><strong>Create a pull request</strong> - Even for tiny changes</li>
+          <li><strong>CI runs automatically</strong> - Linting, type checking, build verification</li>
+          <li><strong>Watch the checks</strong> - Claude Code would monitor CI status</li>
+          <li><strong>Fix any issues</strong> - If Prettier failed, run formatting and push again</li>
+          <li><strong>Merge when green</strong> - Only after all checks passed</li>
+        </ol>
+
+        <p>
+          But we went further - I had Claude Code simulate grant reviews from different perspectives:
+        </p>
+
+        <p>
+          <strong>Me:</strong> "Review this application as a skeptical PBIF reviewer. What weaknesses 
+          do you see?"
+        </p>
+
+        <p>
+          <strong>Claude Code:</strong> <em>Analyzes the entire application, identifies that we claim 
+          government partnerships but don't have letters from agencies, suggests emphasizing 
+          existing Federal Reserve collaboration more</em>
+        </p>
+
+        <p>
+          <strong>Me:</strong> "Now review it as someone who cares about equity and access"
+        </p>
+
+        <p>
+          <strong>Claude Code:</strong> <em>Points out we should mention how clearer policies 
+          disproportionately help vulnerable populations, adds research citations about 
+          administrative burden's disparate impact</em>
+        </p>
+
+        <p>
+          These simulated reviews surfaced blind spots I wouldn't have caught. Combined with the 
+          CI pipeline ensuring technical quality, we had both content and code review happening 
+          continuously. The GitHub history shows dozens of PRs, each improving the application 
+          based on these reviews.
         </p>
 
         <h2>Maintaining Rigor Under Pressure</h2>
