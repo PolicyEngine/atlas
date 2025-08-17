@@ -5,7 +5,7 @@ import './App.css';
 
 function AppRouter() {
   return (
-    <BrowserRouter basename="/policy-library">
+    <BrowserRouter basename="/atlas">
       <div className="app">
         <NavigationRouter />
 
