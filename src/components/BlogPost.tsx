@@ -507,6 +507,13 @@ if word_count > 250:
         <h2>The Breakthrough: Everything is Software</h2>
 
         <p>
+          In 2011, Marc Andreessen wrote that "software is eating the world." He was right, but 
+          perhaps not in the way he imagined. It's not just that software companies are disrupting 
+          industries - it's that <strong>everything can become software if you structure it that 
+          way.</strong> And when you do, you unlock something extraordinary.
+        </p>
+
+        <p>
           Here's the real insight: <strong>By treating the grant application as a software project, 
           I unlocked the full power of agentic AI for a domain that has nothing to do with 
           programming.</strong> This isn't about AI helping with coding - it's about recognizing that 
