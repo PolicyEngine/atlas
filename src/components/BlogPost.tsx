@@ -6,8 +6,8 @@ const BlogPost: React.FC = () => {
     <div className="blog-post-container">
       <article className="blog-post">
         <h1>
-          How I Wrote a 4,300-Word Grant Application Without Typing a Single Word: Using Claude Code
-          for the PBIF
+          The Grant Application That Proved Everything Can Be Software: How Treating a PBIF 
+          Proposal as Code Unlocked Agentic AI
         </h1>
 
         <p className="author">
@@ -24,9 +24,17 @@ const BlogPost: React.FC = () => {
             Public Benefit Innovation Fund (PBIF)
           </a>{' '}
           - a comprehensive 4,300-word proposal, complete with budget spreadsheets, architecture
-          diagrams, team bios, and support letters. The remarkable part? I didn't type a single word
-          of the application myself. Instead, I used Claude Code as my writing partner, treating the
-          entire grant as a unified software project.
+          diagrams, team bios, and support letters. But this isn't a story about grant writing. 
+          It's about discovering that <strong>any complex project - even a federal grant application - 
+          can be transformed into software, and when you do that, agentic AI becomes impossibly 
+          powerful.</strong>
+        </p>
+
+        <p>
+          I didn't type a single word of the application myself. Instead, I structured the entire 
+          grant as a software repository and let Claude Code manage it like any other codebase. 
+          The result? Not just a successful application, but a fundamental rethinking of how AI 
+          can operate in non-technical domains.
         </p>
 
         <p>
@@ -34,8 +42,7 @@ const BlogPost: React.FC = () => {
           <a href="https://policyengine.github.io/atlas" target="_blank" rel="noopener noreferrer">
             policyengine.github.io/atlas
           </a>{' '}
-          (note: we're renaming everything from "policy-library" to "atlas" to match our project
-          name).
+          - itself a React application that evolved alongside the grant narrative.
         </p>
 
         <h2>The Challenge: More Than Just a Grant Application</h2>
@@ -497,56 +504,91 @@ if word_count > 250:
           generator all treated documents as structured data.
         </p>
 
-        <h2>The Implications</h2>
+        <h2>The Breakthrough: Everything is Software</h2>
 
         <p>
-          This experience demonstrates a fundamentally different approach to complex document
-          creation. By treating the grant as a software project and maintaining rigorous standards
-          throughout, I could focus on strategy and accuracy while Claude Code handled
-          implementation. The key wasn't speed - it was maintaining perfect consistency across
-          dozens of interconnected documents while ensuring every claim was verifiable.
+          Here's the real insight: <strong>By treating the grant application as a software project, 
+          I unlocked the full power of agentic AI for a domain that has nothing to do with 
+          programming.</strong> This isn't about AI helping with coding - it's about recognizing that 
+          any complex project can be structured as code, and once you do that, AI tools become 
+          orders of magnitude more powerful.
         </p>
 
         <p>
-          The unified repository approach enabled something unexpected: the product concept evolved
-          through the grant writing process itself. Each stakeholder conversation led to mockup
-          updates, which clarified the vision, which improved the grant narrative, which prompted
-          new mockup features. The grant application became a forcing function for product
-          development, with Claude Code enabling systematic iteration across all artifacts
-          simultaneously.
+          Think about what we actually did: We took a grant application - traditionally a Word 
+          document edited by committee - and transformed it into:
+        </p>
+
+        <ul>
+          <li>Markdown files in version control</li>
+          <li>Python scripts enforcing constraints</li>
+          <li>Automated CI/CD pipelines</li>
+          <li>Pull requests for every change</li>
+          <li>Automated tests and validation</li>
+          <li>API integrations with Google Sheets</li>
+        </ul>
+
+        <p>
+          Suddenly, Claude Code could operate at full capacity. It could search across files, 
+          maintain consistency, run tests, create pull requests, monitor deployments. The grant 
+          became <em>computable</em>. And when something is computable, agentic AI can manage it 
+          with superhuman precision.
         </p>
 
         <p>
-          For any complex document requiring accuracy, consistency, and multiple output formats,
-          this methodical approach is transformative. It's not about rushing or having AI write for
-          you - it's about establishing rigorous processes where natural language becomes the
-          interface for precise, verifiable document creation. The careful approach, with constant
-          fact-checking and systematic propagation of changes, ensures quality that matches or
-          exceeds traditional methods while enabling complexity that would be impossible to manage
-          manually.
+          <strong>This approach works for anything:</strong>
         </p>
 
-        <h2>Try It Yourself</h2>
+        <ul>
+          <li><strong>Legal contracts</strong> → Markdown + version control + automated clause validation</li>
+          <li><strong>Research papers</strong> → LaTeX + citation management + automated fact-checking</li>
+          <li><strong>Business plans</strong> → YAML data + markdown narrative + financial model sync</li>
+          <li><strong>Policy documents</strong> → Structured text + change tracking + stakeholder review flows</li>
+          <li><strong>Even wedding planning</strong> → Task lists + budget tracking + vendor management</li>
+        </ul>
+
+        <p>
+          The transformation happens when you stop thinking "this is a document" and start thinking 
+          "this is a data structure with business logic." Once you make that shift, you can leverage 
+          the entire software development ecosystem - version control, testing, CI/CD, code review - 
+          for any domain. And more importantly, you can unleash agentic AI to manage it all.
+        </p>
+
+        <p>
+          The grant application became a living system that could evolve, validate itself, and 
+          maintain perfect consistency across dozens of interconnected components. We didn't just 
+          write a grant - we built a grant-writing machine that happened to produce a single 
+          document as its output.
+        </p>
+
+        <h2>The Future: When Everything Becomes Software</h2>
+
+        <p>
+          This experiment proved something profound: <strong>The boundary between "technical" and 
+          "non-technical" work is dissolving.</strong> When you can structure any project as code, 
+          agentic AI can manage it with the same precision it brings to software development. The 
+          constraint isn't the AI's capability - it's our imagination about what can be coded.
+        </p>
 
         <p>
           The entire project is open source at{' '}
           <a href="https://github.com/policyengine/atlas" target="_blank" rel="noopener noreferrer">
             github.com/policyengine/atlas
-          </a>{' '}
-          (currently still at github.com/policyengine/policy-library but migrating to match our
-          project name). You can see every file, script, and component we built together. Visit our
-          interactive demonstration at{' '}
-          <a href="https://policyengine.github.io/atlas" target="_blank" rel="noopener noreferrer">
-            policyengine.github.io/atlas
-          </a>{' '}
-          to explore the proposed system.
+          </a>. 
+          Every file, script, and component is there - not just as a grant application, but as a 
+          template for how to transform any complex project into software.
         </p>
 
         <p>
-          For your next complex document - whether it's a grant, report, or technical specification
-          - consider structuring it as a repository and letting Claude Code be your implementation
-          partner. You might find, as I did, that you can create something far more sophisticated
-          than you could alone, without typing a single word.
+          For your next project - whatever it is - ask yourself: How could this be code? How could 
+          I structure this so an AI agent could manage it? You might discover, as I did, that the 
+          answer transforms not just how you work, but what becomes possible.
+        </p>
+
+        <p>
+          <strong>The revolution isn't that AI can write. It's that when you treat everything as 
+          software, AI can do everything software developers do: architect, implement, test, deploy, 
+          maintain, and evolve complex systems. The grant was just the beginning.</strong>
         </p>
 
         <hr />
