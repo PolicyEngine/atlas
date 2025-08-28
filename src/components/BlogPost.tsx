@@ -279,16 +279,37 @@ if word_count > 250:
           far more convincing than promises to "update the budget later."
         </p>
 
-        <h3>4. Managing Like a Manager (Teaching Through Correction)</h3>
+        <h3>4. The Discipline: "Don't Touch the Code" (Or Anything Else)</h3>
 
         <p>
-          The phrase "didn't type a single word" deserves clarification. Like a manager reviewing
-          a junior employee's draft, I could have directly edited files myself - but that would miss
-          the point. When a manager redlines a document, they don't just fix it themselves; they
-          mark it up so the employee learns the desired approach. Similarly, when I spotted an error
-          like "Government agencies increasingly seek," I didn't open the file and change it to 
-          "will increasingly seek." Instead, I told Claude Code exactly what needed changing, so it
-          would learn my preferences and apply them consistently across the entire codebase.
+          In my first job out of college, consulting, the golden rule for Excel mastery was "don't 
+          touch the mouse." Keyboard shortcuts were everything. You had to feel the pain of not 
+          using the mouse to force yourself to learn the efficient way. This project had a similar 
+          discipline: <strong>"Don't touch the code - or anything else."</strong>
+        </p>
+
+        <p>
+          I challenged myself to do everything within Claude Code. Quick questions I'd normally 
+          Google or ask ChatGPT? Asked Claude Code. Minor copy edits? Claude Code. Researching 
+          academic articles about administrative burden? Claude Code with WebSearch. Checking if 
+          a statistic was real? Claude Code with WebFetch. 
+        </p>
+
+        <p>
+          The discipline was almost absolute - 95% of tasks stayed in the terminal. The only 
+          exceptions were downloading support letters to my Downloads folder (though I probably 
+          could have set up an email client locally - next time). This constraint forced me to 
+          discover Claude Code's full capabilities. Just like avoiding the mouse in Excel teaches 
+          you powerful shortcuts, avoiding manual intervention taught me how to orchestrate complex 
+          workflows through natural language alone.
+        </p>
+
+        <p>
+          This extends to managing corrections. Like a manager reviewing a junior employee's draft, 
+          I could have directly edited files myself - but that would miss the point. When I spotted 
+          an error like "Government agencies increasingly seek," I didn't open the file and change 
+          it to "will increasingly seek." Instead, I told Claude Code exactly what needed changing, 
+          teaching it my preferences so it would apply them consistently across the entire codebase.
         </p>
 
         <p>

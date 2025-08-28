@@ -8,16 +8,16 @@ function Overview() {
         </p>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-number">100K+</div>
-            <div className="hero-stat-label">Americans Helped</div>
+            <div className="hero-stat-number">One</div>
+            <div className="hero-stat-label">Unified System</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">50+</div>
-            <div className="hero-stat-label">Jurisdictions</div>
+            <div className="hero-stat-number">All</div>
+            <div className="hero-stat-label">Safety Net Programs</div>
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-number">10.93%</div>
-            <div className="hero-stat-label">SNAP Error Rate</div>
+            <div className="hero-stat-number">Forever</div>
+            <div className="hero-stat-label">Preserved Access</div>
           </div>
         </div>
       </div>
@@ -27,38 +27,42 @@ function Overview() {
           <div className="card problem-card">
             <h2 className="card-title">The Hidden Crisis Organizations Face</h2>
             <p>
-              <strong>Duplicated Effort:</strong> Every caseworker, navigator tool, and research
-              group builds their own document libraries. Organizations waste resources solving the
-              same problem separately while documents disappear and links break.
+              <strong>Infrastructure Crisis:</strong> No platform connects scattered policy
+              documents into a coherent system. Every organization works with fragments of the
+              policy landscape—unable to see connections across programs or jurisdictions.
             </p>
             <p>
-              <strong>Unclear Language:</strong> Policy language varies wildly between
-              jurisdictions. The same eligibility criteria gets interpreted differently. Caseworkers
-              can't find clear guidance, leading to errors and improper denials.
+              <strong>Unclear Language:</strong> GAO calls complex regulations "inherently
+              error-prone," creating barriers preventing eligible families from accessing benefits.
+              Yet agencies cannot learn which language patterns work because no infrastructure
+              enables comparison across jurisdictions.
             </p>
             <p>
-              <strong>Not Computable:</strong> Rules engines can't cite sources. AI tools
-              hallucinate benefits. Hidden eligibility pathways stay buried. Organizations can't
-              prove their calculations are correct without authoritative sources.
+              <strong>Not Computable:</strong> Rules-as-code developers cannot establish
+              authoritative sources for their calculations. Without a platform connecting computable
+              policies to authoritative documents, tools cannot earn government trust.
             </p>
           </div>
 
           <div className="card solution-card">
             <h2 className="card-title">Solving It Once, For Everyone</h2>
             <p>
-              <strong>Shared Infrastructure:</strong> One comprehensive archive serves the entire
-              ecosystem. Organizations stop duplicating effort. MyFriendBen saves 20% engineering
-              time. Benefit Navigator accelerates deployment. Everyone focuses on helping families.
+              <strong>Shared Infrastructure:</strong> One comprehensive, AI-powered archive serves
+              the entire ecosystem. We retrieve, store, and continuously update statutes,
+              regulations, and manuals across 50 states, letting organizations stop duplicating
+              effort and focus on helping families.
             </p>
             <p>
-              <strong>Clarity Index:</strong> AI + human expertise analyzes which policy language
-              causes errors and delays. Agencies learn from successful peers. Strategic subgrants
-              ensure insights become clearer communication, not policy changes.
+              <strong>Clarity Index:</strong> Human experts and AI analyze which policy language
+              patterns cause errors. When one state's simplified language reduces errors, others
+              adopt those proven approaches through our platform—improving communication, not
+              changing policy.
             </p>
             <p>
-              <strong>Semantic Knowledge Graph:</strong> Documents connect to reveal hidden
-              pathways. TANF→SNAP→Lifeline chains become discoverable. Caseworkers find answers
-              quickly. AI tools access authoritative sources without hallucinating.
+              <strong>Semantic Knowledge Graph:</strong> Our semantic layer reveals categorical
+              eligibility chains—like TANF enabling SNAP which qualifies for Lifeline—invisible in
+              traditional search. When tools reference exact regulatory text, governments trust them
+              for official use.
             </p>
           </div>
         </div>
@@ -121,9 +125,10 @@ function Overview() {
                 📊 GAO Analysis (2001-2024)
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                GAO reports found SNAP regulations are "extremely complex and inherently
-                error-prone." SNAP achieved record-low <strong>3.2% error rate in FY2013</strong>{' '}
-                through simplification, but rates have climbed back to 10.93% by FY2024.
+                GAO reports call SNAP regulations "extremely complex and inherently error-prone,"
+                creating barriers preventing eligible families from accessing benefits. When states
+                simplify language, errors decrease—but without infrastructure to share successes,
+                states repeat mistakes.
               </p>
               <a
                 href="https://www.gao.gov/assets/a246247.html"
@@ -154,12 +159,12 @@ function Overview() {
             </div>
             <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
               <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>
-                📈 Current SNAP Error Crisis
+                📈 Administrative Burden Crisis
               </h3>
               <p style={{ marginBottom: '10px' }}>
-                SNAP error rate reached <strong>10.93% in FY2024</strong>, up from record-low 3.2%
-                in FY2013. 44 states fail error thresholds. 99% are administrative errors from
-                policy interpretation, not fraud.
+                Unclear policy language drives administrative burden costing billions annually. Most
+                errors stem from policy interpretation, not fraud. Agencies need infrastructure to
+                learn which language patterns work across jurisdictions.
               </p>
               <a
                 href="https://www.fns.usda.gov/snap/qc/per"
@@ -193,7 +198,7 @@ function Overview() {
               <p style={{ marginBottom: '10px' }}>
                 2024 Israeli study: Poor readability of welfare documents{' '}
                 <strong>directly correlates with lower engagement and higher error rates</strong>.
-                Plain language initiatives show 20-30% error reduction.
+                Plain language initiatives demonstrate measurable improvements.
               </p>
               <a
                 href="https://link.springer.com/article/10.1007/s10209-024-01167-2"
@@ -207,9 +212,9 @@ function Overview() {
             <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
               <h3 style={{ color: 'var(--blue)', marginBottom: '10px' }}>💡 The Solution Works</h3>
               <p style={{ marginBottom: '10px' }}>
-                The FY2013 record-low <strong>3.2% error rate</strong> proved simplification works.
-                Current 10.93% rate shows regression when complexity returns. Primary source: USDA
-                SNAP Quality Control data.
+                Evidence shows that when states simplify policy language, errors decrease
+                significantly. But without infrastructure to compare language patterns across
+                jurisdictions, agencies cannot systematically learn what works.
               </p>
               <a
                 href="https://www.usda.gov/media/blog/2013/06/21/snap-payment-accuracy-best-record"
