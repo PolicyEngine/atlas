@@ -12,7 +12,6 @@ function NavigationRouter() {
   const publicItems = [
     { path: '/', label: 'Overview' },
     { path: '/demo', label: 'Mock-up' },
-    { path: '/partners', label: 'Partners' },
     { path: '/community', label: 'Community' },
     { path: '/blog', label: 'Blog' },
   ];
@@ -20,7 +19,6 @@ function NavigationRouter() {
   const allItems = [
     { path: '/', label: 'Overview' },
     { path: '/demo', label: 'Mock-up' },
-    { path: '/partners', label: 'Partners' },
     { path: '/application', label: 'PBIF Application' },
     { path: '/community', label: 'Community' },
     { path: '/engine', label: 'ENG(INE) Application' },

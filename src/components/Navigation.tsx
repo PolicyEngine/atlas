@@ -12,14 +12,12 @@ function Navigation({ activeSection, setActiveSection }: NavigationProps) {
   const publicItems = [
     { id: 'overview', label: 'Overview' },
     { id: 'demo', label: 'Mock-up' },
-    { id: 'partners', label: 'Partners' },
     { id: 'civic-tech', label: 'Community' },
   ];
 
   const allItems = [
     { id: 'overview', label: 'Overview' },
     { id: 'demo', label: 'Mock-up' },
-    { id: 'partners', label: 'Partners' },
     { id: 'application', label: 'PBIF Application' },
     { id: 'civic-tech', label: 'Community' },
     { id: 'engine', label: 'ENG(INE) Application' },

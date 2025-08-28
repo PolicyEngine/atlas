@@ -25,7 +25,6 @@ function AppRouter() {
             </a>
             <br />
             <br />
-            <em>Application Deadline: August 16, 2025, 11:59 PM PT</em>
           </div>
         </footer>
       </div>
