@@ -6,8 +6,8 @@ const BlogPost: React.FC = () => {
     <div className="blog-post-container">
       <article className="blog-post">
         <h1>
-          The Grant Application That Proved Everything Can Be Software: How Treating a PBIF 
-          Proposal as Code Unlocked Agentic AI
+          The Grant Application That Proved Everything Can Be Software: How Treating a PBIF Proposal
+          as Code Unlocked Agentic AI
         </h1>
 
         <p className="author">
@@ -24,17 +24,19 @@ const BlogPost: React.FC = () => {
             Public Benefit Innovation Fund (PBIF)
           </a>{' '}
           - a comprehensive 4,300-word proposal, complete with budget spreadsheets, architecture
-          diagrams, team bios, and support letters. But this isn't a story about grant writing. 
-          It's about discovering that <strong>any complex project - even a federal grant application - 
-          can be transformed into software, and when you do that, agentic AI becomes impossibly 
-          powerful.</strong>
+          diagrams, team bios, and support letters. But this isn't a story about grant writing. It's
+          about discovering that{' '}
+          <strong>
+            any complex project - even a federal grant application - can be transformed into
+            software, and when you do that, agentic AI becomes impossibly powerful.
+          </strong>
         </p>
 
         <p>
-          I didn't type a single word of the application myself. Instead, I structured the entire 
-          grant as a software repository and let Claude Code manage it like any other codebase. 
-          The result? Not just a successful application, but a fundamental rethinking of how AI 
-          can operate in non-technical domains.
+          I didn't type a single word of the application myself. Instead, I structured the entire
+          grant as a software repository and let Claude Code manage it like any other codebase. The
+          result? Not just a successful application, but a fundamental rethinking of how AI can
+          operate in non-technical domains.
         </p>
 
         <p>
@@ -201,7 +203,7 @@ const BlogPost: React.FC = () => {
         <h3>2. Iterative Word Count Refinement</h3>
 
         <p>
-          PBIF's strict 250-word limits meant every word mattered. We built a Python script that 
+          PBIF's strict 250-word limits meant every word mattered. We built a Python script that
           reads all markdown files and enforces these limits:
         </p>
 
@@ -210,28 +212,28 @@ if word_count > 250:
     print(f"⚠️ WARNING: Answer {q_num} exceeds 250 words ({word_count} words)")`}</pre>
 
         <p>
-          But here's where it got interesting - Claude Code would iteratively refine responses when 
+          But here's where it got interesting - Claude Code would iteratively refine responses when
           they exceeded limits. It wouldn't just truncate; it would rewrite for conciseness:
         </p>
 
         <p>
-          <strong>First attempt:</strong> 267 words - "PolicyEngine Atlas represents a comprehensive 
+          <strong>First attempt:</strong> 267 words - "PolicyEngine Atlas represents a comprehensive
           solution to the infrastructure crisis facing organizations..."
         </p>
 
         <p>
-          <strong>Second attempt:</strong> 254 words - Removes filler words like "comprehensive" and 
+          <strong>Second attempt:</strong> 254 words - Removes filler words like "comprehensive" and
           "represents"
         </p>
 
         <p>
-          <strong>Final version:</strong> 249 words - Combines sentences, uses active voice, cuts 
+          <strong>Final version:</strong> 249 words - Combines sentences, uses active voice, cuts
           redundancy while preserving all key points
         </p>
 
         <p>
-          This iterative refinement happened automatically. Claude Code would run the script, see 
-          the warning, trim the content, regenerate the TypeScript, and verify again - all without 
+          This iterative refinement happened automatically. Claude Code would run the script, see
+          the warning, trim the content, regenerate the TypeScript, and verify again - all without
           me intervening. It learned to write more concisely with each iteration.
         </p>
 
@@ -282,33 +284,33 @@ if word_count > 250:
         <h3>4. The Discipline: "Don't Touch the Code" (Or Anything Else)</h3>
 
         <p>
-          In my first job out of college, consulting, the golden rule for Excel mastery was "don't 
-          touch the mouse." Keyboard shortcuts were everything. You had to feel the pain of not 
-          using the mouse to force yourself to learn the efficient way. This project had a similar 
+          In my first job out of college, consulting, the golden rule for Excel mastery was "don't
+          touch the mouse." Keyboard shortcuts were everything. You had to feel the pain of not
+          using the mouse to force yourself to learn the efficient way. This project had a similar
           discipline: <strong>"Don't touch the code - or anything else."</strong>
         </p>
 
         <p>
-          I challenged myself to do everything within Claude Code. Quick questions I'd normally 
-          Google or ask ChatGPT? Asked Claude Code. Minor copy edits? Claude Code. Researching 
-          academic articles about administrative burden? Claude Code with WebSearch. Checking if 
-          a statistic was real? Claude Code with WebFetch. 
+          I challenged myself to do everything within Claude Code. Quick questions I'd normally
+          Google or ask ChatGPT? Asked Claude Code. Minor copy edits? Claude Code. Researching
+          academic articles about administrative burden? Claude Code with WebSearch. Checking if a
+          statistic was real? Claude Code with WebFetch.
         </p>
 
         <p>
-          The discipline was almost absolute - 95% of tasks stayed in the terminal. The only 
-          exceptions were downloading support letters to my Downloads folder (though I probably 
-          could have set up an email client locally - next time). This constraint forced me to 
-          discover Claude Code's full capabilities. Just like avoiding the mouse in Excel teaches 
-          you powerful shortcuts, avoiding manual intervention taught me how to orchestrate complex 
+          The discipline was almost absolute - 95% of tasks stayed in the terminal. The only
+          exceptions were downloading support letters to my Downloads folder (though I probably
+          could have set up an email client locally - next time). This constraint forced me to
+          discover Claude Code's full capabilities. Just like avoiding the mouse in Excel teaches
+          you powerful shortcuts, avoiding manual intervention taught me how to orchestrate complex
           workflows through natural language alone.
         </p>
 
         <p>
-          This extends to managing corrections. Like a manager reviewing a junior employee's draft, 
-          I could have directly edited files myself - but that would miss the point. When I spotted 
-          an error like "Government agencies increasingly seek," I didn't open the file and change 
-          it to "will increasingly seek." Instead, I told Claude Code exactly what needed changing, 
+          This extends to managing corrections. Like a manager reviewing a junior employee's draft,
+          I could have directly edited files myself - but that would miss the point. When I spotted
+          an error like "Government agencies increasingly seek," I didn't open the file and change
+          it to "will increasingly seek." Instead, I told Claude Code exactly what needed changing,
           teaching it my preferences so it would apply them consistently across the entire codebase.
         </p>
 
@@ -348,7 +350,7 @@ if word_count > 250:
 
         <p>
           This precision in feedback - being specific about what's wrong and how to fix it - helped
-          Claude Code learn my standards. The key difference from human management is that Claude 
+          Claude Code learn my standards. The key difference from human management is that Claude
           Code could search the entire repository instantly to verify claims:
         </p>
 
@@ -397,31 +399,45 @@ if word_count > 250:
         <h3>6. Simulated Grant Reviews and CI as Quality Control</h3>
 
         <p>
-          Perhaps the most powerful aspect was treating the grant like production software with 
+          Perhaps the most powerful aspect was treating the grant like production software with
           continuous integration. Every change went through the same rigorous process:
         </p>
 
         <ol>
-          <li><strong>Create a pull request</strong> - Even for tiny changes</li>
-          <li><strong>CI runs automatically</strong> - Linting, type checking, build verification</li>
-          <li><strong>Watch the checks</strong> - Claude Code would monitor CI status</li>
-          <li><strong>Fix any issues</strong> - If Prettier failed, run formatting and push again</li>
-          <li><strong>Merge when green</strong> - Only after all checks passed</li>
+          <li>
+            <strong>Create a pull request</strong> - Even for tiny changes
+          </li>
+          <li>
+            <strong>CI runs automatically</strong> - Linting, type checking, build verification
+          </li>
+          <li>
+            <strong>Watch the checks</strong> - Claude Code would monitor CI status
+          </li>
+          <li>
+            <strong>Fix any issues</strong> - If Prettier failed, run formatting and push again
+          </li>
+          <li>
+            <strong>Merge when green</strong> - Only after all checks passed
+          </li>
         </ol>
 
         <p>
-          But we went further - I had Claude Code simulate grant reviews from different perspectives:
+          But we went further - I had Claude Code simulate grant reviews from different
+          perspectives:
         </p>
 
         <p>
-          <strong>Me:</strong> "Review this application as a skeptical PBIF reviewer. What weaknesses 
-          do you see?"
+          <strong>Me:</strong> "Review this application as a skeptical PBIF reviewer. What
+          weaknesses do you see?"
         </p>
 
         <p>
-          <strong>Claude Code:</strong> <em>Analyzes the entire application, identifies that we claim 
-          government partnerships but don't have letters from agencies, suggests emphasizing 
-          existing Federal Reserve collaboration more</em>
+          <strong>Claude Code:</strong>{' '}
+          <em>
+            Analyzes the entire application, identifies that we claim government partnerships but
+            don't have letters from agencies, suggests emphasizing existing Federal Reserve
+            collaboration more
+          </em>
         </p>
 
         <p>
@@ -429,16 +445,18 @@ if word_count > 250:
         </p>
 
         <p>
-          <strong>Claude Code:</strong> <em>Points out we should mention how clearer policies 
-          disproportionately help vulnerable populations, adds research citations about 
-          administrative burden's disparate impact</em>
+          <strong>Claude Code:</strong>{' '}
+          <em>
+            Points out we should mention how clearer policies disproportionately help vulnerable
+            populations, adds research citations about administrative burden's disparate impact
+          </em>
         </p>
 
         <p>
-          These simulated reviews surfaced blind spots I wouldn't have caught. Combined with the 
-          CI pipeline ensuring technical quality, we had both content and code review happening 
-          continuously. The GitHub history shows dozens of PRs, each improving the application 
-          based on these reviews.
+          These simulated reviews surfaced blind spots I wouldn't have caught. Combined with the CI
+          pipeline ensuring technical quality, we had both content and code review happening
+          continuously. The GitHub history shows dozens of PRs, each improving the application based
+          on these reviews.
         </p>
 
         <h2>Maintaining Rigor Under Pressure</h2>
@@ -528,22 +546,26 @@ if word_count > 250:
         <h2>The Breakthrough: Everything is Software</h2>
 
         <p>
-          In 2011, Marc Andreessen wrote that "software is eating the world." He was right, but 
-          perhaps not in the way he imagined. It's not just that software companies are disrupting 
-          industries - it's that <strong>everything can become software if you structure it that 
-          way.</strong> And when you do, you unlock something extraordinary.
+          In 2011, Marc Andreessen wrote that "software is eating the world." He was right, but
+          perhaps not in the way he imagined. It's not just that software companies are disrupting
+          industries - it's that{' '}
+          <strong>everything can become software if you structure it that way.</strong> And when you
+          do, you unlock something extraordinary.
         </p>
 
         <p>
-          Here's the real insight: <strong>By treating the grant application as a software project, 
-          I unlocked the full power of agentic AI for a domain that has nothing to do with 
-          programming.</strong> This isn't about AI helping with coding - it's about recognizing that 
-          any complex project can be structured as code, and once you do that, AI tools become 
-          orders of magnitude more powerful.
+          Here's the real insight:{' '}
+          <strong>
+            By treating the grant application as a software project, I unlocked the full power of
+            agentic AI for a domain that has nothing to do with programming.
+          </strong>{' '}
+          This isn't about AI helping with coding - it's about recognizing that any complex project
+          can be structured as code, and once you do that, AI tools become orders of magnitude more
+          powerful.
         </p>
 
         <p>
-          Think about what we actually did: We took a grant application - traditionally a Word 
+          Think about what we actually did: We took a grant application - traditionally a Word
           document edited by committee - and transformed it into:
         </p>
 
@@ -557,9 +579,9 @@ if word_count > 250:
         </ul>
 
         <p>
-          Suddenly, Claude Code could operate at full capacity. It could search across files, 
-          maintain consistency, run tests, create pull requests, monitor deployments. The grant 
-          became <em>computable</em>. And when something is computable, agentic AI can manage it 
+          Suddenly, Claude Code could operate at full capacity. It could search across files,
+          maintain consistency, run tests, create pull requests, monitor deployments. The grant
+          became <em>computable</em>. And when something is computable, agentic AI can manage it
           with superhuman precision.
         </p>
 
@@ -568,55 +590,71 @@ if word_count > 250:
         </p>
 
         <ul>
-          <li><strong>Legal contracts</strong> → Markdown + version control + automated clause validation</li>
-          <li><strong>Research papers</strong> → LaTeX + citation management + automated fact-checking</li>
-          <li><strong>Business plans</strong> → YAML data + markdown narrative + financial model sync</li>
-          <li><strong>Policy documents</strong> → Structured text + change tracking + stakeholder review flows</li>
-          <li><strong>Even wedding planning</strong> → Task lists + budget tracking + vendor management</li>
+          <li>
+            <strong>Legal contracts</strong> → Markdown + version control + automated clause
+            validation
+          </li>
+          <li>
+            <strong>Research papers</strong> → LaTeX + citation management + automated fact-checking
+          </li>
+          <li>
+            <strong>Business plans</strong> → YAML data + markdown narrative + financial model sync
+          </li>
+          <li>
+            <strong>Policy documents</strong> → Structured text + change tracking + stakeholder
+            review flows
+          </li>
+          <li>
+            <strong>Even wedding planning</strong> → Task lists + budget tracking + vendor
+            management
+          </li>
         </ul>
 
         <p>
-          The transformation happens when you stop thinking "this is a document" and start thinking 
-          "this is a data structure with business logic." Once you make that shift, you can leverage 
-          the entire software development ecosystem - version control, testing, CI/CD, code review - 
+          The transformation happens when you stop thinking "this is a document" and start thinking
+          "this is a data structure with business logic." Once you make that shift, you can leverage
+          the entire software development ecosystem - version control, testing, CI/CD, code review -
           for any domain. And more importantly, you can unleash agentic AI to manage it all.
         </p>
 
         <p>
-          The grant application became a living system that could evolve, validate itself, and 
-          maintain perfect consistency across dozens of interconnected components. We didn't just 
-          write a grant - we built a grant-writing machine that happened to produce a single 
+          The grant application became a living system that could evolve, validate itself, and
+          maintain perfect consistency across dozens of interconnected components. We didn't just
+          write a grant - we built a grant-writing machine that happened to produce a single
           document as its output.
         </p>
 
         <h2>The Future: When Everything Becomes Software</h2>
 
         <p>
-          This experiment proved something profound: <strong>The boundary between "technical" and 
-          "non-technical" work is dissolving.</strong> When you can structure any project as code, 
-          agentic AI can manage it with the same precision it brings to software development. The 
-          constraint isn't the AI's capability - it's our imagination about what can be coded.
+          This experiment proved something profound:{' '}
+          <strong>The boundary between "technical" and "non-technical" work is dissolving.</strong>{' '}
+          When you can structure any project as code, agentic AI can manage it with the same
+          precision it brings to software development. The constraint isn't the AI's capability -
+          it's our imagination about what can be coded.
         </p>
 
         <p>
           The entire project is open source at{' '}
           <a href="https://github.com/policyengine/atlas" target="_blank" rel="noopener noreferrer">
             github.com/policyengine/atlas
-          </a>. 
-          Every file, script, and component is there - not just as a grant application, but as a 
+          </a>
+          . Every file, script, and component is there - not just as a grant application, but as a
           template for how to transform any complex project into software.
         </p>
 
         <p>
-          For your next project - whatever it is - ask yourself: How could this be code? How could 
-          I structure this so an AI agent could manage it? You might discover, as I did, that the 
+          For your next project - whatever it is - ask yourself: How could this be code? How could I
+          structure this so an AI agent could manage it? You might discover, as I did, that the
           answer transforms not just how you work, but what becomes possible.
         </p>
 
         <p>
-          <strong>The revolution isn't that AI can write. It's that when you treat everything as 
-          software, AI can do everything software developers do: architect, implement, test, deploy, 
-          maintain, and evolve complex systems. The grant was just the beginning.</strong>
+          <strong>
+            The revolution isn't that AI can write. It's that when you treat everything as software,
+            AI can do everything software developers do: architect, implement, test, deploy,
+            maintain, and evolve complex systems. The grant was just the beginning.
+          </strong>
         </p>
 
         <hr />
