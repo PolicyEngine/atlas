@@ -12,15 +12,15 @@ This application is deployed to GitHub Pages using GitHub Actions.
 3. Save the changes
 
 ### Why This Matters
-- The build process creates optimized files in the `dist/` directory
+- The build process creates optimized files in the `out/` directory
 - GitHub Actions deployment serves these built files
 - "Deploy from branch" would serve raw source files, breaking the React application
 
 ## Deployment Process
 
 1. **Automatic Deployment**: Every push to `main` triggers the deployment workflow
-2. **Build**: Vite builds the React application with proper base paths
-3. **Deploy**: GitHub Actions uploads the `dist/` folder to GitHub Pages
+2. **Build**: Next.js exports the React application with proper base paths
+3. **Deploy**: GitHub Actions uploads the `out/` folder to GitHub Pages
 
 ## Verification
 
@@ -43,14 +43,14 @@ If you see raw HTML or "module not found" errors:
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Run development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 
 # Preview production build
-npm run preview
+bun run preview
 ```

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/BlogPost.css';
 
 const BlogPost: React.FC = () => {
   return (
