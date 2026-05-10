@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import partnersData from '../data/partners.yaml?raw';
-import yaml from 'js-yaml';
+import partnersData from '../data/partners.json';
 import ReactMarkdown from 'react-markdown';
+import { BASE_PATH } from '../basePath';
 
 interface Partner {
   name: string;
@@ -21,9 +21,7 @@ interface PartnersYAML {
 function Partners() {
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
 
-  // Parse YAML data
-  const data = yaml.load(partnersData) as PartnersYAML;
-  const partners = data.partners;
+  const partners = (partnersData as PartnersYAML).partners;
 
   // Group partners by category for display
   const categories = [...new Set(partners.map((p) => p.category))];
@@ -64,7 +62,7 @@ function Partners() {
                 <div className="partner-logo">
                   {partner.logo.startsWith('/') ? (
                     <img
-                      src={`/policy-library${partner.logo}`}
+                      src={`${BASE_PATH}${partner.logo}`}
                       alt={partner.name}
                       onError={(e) => {
                         // Fallback to text if image fails to load
@@ -103,7 +101,7 @@ function Partners() {
                   <div className="modal-logo">
                     {selectedPartner.logo.startsWith('/') ? (
                       <img
-                        src={`/policy-library${selectedPartner.logo}`}
+                        src={`${BASE_PATH}${selectedPartner.logo}`}
                         alt={selectedPartner.name}
                         style={{ maxHeight: '64px', maxWidth: '200px' }}
                       />

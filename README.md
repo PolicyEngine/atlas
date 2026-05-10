@@ -30,20 +30,20 @@ PolicyEngine Atlas addresses a critical infrastructure failure: benefit program 
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 
 # Run tests
-npm test
+bun test
 
 # Lint and format
-npm run lint -- --fix
-npx prettier --write .
+bun run lint:fix
+bunx prettier --write .
 ```
 
 ## Deployment
@@ -69,14 +69,14 @@ src/
 
 ## Technology Stack
 
-- **Frontend**: React + TypeScript + Vite
+- **Frontend**: Next.js + React + TypeScript
 - **Styling**: CSS with PolicyEngine design system
 - **Deployment**: GitHub Pages via GitHub Actions
 - **CI/CD**: GitHub Actions for testing and deployment
 
 ## Contributing
 
-We welcome contributions from civic technologists! See our [Community page](https://policyengine.github.io/policy-library/#civic-tech) for ways to get involved.
+We welcome contributions from civic technologists! See our [Community page](https://policyengine.github.io/policy-library/community) for ways to get involved.
 
 ## License
 

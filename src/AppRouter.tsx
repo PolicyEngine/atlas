@@ -1,11 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
 import NavigationRouter from './components/NavigationRouter';
 import AppRoutes from './AppRoutes';
-import './App.css';
+import { BASE_PATH } from './basePath';
 
 function AppRouter() {
   return (
-    <BrowserRouter basename="/atlas">
+    <BrowserRouter basename={BASE_PATH}>
       <div className="app">
         <NavigationRouter />
 
